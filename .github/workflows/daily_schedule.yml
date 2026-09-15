@@ -35,5 +35,5 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add tv_assignment_schedule.csv tv_schedule_summary.txt elo_cache.json
-          git add tv_assignment_schedule.csv tv_schedule_summary.txt elo_cache.json index.html
+          git add -A
           git push
