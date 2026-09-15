@@ -6,6 +6,9 @@ on:
     - cron: '0 7 * * *'
   workflow_dispatch: # Allows you to manually trigger it anytime via button click
 
+permissions:
+  contents: write
+  
 jobs:
   run-scheduler:
     runs-on: ubuntu-latest
