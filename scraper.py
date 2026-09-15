@@ -477,4 +477,113 @@ print("\n" + output_text)
 with open(OUTPUT_TXT, "w", encoding="utf-8") as f:
     f.write(output_text)
 
+# ==========================================
+# MOBILE HTML DASHBOARD
+# ==========================================
+OUTPUT_HTML = "index.html"
+
+html_content = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soccer Broadcast Board</title>
+  <style>
+    body {{
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #121212;
+      color: #e0e0e0;
+      margin: 0;
+      padding: 12px;
+    }}
+    h1 {{ font-size: 1.2rem; text-align: center; color: #4dabf7; margin-bottom: 4px; }}
+    .subtitle {{ font-size: 0.75rem; text-align: center; color: #888; margin-bottom: 16px; }}
+    .day-header {{
+      background: #1e1e1e;
+      border-left: 4px solid #4dabf7;
+      padding: 8px 12px;
+      font-size: 0.95rem;
+      font-weight: bold;
+      margin-top: 16px;
+      border-radius: 2px;
+    }}
+    .slot-header {{
+      font-size: 0.8rem;
+      color: #aaa;
+      margin: 12px 0 6px 4px;
+      font-weight: 600;
+    }}
+    .card {{
+      background: #1a1a1a;
+      border: 1px solid #2a2a2a;
+      border-radius: 6px;
+      padding: 10px;
+      margin-bottom: 8px;
+    }}
+    .card-top {{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+    }}
+    .badge {{
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 4px;
+      text-transform: uppercase;
+    }}
+    .tv-tv1 {{ background: #2b8a3e; color: #fff; }}
+    .tv-tv2 {{ background: #1971c2; color: #fff; }}
+    .tv-tv3 {{ background: #e67700; color: #fff; }}
+    .tv-other {{ background: #343a40; color: #adb5bd; }}
+    .comp {{ font-size: 0.75rem; font-weight: 600; color: #ced4da; }}
+    .matchup {{ font-size: 0.95rem; font-weight: bold; margin: 4px 0; }}
+    .meta {{ font-size: 0.75rem; color: #888; display: flex; justify-content: space-between; }}
+    .channel {{ color: #ffd43b; font-weight: 600; }}
+  </style>
+</head>
+<body>
+  <h1>Soccer Broadcast Board</h1>
+  <div class="subtitle">48-Hour Multi-Screen Schedule (Anchored 3 AM)</div>
+"""
+
+for target_group, group_header in [("TODAY", f"TODAY'S MATCHES ({today_label})"),
+                                   ("TOMORROW", f"TOMORROW'S MATCHES ({tomorrow_label})")]:
+    group_matches = [m for m in matches_chronological if m["day_group"] == target_group]
+    if not group_matches:
+        continue
+
+    html_content += f'<div class="day-header">{group_header}</div>\n'
+    
+    current_slot = None
+    for m in group_matches:
+        if m["match_time_str"] != current_slot:
+            current_slot = m["match_time_str"]
+            html_content += f'<div class="slot-header">{current_slot}</div>\n'
+
+        tv_class = "tv-other"
+        if "TV 1" in m["tv_assignment"]: tv_class = "tv-tv1"
+        elif "TV 2" in m["tv_assignment"]: tv_class = "tv-tv2"
+        elif "TV 3" in m["tv_assignment"]: tv_class = "tv-tv3"
+
+        html_content += f"""
+        <div class="card">
+          <div class="card-top">
+            <span class="badge {tv_class}">{m['tv_assignment']}</span>
+            <span class="comp">{format_league_badge(m['league'])}</span>
+          </div>
+          <div class="matchup">{m['home_team']} vs {m['away_team']}</div>
+          <div class="meta">
+            <span>Elos: {m['home_elo']} vs {m['away_elo']} (Score: {m['sort_value']})</span>
+            <span class="channel">{m['channels']}</span>
+          </div>
+        </div>
+        """
+
+html_content += "</body></html>"
+
+with open(OUTPUT_HTML, "w", encoding="utf-8") as f:
+    f.write(html_content)
+    
 print(f"\nSaved CSV to {OUTPUT_CSV} and summary to {OUTPUT_TXT}")
