@@ -37,8 +37,11 @@ HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36",
     "Accept": "application/json, text/plain, */*",
     "Accept-Language": "en-US,en;q=0.9",
-    "Referer": "https://www.espn.com/",
+    "Referer": "https://www.espn.com/soccer/",
     "Origin": "https://www.espn.com",
+    "Sec-Fetch-Dest": "empty",
+    "Sec-Fetch-Mode": "cors",
+    "Sec-Fetch-Site": "same-site",
 }
 
 LEAGUES = [
@@ -317,7 +320,7 @@ def get_48h_window():
 
 def fetch_espn_fixtures(task):
     league_code, d_str = task
-    url = f"https://site.api.espn.com/apis/site/v2/sports/soccer/{league_code}/scoreboard?dates={d_str}"
+    url = f"https://site.web.api.espn.com/apis/site/v2/sports/soccer/{league_code}/scoreboard?dates={d_str}"
     events = []
     try:
         r = requests.get(url, headers=HEADERS, timeout=10)
@@ -346,8 +349,7 @@ def harvest_matches(window, elo_engine):
     print(f"Querying {len(LEAGUES)} leagues across ESPN ({len(tasks)} parallel requests)...")
 
     raw_events = []
-    # 8 workers is the sweet spot for ESPN's CDN without hitting connection throttles
-    with ThreadPoolExecutor(max_workers=8) as executor:
+    with ThreadPoolExecutor(max_workers=4) as executor:
         futures = [executor.submit(fetch_espn_fixtures, t) for t in tasks]
         for f in as_completed(futures):
             raw_events.extend(f.result())
