@@ -3,66 +3,58 @@
 ============================================================================================================
 
 ############################################################################################################
-###  TODAY'S MATCHES (Tuesday, September 15)
-############################################################################################################
-
---- 2026-09-15 12:00 PM EDT ---
-  [FINAL    ] [TV 1        ] [Coppa Italia] Genoa vs Sudtirol                  (1666 vs 1525) Score: 1454.5 [Check listings]
-
---- 2026-09-15 01:00 PM EDT ---
-  [FINAL    ] [TV 2        ] [LaLiga]       Rayo Vallecano vs Espanyol                  (1740 vs 1712) Score: 1698.0 [ESPN Deportes, ESPN+]
-
---- 2026-09-15 02:00 PM EDT ---
-  [FINAL    ] [TV 3        ] [LaLiga]       Alavés vs Valencia                  (1728 vs 1741) Score: 1721.5 [ESPN+]
-  [FINAL    ] [Other Screen] [Eredivisie]   Ajax Amsterdam vs Willem II                 (1689 vs 1414) Score: 1276.5 [ESPN+]
-
---- 2026-09-15 02:30 PM EDT ---
-  [FINAL    ] [Other Screen] [EFL Cup]      Peterborough United vs Barnsley                  (1454 vs 1463) Score: 1449.5 [Check listings]
-
---- 2026-09-15 02:45 PM EDT ---
-  [FINAL    ] [TV 1        ] [EFL Cup]      West Ham United vs Fulham                    (1783 vs 1798) Score: 1775.5 [Paramount+]
-  [FINAL    ] [Other Screen] [Championship] Middlesbrough vs Millwall                  (1651 vs 1637) Score: 1630.0 [Paramount+]
-  [FINAL    ] [Other Screen] [Championship] Bristol City vs Lincoln City              (1584 vs 1610) Score: 1571.0 [Check listings]
-  [FINAL    ] [Other Screen] [SPL]          Motherwell vs Aberdeen                  (1495 vs 1379) Score: 1321.0 [Check listings]
-  [FINAL    ] [Other Screen] [SPL]          Hibernian vs Kilmarnock                (1487 vs 1372) Score: 1314.5 [Check listings]
-  [FINAL    ] [Other Screen] [SPL]          Falkirk vs Heart of Midlothian       (1383 vs 1550) Score: 1299.5 [Check listings]
-
---- 2026-09-15 03:00 PM EDT ---
-  [FINAL    ] [TV 2        ] [EFL Cup]      Liverpool vs Tottenham Hotspur         (1928 vs 1806) Score: 1745.0 [Paramount+]
-  [FINAL    ] [Other Screen] [EFL Cup]      Ipswich Town vs Arsenal                   (1700 vs 2042) Score: 1529.0 [Paramount+]
-  [FINAL    ] [Other Screen] [Coppa Italia] Fiorentina vs Pisa                      (1717 vs 1544) Score: 1457.5 [Check listings]
-  [FINAL    ] [Other Screen] [EFL Cup]      Reading vs Brentford                 (1519 vs 1848) Score: 1354.5 [Check listings]
-
---- 2026-09-15 03:30 PM EDT ---
-  [FINAL    ] [Other Screen] [LaLiga]       Elche vs Real Madrid               (1694 vs 1975) Score: 1553.5 [ESPN2, ESPN Deportes, ESPN+]
-
-############################################################################################################
-###  TOMORROW'S MATCHES (Wednesday, September 16)
+###  TODAY'S MATCHES (Wednesday, September 16)
 ############################################################################################################
 
 --- 2026-09-16 12:45 PM EDT ---
-  [UPCOMING ] [TV 3        ] [UEL]          Omonia Nicosia vs Celta Vigo                (1635 vs 1749) Score: 1578.0 [Paramount+]
-  [UPCOMING ] [Other Screen] [UEL]          Ararat-Armenia vs Sparta Prague             (1459 vs 1507) Score: 1435.0 [Paramount+]
+  [UPCOMING ] [TV 1        ] [UEL]          Ararat-Armenia vs Sparta Prague             (1450 vs 1450) Score: 1450.0 [Paramount+]
+  [UPCOMING ] [TV 2        ] [UEL]          Omonia Nicosia vs Celta Vigo                (1450 vs 1450) Score: 1450.0 [CBSSN, Paramount+]
 
 --- 2026-09-16 01:00 PM EDT ---
-  [UPCOMING ] [TV 1        ] [LaLiga]       Deportivo vs Sevilla                   (1697 vs 1722) Score: 1684.5 [ESPN+]
-  [UPCOMING ] [TV 2        ] [LaLiga]       Atlético Madrid vs Osasuna                   (1894 vs 1723) Score: 1637.5 [ESPN Deportes, ESPN+]
+  [UPCOMING ] [TV 3        ] [LaLiga]       Atlético Madrid vs Osasuna                   (1450 vs 1450) Score: 1450.0 [ESPN Deportes, ESPN+]
+  [UPCOMING ] [Other Screen] [LaLiga]       Deportivo vs Sevilla                   (1450 vs 1450) Score: 1450.0 [ESPN+]
 
 --- 2026-09-16 02:45 PM EDT ---
-  [UPCOMING ] [TV 3        ] [EFL Cup]      Everton vs Wolverhampton Wanderers   (1820 vs 1725) Score: 1677.5 [Paramount+]
-  [UPCOMING ] [Other Screen] [EFL Cup]      Fleetwood Town vs Sheffield United          (1410 vs 1623) Score: 1303.5 [Check listings]
+  [UPCOMING ] [Other Screen] [EFL Cup]      Everton vs Wolverhampton Wanderers   (1450 vs 1450) Score: 1450.0 [Paramount+]
+  [UPCOMING ] [Other Screen] [EFL Cup]      Fleetwood Town vs Sheffield United          (1450 vs 1450) Score: 1450.0 [Check listings]
 
 --- 2026-09-16 03:00 PM EDT ---
-  [UPCOMING ] [TV 1        ] [EFL Cup]      Manchester United vs Brighton & Hove Albion    (1885 vs 1870) Score: 1862.5 [Paramount+]
-  [UPCOMING ] [TV 2        ] [UEL]          AC Milan vs Benfica                   (1829 vs 1851) Score: 1818.0 [Paramount+]
-  [UPCOMING ] [Other Screen] [UEL]          Sunderland vs AZ Alkmaar                (1735 vs 1693) Score: 1672.0 [Paramount+]
-  [UPCOMING ] [Other Screen] [UEL]          Hapoel Be'er vs Dinamo Zagreb             (1624 vs 1671) Score: 1600.5 [Paramount+]
-  [UPCOMING ] [Other Screen] [UEL]          Anderlecht vs Lyon                      (1662 vs 1787) Score: 1599.5 [Paramount+]
-  [UPCOMING ] [Other Screen] [EFL Cup]      Coventry City vs Aston Villa               (1686 vs 1884) Score: 1587.0 [Paramount+]
-  [UPCOMING ] [Other Screen] [UEL]          SK Sturm Graz vs Stade Rennais             (1637 vs 1765) Score: 1573.0 [Paramount+]
-  [UPCOMING ] [Other Screen] [UEL]          Olympiacos vs Jagiellonia Bialystok     (1713 vs 1616) Score: 1567.5 [Paramount+]
-  [UPCOMING ] [Other Screen] [UEL]          Bayer Leverkusen vs NK Celje                  (1865 vs 1518) Score: 1344.5 [Paramount+]
+  [UPCOMING ] [TV 1        ] [UEL]          AC Milan vs Benfica                   (1450 vs 1450) Score: 1450.0 [CBSSN, Paramount+]
+  [UPCOMING ] [TV 2        ] [UEL]          Anderlecht vs Lyon                      (1450 vs 1450) Score: 1450.0 [Paramount+]
+  [UPCOMING ] [TV 3        ] [UEL]          Bayer Leverkusen vs NK Celje                  (1450 vs 1450) Score: 1450.0 [Paramount+]
+  [UPCOMING ] [Other Screen] [UEL]          Hapoel Be'er vs Dinamo Zagreb             (1450 vs 1450) Score: 1450.0 [Paramount+]
+  [UPCOMING ] [Other Screen] [UEL]          Olympiacos vs Jagiellonia Bialystok     (1450 vs 1450) Score: 1450.0 [Paramount+]
+  [UPCOMING ] [Other Screen] [UEL]          SK Sturm Graz vs Stade Rennais             (1450 vs 1450) Score: 1450.0 [Paramount+]
+  [UPCOMING ] [Other Screen] [UEL]          Sunderland vs AZ Alkmaar                (1450 vs 1450) Score: 1450.0 [Paramount+]
+  [UPCOMING ] [Other Screen] [EFL Cup]      Coventry City vs Aston Villa               (1450 vs 1450) Score: 1450.0 [Paramount+]
+  [UPCOMING ] [Other Screen] [EFL Cup]      Manchester United vs Brighton & Hove Albion    (1450 vs 1450) Score: 1450.0 [Paramount+]
 
 --- 2026-09-16 03:30 PM EDT ---
-  [UPCOMING ] [Other Screen] [LaLiga]       Levante vs Athletic Club             (1711 vs 1607) Score: 1555.0 [ESPN+]
-  [UPCOMING ] [Other Screen] [LaLiga]       Barcelona vs Racing Santander          (2019 vs 1695) Score: 1533.0 [ESPN Deportes, ESPN+]
+  [UPCOMING ] [Other Screen] [LaLiga]       Barcelona vs Racing Santander          (1450 vs 1450) Score: 1450.0 [ESPN Deportes, ESPN+]
+  [UPCOMING ] [Other Screen] [LaLiga]       Levante vs Athletic Club             (1450 vs 1450) Score: 1450.0 [ESPN+]
+
+############################################################################################################
+###  TOMORROW'S MATCHES (Thursday, September 17)
+############################################################################################################
+
+--- 2026-09-17 12:45 PM EDT ---
+  [UPCOMING ] [TV 1        ] [UEL]          Levski Sofia vs RB Salzburg               (1450 vs 1450) Score: 1450.0 [CBSSN, Paramount+]
+  [UPCOMING ] [TV 2        ] [UEL]          OFI Crete vs TSG Hoffenheim            (1450 vs 1450) Score: 1450.0 [Paramount+]
+
+--- 2026-09-17 01:00 PM EDT ---
+  [UPCOMING ] [TV 3        ] [LaLiga]       Real Betis vs Getafe                    (1450 vs 1450) Score: 1450.0 [ESPN Deportes, ESPN+]
+
+--- 2026-09-17 02:30 PM EDT ---
+  [UPCOMING ] [Other Screen] [EFL Cup]      Manchester City vs Norwich City              (1450 vs 1450) Score: 1450.0 [Paramount+]
+
+--- 2026-09-17 03:00 PM EDT ---
+  [UPCOMING ] [TV 1        ] [UEL]          Besiktas vs Marseille                 (1450 vs 1450) Score: 1450.0 [Paramount+]
+  [UPCOMING ] [TV 2        ] [UEL]          Celtic vs Ferencvaros               (1450 vs 1450) Score: 1450.0 [Paramount+]
+  [UPCOMING ] [TV 3        ] [UEL]          Crystal Palace vs Lech Poznan               (1450 vs 1450) Score: 1450.0 [Paramount+]
+  [UPCOMING ] [Other Screen] [UEL]          Juventus vs NEC Nijmegen              (1450 vs 1450) Score: 1450.0 [Paramount+]
+  [UPCOMING ] [Other Screen] [UEL]          Lillestrom vs Torreense                 (1450 vs 1450) Score: 1450.0 [Paramount+]
+  [UPCOMING ] [Other Screen] [UEL]          Real Sociedad vs AFC Bournemouth           (1450 vs 1450) Score: 1450.0 [CBSSN, Paramount+]
+  [UPCOMING ] [Other Screen] [UEL]          Viktoria Plzen vs Union St.-Gilloise        (1450 vs 1450) Score: 1450.0 [Paramount+]
+
+--- 2026-09-17 03:30 PM EDT ---
+  [UPCOMING ] [Other Screen] [LaLiga]       Málaga vs Villarreal                (1450 vs 1450) Score: 1450.0 [ESPN Deportes, ESPN+]

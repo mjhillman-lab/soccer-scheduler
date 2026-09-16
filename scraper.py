@@ -307,19 +307,23 @@ def get_48h_window():
         "end_utc": t_end_local.astimezone(timezone.utc),
     }
 
-def fetch_espn_fixtures(task, session):
+def fetch_espn_fixtures(task):
     league_code, d_str = task
     url = f"https://site.api.espn.com/apis/site/v2/sports/soccer/{league_code}/scoreboard?dates={d_str}"
     events = []
     try:
-        r = session.get(url, headers=HEADERS, timeout=8)
-        data = r.json()
-        league_name = data.get("leagues", [{}])[0].get("name", league_code)
-        for event in data.get("events", []):
-            events.append((league_name, event))
-    except Exception:
+        # Direct request per thread avoids shared-session TLS handshake race conditions
+        r = requests.get(url, headers=HEADERS, timeout=10)
+        if r.status_code == 200:
+            data = r.json()
+            league_name = data.get("leagues", [{}])[0].get("name", league_code)
+            for event in data.get("events", []):
+                events.append((league_name, event))
+    except Exception as e:
+        # Silently skip transient network glitches
         pass
     return events
+
 
 def harvest_matches(window, elo_engine):
     # Compute relevant date keys using local calendar days (matches ESPN's scoreboard indexing)
@@ -333,20 +337,12 @@ def harvest_matches(window, elo_engine):
     tasks = [(league, d_str) for league in LEAGUES for d_str in date_keys]
     print(f"Querying {len(LEAGUES)} leagues across ESPN ({len(tasks)} parallel requests)...")
 
-    # Configure session with connection pool matched to thread count
-    session = requests.Session()
-    adapter = HTTPAdapter(pool_connections=MAX_WORKERS, pool_maxsize=MAX_WORKERS)
-    session.mount("https://", adapter)
-    session.mount("http://", adapter)
-
     raw_events = []
-    with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
-        # Pass session to each worker thread
-        futures = [executor.submit(fetch_espn_fixtures, t, session) for t in tasks]
+    # 8 workers is the sweet spot for ESPN's CDN without hitting connection throttles
+    with ThreadPoolExecutor(max_workers=8) as executor:
+        futures = [executor.submit(fetch_espn_fixtures, t) for t in tasks]
         for f in as_completed(futures):
             raw_events.extend(f.result())
-
-    session.close()
 
     now_utc = datetime.now(timezone.utc)
     seen_ids = set()
