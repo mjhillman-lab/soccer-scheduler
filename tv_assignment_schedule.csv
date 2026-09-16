@@ -1,30 +1,30 @@
 day_group,match_time_str,live_status,tv_assignment,home_team,away_team,home_elo,away_elo,channels,sort_value,league
-TODAY,2026-09-16 12:45 PM EDT,UPCOMING,TV 1,Ararat-Armenia,Sparta Prague,1450,1450,Paramount+,1450.0,UEFA Europa League
-TODAY,2026-09-16 12:45 PM EDT,UPCOMING,TV 2,Omonia Nicosia,Celta Vigo,1450,1450,"CBSSN, Paramount+",1450.0,UEFA Europa League
-TODAY,2026-09-16 01:00 PM EDT,UPCOMING,TV 3,Atlético Madrid,Osasuna,1450,1450,"ESPN Deportes, ESPN+",1450.0,Spanish LALIGA
-TODAY,2026-09-16 01:00 PM EDT,UPCOMING,Other Screen,Deportivo,Sevilla,1450,1450,ESPN+,1450.0,Spanish LALIGA
-TODAY,2026-09-16 02:45 PM EDT,UPCOMING,Other Screen,Everton,Wolverhampton Wanderers,1450,1450,Paramount+,1450.0,English Carabao Cup
-TODAY,2026-09-16 02:45 PM EDT,UPCOMING,Other Screen,Fleetwood Town,Sheffield United,1450,1450,Check listings,1450.0,English Carabao Cup
-TODAY,2026-09-16 03:00 PM EDT,UPCOMING,TV 1,AC Milan,Benfica,1450,1450,"CBSSN, Paramount+",1450.0,UEFA Europa League
-TODAY,2026-09-16 03:00 PM EDT,UPCOMING,TV 2,Anderlecht,Lyon,1450,1450,Paramount+,1450.0,UEFA Europa League
-TODAY,2026-09-16 03:00 PM EDT,UPCOMING,TV 3,Bayer Leverkusen,NK Celje,1450,1450,Paramount+,1450.0,UEFA Europa League
-TODAY,2026-09-16 03:00 PM EDT,UPCOMING,Other Screen,Hapoel Be'er,Dinamo Zagreb,1450,1450,Paramount+,1450.0,UEFA Europa League
-TODAY,2026-09-16 03:00 PM EDT,UPCOMING,Other Screen,Olympiacos,Jagiellonia Bialystok,1450,1450,Paramount+,1450.0,UEFA Europa League
-TODAY,2026-09-16 03:00 PM EDT,UPCOMING,Other Screen,SK Sturm Graz,Stade Rennais,1450,1450,Paramount+,1450.0,UEFA Europa League
-TODAY,2026-09-16 03:00 PM EDT,UPCOMING,Other Screen,Sunderland,AZ Alkmaar,1450,1450,Paramount+,1450.0,UEFA Europa League
-TODAY,2026-09-16 03:00 PM EDT,UPCOMING,Other Screen,Coventry City,Aston Villa,1450,1450,Paramount+,1450.0,English Carabao Cup
-TODAY,2026-09-16 03:00 PM EDT,UPCOMING,Other Screen,Manchester United,Brighton & Hove Albion,1450,1450,Paramount+,1450.0,English Carabao Cup
-TODAY,2026-09-16 03:30 PM EDT,UPCOMING,Other Screen,Barcelona,Racing Santander,1450,1450,"ESPN Deportes, ESPN+",1450.0,Spanish LALIGA
-TODAY,2026-09-16 03:30 PM EDT,UPCOMING,Other Screen,Levante,Athletic Club,1450,1450,ESPN+,1450.0,Spanish LALIGA
-TOMORROW,2026-09-17 12:45 PM EDT,UPCOMING,TV 1,Levski Sofia,RB Salzburg,1450,1450,"CBSSN, Paramount+",1450.0,UEFA Europa League
-TOMORROW,2026-09-17 12:45 PM EDT,UPCOMING,TV 2,OFI Crete,TSG Hoffenheim,1450,1450,Paramount+,1450.0,UEFA Europa League
-TOMORROW,2026-09-17 01:00 PM EDT,UPCOMING,TV 3,Real Betis,Getafe,1450,1450,"ESPN Deportes, ESPN+",1450.0,Spanish LALIGA
-TOMORROW,2026-09-17 02:30 PM EDT,UPCOMING,Other Screen,Manchester City,Norwich City,1450,1450,Paramount+,1450.0,English Carabao Cup
-TOMORROW,2026-09-17 03:00 PM EDT,UPCOMING,TV 1,Besiktas,Marseille,1450,1450,Paramount+,1450.0,UEFA Europa League
-TOMORROW,2026-09-17 03:00 PM EDT,UPCOMING,TV 2,Celtic,Ferencvaros,1450,1450,Paramount+,1450.0,UEFA Europa League
-TOMORROW,2026-09-17 03:00 PM EDT,UPCOMING,TV 3,Crystal Palace,Lech Poznan,1450,1450,Paramount+,1450.0,UEFA Europa League
-TOMORROW,2026-09-17 03:00 PM EDT,UPCOMING,Other Screen,Juventus,NEC Nijmegen,1450,1450,Paramount+,1450.0,UEFA Europa League
-TOMORROW,2026-09-17 03:00 PM EDT,UPCOMING,Other Screen,Lillestrom,Torreense,1450,1450,Paramount+,1450.0,UEFA Europa League
-TOMORROW,2026-09-17 03:00 PM EDT,UPCOMING,Other Screen,Real Sociedad,AFC Bournemouth,1450,1450,"CBSSN, Paramount+",1450.0,UEFA Europa League
-TOMORROW,2026-09-17 03:00 PM EDT,UPCOMING,Other Screen,Viktoria Plzen,Union St.-Gilloise,1450,1450,Paramount+,1450.0,UEFA Europa League
-TOMORROW,2026-09-17 03:30 PM EDT,UPCOMING,Other Screen,Málaga,Villarreal,1450,1450,"ESPN Deportes, ESPN+",1450.0,Spanish LALIGA
+TODAY,2026-09-16 12:45 PM EDT,UPCOMING,TV 3,Omonia Nicosia,Celta Vigo,1635,1749,"CBSSN, Paramount+",1578.0,UEFA Europa League
+TODAY,2026-09-16 12:45 PM EDT,UPCOMING,Other Screen,Ararat-Armenia,Sparta Prague,1459,1507,Paramount+,1435.0,UEFA Europa League
+TODAY,2026-09-16 01:00 PM EDT,UPCOMING,TV 1,Deportivo,Sevilla,1697,1722,ESPN+,1684.5,Spanish LALIGA
+TODAY,2026-09-16 01:00 PM EDT,UPCOMING,TV 2,Atlético Madrid,Osasuna,1894,1723,"ESPN Deportes, ESPN+",1637.5,Spanish LALIGA
+TODAY,2026-09-16 02:45 PM EDT,UPCOMING,TV 3,Everton,Wolverhampton Wanderers,1820,1725,Paramount+,1677.5,English Carabao Cup
+TODAY,2026-09-16 02:45 PM EDT,UPCOMING,Other Screen,Fleetwood Town,Sheffield United,1410,1623,Check listings,1303.5,English Carabao Cup
+TODAY,2026-09-16 03:00 PM EDT,UPCOMING,TV 1,Manchester United,Brighton & Hove Albion,1885,1870,Paramount+,1862.5,English Carabao Cup
+TODAY,2026-09-16 03:00 PM EDT,UPCOMING,TV 2,AC Milan,Benfica,1829,1851,"CBSSN, Paramount+",1818.0,UEFA Europa League
+TODAY,2026-09-16 03:00 PM EDT,UPCOMING,Other Screen,Sunderland,AZ Alkmaar,1735,1693,Paramount+,1672.0,UEFA Europa League
+TODAY,2026-09-16 03:00 PM EDT,UPCOMING,Other Screen,Hapoel Be'er,Dinamo Zagreb,1624,1671,Paramount+,1600.5,UEFA Europa League
+TODAY,2026-09-16 03:00 PM EDT,UPCOMING,Other Screen,Anderlecht,Lyon,1662,1787,Paramount+,1599.5,UEFA Europa League
+TODAY,2026-09-16 03:00 PM EDT,UPCOMING,Other Screen,Coventry City,Aston Villa,1686,1884,Paramount+,1587.0,English Carabao Cup
+TODAY,2026-09-16 03:00 PM EDT,UPCOMING,Other Screen,SK Sturm Graz,Stade Rennais,1637,1765,Paramount+,1573.0,UEFA Europa League
+TODAY,2026-09-16 03:00 PM EDT,UPCOMING,Other Screen,Olympiacos,Jagiellonia Bialystok,1713,1616,Paramount+,1567.5,UEFA Europa League
+TODAY,2026-09-16 03:00 PM EDT,UPCOMING,Other Screen,Bayer Leverkusen,NK Celje,1865,1518,Paramount+,1344.5,UEFA Europa League
+TODAY,2026-09-16 03:30 PM EDT,UPCOMING,Other Screen,Levante,Athletic Club,1711,1607,ESPN+,1555.0,Spanish LALIGA
+TODAY,2026-09-16 03:30 PM EDT,UPCOMING,Other Screen,Barcelona,Racing Santander,2019,1695,"ESPN Deportes, ESPN+",1533.0,Spanish LALIGA
+TOMORROW,2026-09-17 12:45 PM EDT,UPCOMING,TV 1,OFI Crete,TSG Hoffenheim,1450,1450,Paramount+,1450.0,UEFA Europa League
+TOMORROW,2026-09-17 12:45 PM EDT,UPCOMING,TV 2,Levski Sofia,RB Salzburg,1450,1646,"CBSSN, Paramount+",1352.0,UEFA Europa League
+TOMORROW,2026-09-17 01:00 PM EDT,UPCOMING,TV 3,Real Betis,Getafe,1450,1699,"ESPN Deportes, ESPN+",1325.5,Spanish LALIGA
+TOMORROW,2026-09-17 02:30 PM EDT,UPCOMING,Other Screen,Manchester City,Norwich City,2031,1621,Paramount+,1416.0,English Carabao Cup
+TOMORROW,2026-09-17 03:00 PM EDT,UPCOMING,TV 1,Real Sociedad,AFC Bournemouth,1768,1859,"CBSSN, Paramount+",1722.5,UEFA Europa League
+TOMORROW,2026-09-17 03:00 PM EDT,UPCOMING,TV 2,Besiktas,Marseille,1693,1775,Paramount+,1652.0,UEFA Europa League
+TOMORROW,2026-09-17 03:00 PM EDT,UPCOMING,TV 3,Celtic,Ferencvaros,1692,1657,Paramount+,1639.5,UEFA Europa League
+TOMORROW,2026-09-17 03:00 PM EDT,UPCOMING,Other Screen,Viktoria Plzen,Union St.-Gilloise,1638,1803,Paramount+,1555.5,UEFA Europa League
+TOMORROW,2026-09-17 03:00 PM EDT,UPCOMING,Other Screen,Lillestrom,Torreense,1450,1449,Paramount+,1448.5,UEFA Europa League
+TOMORROW,2026-09-17 03:00 PM EDT,UPCOMING,Other Screen,Crystal Palace,Lech Poznan,1818,1450,Paramount+,1266.0,UEFA Europa League
+TOMORROW,2026-09-17 03:00 PM EDT,UPCOMING,Other Screen,Juventus,NEC Nijmegen,1833,1450,Paramount+,1258.5,UEFA Europa League
+TOMORROW,2026-09-17 03:30 PM EDT,UPCOMING,Other Screen,Málaga,Villarreal,1677,1788,"ESPN Deportes, ESPN+",1621.5,Spanish LALIGA
