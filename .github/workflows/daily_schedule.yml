@@ -2,7 +2,7 @@ name: Daily 48-Hour Soccer Scheduler
 
 on:
   schedule:
-    - cron: '40 12 * * *'
+    - cron: '5 17 * * *'
   workflow_dispatch: # Allows you to manually trigger it anytime via button click
 
 permissions:
