@@ -33,7 +33,13 @@ OUTPUT_CSV = "tv_assignment_schedule.csv"
 OUTPUT_TXT = "tv_schedule_summary.txt"
 OUTPUT_HTML = "index.html"
 
-HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36",
+    "Accept": "application/json, text/plain, */*",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Referer": "https://www.espn.com/",
+    "Origin": "https://www.espn.com",
+}
 
 LEAGUES = [
     # Continental (UEFA)
@@ -291,20 +297,22 @@ class EloEngine:
 # ==========================================
 # 2. ESPN FIXTURE FETCHER
 # ==========================================
+LOCAL_TIMEZONE = zoneinfo.ZoneInfo("America/New_York")
+
 def get_48h_window():
     now_local = datetime.now(LOCAL_TIMEZONE)
     today_3am = now_local.replace(hour=3, minute=0, second=0, microsecond=0)
     t_start_local = today_3am if now_local >= today_3am else today_3am - timedelta(days=1)
-    t_split_local = t_start_local + timedelta(days=1)
-    t_end_local = t_start_local + timedelta(days=2)
+    t_end_local = t_start_local + timedelta(hours=48)
+    t_split_local = t_start_local + timedelta(hours=24)
 
     return {
         "start_local": t_start_local,
-        "split_local": t_split_local,
         "end_local": t_end_local,
+        "split_local": t_split_local,
         "start_utc": t_start_local.astimezone(timezone.utc),
-        "split_utc": t_split_local.astimezone(timezone.utc),
         "end_utc": t_end_local.astimezone(timezone.utc),
+        "split_utc": t_split_local.astimezone(timezone.utc),
     }
 
 def fetch_espn_fixtures(task):
@@ -312,16 +320,16 @@ def fetch_espn_fixtures(task):
     url = f"https://site.api.espn.com/apis/site/v2/sports/soccer/{league_code}/scoreboard?dates={d_str}"
     events = []
     try:
-        # Direct request per thread avoids shared-session TLS handshake race conditions
         r = requests.get(url, headers=HEADERS, timeout=10)
-        if r.status_code == 200:
-            data = r.json()
-            league_name = data.get("leagues", [{}])[0].get("name", league_code)
-            for event in data.get("events", []):
-                events.append((league_name, event))
+        if r.status_code != 200:
+            print(f"[WARN] {league_code} {d_str} returned HTTP {r.status_code}")
+            return events
+        data = r.json()
+        league_name = data.get("leagues", [{}])[0].get("name", league_code)
+        for event in data.get("events", []):
+            events.append((league_name, event))
     except Exception as e:
-        # Silently skip transient network glitches
-        pass
+        print(f"[ERR] {league_code} {d_str}: {e}")
     return events
 
 
