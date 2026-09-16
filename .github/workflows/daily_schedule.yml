@@ -3,7 +3,7 @@ name: Daily 48-Hour Soccer Scheduler
 on:
   schedule:
     # 07:00 UTC corresponds to 3:00 AM EDT (08:00 UTC during EST)
-    - cron: '0 7 * * *'
+    - cron: '30 16 * * *'
   workflow_dispatch: # Allows you to manually trigger it anytime via button click
 
 permissions:
