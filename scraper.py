@@ -13,6 +13,7 @@ import sys
 import unicodedata
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timedelta, timezone
+from requests.adapters import HTTPAdapter
 import zoneinfo
 import requests
 
@@ -186,6 +187,12 @@ class EloEngine:
         # Build accent-free lookup index
         self.stripped_ratings = {strip_accents(k): v for k, v in self.ratings.items()}
 
+        # Build de-punctuated lookup index (O(1) lookups for hyphens/spaces/apostrophes)
+        self.condensed_ratings = {
+            strip_accents(k).replace("-", "").replace(" ", "").replace("'", ""): v
+            for k, v in self.ratings.items()
+        }
+
     def _load_cache(self):
         if os.path.exists(self.cache_file):
             mtime = datetime.fromtimestamp(os.path.getmtime(self.cache_file), tz=timezone.utc)
@@ -276,10 +283,9 @@ class EloEngine:
             return self.stripped_ratings[normalized]
         # 5. De-punctuated condensation check (catches hyphenation & apostrophe mismatches)
         condensed = clean.replace("-", "").replace(" ", "").replace("'", "")
-        for k, v in self.ratings.items():
-            if k.replace("-", "").replace(" ", "").replace("'", "") == condensed:
-                return v
-            
+        if condensed in self.condensed_ratings:
+            return self.condensed_ratings[condensed]
+
         return DEFAULT_ELO
 
 # ==========================================
@@ -301,12 +307,12 @@ def get_48h_window():
         "end_utc": t_end_local.astimezone(timezone.utc),
     }
 
-def fetch_espn_fixtures(task):
+def fetch_espn_fixtures(task, session):
     league_code, d_str = task
     url = f"https://site.api.espn.com/apis/site/v2/sports/soccer/{league_code}/scoreboard?dates={d_str}"
     events = []
     try:
-        r = requests.get(url, headers=HEADERS, timeout=8)
+        r = session.get(url, headers=HEADERS, timeout=8)
         data = r.json()
         league_name = data.get("leagues", [{}])[0].get("name", league_code)
         for event in data.get("events", []):
@@ -316,21 +322,31 @@ def fetch_espn_fixtures(task):
     return events
 
 def harvest_matches(window, elo_engine):
-    # Compute relevant date keys
+    # Compute relevant date keys using local calendar days (matches ESPN's scoreboard indexing)
     date_keys = set()
-    curr = window["start_utc"]
-    while curr <= window["end_utc"] + timedelta(days=1):
+    curr = window["start_local"].date()
+    end_date = window["end_local"].date()
+    while curr <= end_date:
         date_keys.add(curr.strftime("%Y%m%d"))
         curr += timedelta(days=1)
 
     tasks = [(league, d_str) for league in LEAGUES for d_str in date_keys]
     print(f"Querying {len(LEAGUES)} leagues across ESPN ({len(tasks)} parallel requests)...")
 
+    # Configure session with connection pool matched to thread count
+    session = requests.Session()
+    adapter = HTTPAdapter(pool_connections=MAX_WORKERS, pool_maxsize=MAX_WORKERS)
+    session.mount("https://", adapter)
+    session.mount("http://", adapter)
+
     raw_events = []
     with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
-        futures = [executor.submit(fetch_espn_fixtures, t) for t in tasks]
+        # Pass session to each worker thread
+        futures = [executor.submit(fetch_espn_fixtures, t, session) for t in tasks]
         for f in as_completed(futures):
             raw_events.extend(f.result())
+
+    session.close()
 
     now_utc = datetime.now(timezone.utc)
     seen_ids = set()
@@ -487,12 +503,21 @@ def export_mobile_html(matches, window, filename=OUTPUT_HTML):
     today_lbl = window["start_local"].strftime("%A, %B %d")
     tmrw_lbl = window["split_local"].strftime("%A, %B %d")
 
+    # Generate the local update timestamp
+    updated_at_str = datetime.now(LOCAL_TIMEZONE).strftime("%a, %b %d at %I:%M %p %Z")
+
     html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Soccer Broadcast Board</title>
+  
+  <!-- Mobile & PWA Theme Metadata -->
+  <meta name="theme-color" content="#121212">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
   <style>
     body {{
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -502,7 +527,8 @@ def export_mobile_html(matches, window, filename=OUTPUT_HTML):
       padding: 12px;
     }}
     h1 {{ font-size: 1.25rem; text-align: center; color: #4dabf7; margin-bottom: 2px; }}
-    .subtitle {{ font-size: 0.75rem; text-align: center; color: #888; margin-bottom: 16px; }}
+    .subtitle {{ font-size: 0.75rem; text-align: center; color: #888; margin-bottom: 4px; }}
+    .updated-at {{ font-size: 0.68rem; text-align: center; color: #666; margin-bottom: 16px; }}
     .day-header {{
       background: #1e1e1e;
       border-left: 4px solid #4dabf7;
@@ -551,6 +577,7 @@ def export_mobile_html(matches, window, filename=OUTPUT_HTML):
 <body>
   <h1>Soccer Broadcast Board</h1>
   <div class="subtitle">48-Hour Multi-Screen Schedule (Anchored 3 AM)</div>
+  <div class="updated-at">Updated: {updated_at_str}</div>
 """
     for group, label in [("TODAY", f"TODAY'S MATCHES ({today_lbl})"),
                          ("TOMORROW", f"TOMORROW'S MATCHES ({tmrw_lbl})")]:

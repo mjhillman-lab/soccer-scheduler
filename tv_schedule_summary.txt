@@ -17,24 +17,24 @@
   [FINAL    ] [Other Screen] [Eredivisie]   Ajax Amsterdam vs Willem II                 (1689 vs 1414) Score: 1276.5 [ESPN+]
 
 --- 2026-09-15 02:30 PM EDT ---
-  [LIVE ~83'] [Other Screen] [EFL Cup]      Peterborough United vs Barnsley                  (1454 vs 1463) Score: 1449.5 [Check listings]
+  [FINAL    ] [Other Screen] [EFL Cup]      Peterborough United vs Barnsley                  (1454 vs 1463) Score: 1449.5 [Check listings]
 
 --- 2026-09-15 02:45 PM EDT ---
-  [LIVE ~68'] [TV 1        ] [EFL Cup]      West Ham United vs Fulham                    (1783 vs 1798) Score: 1775.5 [Paramount+]
-  [LIVE ~68'] [Other Screen] [Championship] Middlesbrough vs Millwall                  (1651 vs 1637) Score: 1630.0 [Paramount+]
-  [LIVE ~68'] [Other Screen] [Championship] Bristol City vs Lincoln City              (1584 vs 1610) Score: 1571.0 [Check listings]
-  [LIVE ~68'] [Other Screen] [SPL]          Motherwell vs Aberdeen                  (1495 vs 1379) Score: 1321.0 [Check listings]
-  [LIVE ~68'] [Other Screen] [SPL]          Hibernian vs Kilmarnock                (1487 vs 1372) Score: 1314.5 [Check listings]
-  [LIVE ~68'] [Other Screen] [SPL]          Falkirk vs Heart of Midlothian       (1383 vs 1550) Score: 1299.5 [Check listings]
+  [FINAL    ] [TV 1        ] [EFL Cup]      West Ham United vs Fulham                    (1783 vs 1798) Score: 1775.5 [Paramount+]
+  [FINAL    ] [Other Screen] [Championship] Middlesbrough vs Millwall                  (1651 vs 1637) Score: 1630.0 [Paramount+]
+  [FINAL    ] [Other Screen] [Championship] Bristol City vs Lincoln City              (1584 vs 1610) Score: 1571.0 [Check listings]
+  [FINAL    ] [Other Screen] [SPL]          Motherwell vs Aberdeen                  (1495 vs 1379) Score: 1321.0 [Check listings]
+  [FINAL    ] [Other Screen] [SPL]          Hibernian vs Kilmarnock                (1487 vs 1372) Score: 1314.5 [Check listings]
+  [FINAL    ] [Other Screen] [SPL]          Falkirk vs Heart of Midlothian       (1383 vs 1550) Score: 1299.5 [Check listings]
 
 --- 2026-09-15 03:00 PM EDT ---
-  [LIVE ~53'] [TV 2        ] [EFL Cup]      Liverpool vs Tottenham Hotspur         (1928 vs 1806) Score: 1745.0 [Paramount+]
-  [LIVE ~53'] [Other Screen] [EFL Cup]      Ipswich Town vs Arsenal                   (1700 vs 2042) Score: 1529.0 [Paramount+]
-  [LIVE ~53'] [Other Screen] [Coppa Italia] Fiorentina vs Pisa                      (1717 vs 1544) Score: 1457.5 [Check listings]
-  [LIVE ~53'] [Other Screen] [EFL Cup]      Reading vs Brentford                 (1519 vs 1848) Score: 1354.5 [Check listings]
+  [FINAL    ] [TV 2        ] [EFL Cup]      Liverpool vs Tottenham Hotspur         (1928 vs 1806) Score: 1745.0 [Paramount+]
+  [FINAL    ] [Other Screen] [EFL Cup]      Ipswich Town vs Arsenal                   (1700 vs 2042) Score: 1529.0 [Paramount+]
+  [FINAL    ] [Other Screen] [Coppa Italia] Fiorentina vs Pisa                      (1717 vs 1544) Score: 1457.5 [Check listings]
+  [FINAL    ] [Other Screen] [EFL Cup]      Reading vs Brentford                 (1519 vs 1848) Score: 1354.5 [Check listings]
 
 --- 2026-09-15 03:30 PM EDT ---
-  [LIVE ~38'] [Other Screen] [LaLiga]       Elche vs Real Madrid               (1694 vs 1975) Score: 1553.5 [ESPN2, ESPN Deportes, ESPN+]
+  [FINAL    ] [Other Screen] [LaLiga]       Elche vs Real Madrid               (1694 vs 1975) Score: 1553.5 [ESPN2, ESPN Deportes, ESPN+]
 
 ############################################################################################################
 ###  TOMORROW'S MATCHES (Wednesday, September 16)
