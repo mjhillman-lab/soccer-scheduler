@@ -1,8 +1,8 @@
 day_group,match_time_str,live_status,tv_assignment,home_team,away_team,home_elo,away_elo,channels,sort_value,league
-TODAY,2026-09-16 12:45 PM EDT,UPCOMING,TV 3,Omonia Nicosia,Celta Vigo,1635,1749,"CBSSN, Paramount+",1578.0,UEFA Europa League
-TODAY,2026-09-16 12:45 PM EDT,UPCOMING,Other Screen,Ararat-Armenia,Sparta Prague,1459,1507,Paramount+,1435.0,UEFA Europa League
-TODAY,2026-09-16 01:00 PM EDT,UPCOMING,TV 1,Deportivo,Sevilla,1697,1722,ESPN+,1684.5,Spanish LALIGA
-TODAY,2026-09-16 01:00 PM EDT,UPCOMING,TV 2,Atlético Madrid,Osasuna,1894,1723,"ESPN Deportes, ESPN+",1637.5,Spanish LALIGA
+TODAY,2026-09-16 12:45 PM EDT,LIVE ~32',TV 3,Omonia Nicosia,Celta Vigo,1635,1749,"CBSSN, Paramount+",1578.0,UEFA Europa League
+TODAY,2026-09-16 12:45 PM EDT,LIVE ~32',Other Screen,Ararat-Armenia,Sparta Prague,1459,1507,Paramount+,1435.0,UEFA Europa League
+TODAY,2026-09-16 01:00 PM EDT,LIVE ~17',TV 1,Deportivo,Sevilla,1697,1722,ESPN+,1684.5,Spanish LALIGA
+TODAY,2026-09-16 01:00 PM EDT,LIVE ~17',TV 2,Atlético Madrid,Osasuna,1894,1723,"ESPN Deportes, ESPN+",1637.5,Spanish LALIGA
 TODAY,2026-09-16 02:45 PM EDT,UPCOMING,TV 3,Everton,Wolverhampton Wanderers,1820,1725,Paramount+,1677.5,English Carabao Cup
 TODAY,2026-09-16 02:45 PM EDT,UPCOMING,Other Screen,Fleetwood Town,Sheffield United,1410,1623,Check listings,1303.5,English Carabao Cup
 TODAY,2026-09-16 03:00 PM EDT,UPCOMING,TV 1,Manchester United,Brighton & Hove Albion,1885,1870,Paramount+,1862.5,English Carabao Cup

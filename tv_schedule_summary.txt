@@ -7,12 +7,12 @@
 ############################################################################################################
 
 --- 2026-09-16 12:45 PM EDT ---
-  [UPCOMING ] [TV 3        ] [UEL]          Omonia Nicosia vs Celta Vigo                (1635 vs 1749) Score: 1578.0 [CBSSN, Paramount+]
-  [UPCOMING ] [Other Screen] [UEL]          Ararat-Armenia vs Sparta Prague             (1459 vs 1507) Score: 1435.0 [Paramount+]
+  [LIVE ~32'] [TV 3        ] [UEL]          Omonia Nicosia vs Celta Vigo                (1635 vs 1749) Score: 1578.0 [CBSSN, Paramount+]
+  [LIVE ~32'] [Other Screen] [UEL]          Ararat-Armenia vs Sparta Prague             (1459 vs 1507) Score: 1435.0 [Paramount+]
 
 --- 2026-09-16 01:00 PM EDT ---
-  [UPCOMING ] [TV 1        ] [LaLiga]       Deportivo vs Sevilla                   (1697 vs 1722) Score: 1684.5 [ESPN+]
-  [UPCOMING ] [TV 2        ] [LaLiga]       Atlético Madrid vs Osasuna                   (1894 vs 1723) Score: 1637.5 [ESPN Deportes, ESPN+]
+  [LIVE ~17'] [TV 1        ] [LaLiga]       Deportivo vs Sevilla                   (1697 vs 1722) Score: 1684.5 [ESPN+]
+  [LIVE ~17'] [TV 2        ] [LaLiga]       Atlético Madrid vs Osasuna                   (1894 vs 1723) Score: 1637.5 [ESPN Deportes, ESPN+]
 
 --- 2026-09-16 02:45 PM EDT ---
   [UPCOMING ] [TV 3        ] [EFL Cup]      Everton vs Wolverhampton Wanderers   (1820 vs 1725) Score: 1677.5 [Paramount+]
