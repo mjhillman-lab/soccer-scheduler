@@ -126,9 +126,10 @@ NAME_ALIASES = {
     "fc cologne": "köln",
     "cologne": "köln",
     "bayern munich": "bayern münchen",
-    "bayern munchen": "bayern münchen",
-    "bayern münchen": "bayern münchen",
     "fc bayern munich": "bayern münchen",
+    "bayern munchen": "bayern münchen",
+    "fc bayern munchen": "bayern münchen",
+    "bayern": "bayern münchen",
     "bayer leverkusen": "leverkusen",
     "tsg hoffenheim": "hoffenheim",
     "1899 hoffenheim": "hoffenheim",
@@ -195,9 +196,9 @@ NAME_ALIASES = {
     "lillestrøm": "lillestrøm",
     "lillestrom sk": "lillestrøm",
     "lillestrøm sk": "lillestrøm",
-    "lech poznan": "poznan",
-    "lech": "poznan",
-    "kks lech poznan": "poznan",
+    "lech poznan": "lech",
+    "lech": "lech",
+    "kks lech poznan": "lech",
     "jagiellonia bialystok": "jagiellonia",
     "sparta prague": "sparta",
     "sk sturm graz": "sturm graz",
@@ -241,18 +242,21 @@ class EloEngine:
         self._load_or_fetch()
 
     def _load_or_fetch(self):
-        cached = self._load_cache()
-        if cached:
-            self.ratings = cached
+        # 1. Try fetching fresh ClubElo CSV
+        self.ratings = self._fetch_clubelo_csv()
+        
+        # 2. If fetch succeeded, update disk cache
+        if self.ratings and len(self.ratings) > 100:
+            self._save_cache(self.ratings)
         else:
-            self.ratings = self._fetch_clubelo_csv()
-            if self.ratings:
-                self._save_cache(self.ratings)
+            # 3. If fetch failed (502, 403, offline), LOAD DISK CACHE REGARDLESS OF AGE
+            print("Notice: Online fetch yielded no data. Loading disk cache fallback...")
+            self.ratings = self._load_cache()
 
         # Build accent-free lookup index
         self.stripped_ratings = {strip_accents(k): v for k, v in self.ratings.items()}
 
-        # Build de-punctuated lookup index (O(1) lookups for hyphens/spaces/apostrophes)
+        # Build de-punctuated lookup index
         self.condensed_ratings = {
             strip_accents(k).replace("-", "").replace(" ", "").replace("'", ""): v
             for k, v in self.ratings.items()
@@ -260,17 +264,15 @@ class EloEngine:
 
     def _load_cache(self):
         if os.path.exists(self.cache_file):
-            mtime = datetime.fromtimestamp(os.path.getmtime(self.cache_file), tz=timezone.utc)
-            if datetime.now(timezone.utc) - mtime < timedelta(hours=self.expiry_hours):
-                try:
-                    with open(self.cache_file, "r", encoding="utf-8") as f:
-                        data = json.load(f)
-                        if len(data) > 100:
-                            print(f"Loaded {len(data)} club ratings from local cache.")
-                            return data
-                except Exception:
-                    pass
-        return None
+            try:
+                with open(self.cache_file, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+                    if len(data) > 100:
+                        print(f"Loaded {len(data)} club ratings from local cache.")
+                        return data
+            except Exception as e:
+                print(f"Failed to read cache file: {e}")
+        return {}
 
     def _save_cache(self, data):
         try:
@@ -285,11 +287,12 @@ class EloEngine:
         url = f"http://api.clubelo.com/{today_str}"
         print(f"Fetching ClubElo official daily CSV ({url})...")
         ratings = {}
+        clubelo_headers = {"User-Agent": "Mozilla/5.0"}
         try:
-            r = requests.get(url, headers=HEADERS, timeout=12)
+            r = requests.get(url, headers=clubelo_headers, timeout=12)
             if r.status_code != 200:
                 # Fallback to general endpoint if today's date file is building
-                r = requests.get("http://api.clubelo.com/today", headers=HEADERS, timeout=12)
+                r = requests.get("http://api.clubelo.com/today", headers=clubelo_headers, timeout=12)
 
             if r.status_code == 200:
                 reader = csv.DictReader(io.StringIO(r.text.strip()))
@@ -323,33 +326,43 @@ class EloEngine:
     def get(self, team_name: str) -> int:
         norm = team_name.lower().strip()
 
-        # 1. Explicit Alias Map
-        aliased = NAME_ALIASES.get(norm, norm)
+        # 1. Check explicit alias mapping
+        aliased = NAME_ALIASES.get(norm, norm).lower().strip()
         if aliased in self.ratings:
             return self.ratings[aliased]
 
-        # 2. Direct Match
+        # 2. Direct match
         if norm in self.ratings:
             return self.ratings[norm]
 
-        # 3. Accent-stripped Match
-        clean = strip_accents(aliased)
-        if clean in self.stripped_ratings:
-            return self.stripped_ratings[clean]
+        # 3. Accent-stripped match
+        clean_alias = strip_accents(aliased)
+        if clean_alias in self.stripped_ratings:
+            return self.stripped_ratings[clean_alias]
 
-        # 4. Standardized Normalization (strip common prefixes and suffixes)
+        clean_norm = strip_accents(norm)
+        if clean_norm in self.stripped_ratings:
+            return self.stripped_ratings[clean_norm]
+
+        # 4. Standardized noise word stripping
         noise_words = {
-            "fc", "cf", "sc", "afc", "cd", "sk", "nk",
+            "fc", "cf", "sc", "afc", "cd", "sk", "nk", "vfl", "sv", "spvgg",
             "city", "town", "united", "wanderers", "rovers", "albion", "athletic"
         }
-        tokens = [t for t in clean.replace("-", " ").split() if t not in noise_words]
+        tokens = [t for t in clean_alias.replace("-", " ").split() if t not in noise_words]
         normalized = " ".join(tokens)
         if normalized in self.stripped_ratings:
             return self.stripped_ratings[normalized]
-        # 5. De-punctuated condensation check (catches hyphenation & apostrophe mismatches)
-        condensed = clean.replace("-", "").replace(" ", "").replace("'", "")
+
+        # 5. Condensation check
+        condensed = clean_alias.replace("-", "").replace(" ", "").replace("'", "")
         if condensed in self.condensed_ratings:
             return self.condensed_ratings[condensed]
+
+        # 6. Automatic substring match against cache keys
+        for key, val in self.ratings.items():
+            if len(key) >= 5 and (key in norm or key in clean_norm):
+                return val
 
         return DEFAULT_ELO
 
