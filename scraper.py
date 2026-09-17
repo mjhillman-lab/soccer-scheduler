@@ -175,6 +175,43 @@ NAME_ALIASES = {
     "nec nijmegen": "Nijmegen",
     "n.e.c.": "Nijmegen",
     "nec": "Nijmegen",
+
+    # Germany
+    "bayern munich": "Bayern München",
+    "bayern munchen": "Bayern München",
+    "fc bayern munich": "Bayern München",
+    "1. fc union berlin": "Union Berlin",
+    "union berlin": "Union Berlin",
+    "spvgg greuther fürth": "Fürth",
+    "spvgg greuther furth": "Fürth",
+    "greuther fürth": "Fürth",
+    "greuther furth": "Fürth",
+    "1. fc magdeburg": "Magdeburg",
+    "magdeburg": "Magdeburg",
+    "vfl wolfsburg": "Wolfsburg",
+    "sv darmstadt 98": "Darmstadt",
+    "darmstadt 98": "Darmstadt",
+    "darmstadt": "Darmstadt",
+
+    # Belgium & Netherlands
+    "standard liege": "Standard",
+    "standard de liege": "Standard",
+    "kaa gent": "Gent",
+    "fc groningen": "Groningen",
+
+    # France
+    "as monaco": "Monaco",
+    "stade de reims": "Reims",
+    "stade reims": "Reims",
+    "clermont foot": "Clermont",
+    "clermont foot 63": "Clermont",
+    "stade laval": "Laval",
+    "stade lavallois": "Laval",
+    "rodez aveyron": "Rodez",
+    "rodez af": "Rodez",
+    "as nancy lorraine": "Nancy",
+    "as nancy-lorraine": "Nancy",
+    "dijon fco": "Dijon",
 }
 
 # ==========================================
