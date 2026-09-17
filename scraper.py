@@ -155,6 +155,23 @@ NAME_ALIASES = {
     "nk celje": "celje",
     "omonia nicosia": "omonia",
     "hapoel be'er": "beer sheva",
+
+    # New additions for Greek, German, Bulgarian, Spanish, Norwegian, Polish, Dutch clubs
+    "ofi crete": "OFI",
+    "ofi": "OFI",
+    "tsg hoffenheim": "Hoffenheim",
+    "1899 hoffenheim": "Hoffenheim",
+    "levski sofia": "Levski",
+    "pfc levski sofia": "Levski",
+    "real betis": "Betis",
+    "real betis balompie": "Betis",
+    "lillestrom": "Lillestrom",
+    "lillestrøm": "Lillestrom",
+    "lech poznan": "Poznan",
+    "kks lech poznan": "Poznan",
+    "nec nijmegen": "Nijmegen",
+    "n.e.c.": "Nijmegen",
+    "nec": "Nijmegen",
 }
 
 # ==========================================
