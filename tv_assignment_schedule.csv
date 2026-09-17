@@ -1,7 +1,7 @@
 day_group,match_time_str,live_status,tv_assignment,home_team,away_team,home_elo,away_elo,channels,sort_value,league
-TODAY,2026-09-17 12:45 PM EDT,LIVE ~1',TV 1,Levski Sofia,RB Salzburg,1450,1450,"CBSSN, Paramount+",1450.0,UEFA Europa League
-TODAY,2026-09-17 12:45 PM EDT,LIVE ~1',TV 2,OFI Crete,TSG Hoffenheim,1450,1450,Paramount+,1450.0,UEFA Europa League
-TODAY,2026-09-17 01:00 PM EDT,UPCOMING,TV 3,Real Betis,Getafe,1450,1450,"ESPN Deportes, ESPN+",1450.0,Spanish LALIGA
+TODAY,2026-09-17 12:45 PM EDT,LIVE ~18',TV 1,Levski Sofia,RB Salzburg,1450,1450,"CBSSN, Paramount+",1450.0,UEFA Europa League
+TODAY,2026-09-17 12:45 PM EDT,LIVE ~18',TV 2,OFI Crete,TSG Hoffenheim,1450,1450,Paramount+,1450.0,UEFA Europa League
+TODAY,2026-09-17 01:00 PM EDT,LIVE ~3',TV 3,Real Betis,Getafe,1450,1450,"ESPN Deportes, ESPN+",1450.0,Spanish LALIGA
 TODAY,2026-09-17 02:30 PM EDT,UPCOMING,Other Screen,Manchester City,Norwich City,1450,1450,Paramount+,1450.0,English Carabao Cup
 TODAY,2026-09-17 03:00 PM EDT,UPCOMING,TV 1,Besiktas,Marseille,1450,1450,Paramount+,1450.0,UEFA Europa League
 TODAY,2026-09-17 03:00 PM EDT,UPCOMING,TV 2,Celtic,Ferencvaros,1450,1450,Paramount+,1450.0,UEFA Europa League
@@ -28,5 +28,5 @@ TOMORROW,2026-09-18 02:45 PM EDT,UPCOMING,Other Screen,Monza,Sassuolo,1450,1450,
 TOMORROW,2026-09-18 02:45 PM EDT,UPCOMING,Other Screen,AS Monaco,Lens,1450,1450,Check listings,1450.0,French Ligue 1
 TOMORROW,2026-09-18 02:45 PM EDT,UPCOMING,Other Screen,KAA Gent,Standard Liege,1450,1450,Check listings,1450.0,Belgian Pro League
 TOMORROW,2026-09-18 03:00 PM EDT,UPCOMING,TV 1,Brentford,Chelsea,1450,1450,USA Net,1450.0,English Premier League
-TOMORROW,2026-09-18 03:00 PM EDT,UPCOMING,TV 2,Bristol City,Watford,1450,1450,Paramount+,1450.0,English League Championship
-TOMORROW,2026-09-18 03:00 PM EDT,UPCOMING,TV 3,Espanyol,Elche,1450,1450,"ESPN Deportes, ESPN+",1450.0,Spanish LALIGA
+TOMORROW,2026-09-18 03:00 PM EDT,UPCOMING,TV 2,Espanyol,Elche,1450,1450,"ESPN Deportes, ESPN+",1450.0,Spanish LALIGA
+TOMORROW,2026-09-18 03:00 PM EDT,UPCOMING,TV 3,Bristol City,Watford,1450,1450,Paramount+,1450.0,English League Championship

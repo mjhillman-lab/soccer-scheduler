@@ -7,11 +7,11 @@
 ############################################################################################################
 
 --- 2026-09-17 12:45 PM EDT ---
-  [LIVE ~1' ] [TV 1        ] [UEL]          Levski Sofia vs RB Salzburg               (1450 vs 1450) Score: 1450.0 [CBSSN, Paramount+]
-  [LIVE ~1' ] [TV 2        ] [UEL]          OFI Crete vs TSG Hoffenheim            (1450 vs 1450) Score: 1450.0 [Paramount+]
+  [LIVE ~18'] [TV 1        ] [UEL]          Levski Sofia vs RB Salzburg               (1450 vs 1450) Score: 1450.0 [CBSSN, Paramount+]
+  [LIVE ~18'] [TV 2        ] [UEL]          OFI Crete vs TSG Hoffenheim            (1450 vs 1450) Score: 1450.0 [Paramount+]
 
 --- 2026-09-17 01:00 PM EDT ---
-  [UPCOMING ] [TV 3        ] [LaLiga]       Real Betis vs Getafe                    (1450 vs 1450) Score: 1450.0 [ESPN Deportes, ESPN+]
+  [LIVE ~3' ] [TV 3        ] [LaLiga]       Real Betis vs Getafe                    (1450 vs 1450) Score: 1450.0 [ESPN Deportes, ESPN+]
 
 --- 2026-09-17 02:30 PM EDT ---
   [UPCOMING ] [Other Screen] [EFL Cup]      Manchester City vs Norwich City              (1450 vs 1450) Score: 1450.0 [Paramount+]
@@ -60,5 +60,5 @@
 
 --- 2026-09-18 03:00 PM EDT ---
   [UPCOMING ] [TV 1        ] [EPL]          Brentford vs Chelsea                   (1450 vs 1450) Score: 1450.0 [USA Net]
-  [UPCOMING ] [TV 2        ] [Championship] Bristol City vs Watford                   (1450 vs 1450) Score: 1450.0 [Paramount+]
-  [UPCOMING ] [TV 3        ] [LaLiga]       Espanyol vs Elche                     (1450 vs 1450) Score: 1450.0 [ESPN Deportes, ESPN+]
+  [UPCOMING ] [TV 2        ] [LaLiga]       Espanyol vs Elche                     (1450 vs 1450) Score: 1450.0 [ESPN Deportes, ESPN+]
+  [UPCOMING ] [TV 3        ] [Championship] Bristol City vs Watford                   (1450 vs 1450) Score: 1450.0 [Paramount+]
