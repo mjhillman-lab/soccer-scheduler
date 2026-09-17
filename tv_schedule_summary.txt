@@ -7,11 +7,11 @@
 ############################################################################################################
 
 --- 2026-09-17 12:45 PM EDT ---
-  [LIVE ~36'] [TV 2        ] [UEL]          Levski Sofia vs RB Salzburg               (1583 vs 1646) Score: 1551.5 [CBSSN, Paramount+]
-  [LIVE ~36'] [TV 3        ] [UEL]          OFI Crete vs TSG Hoffenheim            (1472 vs 1754) Score: 1331.0 [Paramount+]
+  [LIVE ~81'] [TV 2        ] [UEL]          Levski Sofia vs RB Salzburg               (1583 vs 1646) Score: 1551.5 [CBSSN, Paramount+]
+  [LIVE ~81'] [TV 3        ] [UEL]          OFI Crete vs TSG Hoffenheim            (1472 vs 1754) Score: 1331.0 [Paramount+]
 
 --- 2026-09-17 01:00 PM EDT ---
-  [LIVE ~21'] [TV 1        ] [LaLiga]       Real Betis vs Getafe                    (1816 vs 1699) Score: 1640.5 [ESPN Deportes, ESPN+]
+  [LIVE ~66'] [TV 1        ] [LaLiga]       Real Betis vs Getafe                    (1816 vs 1699) Score: 1640.5 [ESPN Deportes, ESPN+]
 
 --- 2026-09-17 02:30 PM EDT ---
   [UPCOMING ] [Other Screen] [EFL Cup]      Manchester City vs Norwich City              (2031 vs 1621) Score: 1416.0 [Paramount+]
@@ -20,10 +20,10 @@
   [UPCOMING ] [TV 1        ] [UEL]          Real Sociedad vs AFC Bournemouth           (1768 vs 1859) Score: 1722.5 [CBSSN, Paramount+]
   [UPCOMING ] [TV 2        ] [UEL]          Besiktas vs Marseille                 (1693 vs 1775) Score: 1652.0 [Paramount+]
   [UPCOMING ] [TV 3        ] [UEL]          Celtic vs Ferencvaros               (1692 vs 1657) Score: 1639.5 [Paramount+]
+  [UPCOMING ] [Other Screen] [UEL]          Crystal Palace vs Lech Poznan               (1818 vs 1675) Score: 1603.5 [Paramount+]
   [UPCOMING ] [Other Screen] [UEL]          Viktoria Plzen vs Union St.-Gilloise        (1638 vs 1803) Score: 1555.5 [Paramount+]
   [UPCOMING ] [Other Screen] [UEL]          Juventus vs NEC Nijmegen              (1833 vs 1591) Score: 1470.0 [Paramount+]
   [UPCOMING ] [Other Screen] [UEL]          Lillestrom vs Torreense                 (1530 vs 1449) Score: 1408.5 [Paramount+]
-  [UPCOMING ] [Other Screen] [UEL]          Crystal Palace vs Lech Poznan               (1818 vs 1450) Score: 1266.0 [Paramount+]
 
 --- 2026-09-17 03:30 PM EDT ---
   [UPCOMING ] [Other Screen] [LaLiga]       Málaga vs Villarreal                (1677 vs 1788) Score: 1621.5 [ESPN Deportes, ESPN+]
@@ -46,7 +46,7 @@
   [UPCOMING ] [Other Screen] [Ligue 2]      Stade Laval vs Sochaux                   (1484 vs 1517) Score: 1467.5 [Check listings]
   [UPCOMING ] [Other Screen] [Ligue 2]      Pau vs Dunkerque                 (1488 vs 1539) Score: 1462.5 [Check listings]
   [UPCOMING ] [Other Screen] [Ligue 2]      Rodez Aveyron vs AS Nancy Lorraine         (1573 vs 1491) Score: 1450.0 [Check listings]
-  [UPCOMING ] [Other Screen] [Eredivisie]   FC Groningen vs PEC Zwolle                (1520 vs 1450) Score: 1415.0 [Check listings]
+  [UPCOMING ] [Other Screen] [Eredivisie]   FC Groningen vs PEC Zwolle                (1520 vs 1472) Score: 1448.0 [Check listings]
 
 --- 2026-09-18 02:30 PM EDT ---
   [UPCOMING ] [Other Screen] [LALIGA 2]     Albacete vs Córdoba                   (1613 vs 1594) Score: 1584.5 [Check listings]
