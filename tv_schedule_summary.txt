@@ -51,10 +51,10 @@
   [UPCOMING ] [TV 1        ] [UEL]          Real Sociedad vs AFC Bournemouth           (1768 vs 1859) Score: 1722.5 [CBSSN, Paramount+]
   [UPCOMING ] [TV 2        ] [UEL]          Besiktas vs Marseille                 (1693 vs 1775) Score: 1652.0 [Paramount+]
   [UPCOMING ] [TV 3        ] [UEL]          Celtic vs Ferencvaros               (1692 vs 1657) Score: 1639.5 [Paramount+]
+  [UPCOMING ] [Other Screen] [UEL]          Crystal Palace vs Lech Poznan               (1818 vs 1675) Score: 1603.5 [Paramount+]
   [UPCOMING ] [Other Screen] [UEL]          Viktoria Plzen vs Union St.-Gilloise        (1638 vs 1803) Score: 1555.5 [Paramount+]
   [UPCOMING ] [Other Screen] [UEL]          Juventus vs NEC Nijmegen              (1833 vs 1591) Score: 1470.0 [Paramount+]
   [UPCOMING ] [Other Screen] [UEL]          Lillestrom vs Torreense                 (1530 vs 1449) Score: 1408.5 [Paramount+]
-  [UPCOMING ] [Other Screen] [UEL]          Crystal Palace vs Lech Poznan               (1818 vs 1450) Score: 1266.0 [Paramount+]
 
 --- 2026-09-17 03:30 PM EDT ---
   [UPCOMING ] [Other Screen] [LaLiga]       Málaga vs Villarreal                (1677 vs 1788) Score: 1621.5 [ESPN Deportes, ESPN+]
