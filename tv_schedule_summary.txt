@@ -11,26 +11,19 @@
   [UPCOMING ] [TV 2                    ] [2. Bundesliga] SpVgg Greuther Fürth vs 1. FC Magdeburg           (1527 vs 1581) Score: 1500.0 [Check listings]
 
 --- 2026-09-18 01:00 PM EDT ---
-  [UPCOMING ] [TV 3                    ] [Süper Lig]    Kasimpasa vs Konyaspor                 (1567 vs 1533) Score: 1516.0 [Check listings]
+  [UPCOMING ] [TV 3                    ] [Süper Lig]    Kasimpasa vs Konyaspor                 (1567 vs 1533) Score: 1516.0 [beIN SPORTS]
 
 --- 2026-09-18 02:00 PM EDT ---
-  [UPCOMING ] [Other Screen            ] [Ligue 2]      Stade de Reims vs Montpellier               (1636 vs 1578) Score: 1549.0 [Check listings]
-  [UPCOMING ] [Other Screen            ] [Ligue 2]      Annecy vs Dijon FCO                 (1563 vs 1538) Score: 1525.5 [Check listings]
-  [UPCOMING ] [Other Screen            ] [Ligue 2]      Grenoble vs Clermont Foot             (1512 vs 1498) Score: 1491.0 [Check listings]
-  [UPCOMING ] [Other Screen            ] [Ligue 2]      Stade Laval vs Sochaux                   (1484 vs 1517) Score: 1467.5 [Check listings]
-  [UPCOMING ] [Other Screen            ] [Ligue 2]      Pau vs Dunkerque                 (1488 vs 1539) Score: 1462.5 [Check listings]
-  [UPCOMING ] [Other Screen            ] [Ligue 2]      Rodez Aveyron vs AS Nancy Lorraine         (1573 vs 1491) Score: 1450.0 [Check listings]
-  [UPCOMING ] [Other Screen            ] [Eredivisie]   FC Groningen vs PEC Zwolle                (1520 vs 1472) Score: 1448.0 [Check listings]
+  [UPCOMING ] [Other Screen            ] [Eredivisie]   FC Groningen vs PEC Zwolle                (1520 vs 1472) Score: 1448.0 [ESPN+]
 
 --- 2026-09-18 02:30 PM EDT ---
   [UPCOMING ] [TV 1 (Look-in) [02:30 PM-03:00 PM (~30m)]] [LALIGA 2]     Albacete vs Córdoba                   (1613 vs 1594) Score: 1584.5 [Check listings]
-  [UPCOMING ] [Other Screen            ] [Serie B]      Juve Stabia vs Cesena                    (1532 vs 1522) Score: 1517.0 [Check listings]
   [UPCOMING ] [Other Screen            ] [Bundesliga]   Bayern Munich vs 1. FC Union Berlin        (2046 vs 1680) Score: 1497.0 [Fandango]
 
 --- 2026-09-18 02:45 PM EDT ---
-  [UPCOMING ] [TV 2                    ] [Ligue 1]      AS Monaco vs Lens                      (1798 vs 1817) Score: 1788.5 [Check listings]
+  [UPCOMING ] [TV 2                    ] [Ligue 1]      AS Monaco vs Lens                      (1798 vs 1817) Score: 1788.5 [beIN SPORTS]
   [UPCOMING ] [Other Screen            ] [Serie A]      Monza vs Sassuolo                  (1636 vs 1703) Score: 1602.5 [Paramount+]
-  [UPCOMING ] [Other Screen            ] [Belgian Pro]  KAA Gent vs Standard Liege            (1628 vs 1588) Score: 1568.0 [Check listings]
+  [UPCOMING ] [Other Screen            ] [Belgian Pro]  KAA Gent vs Standard Liege            (1628 vs 1588) Score: 1568.0 [DAZN]
 
 --- 2026-09-18 03:00 PM EDT ---
   [UPCOMING ] [TV 1                    ] [EPL]          Brentford vs Chelsea                   (1848 vs 1888) Score: 1828.0 [USA Net]
@@ -55,15 +48,10 @@
 --- 2026-09-19 08:00 AM EDT ---
   [UPCOMING ] [TV 3                    ] [LaLiga]       Osasuna vs Rayo Vallecano            (1723 vs 1740) Score: 1714.5 [ESPN Deportes, ESPN+]
   [UPCOMING ] [TV 1 (Look-in) [09:25 AM-09:55 AM (~30m)]] [LALIGA 2]     Real Sociedad II vs Mallorca                  (1768 vs 1715) Score: 1688.5 [ESPN+]
-  [UPCOMING ] [Other Screen            ] [Ligue 2]      Guingamp vs Red Star FC 93            (1530 vs 1572) Score: 1509.0 [Check listings]
-  [UPCOMING ] [Other Screen            ] [Ligue 2]      Boulogne vs Nantes                    (1484 vs 1571) Score: 1440.5 [Check listings]
 
 --- 2026-09-19 09:00 AM EDT ---
   [UPCOMING ] [Other Screen            ] [Serie A]      Udinese vs Cagliari                  (1704 vs 1671) Score: 1654.5 [Paramount+]
   [UPCOMING ] [Other Screen            ] [Serie A]      Bologna vs Torino                    (1755 vs 1680) Score: 1642.5 [Paramount+]
-  [UPCOMING ] [Other Screen            ] [Serie B]      Cremonese vs Virtus Entella            (1610 vs 1510) Score: 1460.0 [Check listings]
-  [UPCOMING ] [Other Screen            ] [Serie B]      Carrarese vs Benevento                 (1488 vs 1546) Score: 1459.0 [Check listings]
-  [UPCOMING ] [Other Screen            ] [Serie B]      Palermo vs Padova                    (1644 vs 1516) Score: 1452.0 [Check listings]
 
 --- 2026-09-19 09:30 AM EDT ---
   [UPCOMING ] [TV 2                    ] [Bundesliga]   Eintracht Frankfurt vs SC Freiburg               (1741 vs 1792) Score: 1715.5 [Fandango]
@@ -77,36 +65,31 @@
   [UPCOMING ] [Other Screen            ] [Championship] Birmingham City vs Middlesbrough             (1622 vs 1651) Score: 1607.5 [Paramount+]
   [UPCOMING ] [Other Screen            ] [Championship] Lincoln City vs Swansea City              (1610 vs 1608) Score: 1607.0 [Check listings]
   [UPCOMING ] [Other Screen            ] [Championship] Wrexham vs Southampton               (1611 vs 1705) Score: 1564.0 [Paramount+]
-  [UPCOMING ] [Other Screen            ] [Süper Lig]    Çorum FK vs Alanyaspor                (1582 vs 1569) Score: 1562.5 [Check listings]
+  [UPCOMING ] [Other Screen            ] [Süper Lig]    Çorum FK vs Alanyaspor                (1582 vs 1569) Score: 1562.5 [beIN SPORTS]
   [UPCOMING ] [Other Screen            ] [Championship] Portsmouth vs Blackburn Rovers          (1555 vs 1576) Score: 1544.5 [Check listings]
-  [UPCOMING ] [Other Screen            ] [Süper Lig]    Kocaelispor vs Gaziantep FK              (1576 vs 1545) Score: 1529.5 [Check listings]
+  [UPCOMING ] [Other Screen            ] [Süper Lig]    Kocaelispor vs Gaziantep FK              (1576 vs 1545) Score: 1529.5 [beIN SPORTS]
   [UPCOMING ] [Other Screen            ] [Championship] Burnley vs Derby County              (1647 vs 1567) Score: 1527.0 [Paramount+]
   [UPCOMING ] [Other Screen            ] [EPL]          Newcastle United vs Hull City                 (1876 vs 1636) Score: 1516.0 [Peacock]
   [UPCOMING ] [Other Screen            ] [Championship] Queens Park Rangers vs Preston North End         (1613 vs 1524) Score: 1479.5 [Check listings]
-  [UPCOMING ] [Other Screen            ] [Belgian Pro]  OH Leuven vs RAAL La Louvière          (1504 vs 1450) Score: 1423.0 [Check listings]
-  [UPCOMING ] [Other Screen            ] [SPL]          St Mirren vs Dundee United             (1390 vs 1406) Score: 1382.0 [Check listings]
-  [UPCOMING ] [Other Screen            ] [SPL]          St Johnstone vs Falkirk                   (1369 vs 1383) Score: 1362.0 [Check listings]
-  [UPCOMING ] [Other Screen            ] [SPL]          Dundee vs Motherwell                (1382 vs 1495) Score: 1325.5 [Check listings]
-  [UPCOMING ] [Other Screen            ] [SPL]          Hibernian vs Aberdeen                  (1487 vs 1379) Score: 1325.0 [Check listings]
+  [UPCOMING ] [Other Screen            ] [Belgian Pro]  OH Leuven vs RAAL La Louvière          (1504 vs 1450) Score: 1423.0 [DAZN]
 
 --- 2026-09-19 10:15 AM EDT ---
   [UPCOMING ] [Other Screen            ] [LALIGA 2]     FC Andorra vs Sporting Gijón            (1593 vs 1621) Score: 1579.0 [Check listings]
   [UPCOMING ] [Other Screen            ] [LaLiga]       Athletic Club vs Alavés                    (1607 vs 1728) Score: 1546.5 [ESPN Deportes, ESPN+]
 
 --- 2026-09-19 10:30 AM EDT ---
-  [UPCOMING ] [TV 1 (Look-in) [11:55 AM-12:25 PM (~30m)]] [Liga Portugal] C.D. Nacional vs FC Famalicao              (1642 vs 1602) Score: 1582.0 [Check listings]
-  [UPCOMING ] [TV 2 (Look-in) [11:55 AM-12:25 PM (~30m)]] [Liga Portugal] Gil Vicente vs Maritimo                  (1564 vs 1488) Score: 1450.0 [Check listings]
-  [UPCOMING ] [Other Screen            ] [Eredivisie]   ADO Den Haag vs SC Cambuur                (1437 vs 1406) Score: 1390.5 [Check listings]
+  [UPCOMING ] [TV 1 (Look-in) [11:55 AM-12:25 PM (~30m)]] [Liga Portugal] C.D. Nacional vs FC Famalicao              (1642 vs 1602) Score: 1582.0 [DAZN]
+  [UPCOMING ] [TV 2 (Look-in) [11:55 AM-12:25 PM (~30m)]] [Liga Portugal] Gil Vicente vs Maritimo                  (1564 vs 1488) Score: 1450.0 [DAZN]
+  [UPCOMING ] [Other Screen            ] [Eredivisie]   ADO Den Haag vs SC Cambuur                (1437 vs 1406) Score: 1390.5 [ESPN+]
 
 --- 2026-09-19 11:15 AM EDT ---
-  [UPCOMING ] [TV 3                    ] [Ligue 1]      Paris FC vs Strasbourg                (1699 vs 1748) Score: 1674.5 [Check listings]
-  [UPCOMING ] [Other Screen            ] [Serie B]      Sampdoria vs Catanzaro                 (1492 vs 1579) Score: 1448.5 [Check listings]
+  [UPCOMING ] [TV 3                    ] [Ligue 1]      Paris FC vs Strasbourg                (1699 vs 1748) Score: 1674.5 [beIN SPORTS]
 
 --- 2026-09-19 12:00 PM EDT ---
   [UPCOMING ] [Other Screen            ] [Serie A]      AS Roma vs Internazionale            (1450 vs 1947) Score: 1201.5 [Paramount+]
 
 --- 2026-09-19 12:15 PM EDT ---
-  [UPCOMING ] [Other Screen            ] [Belgian Pro]  Royal Charleroi SC vs Cercle Brugge KSV         (1623 vs 1804) Score: 1532.5 [Check listings]
+  [UPCOMING ] [Other Screen            ] [Belgian Pro]  Royal Charleroi SC vs Cercle Brugge KSV         (1623 vs 1804) Score: 1532.5 [DAZN]
 
 --- 2026-09-19 12:30 PM EDT ---
   [UPCOMING ] [TV 1                    ] [Bundesliga]   VfB Stuttgart vs Borussia Dortmund         (1825 vs 1897) Score: 1789.0 [Fandango]
@@ -116,37 +99,32 @@
   [UPCOMING ] [Other Screen            ] [LALIGA 2]     Eldense vs Eibar                     (1591 vs 1681) Score: 1546.0 [Check listings]
 
 --- 2026-09-19 12:45 PM EDT ---
-  [UPCOMING ] [Other Screen            ] [Eredivisie]   Sparta Rotterdam vs Heerenveen                (1507 vs 1542) Score: 1489.5 [Check listings]
-  [UPCOMING ] [Other Screen            ] [SPL]          Kilmarnock vs Heart of Midlothian       (1372 vs 1550) Score: 1283.0 [Check listings]
+  [UPCOMING ] [Other Screen            ] [Eredivisie]   Sparta Rotterdam vs Heerenveen                (1507 vs 1542) Score: 1489.5 [ESPN+]
 
 --- 2026-09-19 01:00 PM EDT ---
-  [UPCOMING ] [Other Screen            ] [Süper Lig]    Trabzonspor vs Galatasaray               (1647 vs 1807) Score: 1567.0 [Check listings]
-  [UPCOMING ] [Other Screen            ] [Liga Portugal] Alverca vs Rio Ave                   (1531 vs 1500) Score: 1484.5 [Check listings]
-  [UPCOMING ] [Other Screen            ] [Süper Lig]    Istanbul Basaksehir vs Genclerbirligi            (1450 vs 1565) Score: 1392.5 [Check listings]
-
---- 2026-09-19 01:30 PM EDT ---
-  [UPCOMING ] [Other Screen            ] [Serie B]      Ascoli vs US Avellino               (1529 vs 1529) Score: 1529.0 [Check listings]
+  [UPCOMING ] [Other Screen            ] [Süper Lig]    Trabzonspor vs Galatasaray               (1647 vs 1807) Score: 1567.0 [beIN SPORTS]
+  [UPCOMING ] [Other Screen            ] [Liga Portugal] Alverca vs Rio Ave                   (1531 vs 1500) Score: 1484.5 [DAZN]
+  [UPCOMING ] [Other Screen            ] [Süper Lig]    Istanbul Basaksehir vs Genclerbirligi            (1450 vs 1565) Score: 1392.5 [beIN SPORTS]
 
 --- 2026-09-19 02:00 PM EDT ---
-  [UPCOMING ] [Other Screen            ] [Ligue 2]      Metz vs Saint-Étienne             (1568 vs 1613) Score: 1545.5 [Check listings]
   [UPCOMING ] [Other Screen            ] [Eredivisie]   Ajax Amsterdam vs Excelsior                 (1689 vs 1503) Score: 1410.0 [ESPN+]
 
 --- 2026-09-19 02:30 PM EDT ---
   [UPCOMING ] [Other Screen            ] [2. Bundesliga] Dynamo Dresden vs Hertha Berlin             (1562 vs 1651) Score: 1517.5 [Check listings]
 
 --- 2026-09-19 02:45 PM EDT ---
-  [UPCOMING ] [TV 1                    ] [Ligue 1]      Lyon vs Stade Rennais             (1787 vs 1765) Score: 1754.0 [Check listings]
-  [UPCOMING ] [TV 2                    ] [Ligue 1]      Angers vs Troyes                    (1613 vs 1612) Score: 1611.5 [Check listings]
+  [UPCOMING ] [TV 1                    ] [Ligue 1]      Lyon vs Stade Rennais             (1787 vs 1765) Score: 1754.0 [beIN SPORTS]
+  [UPCOMING ] [TV 2                    ] [Ligue 1]      Angers vs Troyes                    (1613 vs 1612) Score: 1611.5 [beIN SPORTS]
   [UPCOMING ] [TV 3                    ] [Serie A]      Venezia vs Lazio                     (1651 vs 1772) Score: 1590.5 [Paramount+]
-  [UPCOMING ] [Other Screen            ] [Ligue 1]      Toulouse vs Le Havre AC               (1684 vs 1610) Score: 1573.0 [Check listings]
-  [UPCOMING ] [Other Screen            ] [Ligue 1]      Le Mans vs Lorient                   (1589 vs 1696) Score: 1535.5 [Check listings]
-  [UPCOMING ] [Other Screen            ] [Belgian Pro]  Anderlecht vs Zulte-Waregem             (1662 vs 1575) Score: 1531.5 [Check listings]
-  [UPCOMING ] [Other Screen            ] [Belgian Pro]  Lommel SK vs KV Mechelen               (1502 vs 1545) Score: 1480.5 [Check listings]
+  [UPCOMING ] [Other Screen            ] [Ligue 1]      Toulouse vs Le Havre AC               (1684 vs 1610) Score: 1573.0 [beIN SPORTS]
+  [UPCOMING ] [Other Screen            ] [Ligue 1]      Le Mans vs Lorient                   (1589 vs 1696) Score: 1535.5 [beIN SPORTS]
+  [UPCOMING ] [Other Screen            ] [Belgian Pro]  Anderlecht vs Zulte-Waregem             (1662 vs 1575) Score: 1531.5 [DAZN]
+  [UPCOMING ] [Other Screen            ] [Belgian Pro]  Lommel SK vs KV Mechelen               (1502 vs 1545) Score: 1480.5 [DAZN]
 
 --- 2026-09-19 03:00 PM EDT ---
   [UPCOMING ] [Other Screen            ] [LaLiga]       Sevilla vs Barcelona                 (1722 vs 2019) Score: 1573.5 [ESPN Deportes, ESPN+]
   [UPCOMING ] [Other Screen            ] [LALIGA 2]     Cádiz vs Girona                    (1554 vs 1713) Score: 1474.5 [ESPN+]
-  [UPCOMING ] [Other Screen            ] [Eredivisie]   Willem II vs Fortuna Sittard           (1414 vs 1483) Score: 1379.5 [Check listings]
+  [UPCOMING ] [Other Screen            ] [Eredivisie]   Willem II vs Fortuna Sittard           (1414 vs 1483) Score: 1379.5 [ESPN+]
 
 --- 2026-09-19 03:30 PM EDT ---
-  [UPCOMING ] [TV 1 (Look-in) [04:40 PM-05:25 PM (~45m)]] [Liga Portugal] Sporting CP vs Arouca                    (1877 vs 1563) Score: 1406.0 [Check listings]
+  [UPCOMING ] [TV 1 (Look-in) [04:40 PM-05:25 PM (~45m)]] [Liga Portugal] Sporting CP vs Arouca                    (1877 vs 1563) Score: 1406.0 [DAZN]
