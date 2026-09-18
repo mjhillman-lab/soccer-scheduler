@@ -148,6 +148,7 @@ NAME_ALIASES = {
     "inter milan": "inter",
     "internazionale": "inter",
     "ac milan": "milan",
+    "as roma" : "roma",
 
     # France (Ligue 1 & Ligue 2)
     "paris saint-germain": "paris sg",
@@ -184,12 +185,18 @@ NAME_ALIASES = {
     "standard liege": "standard",
     "standard de liege": "standard",
 
-    # Portugal & Scotland
+    # Portugal
     "sporting cp": "sporting",
     "sporting lisbon": "sporting",
-    "heart of midlothian": "hearts",
+    "cs maritimo": "maritimo",
+    "marítimo": "maritimo",
 
-    # Scandinavia & Central/Eastern Europe
+    # Belgium (Pro League)
+    "raal la louvière": "la louviere",
+    "raal la louviere": "la louviere",
+    
+    # Europe
+    "heart of midlothian": "hearts",
     "lillestrom": "lillestrøm",
     "lillestrøm": "lillestrøm",
     "lillestrom sk": "lillestrøm",
@@ -210,6 +217,11 @@ NAME_ALIASES = {
     "nk celje": "celje",
     "omonia nicosia": "omonia",
     "hapoel be'er": "beer sheva",
+
+    # Turkey (Süper Lig)
+    "istanbul basaksehir": "basaksehir",
+    "rams basaksehir": "basaksehir",
+    "istanbul başakşehir": "basaksehir",
 }
 
 # ==========================================
@@ -501,17 +513,27 @@ def harvest_matches(window, elo_engine):
         day_group = "TODAY" if utc_dt < window["split_utc"] else "TOMORROW"
 
         # Status determination
-        status_type = event.get("status", {}).get("type", {}).get("name", "")
-        if "STATUS_FINAL" in status_type or now_utc >= end_dt_utc:
+        status_obj = event.get("status", {})
+        status_type_obj = status_obj.get("type", {})
+        state = status_type_obj.get("state", "").lower()          # 'pre', 'in', 'post'
+        type_name = status_type_obj.get("name", "").upper()        # 'STATUS_IN_PROGRESS', 'STATUS_HALFTIME', 'STATUS_FINAL'
+        display_clock = status_obj.get("displayClock", "")
+
+        if state == "post" or "FINAL" in type_name or now_utc >= end_dt_utc:
             live_status = "FINAL"
-        elif utc_dt <= now_utc:
-            mins_in = int((now_utc - utc_dt).total_seconds() / 60)
-            if mins_in <= 45:
-                live_status = f"LIVE ~{mins_in}'"
-            elif mins_in <= 60:
+        elif state == "in" or "IN_PROGRESS" in type_name or "HALFTIME" in type_name or (utc_dt <= now_utc < end_dt_utc):
+            if "HALFTIME" in type_name or display_clock == "HT":
                 live_status = "LIVE HT"
+            elif display_clock:
+                live_status = f"LIVE {display_clock}"
             else:
-                live_status = f"LIVE ~{mins_in - 15}'"
+                mins_in = int((now_utc - utc_dt).total_seconds() / 60)
+                if mins_in <= 45:
+                    live_status = f"LIVE ~{mins_in}'"
+                elif mins_in <= 60:
+                    live_status = "LIVE HT"
+                else:
+                    live_status = f"LIVE ~{mins_in - 15}'"
         else:
             live_status = "UPCOMING"
 
@@ -568,7 +590,6 @@ def harvest_matches(window, elo_engine):
             "channels": channels,
             "match_time_dt": local_dt,
             "match_time_str": local_dt.strftime("%Y-%m-%d %I:%M %p %Z"),
-            "live_status": live_status,
             "sort_value": sort_value,
             "tv_assignment": None,
         })
@@ -585,8 +606,39 @@ def allocate_screens(matches, num_tvs=NUM_TVS):
     def has_any_conflict(start, end, booked):
         return any(max(start, b[0]) < min(end, b[1]) for b in booked)
 
+    confirmed_linear_nets = ["usa", "nbc", "cbs sports network", "cbssn", "fs1", "fs2"]
+    streaming_only_leagues = [
+        "por.1", "primeira liga",
+        "bel.1", "belgian",
+        "tur.1", "super lig", "süper lig"
+    ]
+
+    allocatable_matches = []
+    for m in matches:
+        ch = m.get("channels", "").lower()
+        lg = m.get("league", "").lower()
+
+        # 1. Untelevised matches cannot take physical screens
+        if ch == "check listings":
+            m["tv_assignment"] = "Other Screen"
+            m["is_lookin"] = False
+            m["lookin_window"] = ""
+            continue
+
+        # 2. Suppress Portugal, Belgium, and Turkey unless on confirmed linear cable
+        is_streaming_league = any(sub in lg for sub in streaming_only_leagues)
+        is_linear_tv = any(net in ch for net in confirmed_linear_nets)
+
+        if is_streaming_league and not is_linear_tv:
+            m["tv_assignment"] = "Other Screen"
+            m["is_lookin"] = False
+            m["lookin_window"] = ""
+            continue
+
+        allocatable_matches.append(m)
+
     # Higher score = priority for screens
-    by_priority = sorted(matches, key=lambda m: m["sort_value"], reverse=True)
+    by_priority = sorted(allocatable_matches, key=lambda m: m["sort_value"], reverse=True)
 
     # -------------------------------------------------------------
     # Pass 1: Primary Full-Match Assignments
@@ -619,10 +671,8 @@ def allocate_screens(matches, num_tvs=NUM_TVS):
         best_window = None
 
         for tv in sorted(screen_bookings.keys(), key=lambda x: int(x.split()[1])):
-            # Sort current bookings chronologically on this screen
             bookings = sorted(screen_bookings[tv], key=lambda b: b[0])
 
-            # Find idle intervals that overlap with this match's broadcast window
             cur_time = m_start
             idle_windows = []
 
@@ -637,7 +687,6 @@ def allocate_screens(matches, num_tvs=NUM_TVS):
             if cur_time < m_end:
                 idle_windows.append((cur_time, m_end))
 
-            # Check if any idle gap offers at least MIN_LOOKIN_MINUTES
             for gap_start, gap_end in idle_windows:
                 duration = int((gap_end - gap_start).total_seconds() / 60)
                 if duration >= MIN_LOOKIN_MINUTES:
@@ -663,7 +712,7 @@ def allocate_screens(matches, num_tvs=NUM_TVS):
 # ==========================================
 def export_csv(matches, filename=OUTPUT_CSV):
     fieldnames = [
-        "day_group", "match_time_str", "live_status", "tv_assignment",
+        "day_group", "match_time_str", "tv_assignment",
         "lookin_window", "home_team", "away_team", "home_elo", "away_elo",
         "channels", "sort_value", "league",
     ]
@@ -699,13 +748,13 @@ def export_text_summary(matches, window, filename=OUTPUT_TXT):
                 current_slot = m["match_time_str"]
                 lines.append(f"\n--- {current_slot} ---")
 
-            # Format screen badge string with look-in context
-            tv_label = m["tv_assignment"]
+            # --- DEFINE TV_LABEL HERE ---
+            tv_label = m.get("tv_assignment") or "Other Screen"
             if m.get("is_lookin") and m.get("lookin_window"):
                 tv_label = f"{m['tv_assignment']} [{m['lookin_window']}]"
 
             lines.append(
-                f"  [{m['live_status']:<9}] [{tv_label:<24}] {format_league_badge(m['league']):<14} "
+                f"  [{tv_label:<24}] {format_league_badge(m['league']):<14} "
                 f"{m['home_team']} vs {m['away_team']:<25} ({m['home_elo']} vs {m['away_elo']}) "
                 f"Score: {m['sort_value']:<6} [{m['channels']}]"
             )
@@ -918,7 +967,8 @@ def export_mobile_html(matches, window, filename=OUTPUT_HTML):
         for m in group_matches:
             if m["match_time_str"] != current_slot:
                 current_slot = m["match_time_str"]
-                html += f'<div class="slot-header">{current_slot}</div>\n'
+                iso_time = m["match_time_dt"].isoformat()
+                html += f'<div class="slot-header" data-time="{iso_time}">{current_slot}</div>\n'
 
             # 1. Determine clean badge label (e.g., 'TV 1', 'TV 4', or 'Other Screen')
             raw_assignment = m.get("tv_assignment", "Other Screen")
@@ -957,7 +1007,6 @@ def export_mobile_html(matches, window, filename=OUTPUT_HTML):
             <div class="badge-container">
               <span class="badge {tv_class}">{base_tv}</span>
               {lookin_pill}
-              <span class="status-badge {status_class}">{status_str}</span>
             </div>
             <span class="comp">{format_league_badge(m['league'])}</span>
           </div>
@@ -968,7 +1017,36 @@ def export_mobile_html(matches, window, filename=OUTPUT_HTML):
           </div>
         </div>
         """
-    html += "</body></html>"
+    html += """
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const now = new Date().getTime();
+      const lookbackMs = 120 * 60 * 1000; // 2-hour window catches ongoing matches
+      const targetTime = now - lookbackMs;
+
+      const headers = Array.from(document.querySelectorAll('.slot-header[data-time]'));
+      let anchorTarget = null;
+
+      for (const el of headers) {
+        const slotTime = new Date(el.dataset.time).getTime();
+        if (slotTime >= targetTime) {
+          anchorTarget = el;
+          break;
+        }
+      }
+
+      if (!anchorTarget && headers.length > 0) {
+        anchorTarget = headers[headers.length - 1];
+      }
+
+      if (anchorTarget) {
+        anchorTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  </script>
+</body>
+</html>
+"""
     with open(filename, "w", encoding="utf-8") as f:
         f.write(html)
 
