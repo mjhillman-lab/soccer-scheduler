@@ -10,6 +10,7 @@ import io
 import json
 import os
 import sys
+import urllib.parse
 import unicodedata
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timedelta, timezone
@@ -52,10 +53,10 @@ LEAGUES = [
     "eng.1", "eng.2",
     "esp.1", "esp.2",
     "ger.1", "ger.2",
-    "ita.1", "ita.2",
-    "fra.1", "fra.2",
+    "ita.1",
+    "fra.1",
     # Additional European Leagues
-    "por.1", "bel.1", "tur.1", "ned.1", "sco.1",
+    "por.1", "bel.1", "tur.1", "ned.1",
     # Domestic Cups
     "eng.fa", "eng.league_cup",
     "esp.copa_del_rey",
@@ -76,19 +77,15 @@ LEAGUE_DISPLAY_NAMES = {
     "UEFA Conference League": "UECL",
     "English Premier League": "EPL",
     "English League Championship": "Championship",
-    "English League One": "League One",
     "Spanish LALIGA": "LaLiga",
     "Spanish Segunda División": "LaLiga 2",
     "German Bundesliga": "Bundesliga",
     "German 2. Bundesliga": "2. Bundesliga",
     "Italian Serie A": "Serie A",
-    "Italian Serie B": "Serie B",
     "French Ligue 1": "Ligue 1",
-    "French Ligue 2": "Ligue 2",
     "Dutch Eredivisie": "Eredivisie",
     "Portuguese Primeira Liga": "Liga Portugal",
     "Belgian Pro League": "Belgian Pro",
-    "Scottish Premiership": "SPL",
     "Turkish Super Lig": "Süper Lig",
 }
 
@@ -283,15 +280,28 @@ class EloEngine:
             pass
 
     def _fetch_clubelo_csv(self):
-        """Fetches ClubElo official daily CSV table with a guaranteed yesterday fallback."""
+        """Fetches ClubElo official daily CSV table with session retries and updates disk cache."""
         now_dt = datetime.now(timezone.utc)
         today_str = now_dt.strftime("%Y-%m-%d")
         yesterday_str = (now_dt - timedelta(days=1)).strftime("%Y-%m-%d")
-        
-        clubelo_headers = {"User-Agent": "Mozilla/5.0"}
+
+        session = requests.Session()
+        retries = requests.adapters.Retry(
+            total=3,
+            backoff_factor=1.5,
+            status_forcelist=[500, 502, 503, 504],
+            raise_on_status=False,
+        )
+        session.mount("http://", requests.adapters.HTTPAdapter(max_retries=retries))
+        session.mount("https://", requests.adapters.HTTPAdapter(max_retries=retries))
+
+        clubelo_headers = {
+            "User-Agent": "Mozilla/5.0 (X11; CrOS x86_64 14542.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36",
+            "Accept": "text/csv,text/plain;q=0.9,*/*;q=0.8",
+            "Accept-Language": "en-US,en;q=0.9",
+        }
         ratings = {}
 
-        # Candidate endpoints in order of reliability
         endpoints = [
             f"http://api.clubelo.com/{today_str}",
             "http://api.clubelo.com/today",
@@ -301,7 +311,7 @@ class EloEngine:
         for url in endpoints:
             try:
                 print(f"Fetching ClubElo daily CSV ({url})...")
-                r = requests.get(url, headers=clubelo_headers, timeout=10)
+                r = session.get(url, headers=clubelo_headers, timeout=12)
                 if r.status_code == 200 and len(r.text.strip()) > 500:
                     reader = csv.DictReader(io.StringIO(r.text.strip()))
                     for row in reader:
@@ -325,10 +335,18 @@ class EloEngine:
                             ratings[norm_name] = elo_val
 
                     if len(ratings) > 100:
-                        print(f"Successfully ingested and cached {len(ratings)} club Elo ratings from {url}.")
+                        print(f"Successfully ingested {len(ratings)} club Elo ratings from {url}. Updating disk cache.")
+                        try:
+                            import json
+                            with open("elo_cache.json", "w", encoding="utf-8") as f:
+                                json.dump(ratings, f, indent=2)
+                        except Exception as ce:
+                            print(f"Notice: Failed to write updated cache to disk: {ce}")
                         return ratings
+                else:
+                    print(f"Notice: {url} returned HTTP {r.status_code} (length: {len(r.text.strip())}). Trying next...")
             except Exception as e:
-                print(f"Notice: Endpoint {url} failed ({e}). Trying next...")
+                print(f"Notice: Endpoint {url} failed ({repr(e)}). Trying next...")
 
         print("Notice: All ClubElo remote endpoints failed. Falling back to disk cache.")
         return ratings
@@ -499,7 +517,40 @@ def harvest_matches(window, elo_engine):
 
         broadcasts = [b.get("names", []) for b in comp.get("broadcasts", [])]
         channels = ", ".join([item for sublist in broadcasts for item in sublist]) or "Check listings"
-
+        
+        # --- Contract-based fallback when ESPN doesn't list a channel ---
+        if channels == "Check listings":
+            league_code = league_name.lower()
+            exclusive_defaults = {
+                # Belgium & Portugal (DAZN US)
+                "bel.1": "DAZN",
+                "belgian": "DAZN",
+                "por.1": "DAZN",
+                "primeira liga": "DAZN",
+                # France
+                "fra.1": "beIN SPORTS",
+                "ligue 1": "beIN SPORTS",
+                # Turkey
+                "tur.1": "beIN SPORTS",
+                "super lig": "beIN SPORTS",
+                "süper lig": "beIN SPORTS",
+                # Spain
+                "esp.2": "ESPN+",
+                "segunda": "ESPN+",
+                "hypermotion": "ESPN+",
+                # Netherlands
+                "ned.1": "ESPN+",
+                "eredivisie": "ESPN+",
+                # Italy
+                "ita.coppa_italia": "Paramount+",
+                "coppa italia": "Paramount+",
+                # Note: Championship, 2. Bundesliga, etc. intentionally omitted to remain "Check listings"
+            }
+            for code, default_net in exclusive_defaults.items():
+                if code in league_code:
+                    channels = default_net
+                    break
+                
         home_elo = elo_engine.get(home_team)
         away_elo = elo_engine.get(away_team)
         avg_elo = (home_elo + away_elo) / 2.0
@@ -664,34 +715,55 @@ def export_text_summary(matches, window, filename=OUTPUT_TXT):
     with open(filename, "w", encoding="utf-8") as f:
         f.write(output)
 
-import urllib.parse
-
 def resolve_stream_url(channels: str, league: str, home: str = "", away: str = "") -> str:
+    """Returns a direct streaming hub or YouTube TV search URL based on channel, league, and matchup."""
     c = channels.lower()
     l = league.lower()
 
-    # If fixture is on linear TV via YouTube TV, search query parameter
-    if any(net in c for net in ["usa", "nbc", "cbs sports network", "cbssn", "fs1"]):
-        query = f"{home} vs {away}".strip(" vs")
-        return f"https://tv.youtube.com/search?q={urllib.parse.quote(query)}"
+    # Normalize team names to clean ASCII to prevent mojibake in URL search parameters
+    clean_h = strip_accents(home).title() if home else ""
+    clean_a = strip_accents(away).title() if away else ""
+    query = f"{clean_h} vs {clean_a}".strip() if (clean_h and clean_a) else (clean_h or clean_a).strip()
+    yt_search_url = f"https://tv.youtube.com/search?q={urllib.parse.quote(query)}"
 
-    # 2. Peacock League Hubs
+    # 1. PRIORITY LINEAR CABLE GATE
+    # Strictly confirmed domestic TV feeds (catches USA, NBC, CBSSN, FS1/2 before league streaming hubs)
+    confirmed_linear_nets = ["usa", "nbc", "cbs sports network", "cbssn", "fs1", "fs2"]
+    if any(net in c for net in confirmed_linear_nets):
+        return yt_search_url
+
+    # 2. DAZN (Belgium & Portugal Hubs)
+    if "bel.1" in l or "belgian" in l:
+        return "https://www.dazn.com/en-US/competition/Competition:4zwgbb66rif2spcoeeol2motx"
+    if "por.1" in l or "primeira liga" in l or "portuguese" in l:
+        return "https://www.dazn.com/en-US/competition/Competition:8yi6ejjd1zudcqtbn07haahg6"
+    if "dazn" in c:
+        return "https://www.dazn.com/en-US/sports"
+
+    # 3. German Bundesliga (Top Flight Overflow to Fandango at Home)
+    if ("ger.1" in l or "bundesliga" in l) and "2." not in l and "ger.2" not in l:
+        return "https://athome.fandango.com/content/browse/uxrow/Live-Upcoming-Bundesliga-Matches/27372"
+
+    # 4. Turkish Süper Lig (Dedicated 24/7 beIN Hub)
+    if "super lig" in l or "süper lig" in l or "tur.1" in l:
+        return "https://watch.beinsports-apps.com/events/bein-turkish-superlig-24-7-2"
+
+    # 5. beIN SPORTS Linear (Ligue 1 / explicit cable slot via YouTube TV)
+    if "bein" in c:
+        return yt_search_url
+
+    # 6. Peacock League Hubs
     if "peacock" in c:
         if "premier" in l or "eng.1" in l:
             return "https://www.peacocktv.com/sports/premier-league"
         return "https://www.peacocktv.com/sports"
 
-    # 3. Paramount+ Competitions (Deconflicted: EFL Cup & League Tiers vs UCL)
+    # 7. Paramount+ Competitions (Carried matches only)
     if "paramount" in c or "cbs" in c:
-        # EFL Cup (Carabao Cup) Knockout Hub
         if "carabao" in l or "efl cup" in l or "eng.league_cup" in l:
             return "https://www.paramountplus.com/shows/efl-cup/"
-
-        # English Football League Tier Matches (Championship, League One, League Two)
-        if any(k in l for k in ["championship", "eng.2", "league one", "eng.3", "league two", "eng.4"]):
+        if any(k in l for k in ["championship", "eng.2"]):
             return "https://www.paramountplus.com/shows/english-football-league/"
-        
-        # European Continental Competitions
         if "champions league" in l or "ucl" in l or "uefa.champions" in l:
             return "https://www.paramountplus.com/shows/uefa-champions-league/"
         if "europa" in l or "uel" in l or "uecl" in l or "uefa.europa" in l:
@@ -700,15 +772,21 @@ def resolve_stream_url(channels: str, league: str, home: str = "", away: str = "
             return "https://www.paramountplus.com/shows/serie-a/"
         return "https://www.paramountplus.com/sports"
 
-    # 4. ESPN+ Competitions
+    # 8. ESPN+ Competitions
     if "espn+" in c:
+        if any(k in l for k in ["esp.2", "segunda", "hypermotion", "laliga 2"]):
+            return "https://www.espn.com/watch/catalog/20a6bdc8-ff1f-350a-9e78-a771d12ce59a/spanish-laliga-2"
         if "laliga" in l or "esp.1" in l or "spanish" in l:
             return "https://www.espn.com/watch/catalog/cf7b0c51-7c48-3e9a-8abb-0c01b1a973a0/spanish-laliga"
-        if "bundesliga" in l or "ger.1" in l or "german" in l:
-            return "https://www.espn.com/watch/catalog/0270a442-7cf2-3e28-8d74-2794db5d41a7/german-bundesliga"
+        if "eredivisie" in l or "ned.1" in l or "dutch" in l:
+            return "https://www.espn.com/watch/catalog/e8c15234-75dd-3155-bea5-3a1d9edcfd27/dutch-eredivisie"
         if "fa cup" in l or "eng.fa" in l:
             return "https://www.espn.com/watch/catalog/5a560c57-ca5e-3ee8-8f81-a9686ae2c00e/the-fa-cup"
         return "https://www.espn.com/watch/espnplus/soccer"
+
+    # 9. FINAL SAFETY NET (Unconfirmed rights / "Check listings" -> YouTube TV Search)
+    if "check listings" in c:
+        return yt_search_url
 
     return ""
 
