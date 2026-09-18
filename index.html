@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Soccer Broadcast Board</title>
   
-  <!-- Mobile & PWA Theme Metadata -->
   <meta name="theme-color" content="#121212">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -36,6 +35,22 @@
       margin: 12px 0 6px 4px;
       font-weight: 600;
     }
+    .status-badge {
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      margin-left: 6px;
+    }
+    .status-live { background: #c92a2a; color: #fff; animation: pulse 2s infinite; }
+    .status-final { background: #495057; color: #ced4da; }
+    .status-upcoming { background: #212529; color: #868e96; border: 1px solid #343a40; }
+    @keyframes pulse {
+      0% { opacity: 1; }
+      50% { opacity: 0.6; }
+      100% { opacity: 1; }
+    }
     .card {
       background: #1a1a1a;
       border: 1px solid #2a2a2a;
@@ -49,6 +64,11 @@
       align-items: center;
       margin-bottom: 6px;
     }
+    .badge-container {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
     .badge {
       font-size: 0.7rem;
       font-weight: 700;
@@ -56,10 +76,22 @@
       border-radius: 4px;
       text-transform: uppercase;
     }
-    .tv-tv1 { background: #2b8a3e; color: #fff; }
-    .tv-tv2 { background: #1971c2; color: #fff; }
-    .tv-tv3 { background: #e67700; color: #fff; }
-    .tv-other { background: #343a40; color: #adb5bd; }
+    .tv-tv1 { background: #2b8a3e; color: #fff; } /* Green */
+    .tv-tv2 { background: #1971c2; color: #fff; } /* Blue */
+    .tv-tv3 { background: #e67700; color: #fff; } /* Orange */
+    .tv-tv4 { background: #ae3ec9; color: #fff; } /* Grape / Purple */
+    .tv-tv5 { background: #0ca678; color: #fff; } /* Teal */
+    .tv-tv6 { background: #d6336c; color: #fff; } /* Rose / Pink */
+    .tv-other { background: #343a40; color: #adb5bd; } /* Slate Gray */
+    .badge-lookin {
+      background: #495057;
+      color: #74c0fc;
+      border: 1px solid #74c0fc;
+      font-size: 0.68rem;
+      font-weight: 600;
+      padding: 1px 5px;
+      border-radius: 3px;
+    }
     .comp { font-size: 0.75rem; font-weight: 600; color: #ced4da; }
     .matchup { font-size: 0.95rem; font-weight: bold; margin: 4px 0; }
     .meta { font-size: 0.75rem; color: #888; display: flex; justify-content: space-between; }
@@ -69,13 +101,17 @@
 <body>
   <h1>Soccer Broadcast Board</h1>
   <div class="subtitle">48-Hour Multi-Screen Schedule (Anchored 3 AM)</div>
-  <div class="updated-at">Updated: Thu, Sep 17 at 02:21 PM EDT</div>
+  <div class="updated-at">Updated: Thu, Sep 17 at 09:07 PM EDT</div>
 <div class="day-header">TODAY'S MATCHES (Thursday, September 17)</div>
 <div class="slot-header">2026-09-17 12:45 PM EDT</div>
 
         <div class="card">
           <div class="card-top">
-            <span class="badge tv-tv2">TV 2</span>
+            <div class="badge-container">
+              <span class="badge tv-tv2">TV 2</span>
+              
+              <span class="status-badge status-final">FINAL</span>
+            </div>
             <span class="comp">[UEL]</span>
           </div>
           <div class="matchup">Levski Sofia vs RB Salzburg</div>
@@ -87,7 +123,11 @@
         
         <div class="card">
           <div class="card-top">
-            <span class="badge tv-tv3">TV 3</span>
+            <div class="badge-container">
+              <span class="badge tv-tv3">TV 3</span>
+              
+              <span class="status-badge status-final">FINAL</span>
+            </div>
             <span class="comp">[UEL]</span>
           </div>
           <div class="matchup">OFI Crete vs TSG Hoffenheim</div>
@@ -100,7 +140,11 @@
 
         <div class="card">
           <div class="card-top">
-            <span class="badge tv-tv1">TV 1</span>
+            <div class="badge-container">
+              <span class="badge tv-tv1">TV 1</span>
+              
+              <span class="status-badge status-final">FINAL</span>
+            </div>
             <span class="comp">[LaLiga]</span>
           </div>
           <div class="matchup">Real Betis vs Getafe</div>
@@ -113,7 +157,11 @@
 
         <div class="card">
           <div class="card-top">
-            <span class="badge tv-other">Other Screen</span>
+            <div class="badge-container">
+              <span class="badge tv-other">Other Screen</span>
+              
+              <span class="status-badge status-final">FINAL</span>
+            </div>
             <span class="comp">[EFL Cup]</span>
           </div>
           <div class="matchup">Manchester City vs Norwich City</div>
@@ -126,7 +174,11 @@
 
         <div class="card">
           <div class="card-top">
-            <span class="badge tv-tv1">TV 1</span>
+            <div class="badge-container">
+              <span class="badge tv-tv1">TV 1</span>
+              
+              <span class="status-badge status-final">FINAL</span>
+            </div>
             <span class="comp">[UEL]</span>
           </div>
           <div class="matchup">Real Sociedad vs AFC Bournemouth</div>
@@ -138,7 +190,11 @@
         
         <div class="card">
           <div class="card-top">
-            <span class="badge tv-tv2">TV 2</span>
+            <div class="badge-container">
+              <span class="badge tv-tv2">TV 2</span>
+              
+              <span class="status-badge status-final">FINAL</span>
+            </div>
             <span class="comp">[UEL]</span>
           </div>
           <div class="matchup">Besiktas vs Marseille</div>
@@ -150,7 +206,11 @@
         
         <div class="card">
           <div class="card-top">
-            <span class="badge tv-tv3">TV 3</span>
+            <div class="badge-container">
+              <span class="badge tv-tv3">TV 3</span>
+              
+              <span class="status-badge status-final">FINAL</span>
+            </div>
             <span class="comp">[UEL]</span>
           </div>
           <div class="matchup">Celtic vs Ferencvaros</div>
@@ -162,7 +222,11 @@
         
         <div class="card">
           <div class="card-top">
-            <span class="badge tv-other">Other Screen</span>
+            <div class="badge-container">
+              <span class="badge tv-other">Other Screen</span>
+              
+              <span class="status-badge status-final">FINAL</span>
+            </div>
             <span class="comp">[UEL]</span>
           </div>
           <div class="matchup">Crystal Palace vs Lech Poznan</div>
@@ -174,7 +238,11 @@
         
         <div class="card">
           <div class="card-top">
-            <span class="badge tv-other">Other Screen</span>
+            <div class="badge-container">
+              <span class="badge tv-other">Other Screen</span>
+              
+              <span class="status-badge status-final">FINAL</span>
+            </div>
             <span class="comp">[UEL]</span>
           </div>
           <div class="matchup">Viktoria Plzen vs Union St.-Gilloise</div>
@@ -186,7 +254,11 @@
         
         <div class="card">
           <div class="card-top">
-            <span class="badge tv-other">Other Screen</span>
+            <div class="badge-container">
+              <span class="badge tv-other">Other Screen</span>
+              
+              <span class="status-badge status-final">FINAL</span>
+            </div>
             <span class="comp">[UEL]</span>
           </div>
           <div class="matchup">Juventus vs NEC Nijmegen</div>
@@ -198,7 +270,11 @@
         
         <div class="card">
           <div class="card-top">
-            <span class="badge tv-other">Other Screen</span>
+            <div class="badge-container">
+              <span class="badge tv-other">Other Screen</span>
+              
+              <span class="status-badge status-final">FINAL</span>
+            </div>
             <span class="comp">[UEL]</span>
           </div>
           <div class="matchup">Lillestrom vs Torreense</div>
@@ -211,7 +287,11 @@
 
         <div class="card">
           <div class="card-top">
-            <span class="badge tv-other">Other Screen</span>
+            <div class="badge-container">
+              <span class="badge tv-tv1">TV 1</span>
+              <span class="badge-lookin">Look-in: 04:55 PM-05:25 PM (~30m)</span>
+              <span class="status-badge status-final">FINAL</span>
+            </div>
             <span class="comp">[LaLiga]</span>
           </div>
           <div class="matchup">Málaga vs Villarreal</div>
@@ -225,7 +305,11 @@
 
         <div class="card">
           <div class="card-top">
-            <span class="badge tv-tv1">TV 1</span>
+            <div class="badge-container">
+              <span class="badge tv-tv1">TV 1</span>
+              
+              <span class="status-badge status-upcoming">UPCOMING</span>
+            </div>
             <span class="comp">[2. Bundesliga]</span>
           </div>
           <div class="matchup">VfL Wolfsburg vs SV Darmstadt 98</div>
@@ -237,7 +321,11 @@
         
         <div class="card">
           <div class="card-top">
-            <span class="badge tv-tv2">TV 2</span>
+            <div class="badge-container">
+              <span class="badge tv-tv2">TV 2</span>
+              
+              <span class="status-badge status-upcoming">UPCOMING</span>
+            </div>
             <span class="comp">[2. Bundesliga]</span>
           </div>
           <div class="matchup">SpVgg Greuther Fürth vs 1. FC Magdeburg</div>
@@ -250,7 +338,11 @@
 
         <div class="card">
           <div class="card-top">
-            <span class="badge tv-tv3">TV 3</span>
+            <div class="badge-container">
+              <span class="badge tv-tv3">TV 3</span>
+              
+              <span class="status-badge status-upcoming">UPCOMING</span>
+            </div>
             <span class="comp">[Süper Lig]</span>
           </div>
           <div class="matchup">Kasimpasa vs Konyaspor</div>
@@ -263,7 +355,11 @@
 
         <div class="card">
           <div class="card-top">
-            <span class="badge tv-other">Other Screen</span>
+            <div class="badge-container">
+              <span class="badge tv-other">Other Screen</span>
+              
+              <span class="status-badge status-upcoming">UPCOMING</span>
+            </div>
             <span class="comp">[Ligue 2]</span>
           </div>
           <div class="matchup">Stade de Reims vs Montpellier</div>
@@ -275,7 +371,11 @@
         
         <div class="card">
           <div class="card-top">
-            <span class="badge tv-other">Other Screen</span>
+            <div class="badge-container">
+              <span class="badge tv-other">Other Screen</span>
+              
+              <span class="status-badge status-upcoming">UPCOMING</span>
+            </div>
             <span class="comp">[Ligue 2]</span>
           </div>
           <div class="matchup">Annecy vs Dijon FCO</div>
@@ -287,7 +387,11 @@
         
         <div class="card">
           <div class="card-top">
-            <span class="badge tv-other">Other Screen</span>
+            <div class="badge-container">
+              <span class="badge tv-other">Other Screen</span>
+              
+              <span class="status-badge status-upcoming">UPCOMING</span>
+            </div>
             <span class="comp">[Ligue 2]</span>
           </div>
           <div class="matchup">Grenoble vs Clermont Foot</div>
@@ -299,7 +403,11 @@
         
         <div class="card">
           <div class="card-top">
-            <span class="badge tv-other">Other Screen</span>
+            <div class="badge-container">
+              <span class="badge tv-other">Other Screen</span>
+              
+              <span class="status-badge status-upcoming">UPCOMING</span>
+            </div>
             <span class="comp">[Ligue 2]</span>
           </div>
           <div class="matchup">Stade Laval vs Sochaux</div>
@@ -311,7 +419,11 @@
         
         <div class="card">
           <div class="card-top">
-            <span class="badge tv-other">Other Screen</span>
+            <div class="badge-container">
+              <span class="badge tv-other">Other Screen</span>
+              
+              <span class="status-badge status-upcoming">UPCOMING</span>
+            </div>
             <span class="comp">[Ligue 2]</span>
           </div>
           <div class="matchup">Pau vs Dunkerque</div>
@@ -323,7 +435,11 @@
         
         <div class="card">
           <div class="card-top">
-            <span class="badge tv-other">Other Screen</span>
+            <div class="badge-container">
+              <span class="badge tv-other">Other Screen</span>
+              
+              <span class="status-badge status-upcoming">UPCOMING</span>
+            </div>
             <span class="comp">[Ligue 2]</span>
           </div>
           <div class="matchup">Rodez Aveyron vs AS Nancy Lorraine</div>
@@ -335,7 +451,11 @@
         
         <div class="card">
           <div class="card-top">
-            <span class="badge tv-other">Other Screen</span>
+            <div class="badge-container">
+              <span class="badge tv-other">Other Screen</span>
+              
+              <span class="status-badge status-upcoming">UPCOMING</span>
+            </div>
             <span class="comp">[Eredivisie]</span>
           </div>
           <div class="matchup">FC Groningen vs PEC Zwolle</div>
@@ -348,7 +468,11 @@
 
         <div class="card">
           <div class="card-top">
-            <span class="badge tv-other">Other Screen</span>
+            <div class="badge-container">
+              <span class="badge tv-tv1">TV 1</span>
+              <span class="badge-lookin">Look-in: 02:30 PM-03:00 PM (~30m)</span>
+              <span class="status-badge status-upcoming">UPCOMING</span>
+            </div>
             <span class="comp">[LALIGA 2]</span>
           </div>
           <div class="matchup">Albacete vs Córdoba</div>
@@ -360,7 +484,11 @@
         
         <div class="card">
           <div class="card-top">
-            <span class="badge tv-other">Other Screen</span>
+            <div class="badge-container">
+              <span class="badge tv-other">Other Screen</span>
+              
+              <span class="status-badge status-upcoming">UPCOMING</span>
+            </div>
             <span class="comp">[Serie B]</span>
           </div>
           <div class="matchup">Juve Stabia vs Cesena</div>
@@ -372,7 +500,11 @@
         
         <div class="card">
           <div class="card-top">
-            <span class="badge tv-other">Other Screen</span>
+            <div class="badge-container">
+              <span class="badge tv-other">Other Screen</span>
+              
+              <span class="status-badge status-upcoming">UPCOMING</span>
+            </div>
             <span class="comp">[Bundesliga]</span>
           </div>
           <div class="matchup">Bayern Munich vs 1. FC Union Berlin</div>
@@ -385,7 +517,11 @@
 
         <div class="card">
           <div class="card-top">
-            <span class="badge tv-tv2">TV 2</span>
+            <div class="badge-container">
+              <span class="badge tv-tv2">TV 2</span>
+              
+              <span class="status-badge status-upcoming">UPCOMING</span>
+            </div>
             <span class="comp">[Ligue 1]</span>
           </div>
           <div class="matchup">AS Monaco vs Lens</div>
@@ -397,7 +533,11 @@
         
         <div class="card">
           <div class="card-top">
-            <span class="badge tv-other">Other Screen</span>
+            <div class="badge-container">
+              <span class="badge tv-other">Other Screen</span>
+              
+              <span class="status-badge status-upcoming">UPCOMING</span>
+            </div>
             <span class="comp">[Serie A]</span>
           </div>
           <div class="matchup">Monza vs Sassuolo</div>
@@ -409,7 +549,11 @@
         
         <div class="card">
           <div class="card-top">
-            <span class="badge tv-other">Other Screen</span>
+            <div class="badge-container">
+              <span class="badge tv-other">Other Screen</span>
+              
+              <span class="status-badge status-upcoming">UPCOMING</span>
+            </div>
             <span class="comp">[Belgian Pro]</span>
           </div>
           <div class="matchup">KAA Gent vs Standard Liege</div>
@@ -422,7 +566,11 @@
 
         <div class="card">
           <div class="card-top">
-            <span class="badge tv-tv1">TV 1</span>
+            <div class="badge-container">
+              <span class="badge tv-tv1">TV 1</span>
+              
+              <span class="status-badge status-upcoming">UPCOMING</span>
+            </div>
             <span class="comp">[EPL]</span>
           </div>
           <div class="matchup">Brentford vs Chelsea</div>
@@ -434,7 +582,11 @@
         
         <div class="card">
           <div class="card-top">
-            <span class="badge tv-tv3">TV 3</span>
+            <div class="badge-container">
+              <span class="badge tv-tv3">TV 3</span>
+              
+              <span class="status-badge status-upcoming">UPCOMING</span>
+            </div>
             <span class="comp">[LaLiga]</span>
           </div>
           <div class="matchup">Espanyol vs Elche</div>
@@ -446,7 +598,11 @@
         
         <div class="card">
           <div class="card-top">
-            <span class="badge tv-other">Other Screen</span>
+            <div class="badge-container">
+              <span class="badge tv-other">Other Screen</span>
+              
+              <span class="status-badge status-upcoming">UPCOMING</span>
+            </div>
             <span class="comp">[Championship]</span>
           </div>
           <div class="matchup">Bristol City vs Watford</div>

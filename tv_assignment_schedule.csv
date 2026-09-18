@@ -1,32 +1,32 @@
-day_group,match_time_str,live_status,tv_assignment,home_team,away_team,home_elo,away_elo,channels,sort_value,league
-TODAY,2026-09-17 12:45 PM EDT,LIVE ~81',TV 2,Levski Sofia,RB Salzburg,1583,1646,"CBSSN, Paramount+",1551.5,UEFA Europa League
-TODAY,2026-09-17 12:45 PM EDT,LIVE ~81',TV 3,OFI Crete,TSG Hoffenheim,1472,1754,Paramount+,1331.0,UEFA Europa League
-TODAY,2026-09-17 01:00 PM EDT,LIVE ~66',TV 1,Real Betis,Getafe,1816,1699,"ESPN Deportes, ESPN+",1640.5,Spanish LALIGA
-TODAY,2026-09-17 02:30 PM EDT,UPCOMING,Other Screen,Manchester City,Norwich City,2031,1621,Paramount+,1416.0,English Carabao Cup
-TODAY,2026-09-17 03:00 PM EDT,UPCOMING,TV 1,Real Sociedad,AFC Bournemouth,1768,1859,"CBSSN, Paramount+",1722.5,UEFA Europa League
-TODAY,2026-09-17 03:00 PM EDT,UPCOMING,TV 2,Besiktas,Marseille,1693,1775,Paramount+,1652.0,UEFA Europa League
-TODAY,2026-09-17 03:00 PM EDT,UPCOMING,TV 3,Celtic,Ferencvaros,1692,1657,Paramount+,1639.5,UEFA Europa League
-TODAY,2026-09-17 03:00 PM EDT,UPCOMING,Other Screen,Crystal Palace,Lech Poznan,1818,1675,Paramount+,1603.5,UEFA Europa League
-TODAY,2026-09-17 03:00 PM EDT,UPCOMING,Other Screen,Viktoria Plzen,Union St.-Gilloise,1638,1803,Paramount+,1555.5,UEFA Europa League
-TODAY,2026-09-17 03:00 PM EDT,UPCOMING,Other Screen,Juventus,NEC Nijmegen,1833,1591,Paramount+,1470.0,UEFA Europa League
-TODAY,2026-09-17 03:00 PM EDT,UPCOMING,Other Screen,Lillestrom,Torreense,1530,1449,Paramount+,1408.5,UEFA Europa League
-TODAY,2026-09-17 03:30 PM EDT,UPCOMING,Other Screen,Málaga,Villarreal,1677,1788,"ESPN Deportes, ESPN+",1621.5,Spanish LALIGA
-TOMORROW,2026-09-18 12:30 PM EDT,UPCOMING,TV 1,VfL Wolfsburg,SV Darmstadt 98,1672,1590,Check listings,1549.0,German 2. Bundesliga
-TOMORROW,2026-09-18 12:30 PM EDT,UPCOMING,TV 2,SpVgg Greuther Fürth,1. FC Magdeburg,1527,1581,Check listings,1500.0,German 2. Bundesliga
-TOMORROW,2026-09-18 01:00 PM EDT,UPCOMING,TV 3,Kasimpasa,Konyaspor,1567,1533,Check listings,1516.0,Turkish Super Lig
-TOMORROW,2026-09-18 02:00 PM EDT,UPCOMING,Other Screen,Stade de Reims,Montpellier,1636,1578,Check listings,1549.0,French Ligue 2
-TOMORROW,2026-09-18 02:00 PM EDT,UPCOMING,Other Screen,Annecy,Dijon FCO,1563,1538,Check listings,1525.5,French Ligue 2
-TOMORROW,2026-09-18 02:00 PM EDT,UPCOMING,Other Screen,Grenoble,Clermont Foot,1512,1498,Check listings,1491.0,French Ligue 2
-TOMORROW,2026-09-18 02:00 PM EDT,UPCOMING,Other Screen,Stade Laval,Sochaux,1484,1517,Check listings,1467.5,French Ligue 2
-TOMORROW,2026-09-18 02:00 PM EDT,UPCOMING,Other Screen,Pau,Dunkerque,1488,1539,Check listings,1462.5,French Ligue 2
-TOMORROW,2026-09-18 02:00 PM EDT,UPCOMING,Other Screen,Rodez Aveyron,AS Nancy Lorraine,1573,1491,Check listings,1450.0,French Ligue 2
-TOMORROW,2026-09-18 02:00 PM EDT,UPCOMING,Other Screen,FC Groningen,PEC Zwolle,1520,1472,Check listings,1448.0,Dutch Eredivisie
-TOMORROW,2026-09-18 02:30 PM EDT,UPCOMING,Other Screen,Albacete,Córdoba,1613,1594,Check listings,1584.5,Spanish LALIGA 2
-TOMORROW,2026-09-18 02:30 PM EDT,UPCOMING,Other Screen,Juve Stabia,Cesena,1532,1522,Check listings,1517.0,Italian Serie B
-TOMORROW,2026-09-18 02:30 PM EDT,UPCOMING,Other Screen,Bayern Munich,1. FC Union Berlin,2046,1680,Fandango,1497.0,German Bundesliga
-TOMORROW,2026-09-18 02:45 PM EDT,UPCOMING,TV 2,AS Monaco,Lens,1798,1817,Check listings,1788.5,French Ligue 1
-TOMORROW,2026-09-18 02:45 PM EDT,UPCOMING,Other Screen,Monza,Sassuolo,1636,1703,Paramount+,1602.5,Italian Serie A
-TOMORROW,2026-09-18 02:45 PM EDT,UPCOMING,Other Screen,KAA Gent,Standard Liege,1628,1588,Check listings,1568.0,Belgian Pro League
-TOMORROW,2026-09-18 03:00 PM EDT,UPCOMING,TV 1,Brentford,Chelsea,1848,1888,USA Net,1828.0,English Premier League
-TOMORROW,2026-09-18 03:00 PM EDT,UPCOMING,TV 3,Espanyol,Elche,1712,1694,"ESPN Deportes, ESPN+",1685.0,Spanish LALIGA
-TOMORROW,2026-09-18 03:00 PM EDT,UPCOMING,Other Screen,Bristol City,Watford,1584,1531,Paramount+,1504.5,English League Championship
+day_group,match_time_str,live_status,tv_assignment,lookin_window,home_team,away_team,home_elo,away_elo,channels,sort_value,league
+TODAY,2026-09-17 12:45 PM EDT,FINAL,TV 2,,Levski Sofia,RB Salzburg,1583,1646,"CBSSN, Paramount+",1551.5,UEFA Europa League
+TODAY,2026-09-17 12:45 PM EDT,FINAL,TV 3,,OFI Crete,TSG Hoffenheim,1472,1754,Paramount+,1331.0,UEFA Europa League
+TODAY,2026-09-17 01:00 PM EDT,FINAL,TV 1,,Real Betis,Getafe,1816,1699,"ESPN Deportes, ESPN+",1640.5,Spanish LALIGA
+TODAY,2026-09-17 02:30 PM EDT,FINAL,Other Screen,,Manchester City,Norwich City,2031,1621,Paramount+,1416.0,English Carabao Cup
+TODAY,2026-09-17 03:00 PM EDT,FINAL,TV 1,,Real Sociedad,AFC Bournemouth,1768,1859,"CBSSN, Paramount+",1722.5,UEFA Europa League
+TODAY,2026-09-17 03:00 PM EDT,FINAL,TV 2,,Besiktas,Marseille,1693,1775,Paramount+,1652.0,UEFA Europa League
+TODAY,2026-09-17 03:00 PM EDT,FINAL,TV 3,,Celtic,Ferencvaros,1692,1657,Paramount+,1639.5,UEFA Europa League
+TODAY,2026-09-17 03:00 PM EDT,FINAL,Other Screen,,Crystal Palace,Lech Poznan,1818,1675,Paramount+,1603.5,UEFA Europa League
+TODAY,2026-09-17 03:00 PM EDT,FINAL,Other Screen,,Viktoria Plzen,Union St.-Gilloise,1638,1803,Paramount+,1555.5,UEFA Europa League
+TODAY,2026-09-17 03:00 PM EDT,FINAL,Other Screen,,Juventus,NEC Nijmegen,1833,1591,Paramount+,1470.0,UEFA Europa League
+TODAY,2026-09-17 03:00 PM EDT,FINAL,Other Screen,,Lillestrom,Torreense,1530,1449,Paramount+,1408.5,UEFA Europa League
+TODAY,2026-09-17 03:30 PM EDT,FINAL,TV 1 (Look-in),04:55 PM-05:25 PM (~30m),Málaga,Villarreal,1677,1788,"ESPN Deportes, ESPN+",1621.5,Spanish LALIGA
+TOMORROW,2026-09-18 12:30 PM EDT,UPCOMING,TV 1,,VfL Wolfsburg,SV Darmstadt 98,1672,1590,Check listings,1549.0,German 2. Bundesliga
+TOMORROW,2026-09-18 12:30 PM EDT,UPCOMING,TV 2,,SpVgg Greuther Fürth,1. FC Magdeburg,1527,1581,Check listings,1500.0,German 2. Bundesliga
+TOMORROW,2026-09-18 01:00 PM EDT,UPCOMING,TV 3,,Kasimpasa,Konyaspor,1567,1533,Check listings,1516.0,Turkish Super Lig
+TOMORROW,2026-09-18 02:00 PM EDT,UPCOMING,Other Screen,,Stade de Reims,Montpellier,1636,1578,Check listings,1549.0,French Ligue 2
+TOMORROW,2026-09-18 02:00 PM EDT,UPCOMING,Other Screen,,Annecy,Dijon FCO,1563,1538,Check listings,1525.5,French Ligue 2
+TOMORROW,2026-09-18 02:00 PM EDT,UPCOMING,Other Screen,,Grenoble,Clermont Foot,1512,1498,Check listings,1491.0,French Ligue 2
+TOMORROW,2026-09-18 02:00 PM EDT,UPCOMING,Other Screen,,Stade Laval,Sochaux,1484,1517,Check listings,1467.5,French Ligue 2
+TOMORROW,2026-09-18 02:00 PM EDT,UPCOMING,Other Screen,,Pau,Dunkerque,1488,1539,Check listings,1462.5,French Ligue 2
+TOMORROW,2026-09-18 02:00 PM EDT,UPCOMING,Other Screen,,Rodez Aveyron,AS Nancy Lorraine,1573,1491,Check listings,1450.0,French Ligue 2
+TOMORROW,2026-09-18 02:00 PM EDT,UPCOMING,Other Screen,,FC Groningen,PEC Zwolle,1520,1472,Check listings,1448.0,Dutch Eredivisie
+TOMORROW,2026-09-18 02:30 PM EDT,UPCOMING,TV 1 (Look-in),02:30 PM-03:00 PM (~30m),Albacete,Córdoba,1613,1594,Check listings,1584.5,Spanish LALIGA 2
+TOMORROW,2026-09-18 02:30 PM EDT,UPCOMING,Other Screen,,Juve Stabia,Cesena,1532,1522,Check listings,1517.0,Italian Serie B
+TOMORROW,2026-09-18 02:30 PM EDT,UPCOMING,Other Screen,,Bayern Munich,1. FC Union Berlin,2046,1680,Fandango,1497.0,German Bundesliga
+TOMORROW,2026-09-18 02:45 PM EDT,UPCOMING,TV 2,,AS Monaco,Lens,1798,1817,Check listings,1788.5,French Ligue 1
+TOMORROW,2026-09-18 02:45 PM EDT,UPCOMING,Other Screen,,Monza,Sassuolo,1636,1703,Paramount+,1602.5,Italian Serie A
+TOMORROW,2026-09-18 02:45 PM EDT,UPCOMING,Other Screen,,KAA Gent,Standard Liege,1628,1588,Check listings,1568.0,Belgian Pro League
+TOMORROW,2026-09-18 03:00 PM EDT,UPCOMING,TV 1,,Brentford,Chelsea,1848,1888,USA Net,1828.0,English Premier League
+TOMORROW,2026-09-18 03:00 PM EDT,UPCOMING,TV 3,,Espanyol,Elche,1712,1694,"ESPN Deportes, ESPN+",1685.0,Spanish LALIGA
+TOMORROW,2026-09-18 03:00 PM EDT,UPCOMING,Other Screen,,Bristol City,Watford,1584,1531,Paramount+,1504.5,English League Championship

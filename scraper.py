@@ -13,7 +13,7 @@ import sys
 import unicodedata
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timedelta, timezone
-from requests.adapters import HTTPAdapter
+from requests.adapters import HTTPAdapter, Retry
 import zoneinfo
 import requests
 
@@ -22,6 +22,7 @@ import requests
 # ==========================================
 NUM_TVS = 3
 MATCH_DURATION_MINUTES = 115
+MIN_LOOKIN_MINUTES = 30
 LOCAL_TIMEZONE = zoneinfo.ZoneInfo("America/New_York")
 MAX_WORKERS = 16
 
@@ -282,45 +283,54 @@ class EloEngine:
             pass
 
     def _fetch_clubelo_csv(self):
-        """Fetches ClubElo official daily global CSV table."""
-        today_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-        url = f"http://api.clubelo.com/{today_str}"
-        print(f"Fetching ClubElo official daily CSV ({url})...")
-        ratings = {}
+        """Fetches ClubElo official daily CSV table with a guaranteed yesterday fallback."""
+        now_dt = datetime.now(timezone.utc)
+        today_str = now_dt.strftime("%Y-%m-%d")
+        yesterday_str = (now_dt - timedelta(days=1)).strftime("%Y-%m-%d")
+        
         clubelo_headers = {"User-Agent": "Mozilla/5.0"}
-        try:
-            r = requests.get(url, headers=clubelo_headers, timeout=12)
-            if r.status_code != 200:
-                # Fallback to general endpoint if today's date file is building
-                r = requests.get("http://api.clubelo.com/today", headers=clubelo_headers, timeout=12)
+        ratings = {}
 
-            if r.status_code == 200:
-                reader = csv.DictReader(io.StringIO(r.text.strip()))
-                for row in reader:
-                    club = row.get("Club", "").strip()
-                    country = row.get("Country", "").strip()
-                    elo_str = row.get("Elo", "").strip()
+        # Candidate endpoints in order of reliability
+        endpoints = [
+            f"http://api.clubelo.com/{today_str}",
+            "http://api.clubelo.com/today",
+            f"http://api.clubelo.com/{yesterday_str}",
+        ]
 
-                    if not club or not elo_str:
-                        continue
+        for url in endpoints:
+            try:
+                print(f"Fetching ClubElo daily CSV ({url})...")
+                r = requests.get(url, headers=clubelo_headers, timeout=10)
+                if r.status_code == 200 and len(r.text.strip()) > 500:
+                    reader = csv.DictReader(io.StringIO(r.text.strip()))
+                    for row in reader:
+                        club = row.get("Club", "").strip()
+                        country = row.get("Country", "").strip()
+                        elo_str = row.get("Elo", "").strip()
 
-                    try:
-                        elo_val = round(float(elo_str))
-                    except ValueError:
-                        continue
+                        if not club or not elo_str:
+                            continue
 
-                    norm_name = club.lower()
+                        try:
+                            elo_val = round(float(elo_str))
+                        except ValueError:
+                            continue
 
-                    # Disambiguation: prioritize UEFA nations or preserve higher Elo
-                    if norm_name not in ratings or country in ("ENG", "ESP", "GER", "ITA", "FRA", "POR", "NED", "BEL"):
-                        ratings[norm_name] = elo_val
-                    elif elo_val > ratings[norm_name]:
-                        ratings[norm_name] = elo_val
+                        norm_name = club.lower()
 
-                print(f"Ingested and cached {len(ratings)} club Elo ratings from CSV.")
-        except Exception as e:
-            print(f"Notice: Failed to fetch ClubElo CSV ({e}). Falling back to defaults.")
+                        if norm_name not in ratings or country in ("ENG", "ESP", "GER", "ITA", "FRA", "POR", "NED", "BEL"):
+                            ratings[norm_name] = elo_val
+                        elif elo_val > ratings[norm_name]:
+                            ratings[norm_name] = elo_val
 
+                    if len(ratings) > 100:
+                        print(f"Successfully ingested and cached {len(ratings)} club Elo ratings from {url}.")
+                        return ratings
+            except Exception as e:
+                print(f"Notice: Endpoint {url} failed ({e}). Trying next...")
+
+        print("Notice: All ClubElo remote endpoints failed. Falling back to disk cache.")
         return ratings
 
     def get(self, team_name: str) -> int:
@@ -369,7 +379,6 @@ class EloEngine:
 # ==========================================
 # 2. ESPN FIXTURE FETCHER
 # ==========================================
-LOCAL_TIMEZONE = zoneinfo.ZoneInfo("America/New_York")
 
 def get_48h_window():
     now_local = datetime.now(LOCAL_TIMEZONE)
@@ -391,8 +400,22 @@ def fetch_espn_fixtures(task):
     league_code, d_str = task
     url = f"https://site.web.api.espn.com/apis/site/v2/sports/soccer/{league_code}/scoreboard?dates={d_str}"
     events = []
+
+    # Configure a thread-local session with 2 retries and exponential backoff
+    session = requests.Session()
+    retries = Retry(
+        total=2,
+        backoff_factor=0.5,
+        status_forcelist=[429, 500, 502, 503, 504],
+        raise_on_status=False
+    )
+    adapter = HTTPAdapter(max_retries=retries)
+    session.mount("https://", adapter)
+    session.mount("http://", adapter)
+
     try:
-        r = requests.get(url, headers=HEADERS, timeout=10)
+        # Bumped timeout from 10 to 15 seconds
+        r = session.get(url, headers=HEADERS, timeout=15)
         if r.status_code != 200:
             print(f"[WARN] {league_code} {d_str} returned HTTP {r.status_code}")
             return events
@@ -402,11 +425,13 @@ def fetch_espn_fixtures(task):
             events.append((league_name, event))
     except Exception as e:
         print(f"[ERR] {league_code} {d_str}: {e}")
+    finally:
+        session.close()
+
     return events
 
-
 def harvest_matches(window, elo_engine):
-    # Compute relevant date keys using local calendar days (matches ESPN's scoreboard indexing)
+   # Compute relevant date keys using local calendar days (matches ESPN's scoreboard indexing)
     date_keys = set()
     curr = window["start_local"].date()
     end_date = window["end_local"].date()
@@ -418,7 +443,7 @@ def harvest_matches(window, elo_engine):
     print(f"Querying {len(LEAGUES)} leagues across ESPN ({len(tasks)} parallel requests)...")
 
     raw_events = []
-    with ThreadPoolExecutor(max_workers=4) as executor:
+    with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
         futures = [executor.submit(fetch_espn_fixtures, t) for t in tasks]
         for f in as_completed(futures):
             raw_events.extend(f.result())
@@ -444,8 +469,12 @@ def harvest_matches(window, elo_engine):
         if len(competitors) < 2:
             continue
 
-        home = next((c for c in competitors if c.get("homeAway") == "home"), competitors[0])
-        away = next((c for c in competitors if c.get("homeAway") == "away"), competitors[1])
+        home_cand = [c for c in competitors if c.get("homeAway") == "home"]
+        away_cand = [c for c in competitors if c.get("homeAway") == "away"]
+        home = home_cand[0] if home_cand else competitors[0]
+        away = away_cand[0] if away_cand else (competitors[1] if len(competitors) > 1 else competitors[0])
+        if home.get("id") == away.get("id") and len(competitors) > 1:
+            away = competitors[1]
 
         home_team = home.get("team", {}).get("displayName", "Home")
         away_team = away.get("team", {}).get("displayName", "Away")
@@ -496,31 +525,87 @@ def harvest_matches(window, elo_engine):
     return matches
 
 # ==========================================
-# 3. TV ALLOCATION (PRIORITY INTERVAL SCHEDULING)
+# 3. TV ALLOCATION (PRIORITY INTERVAL SCHEDULING + LOOK-INS)
 # ==========================================
 def allocate_screens(matches, num_tvs=NUM_TVS):
-    tv_intervals = {f"TV {n}": [] for n in range(1, num_tvs + 1)}
+    # screen_bookings: { 'TV 1': [(start_dt, end_dt, match_dict)], ... }
+    screen_bookings = {f"TV {n}": [] for n in range(1, num_tvs + 1)}
 
-    def has_conflict(start, end, booked):
-        return any(max(start, b_start) < min(end, b_end) for b_start, b_end in booked)
+    def has_any_conflict(start, end, booked):
+        return any(max(start, b[0]) < min(end, b[1]) for b in booked)
 
     # Higher score = priority for screens
     by_priority = sorted(matches, key=lambda m: m["sort_value"], reverse=True)
 
+    # -------------------------------------------------------------
+    # Pass 1: Primary Full-Match Assignments
+    # -------------------------------------------------------------
+    unassigned = []
     for m in by_priority:
         start = m["match_time_dt"]
         end = start + timedelta(minutes=MATCH_DURATION_MINUTES)
         assigned = False
 
-        for tv_name in sorted(tv_intervals.keys()):
-            if not has_conflict(start, end, tv_intervals[tv_name]):
-                tv_intervals[tv_name].append((start, end))
-                m["tv_assignment"] = tv_name
+        for tv in sorted(screen_bookings.keys(), key=lambda x: int(x.split()[1])):
+            if not has_any_conflict(start, end, screen_bookings[tv]):
+                screen_bookings[tv].append((start, end, m))
+                m["tv_assignment"] = tv
+                m["is_lookin"] = False
+                m["lookin_window"] = ""
                 assigned = True
                 break
 
         if not assigned:
+            unassigned.append(m)
+
+    # -------------------------------------------------------------
+    # Pass 2: Look-in Fillers (minimum 30-minute idle window)
+    # -------------------------------------------------------------
+    for m in unassigned:
+        m_start = m["match_time_dt"]
+        m_end = m_start + timedelta(minutes=MATCH_DURATION_MINUTES)
+        best_tv = None
+        best_window = None
+
+        for tv in sorted(screen_bookings.keys(), key=lambda x: int(x.split()[1])):
+            # Sort current bookings chronologically on this screen
+            bookings = sorted(screen_bookings[tv], key=lambda b: b[0])
+
+            # Find idle intervals that overlap with this match's broadcast window
+            cur_time = m_start
+            idle_windows = []
+
+            for b_start, b_end, _ in bookings:
+                if b_start > cur_time:
+                    gap_start = cur_time
+                    gap_end = min(m_end, b_start)
+                    if gap_start < gap_end:
+                        idle_windows.append((gap_start, gap_end))
+                cur_time = max(cur_time, b_end)
+
+            if cur_time < m_end:
+                idle_windows.append((cur_time, m_end))
+
+            # Check if any idle gap offers at least MIN_LOOKIN_MINUTES
+            for gap_start, gap_end in idle_windows:
+                duration = int((gap_end - gap_start).total_seconds() / 60)
+                if duration >= MIN_LOOKIN_MINUTES:
+                    best_tv = tv
+                    best_window = (gap_start, gap_end, duration)
+                    break
+            if best_tv:
+                break
+
+        if best_tv:
+            gap_start, gap_end, duration = best_window
+            screen_bookings[best_tv].append((gap_start, gap_end, m))
+            m["tv_assignment"] = f"{best_tv} (Look-in)"
+            m["is_lookin"] = True
+            m["lookin_window"] = f"{gap_start.strftime('%I:%M %p')}-{gap_end.strftime('%I:%M %p')} (~{duration}m)"
+        else:
             m["tv_assignment"] = "Other Screen"
+            m["is_lookin"] = False
+            m["lookin_window"] = ""
 
 # ==========================================
 # 4. EXPORTERS (CSV, TXT, HTML)
@@ -528,23 +613,23 @@ def allocate_screens(matches, num_tvs=NUM_TVS):
 def export_csv(matches, filename=OUTPUT_CSV):
     fieldnames = [
         "day_group", "match_time_str", "live_status", "tv_assignment",
-        "home_team", "away_team", "home_elo", "away_elo",
+        "lookin_window", "home_team", "away_team", "home_elo", "away_elo",
         "channels", "sort_value", "league",
     ]
     with open(filename, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
         for m in matches:
-            writer.writerow({k: m[k] for k in fieldnames})
+            writer.writerow({k: m.get(k, "") for k in fieldnames})
 
 def export_text_summary(matches, window, filename=OUTPUT_TXT):
     today_lbl = window["start_local"].strftime("%A, %B %d")
     tmrw_lbl = window["split_local"].strftime("%A, %B %d")
 
     lines = [
-        "=" * 108,
-        f"{'FULL 48-HOUR MULTI-SCREEN BROADCAST SCHEDULE (3 AM ANCHORED)':^108}",
-        "=" * 108,
+        "=" * 116,
+        f"{'FULL 48-HOUR MULTI-SCREEN BROADCAST SCHEDULE (3 AM ANCHORED)':^116}",
+        "=" * 116,
     ]
 
     for group, label in [("TODAY", f"TODAY'S MATCHES ({today_lbl})"),
@@ -553,9 +638,9 @@ def export_text_summary(matches, window, filename=OUTPUT_TXT):
         if not group_matches:
             continue
 
-        lines.append("\n" + "#" * 108)
+        lines.append("\n" + "#" * 116)
         lines.append(f"###  {label}")
-        lines.append("#" * 108)
+        lines.append("#" * 116)
 
         current_slot = None
         for m in group_matches:
@@ -563,8 +648,13 @@ def export_text_summary(matches, window, filename=OUTPUT_TXT):
                 current_slot = m["match_time_str"]
                 lines.append(f"\n--- {current_slot} ---")
 
+            # Format screen badge string with look-in context
+            tv_label = m["tv_assignment"]
+            if m.get("is_lookin") and m.get("lookin_window"):
+                tv_label = f"{m['tv_assignment']} [{m['lookin_window']}]"
+
             lines.append(
-                f"  [{m['live_status']:<9}] [{m['tv_assignment']:<12}] {format_league_badge(m['league']):<14} "
+                f"  [{m['live_status']:<9}] [{tv_label:<24}] {format_league_badge(m['league']):<14} "
                 f"{m['home_team']} vs {m['away_team']:<25} ({m['home_elo']} vs {m['away_elo']}) "
                 f"Score: {m['sort_value']:<6} [{m['channels']}]"
             )
@@ -577,8 +667,6 @@ def export_text_summary(matches, window, filename=OUTPUT_TXT):
 def export_mobile_html(matches, window, filename=OUTPUT_HTML):
     today_lbl = window["start_local"].strftime("%A, %B %d")
     tmrw_lbl = window["split_local"].strftime("%A, %B %d")
-
-    # Generate the local update timestamp
     updated_at_str = datetime.now(LOCAL_TIMEZONE).strftime("%a, %b %d at %I:%M %p %Z")
 
     html = f"""<!DOCTYPE html>
@@ -588,7 +676,6 @@ def export_mobile_html(matches, window, filename=OUTPUT_HTML):
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Soccer Broadcast Board</title>
   
-  <!-- Mobile & PWA Theme Metadata -->
   <meta name="theme-color" content="#121212">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -619,6 +706,22 @@ def export_mobile_html(matches, window, filename=OUTPUT_HTML):
       margin: 12px 0 6px 4px;
       font-weight: 600;
     }}
+    .status-badge {{
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      margin-left: 6px;
+    }}
+    .status-live {{ background: #c92a2a; color: #fff; animation: pulse 2s infinite; }}
+    .status-final {{ background: #495057; color: #ced4da; }}
+    .status-upcoming {{ background: #212529; color: #868e96; border: 1px solid #343a40; }}
+    @keyframes pulse {{
+      0% {{ opacity: 1; }}
+      50% {{ opacity: 0.6; }}
+      100% {{ opacity: 1; }}
+    }}
     .card {{
       background: #1a1a1a;
       border: 1px solid #2a2a2a;
@@ -632,6 +735,11 @@ def export_mobile_html(matches, window, filename=OUTPUT_HTML):
       align-items: center;
       margin-bottom: 6px;
     }}
+    .badge-container {{
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }}
     .badge {{
       font-size: 0.7rem;
       font-weight: 700;
@@ -639,10 +747,22 @@ def export_mobile_html(matches, window, filename=OUTPUT_HTML):
       border-radius: 4px;
       text-transform: uppercase;
     }}
-    .tv-tv1 {{ background: #2b8a3e; color: #fff; }}
-    .tv-tv2 {{ background: #1971c2; color: #fff; }}
-    .tv-tv3 {{ background: #e67700; color: #fff; }}
-    .tv-other {{ background: #343a40; color: #adb5bd; }}
+    .tv-tv1 {{ background: #2b8a3e; color: #fff; }} /* Green */
+    .tv-tv2 {{ background: #1971c2; color: #fff; }} /* Blue */
+    .tv-tv3 {{ background: #e67700; color: #fff; }} /* Orange */
+    .tv-tv4 {{ background: #ae3ec9; color: #fff; }} /* Grape / Purple */
+    .tv-tv5 {{ background: #0ca678; color: #fff; }} /* Teal */
+    .tv-tv6 {{ background: #d6336c; color: #fff; }} /* Rose / Pink */
+    .tv-other {{ background: #343a40; color: #adb5bd; }} /* Slate Gray */
+    .badge-lookin {{
+      background: #495057;
+      color: #74c0fc;
+      border: 1px solid #74c0fc;
+      font-size: 0.68rem;
+      font-weight: 600;
+      padding: 1px 5px;
+      border-radius: 3px;
+    }}
     .comp {{ font-size: 0.75rem; font-weight: 600; color: #ced4da; }}
     .matchup {{ font-size: 0.95rem; font-weight: bold; margin: 4px 0; }}
     .meta {{ font-size: 0.75rem; color: #888; display: flex; justify-content: space-between; }}
@@ -667,15 +787,37 @@ def export_mobile_html(matches, window, filename=OUTPUT_HTML):
                 current_slot = m["match_time_str"]
                 html += f'<div class="slot-header">{current_slot}</div>\n'
 
-            tv_class = "tv-other"
-            if "TV 1" in m["tv_assignment"]: tv_class = "tv-tv1"
-            elif "TV 2" in m["tv_assignment"]: tv_class = "tv-tv2"
-            elif "TV 3" in m["tv_assignment"]: tv_class = "tv-tv3"
+            # 1. Determine clean badge label (e.g., 'TV 1', 'TV 4', or 'Other Screen')
+            raw_assignment = m.get("tv_assignment", "Other Screen")
+            if "TV " in raw_assignment:
+                parts = raw_assignment.split()
+                tv_num = parts[1].replace("(Look-in)", "").strip()
+                base_tv = f"TV {tv_num}"
+                tv_class = f"tv-tv{tv_num}"
+            else:
+                base_tv = "Other Screen"
+                tv_class = "tv-other"
+
+            lookin_pill = ""
+            if m.get("is_lookin") and m.get("lookin_window"):
+                lookin_pill = f'<span class="badge-lookin">Look-in: {m["lookin_window"]}</span>'
+
+            status_str = m.get("live_status", "UPCOMING")
+            if "LIVE" in status_str:
+                status_class = "status-live"
+            elif "FINAL" in status_str:
+                status_class = "status-final"
+            else:
+                status_class = "status-upcoming"
 
             html += f"""
         <div class="card">
           <div class="card-top">
-            <span class="badge {tv_class}">{m['tv_assignment']}</span>
+            <div class="badge-container">
+              <span class="badge {tv_class}">{base_tv}</span>
+              {lookin_pill}
+              <span class="status-badge {status_class}">{status_str}</span>
+            </div>
             <span class="comp">{format_league_badge(m['league'])}</span>
           </div>
           <div class="matchup">{m['home_team']} vs {m['away_team']}</div>
