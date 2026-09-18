@@ -664,6 +664,54 @@ def export_text_summary(matches, window, filename=OUTPUT_TXT):
     with open(filename, "w", encoding="utf-8") as f:
         f.write(output)
 
+import urllib.parse
+
+def resolve_stream_url(channels: str, league: str, home: str = "", away: str = "") -> str:
+    c = channels.lower()
+    l = league.lower()
+
+    # If fixture is on linear TV via YouTube TV, search query parameter
+    if any(net in c for net in ["usa", "nbc", "cbs sports network", "cbssn", "fs1"]):
+        query = f"{home} vs {away}".strip(" vs")
+        return f"https://tv.youtube.com/search?q={urllib.parse.quote(query)}"
+
+    # 2. Peacock League Hubs
+    if "peacock" in c:
+        if "premier" in l or "eng.1" in l:
+            return "https://www.peacocktv.com/sports/premier-league"
+        return "https://www.peacocktv.com/sports"
+
+    # 3. Paramount+ Competitions (Deconflicted: EFL Cup & League Tiers vs UCL)
+    if "paramount" in c or "cbs" in c:
+        # EFL Cup (Carabao Cup) Knockout Hub
+        if "carabao" in l or "efl cup" in l or "eng.league_cup" in l:
+            return "https://www.paramountplus.com/shows/efl-cup/"
+
+        # English Football League Tier Matches (Championship, League One, League Two)
+        if any(k in l for k in ["championship", "eng.2", "league one", "eng.3", "league two", "eng.4"]):
+            return "https://www.paramountplus.com/shows/english-football-league/"
+        
+        # European Continental Competitions
+        if "champions league" in l or "ucl" in l or "uefa.champions" in l:
+            return "https://www.paramountplus.com/shows/uefa-champions-league/"
+        if "europa" in l or "uel" in l or "uecl" in l or "uefa.europa" in l:
+            return "https://www.paramountplus.com/shows/uefa-europa-league/"
+        if "serie a" in l or "ita.1" in l:
+            return "https://www.paramountplus.com/shows/serie-a/"
+        return "https://www.paramountplus.com/sports"
+
+    # 4. ESPN+ Competitions
+    if "espn+" in c:
+        if "laliga" in l or "esp.1" in l or "spanish" in l:
+            return "https://www.espn.com/watch/catalog/cf7b0c51-7c48-3e9a-8abb-0c01b1a973a0/spanish-laliga"
+        if "bundesliga" in l or "ger.1" in l or "german" in l:
+            return "https://www.espn.com/watch/catalog/0270a442-7cf2-3e28-8d74-2794db5d41a7/german-bundesliga"
+        if "fa cup" in l or "eng.fa" in l:
+            return "https://www.espn.com/watch/catalog/5a560c57-ca5e-3ee8-8f81-a9686ae2c00e/the-fa-cup"
+        return "https://www.espn.com/watch/espnplus/soccer"
+
+    return ""
+
 def export_mobile_html(matches, window, filename=OUTPUT_HTML):
     today_lbl = window["start_local"].strftime("%A, %B %d")
     tmrw_lbl = window["split_local"].strftime("%A, %B %d")
@@ -766,7 +814,14 @@ def export_mobile_html(matches, window, filename=OUTPUT_HTML):
     .comp {{ font-size: 0.75rem; font-weight: 600; color: #ced4da; }}
     .matchup {{ font-size: 0.95rem; font-weight: bold; margin: 4px 0; }}
     .meta {{ font-size: 0.75rem; color: #888; display: flex; justify-content: space-between; }}
-    .channel {{ color: #ffd43b; font-weight: 600; }}
+    .channel {{
+      color: #ffd43b;
+      font-weight: 600;
+      text-decoration: none;
+    }}
+    a.channel:hover {{
+      text-decoration: underline;
+    }}
   </style>
 </head>
 <body>
@@ -802,6 +857,7 @@ def export_mobile_html(matches, window, filename=OUTPUT_HTML):
             if m.get("is_lookin") and m.get("lookin_window"):
                 lookin_pill = f'<span class="badge-lookin">Look-in: {m["lookin_window"]}</span>'
 
+            # 1. Match status indicator
             status_str = m.get("live_status", "UPCOMING")
             if "LIVE" in status_str:
                 status_class = "status-live"
@@ -809,6 +865,13 @@ def export_mobile_html(matches, window, filename=OUTPUT_HTML):
                 status_class = "status-final"
             else:
                 status_class = "status-upcoming"
+
+            # 2. Clickable tap-to-stream link
+            stream_url = resolve_stream_url(m["channels"], m["league"], m["home_team"], m["away_team"])
+            if stream_url:
+                channel_html = f'<a href="{stream_url}" target="_blank" rel="noopener noreferrer" class="channel">{m["channels"]} &#8599;</a>'
+            else:
+                channel_html = f'<span class="channel">{m["channels"]}</span>'
 
             html += f"""
         <div class="card">
@@ -823,7 +886,7 @@ def export_mobile_html(matches, window, filename=OUTPUT_HTML):
           <div class="matchup">{m['home_team']} vs {m['away_team']}</div>
           <div class="meta">
             <span>Elos: {m['home_elo']} vs {m['away_elo']} (Score: {m['sort_value']})</span>
-            <span class="channel">{m['channels']}</span>
+            {channel_html}
           </div>
         </div>
         """
