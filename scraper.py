@@ -119,6 +119,9 @@ NAME_ALIASES = {
     "deportivo la coruna": "depor",
     "deportivo": "depor",
     "racing santander": "santander",
+    "ceuta": "ca ceuta",
+    "ad ceuta": "ca ceuta",
+    "ad ceuta fc": "ca ceuta",
 
     # Germany (Bundesliga & 2. Bundesliga)
     "fc cologne": "köln",
@@ -143,6 +146,7 @@ NAME_ALIASES = {
     "darmstadt": "darmstadt",
     "1. fc union berlin": "union berlin",
     "union berlin": "union berlin",
+    "st. pauli": "st pauli",
 
     # Italy (Serie A)
     "inter milan": "inter",
@@ -174,6 +178,7 @@ NAME_ALIASES = {
     "nec nijmegen": "nijmegen",
     "n.e.c.": "nijmegen",
     "nec": "nijmegen",
+    "psv eindhoven": "psv",
     "union st.-gilloise": "st gillis",
     "union saint-gilloise": "st gillis",
     "royale union saint-gilloise": "st gillis",
@@ -190,6 +195,11 @@ NAME_ALIASES = {
     "sporting lisbon": "sporting",
     "cs maritimo": "maritimo",
     "marítimo": "maritimo",
+    "estrela": "estrela amadora",
+    "estrela da amadora": "estrela amadora",
+    "cf estrela": "estrela amadora",
+    "académico de viseu": "ac viseu",
+    "academico de viseu": "ac viseu",
 
     # Belgium (Pro League)
     "raal la louvière": "la louviere",
@@ -222,6 +232,7 @@ NAME_ALIASES = {
     "istanbul basaksehir": "basaksehir",
     "rams basaksehir": "basaksehir",
     "istanbul başakşehir": "basaksehir",
+    "amed sfk": "amed sk",
 }
 
 # ==========================================
@@ -875,6 +886,41 @@ def export_mobile_html(matches, window, filename=OUTPUT_HTML):
       margin-top: 16px;
       border-radius: 2px;
     }}
+    /* Floating / Pinned Live Tray */
+    #live-tray-wrapper {{
+      margin-bottom: 24px;
+      display: none; /* hidden if no live games */
+    }}
+    .tray-title {{
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #e50914;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+      padding-left: 4px;
+    }}
+    .pulse-dot {{
+      width: 8px;
+      height: 8px;
+      background: #e50914;
+      border-radius: 50%;
+      box-shadow: 0 0 8px #e50914;
+      animation: pulse 1.5s infinite;
+    }}
+    @keyframes pulse {{
+      0% {{ opacity: 1; transform: scale(1); }}
+      50% {{ opacity: 0.4; transform: scale(1.2); }}
+      100% {{ opacity: 1; transform: scale(1); }}
+    }}
+    #live-tray .card {{
+      border-left: 4px solid #e50914;
+      background: #1f1f27;
+      margin-bottom: 10px;
+    }}
     .slot-header {{
       font-size: 0.8rem;
       color: #aaa;
@@ -955,6 +1001,13 @@ def export_mobile_html(matches, window, filename=OUTPUT_HTML):
   <h1>Soccer Broadcast Board</h1>
   <div class="subtitle">48-Hour Multi-Screen Schedule (Anchored 3 AM)</div>
   <div class="updated-at">Updated: {updated_at_str}</div>
+  <div id="live-tray-wrapper">
+    <div class="tray-title">
+      <span class="pulse-dot"></span>
+      Active Screen Assignments (Live Now)
+    </div>
+    <div id="live-tray"></div>
+  </div>
 """
     for group, label in [("TODAY", f"TODAY'S MATCHES ({today_lbl})"),
                          ("TOMORROW", f"TOMORROW'S MATCHES ({tmrw_lbl})")]:
@@ -1001,8 +1054,12 @@ def export_mobile_html(matches, window, filename=OUTPUT_HTML):
             else:
                 channel_html = f'<span class="channel">{m["channels"]}</span>'
 
+            # Calculate start and end ISO strings for the dynamic Live Tray
+            start_iso = m["match_time_dt"].isoformat()
+            end_iso = (m["match_time_dt"] + timedelta(minutes=MATCH_DURATION_MINUTES)).isoformat()
+
             html += f"""
-        <div class="card">
+        <div class="card" data-start="{start_iso}" data-end="{end_iso}">
           <div class="card-top">
             <div class="badge-container">
               <span class="badge {tv_class}">{base_tv}</span>
@@ -1041,6 +1098,80 @@ def export_mobile_html(matches, window, filename=OUTPUT_HTML):
 
       if (anchorTarget) {
         anchorTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const now = new Date().getTime();
+      const trayWrapper = document.getElementById("live-tray-wrapper");
+      const tray = document.getElementById("live-tray");
+      const allCards = document.querySelectorAll(".card[data-start]");
+
+      // Map to store exactly ONE card per physical TV: { "TV 1": cardEl, "TV 2": cardEl }
+      const activeTvMap = {};
+
+      allCards.forEach(card => {
+        const tvBadge = card.querySelector(".badge");
+        if (!tvBadge || tvBadge.classList.contains("tv-other") || tvBadge.textContent.includes("Other")) {
+          return;
+        }
+
+        const tvName = tvBadge.textContent.trim(); // e.g., "TV 1", "TV 2"
+        const start = new Date(card.dataset.start).getTime();
+        const end = new Date(card.dataset.end).getTime();
+
+        // 1. MUST be currently active right now (no future matches!)
+        if (now >= start && now <= end) {
+          // 2. If this TV is already occupied in the tray, pick the later kickoff
+          if (!activeTvMap[tvName]) {
+            activeTvMap[tvName] = card;
+          } else {
+            const existingStart = new Date(activeTvMap[tvName].dataset.start).getTime();
+            // The later kickoff superseded the earlier match on this TV
+            if (start > existingStart) {
+              activeTvMap[tvName] = card;
+            }
+          }
+        }
+      });
+
+      const activeCards = Object.values(activeTvMap);
+
+      // Sort cards numerically by TV name (TV 1, TV 2, TV 3...)
+      activeCards.sort((a, b) => {
+        const aName = a.querySelector(".badge").textContent;
+        const bName = b.querySelector(".badge").textContent;
+        return aName.localeCompare(bName, undefined, { numeric: true });
+      });
+
+      if (activeCards.length > 0) {
+        activeCards.forEach(card => {
+          const clone = card.cloneNode(true);
+          tray.appendChild(clone);
+        });
+
+        trayWrapper.style.display = "block";
+        window.scrollTo(0, 0);
+        return;
+      }
+
+      // Fallback: 2-hour auto-scroll if nothing on physical TVs
+      const lookbackMs = 120 * 60 * 1000;
+      const targetTime = now - lookbackMs;
+      const headers = Array.from(document.querySelectorAll(".slot-header[data-time]"));
+      let anchorTarget = null;
+
+      for (const el of headers) {
+        const slotTime = new Date(el.dataset.time).getTime();
+        if (slotTime >= targetTime) {
+          anchorTarget = el;
+          break;
+        }
+      }
+
+      if (anchorTarget) {
+        anchorTarget.scrollIntoView({ behavior: "smooth", block: "start" });
       }
     });
   </script>
