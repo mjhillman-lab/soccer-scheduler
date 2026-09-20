@@ -29,6 +29,41 @@
       margin-top: 16px;
       border-radius: 2px;
     }
+    /* Floating / Pinned Live Tray */
+    #live-tray-wrapper {
+      margin-bottom: 24px;
+      display: none; /* hidden if no live games */
+    }
+    .tray-title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #e50914;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+      padding-left: 4px;
+    }
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      background: #e50914;
+      border-radius: 50%;
+      box-shadow: 0 0 8px #e50914;
+      animation: pulse 1.5s infinite;
+    }
+    @keyframes pulse {
+      0% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(1.2); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+    #live-tray .card {
+      border-left: 4px solid #e50914;
+      background: #1f1f27;
+      margin-bottom: 10px;
+    }
     .slot-header {
       font-size: 0.8rem;
       color: #aaa;
@@ -108,11 +143,18 @@
 <body>
   <h1>Soccer Broadcast Board</h1>
   <div class="subtitle">48-Hour Multi-Screen Schedule (Anchored 3 AM)</div>
-  <div class="updated-at">Updated: Sun, Sep 20 at 03:02 AM EDT</div>
+  <div class="updated-at">Updated: Sun, Sep 20 at 09:23 AM EDT</div>
+  <div id="live-tray-wrapper">
+    <div class="tray-title">
+      <span class="pulse-dot"></span>
+      Active Screen Assignments (Live Now)
+    </div>
+    <div id="live-tray"></div>
+  </div>
 <div class="day-header">TODAY'S MATCHES (Sunday, September 20)</div>
 <div class="slot-header" data-time="2026-09-20T06:15:00-04:00">2026-09-20 06:15 AM EDT</div>
 
-        <div class="card">
+        <div class="card" data-start="2026-09-20T06:15:00-04:00" data-end="2026-09-20T08:10:00-04:00">
           <div class="card-top">
             <div class="badge-container">
               <span class="badge tv-tv1">TV 1</span>
@@ -128,7 +170,7 @@
         </div>
         <div class="slot-header" data-time="2026-09-20T06:30:00-04:00">2026-09-20 06:30 AM EDT</div>
 
-        <div class="card">
+        <div class="card" data-start="2026-09-20T06:30:00-04:00" data-end="2026-09-20T08:25:00-04:00">
           <div class="card-top">
             <div class="badge-container">
               <span class="badge tv-tv2">TV 2</span>
@@ -144,7 +186,7 @@
         </div>
         <div class="slot-header" data-time="2026-09-20T07:00:00-04:00">2026-09-20 07:00 AM EDT</div>
 
-        <div class="card">
+        <div class="card" data-start="2026-09-20T07:00:00-04:00" data-end="2026-09-20T08:55:00-04:00">
           <div class="card-top">
             <div class="badge-container">
               <span class="badge tv-tv3">TV 3</span>
@@ -160,7 +202,7 @@
         </div>
         <div class="slot-header" data-time="2026-09-20T07:30:00-04:00">2026-09-20 07:30 AM EDT</div>
 
-        <div class="card">
+        <div class="card" data-start="2026-09-20T07:30:00-04:00" data-end="2026-09-20T09:25:00-04:00">
           <div class="card-top">
             <div class="badge-container">
               <span class="badge tv-other">Other Screen</span>
@@ -175,7 +217,7 @@
           </div>
         </div>
         
-        <div class="card">
+        <div class="card" data-start="2026-09-20T07:30:00-04:00" data-end="2026-09-20T09:25:00-04:00">
           <div class="card-top">
             <div class="badge-container">
               <span class="badge tv-other">Other Screen</span>
@@ -190,7 +232,22 @@
           </div>
         </div>
         
-        <div class="card">
+        <div class="card" data-start="2026-09-20T07:30:00-04:00" data-end="2026-09-20T09:25:00-04:00">
+          <div class="card-top">
+            <div class="badge-container">
+              <span class="badge tv-other">Other Screen</span>
+              
+            </div>
+            <span class="comp">[2. Bundesliga]</span>
+          </div>
+          <div class="matchup">Energie Cottbus vs St. Pauli</div>
+          <div class="meta">
+            <span>Elos: 1549 vs 1613 (Score: 1517.0)</span>
+            <a href="https://tv.youtube.com/search?q=Energie%20Cottbus%20vs%20St.%20Pauli" target="_blank" rel="noopener noreferrer" class="channel">Check listings &#8599;</a>
+          </div>
+        </div>
+        
+        <div class="card" data-start="2026-09-20T07:30:00-04:00" data-end="2026-09-20T09:25:00-04:00">
           <div class="card-top">
             <div class="badge-container">
               <span class="badge tv-other">Other Screen</span>
@@ -204,24 +261,9 @@
             <a href="https://www.dazn.com/en-US/competition/Competition:4zwgbb66rif2spcoeeol2motx" target="_blank" rel="noopener noreferrer" class="channel">DAZN &#8599;</a>
           </div>
         </div>
-        
-        <div class="card">
-          <div class="card-top">
-            <div class="badge-container">
-              <span class="badge tv-other">Other Screen</span>
-              
-            </div>
-            <span class="comp">[2. Bundesliga]</span>
-          </div>
-          <div class="matchup">Energie Cottbus vs St. Pauli</div>
-          <div class="meta">
-            <span>Elos: 1549 vs 1450 (Score: 1400.5)</span>
-            <a href="https://tv.youtube.com/search?q=Energie%20Cottbus%20vs%20St.%20Pauli" target="_blank" rel="noopener noreferrer" class="channel">Check listings &#8599;</a>
-          </div>
-        </div>
         <div class="slot-header" data-time="2026-09-20T08:00:00-04:00">2026-09-20 08:00 AM EDT</div>
 
-        <div class="card">
+        <div class="card" data-start="2026-09-20T08:00:00-04:00" data-end="2026-09-20T09:55:00-04:00">
           <div class="card-top">
             <div class="badge-container">
               <span class="badge tv-tv1">TV 1</span>
@@ -236,7 +278,7 @@
           </div>
         </div>
         
-        <div class="card">
+        <div class="card" data-start="2026-09-20T08:00:00-04:00" data-end="2026-09-20T09:55:00-04:00">
           <div class="card-top">
             <div class="badge-container">
               <span class="badge tv-other">Other Screen</span>
@@ -252,7 +294,22 @@
         </div>
         <div class="slot-header" data-time="2026-09-20T08:30:00-04:00">2026-09-20 08:30 AM EDT</div>
 
-        <div class="card">
+        <div class="card" data-start="2026-09-20T08:30:00-04:00" data-end="2026-09-20T10:25:00-04:00">
+          <div class="card-top">
+            <div class="badge-container">
+              <span class="badge tv-tv2">TV 2</span>
+              <span class="badge-lookin">Look-in: 08:30 AM-09:00 AM (~30m)</span>
+            </div>
+            <span class="comp">[Eredivisie]</span>
+          </div>
+          <div class="matchup">FC Twente vs PSV Eindhoven</div>
+          <div class="meta">
+            <span>Elos: 1660 vs 1791 (Score: 1594.5)</span>
+            <a href="https://www.espn.com/watch/catalog/e8c15234-75dd-3155-bea5-3a1d9edcfd27/dutch-eredivisie" target="_blank" rel="noopener noreferrer" class="channel">ESPN+ &#8599;</a>
+          </div>
+        </div>
+        
+        <div class="card" data-start="2026-09-20T08:30:00-04:00" data-end="2026-09-20T10:25:00-04:00">
           <div class="card-top">
             <div class="badge-container">
               <span class="badge tv-other">Other Screen</span>
@@ -267,22 +324,7 @@
           </div>
         </div>
         
-        <div class="card">
-          <div class="card-top">
-            <div class="badge-container">
-              <span class="badge tv-tv2">TV 2</span>
-              <span class="badge-lookin">Look-in: 08:30 AM-09:00 AM (~30m)</span>
-            </div>
-            <span class="comp">[Eredivisie]</span>
-          </div>
-          <div class="matchup">FC Twente vs PSV Eindhoven</div>
-          <div class="meta">
-            <span>Elos: 1660 vs 1450 (Score: 1345.0)</span>
-            <a href="https://www.espn.com/watch/catalog/e8c15234-75dd-3155-bea5-3a1d9edcfd27/dutch-eredivisie" target="_blank" rel="noopener noreferrer" class="channel">ESPN+ &#8599;</a>
-          </div>
-        </div>
-        
-        <div class="card">
+        <div class="card" data-start="2026-09-20T08:30:00-04:00" data-end="2026-09-20T10:25:00-04:00">
           <div class="card-top">
             <div class="badge-container">
               <span class="badge tv-other">Other Screen</span>
@@ -298,7 +340,7 @@
         </div>
         <div class="slot-header" data-time="2026-09-20T09:00:00-04:00">2026-09-20 09:00 AM EDT</div>
 
-        <div class="card">
+        <div class="card" data-start="2026-09-20T09:00:00-04:00" data-end="2026-09-20T10:55:00-04:00">
           <div class="card-top">
             <div class="badge-container">
               <span class="badge tv-tv2">TV 2</span>
@@ -313,7 +355,7 @@
           </div>
         </div>
         
-        <div class="card">
+        <div class="card" data-start="2026-09-20T09:00:00-04:00" data-end="2026-09-20T10:55:00-04:00">
           <div class="card-top">
             <div class="badge-container">
               <span class="badge tv-tv3">TV 3</span>
@@ -328,7 +370,7 @@
           </div>
         </div>
         
-        <div class="card">
+        <div class="card" data-start="2026-09-20T09:00:00-04:00" data-end="2026-09-20T10:55:00-04:00">
           <div class="card-top">
             <div class="badge-container">
               <span class="badge tv-other">Other Screen</span>
@@ -343,7 +385,7 @@
           </div>
         </div>
         
-        <div class="card">
+        <div class="card" data-start="2026-09-20T09:00:00-04:00" data-end="2026-09-20T10:55:00-04:00">
           <div class="card-top">
             <div class="badge-container">
               <span class="badge tv-other">Other Screen</span>
@@ -358,7 +400,7 @@
           </div>
         </div>
         
-        <div class="card">
+        <div class="card" data-start="2026-09-20T09:00:00-04:00" data-end="2026-09-20T10:55:00-04:00">
           <div class="card-top">
             <div class="badge-container">
               <span class="badge tv-other">Other Screen</span>
@@ -373,7 +415,7 @@
           </div>
         </div>
         
-        <div class="card">
+        <div class="card" data-start="2026-09-20T09:00:00-04:00" data-end="2026-09-20T10:55:00-04:00">
           <div class="card-top">
             <div class="badge-container">
               <span class="badge tv-other">Other Screen</span>
@@ -389,7 +431,7 @@
         </div>
         <div class="slot-header" data-time="2026-09-20T09:30:00-04:00">2026-09-20 09:30 AM EDT</div>
 
-        <div class="card">
+        <div class="card" data-start="2026-09-20T09:30:00-04:00" data-end="2026-09-20T11:25:00-04:00">
           <div class="card-top">
             <div class="badge-container">
               <span class="badge tv-tv2">TV 2</span>
@@ -405,7 +447,7 @@
         </div>
         <div class="slot-header" data-time="2026-09-20T10:00:00-04:00">2026-09-20 10:00 AM EDT</div>
 
-        <div class="card">
+        <div class="card" data-start="2026-09-20T10:00:00-04:00" data-end="2026-09-20T11:55:00-04:00">
           <div class="card-top">
             <div class="badge-container">
               <span class="badge tv-other">Other Screen</span>
@@ -420,7 +462,7 @@
           </div>
         </div>
         
-        <div class="card">
+        <div class="card" data-start="2026-09-20T10:00:00-04:00" data-end="2026-09-20T11:55:00-04:00">
           <div class="card-top">
             <div class="badge-container">
               <span class="badge tv-other">Other Screen</span>
@@ -435,7 +477,7 @@
           </div>
         </div>
         
-        <div class="card">
+        <div class="card" data-start="2026-09-20T10:00:00-04:00" data-end="2026-09-20T11:55:00-04:00">
           <div class="card-top">
             <div class="badge-container">
               <span class="badge tv-other">Other Screen</span>
@@ -451,7 +493,7 @@
         </div>
         <div class="slot-header" data-time="2026-09-20T10:15:00-04:00">2026-09-20 10:15 AM EDT</div>
 
-        <div class="card">
+        <div class="card" data-start="2026-09-20T10:15:00-04:00" data-end="2026-09-20T12:10:00-04:00">
           <div class="card-top">
             <div class="badge-container">
               <span class="badge tv-tv1">TV 1</span>
@@ -466,7 +508,7 @@
           </div>
         </div>
         
-        <div class="card">
+        <div class="card" data-start="2026-09-20T10:15:00-04:00" data-end="2026-09-20T12:10:00-04:00">
           <div class="card-top">
             <div class="badge-container">
               <span class="badge tv-other">Other Screen</span>
@@ -476,13 +518,13 @@
           </div>
           <div class="matchup">Ceuta vs Real Valladolid</div>
           <div class="meta">
-            <span>Elos: 1450 vs 1360 (Score: 1315.0)</span>
+            <span>Elos: 1560 vs 1360 (Score: 1260.0)</span>
             <a href="https://tv.youtube.com/search?q=Ceuta%20vs%20Real%20Valladolid" target="_blank" rel="noopener noreferrer" class="channel">Check listings &#8599;</a>
           </div>
         </div>
         <div class="slot-header" data-time="2026-09-20T10:30:00-04:00">2026-09-20 10:30 AM EDT</div>
 
-        <div class="card">
+        <div class="card" data-start="2026-09-20T10:30:00-04:00" data-end="2026-09-20T12:25:00-04:00">
           <div class="card-top">
             <div class="badge-container">
               <span class="badge tv-other">Other Screen</span>
@@ -497,7 +539,7 @@
           </div>
         </div>
         
-        <div class="card">
+        <div class="card" data-start="2026-09-20T10:30:00-04:00" data-end="2026-09-20T12:25:00-04:00">
           <div class="card-top">
             <div class="badge-container">
               <span class="badge tv-other">Other Screen</span>
@@ -507,13 +549,13 @@
           </div>
           <div class="matchup">Estrela vs Académico de Viseu</div>
           <div class="meta">
-            <span>Elos: 1450 vs 1450 (Score: 1450.0)</span>
+            <span>Elos: 1503 vs 1494 (Score: 1489.5)</span>
             <a href="https://www.dazn.com/en-US/competition/Competition:8yi6ejjd1zudcqtbn07haahg6" target="_blank" rel="noopener noreferrer" class="channel">DAZN &#8599;</a>
           </div>
         </div>
         <div class="slot-header" data-time="2026-09-20T10:45:00-04:00">2026-09-20 10:45 AM EDT</div>
 
-        <div class="card">
+        <div class="card" data-start="2026-09-20T10:45:00-04:00" data-end="2026-09-20T12:40:00-04:00">
           <div class="card-top">
             <div class="badge-container">
               <span class="badge tv-tv3">TV 3</span>
@@ -529,7 +571,7 @@
         </div>
         <div class="slot-header" data-time="2026-09-20T11:15:00-04:00">2026-09-20 11:15 AM EDT</div>
 
-        <div class="card">
+        <div class="card" data-start="2026-09-20T11:15:00-04:00" data-end="2026-09-20T13:10:00-04:00">
           <div class="card-top">
             <div class="badge-container">
               <span class="badge tv-other">Other Screen</span>
@@ -545,7 +587,7 @@
         </div>
         <div class="slot-header" data-time="2026-09-20T11:30:00-04:00">2026-09-20 11:30 AM EDT</div>
 
-        <div class="card">
+        <div class="card" data-start="2026-09-20T11:30:00-04:00" data-end="2026-09-20T13:25:00-04:00">
           <div class="card-top">
             <div class="badge-container">
               <span class="badge tv-tv3">TV 3</span>
@@ -560,7 +602,7 @@
           </div>
         </div>
         
-        <div class="card">
+        <div class="card" data-start="2026-09-20T11:30:00-04:00" data-end="2026-09-20T13:25:00-04:00">
           <div class="card-top">
             <div class="badge-container">
               <span class="badge tv-tv2">TV 2</span>
@@ -576,7 +618,7 @@
         </div>
         <div class="slot-header" data-time="2026-09-20T12:00:00-04:00">2026-09-20 12:00 PM EDT</div>
 
-        <div class="card">
+        <div class="card" data-start="2026-09-20T12:00:00-04:00" data-end="2026-09-20T13:55:00-04:00">
           <div class="card-top">
             <div class="badge-container">
               <span class="badge tv-tv2">TV 2</span>
@@ -592,7 +634,7 @@
         </div>
         <div class="slot-header" data-time="2026-09-20T12:30:00-04:00">2026-09-20 12:30 PM EDT</div>
 
-        <div class="card">
+        <div class="card" data-start="2026-09-20T12:30:00-04:00" data-end="2026-09-20T14:25:00-04:00">
           <div class="card-top">
             <div class="badge-container">
               <span class="badge tv-tv1">TV 1</span>
@@ -607,7 +649,7 @@
           </div>
         </div>
         
-        <div class="card">
+        <div class="card" data-start="2026-09-20T12:30:00-04:00" data-end="2026-09-20T14:25:00-04:00">
           <div class="card-top">
             <div class="badge-container">
               <span class="badge tv-other">Other Screen</span>
@@ -622,7 +664,7 @@
           </div>
         </div>
         
-        <div class="card">
+        <div class="card" data-start="2026-09-20T12:30:00-04:00" data-end="2026-09-20T14:25:00-04:00">
           <div class="card-top">
             <div class="badge-container">
               <span class="badge tv-tv2">TV 2</span>
@@ -637,7 +679,7 @@
           </div>
         </div>
         
-        <div class="card">
+        <div class="card" data-start="2026-09-20T12:30:00-04:00" data-end="2026-09-20T14:25:00-04:00">
           <div class="card-top">
             <div class="badge-container">
               <span class="badge tv-tv3">TV 3</span>
@@ -652,7 +694,7 @@
           </div>
         </div>
         
-        <div class="card">
+        <div class="card" data-start="2026-09-20T12:30:00-04:00" data-end="2026-09-20T14:25:00-04:00">
           <div class="card-top">
             <div class="badge-container">
               <span class="badge tv-other">Other Screen</span>
@@ -668,7 +710,22 @@
         </div>
         <div class="slot-header" data-time="2026-09-20T13:00:00-04:00">2026-09-20 01:00 PM EDT</div>
 
-        <div class="card">
+        <div class="card" data-start="2026-09-20T13:00:00-04:00" data-end="2026-09-20T14:55:00-04:00">
+          <div class="card-top">
+            <div class="badge-container">
+              <span class="badge tv-other">Other Screen</span>
+              
+            </div>
+            <span class="comp">[Süper Lig]</span>
+          </div>
+          <div class="matchup">Amed SFK vs Besiktas</div>
+          <div class="meta">
+            <span>Elos: 1692 vs 1693 (Score: 1691.5)</span>
+            <a href="https://watch.beinsports-apps.com/events/bein-turkish-superlig-24-7-2" target="_blank" rel="noopener noreferrer" class="channel">beIN SPORTS &#8599;</a>
+          </div>
+        </div>
+        
+        <div class="card" data-start="2026-09-20T13:00:00-04:00" data-end="2026-09-20T14:55:00-04:00">
           <div class="card-top">
             <div class="badge-container">
               <span class="badge tv-other">Other Screen</span>
@@ -683,7 +740,7 @@
           </div>
         </div>
         
-        <div class="card">
+        <div class="card" data-start="2026-09-20T13:00:00-04:00" data-end="2026-09-20T14:55:00-04:00">
           <div class="card-top">
             <div class="badge-container">
               <span class="badge tv-other">Other Screen</span>
@@ -698,7 +755,7 @@
           </div>
         </div>
         
-        <div class="card">
+        <div class="card" data-start="2026-09-20T13:00:00-04:00" data-end="2026-09-20T14:55:00-04:00">
           <div class="card-top">
             <div class="badge-container">
               <span class="badge tv-other">Other Screen</span>
@@ -712,24 +769,9 @@
             <a href="https://www.dazn.com/en-US/competition/Competition:8yi6ejjd1zudcqtbn07haahg6" target="_blank" rel="noopener noreferrer" class="channel">DAZN &#8599;</a>
           </div>
         </div>
-        
-        <div class="card">
-          <div class="card-top">
-            <div class="badge-container">
-              <span class="badge tv-other">Other Screen</span>
-              
-            </div>
-            <span class="comp">[Süper Lig]</span>
-          </div>
-          <div class="matchup">Amed SFK vs Besiktas</div>
-          <div class="meta">
-            <span>Elos: 1450 vs 1693 (Score: 1328.5)</span>
-            <a href="https://watch.beinsports-apps.com/events/bein-turkish-superlig-24-7-2" target="_blank" rel="noopener noreferrer" class="channel">beIN SPORTS &#8599;</a>
-          </div>
-        </div>
         <div class="slot-header" data-time="2026-09-20T13:15:00-04:00">2026-09-20 01:15 PM EDT</div>
 
-        <div class="card">
+        <div class="card" data-start="2026-09-20T13:15:00-04:00" data-end="2026-09-20T15:10:00-04:00">
           <div class="card-top">
             <div class="badge-container">
               <span class="badge tv-other">Other Screen</span>
@@ -745,7 +787,7 @@
         </div>
         <div class="slot-header" data-time="2026-09-20T13:30:00-04:00">2026-09-20 01:30 PM EDT</div>
 
-        <div class="card">
+        <div class="card" data-start="2026-09-20T13:30:00-04:00" data-end="2026-09-20T15:25:00-04:00">
           <div class="card-top">
             <div class="badge-container">
               <span class="badge tv-tv1">TV 1</span>
@@ -761,7 +803,7 @@
         </div>
         <div class="slot-header" data-time="2026-09-20T14:45:00-04:00">2026-09-20 02:45 PM EDT</div>
 
-        <div class="card">
+        <div class="card" data-start="2026-09-20T14:45:00-04:00" data-end="2026-09-20T16:40:00-04:00">
           <div class="card-top">
             <div class="badge-container">
               <span class="badge tv-tv2">TV 2</span>
@@ -776,7 +818,7 @@
           </div>
         </div>
         
-        <div class="card">
+        <div class="card" data-start="2026-09-20T14:45:00-04:00" data-end="2026-09-20T16:40:00-04:00">
           <div class="card-top">
             <div class="badge-container">
               <span class="badge tv-other">Other Screen</span>
@@ -792,7 +834,7 @@
         </div>
         <div class="slot-header" data-time="2026-09-20T15:00:00-04:00">2026-09-20 03:00 PM EDT</div>
 
-        <div class="card">
+        <div class="card" data-start="2026-09-20T15:00:00-04:00" data-end="2026-09-20T16:55:00-04:00">
           <div class="card-top">
             <div class="badge-container">
               <span class="badge tv-tv1">TV 1</span>
@@ -807,7 +849,7 @@
           </div>
         </div>
         
-        <div class="card">
+        <div class="card" data-start="2026-09-20T15:00:00-04:00" data-end="2026-09-20T16:55:00-04:00">
           <div class="card-top">
             <div class="badge-container">
               <span class="badge tv-tv3">TV 3</span>
@@ -823,7 +865,7 @@
         </div>
         <div class="slot-header" data-time="2026-09-20T15:30:00-04:00">2026-09-20 03:30 PM EDT</div>
 
-        <div class="card">
+        <div class="card" data-start="2026-09-20T15:30:00-04:00" data-end="2026-09-20T17:25:00-04:00">
           <div class="card-top">
             <div class="badge-container">
               <span class="badge tv-other">Other Screen</span>
@@ -861,6 +903,80 @@
 
       if (anchorTarget) {
         anchorTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const now = new Date().getTime();
+      const trayWrapper = document.getElementById("live-tray-wrapper");
+      const tray = document.getElementById("live-tray");
+      const allCards = document.querySelectorAll(".card[data-start]");
+
+      // Map to store exactly ONE card per physical TV: { "TV 1": cardEl, "TV 2": cardEl }
+      const activeTvMap = {};
+
+      allCards.forEach(card => {
+        const tvBadge = card.querySelector(".badge");
+        if (!tvBadge || tvBadge.classList.contains("tv-other") || tvBadge.textContent.includes("Other")) {
+          return;
+        }
+
+        const tvName = tvBadge.textContent.trim(); // e.g., "TV 1", "TV 2"
+        const start = new Date(card.dataset.start).getTime();
+        const end = new Date(card.dataset.end).getTime();
+
+        // 1. MUST be currently active right now (no future matches!)
+        if (now >= start && now <= end) {
+          // 2. If this TV is already occupied in the tray, pick the later kickoff
+          if (!activeTvMap[tvName]) {
+            activeTvMap[tvName] = card;
+          } else {
+            const existingStart = new Date(activeTvMap[tvName].dataset.start).getTime();
+            // The later kickoff superseded the earlier match on this TV
+            if (start > existingStart) {
+              activeTvMap[tvName] = card;
+            }
+          }
+        }
+      });
+
+      const activeCards = Object.values(activeTvMap);
+
+      // Sort cards numerically by TV name (TV 1, TV 2, TV 3...)
+      activeCards.sort((a, b) => {
+        const aName = a.querySelector(".badge").textContent;
+        const bName = b.querySelector(".badge").textContent;
+        return aName.localeCompare(bName, undefined, { numeric: true });
+      });
+
+      if (activeCards.length > 0) {
+        activeCards.forEach(card => {
+          const clone = card.cloneNode(true);
+          tray.appendChild(clone);
+        });
+
+        trayWrapper.style.display = "block";
+        window.scrollTo(0, 0);
+        return;
+      }
+
+      // Fallback: 2-hour auto-scroll if nothing on physical TVs
+      const lookbackMs = 120 * 60 * 1000;
+      const targetTime = now - lookbackMs;
+      const headers = Array.from(document.querySelectorAll(".slot-header[data-time]"));
+      let anchorTarget = null;
+
+      for (const el of headers) {
+        const slotTime = new Date(el.dataset.time).getTime();
+        if (slotTime >= targetTime) {
+          anchorTarget = el;
+          break;
+        }
+      }
+
+      if (anchorTarget) {
+        anchorTarget.scrollIntoView({ behavior: "smooth", block: "start" });
       }
     });
   </script>

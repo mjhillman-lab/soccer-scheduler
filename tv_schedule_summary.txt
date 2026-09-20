@@ -18,16 +18,16 @@
 --- 2026-09-20 07:30 AM EDT ---
   [Other Screen            ] [2. Bundesliga] Hannover 96 vs VfL Bochum                (1627 vs 1607) Score: 1597.0 [Check listings]
   [Other Screen            ] [2. Bundesliga] Arminia Bielefeld vs 1. FC Heidenheim 1846     (1571 vs 1642) Score: 1535.5 [Check listings]
+  [Other Screen            ] [2. Bundesliga] Energie Cottbus vs St. Pauli                 (1549 vs 1613) Score: 1517.0 [Check listings]
   [Other Screen            ] [Belgian Pro]  Antwerp vs Union St.-Gilloise        (1586 vs 1803) Score: 1477.5 [DAZN]
-  [Other Screen            ] [2. Bundesliga] Energie Cottbus vs St. Pauli                 (1549 vs 1450) Score: 1400.5 [Check listings]
 
 --- 2026-09-20 08:00 AM EDT ---
   [TV 1                    ] [LaLiga]       Getafe vs Málaga                    (1699 vs 1677) Score: 1666.0 [ESPN Deportes, ESPN+]
   [Other Screen            ] [LALIGA 2]     CD Sabadell vs Real Oviedo               (1578 vs 1649) Score: 1542.5 [Check listings]
 
 --- 2026-09-20 08:30 AM EDT ---
+  [TV 2 (Look-in) [08:30 AM-09:00 AM (~30m)]] [Eredivisie]   FC Twente vs PSV Eindhoven             (1660 vs 1791) Score: 1594.5 [ESPN+]
   [Other Screen            ] [Championship] Norwich City vs Bolton Wanderers          (1621 vs 1529) Score: 1483.0 [Check listings]
-  [TV 2 (Look-in) [08:30 AM-09:00 AM (~30m)]] [Eredivisie]   FC Twente vs PSV Eindhoven             (1660 vs 1450) Score: 1345.0 [ESPN+]
   [Other Screen            ] [Eredivisie]   AZ Alkmaar vs Telstar                   (1693 vs 1450) Score: 1328.5 [ESPN+]
 
 --- 2026-09-20 09:00 AM EDT ---
@@ -48,11 +48,11 @@
 
 --- 2026-09-20 10:15 AM EDT ---
   [TV 1                    ] [LaLiga]       Atlético Madrid vs Real Madrid               (1894 vs 1975) Score: 1853.5 [ESPN2, ESPN Deportes, ESPN+]
-  [Other Screen            ] [LALIGA 2]     Ceuta vs Real Valladolid           (1450 vs 1360) Score: 1315.0 [Check listings]
+  [Other Screen            ] [LALIGA 2]     Ceuta vs Real Valladolid           (1560 vs 1360) Score: 1260.0 [Check listings]
 
 --- 2026-09-20 10:30 AM EDT ---
   [Other Screen            ] [Liga Portugal] Vitória de Guimaraes vs Moreirense                (1569 vs 1544) Score: 1531.5 [DAZN]
-  [Other Screen            ] [Liga Portugal] Estrela vs Académico de Viseu        (1450 vs 1450) Score: 1450.0 [DAZN]
+  [Other Screen            ] [Liga Portugal] Estrela vs Académico de Viseu        (1503 vs 1494) Score: 1489.5 [DAZN]
 
 --- 2026-09-20 10:45 AM EDT ---
   [TV 3 (Look-in) [10:55 AM-11:30 AM (~35m)]] [Eredivisie]   NEC Nijmegen vs Go Ahead Eagles           (1591 vs 1550) Score: 1529.5 [ESPN+]
@@ -75,10 +75,10 @@
   [Other Screen            ] [Belgian Pro]  Club Brugge vs Racing Genk               (1804 vs 1587) Score: 1478.5 [DAZN]
 
 --- 2026-09-20 01:00 PM EDT ---
+  [Other Screen            ] [Süper Lig]    Amed SFK vs Besiktas                  (1692 vs 1693) Score: 1691.5 [beIN SPORTS]
   [Other Screen            ] [Süper Lig]    Goztepe vs Caykur Rizespor           (1600 vs 1566) Score: 1549.0 [beIN SPORTS]
   [Other Screen            ] [Liga Portugal] Santa Clara vs Braga                     (1568 vs 1731) Score: 1486.5 [DAZN]
   [Other Screen            ] [Liga Portugal] Estoril vs Casa Pia                  (1521 vs 1483) Score: 1464.0 [DAZN]
-  [Other Screen            ] [Süper Lig]    Amed SFK vs Besiktas                  (1450 vs 1693) Score: 1328.5 [beIN SPORTS]
 
 --- 2026-09-20 01:15 PM EDT ---
   [Other Screen            ] [Belgian Pro]  KV Kortrijk vs Waasland-Beveren          (1434 vs 1645) Score: 1328.5 [DAZN]
