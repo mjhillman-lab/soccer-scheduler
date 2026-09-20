@@ -143,7 +143,7 @@
 <body>
   <h1>Soccer Broadcast Board</h1>
   <div class="subtitle">48-Hour Multi-Screen Schedule (Anchored 3 AM)</div>
-  <div class="updated-at">Updated: Sun, Sep 20 at 09:23 AM EDT</div>
+  <div class="updated-at">Updated: Sun, Sep 20 at 10:16 AM EDT</div>
   <div id="live-tray-wrapper">
     <div class="tray-title">
       <span class="pulse-dot"></span>
@@ -913,7 +913,6 @@
       const tray = document.getElementById("live-tray");
       const allCards = document.querySelectorAll(".card[data-start]");
 
-      // Map to store exactly ONE card per physical TV: { "TV 1": cardEl, "TV 2": cardEl }
       const activeTvMap = {};
 
       allCards.forEach(card => {
@@ -922,28 +921,49 @@
           return;
         }
 
-        const tvName = tvBadge.textContent.trim(); // e.g., "TV 1", "TV 2"
-        const start = new Date(card.dataset.start).getTime();
-        const end = new Date(card.dataset.end).getTime();
+        const tvName = tvBadge.textContent.trim();
+        let start = new Date(card.dataset.start).getTime();
+        let end = new Date(card.dataset.end).getTime();
 
-        // 1. MUST be currently active right now (no future matches!)
+        // If this match is a Look-in on this TV, adjust start/end to the look-in window!
+        const lookinEl = card.querySelector(".badge-lookin, .lookin-pill");
+        if (lookinEl && lookinEl.textContent.includes("-")) {
+          try {
+            // Text looks like: "Look-in: 10:55 AM - 11:25 AM"
+            const rawTimes = lookinEl.textContent.replace(/Look-in:/i, "").trim();
+            const [startStr, endStr] = rawTimes.split("-").map(s => s.trim());
+
+            // Build full Date objects using the card's calendar date
+            const baseDate = new Date(card.dataset.start);
+            const datePrefix = baseDate.toLocaleDateString("en-US");
+
+            const parsedStart = new Date(`${datePrefix} ${startStr}`).getTime();
+            const parsedEnd = new Date(`${datePrefix} ${endStr}`).getTime();
+
+            if (!isNaN(parsedStart) && !isNaN(parsedEnd)) {
+              start = parsedStart;
+              end = parsedEnd;
+            }
+          } catch (e) {
+            // Fall back to kickoff timestamps if parsing fails
+          }
+        }
+
+        // 1. MUST currently be within its on-screen air window
         if (now >= start && now <= end) {
-          // 2. If this TV is already occupied in the tray, pick the later kickoff
           if (!activeTvMap[tvName]) {
-            activeTvMap[tvName] = card;
+            activeTvMap[tvName] = { card, start };
           } else {
-            const existingStart = new Date(activeTvMap[tvName].dataset.start).getTime();
-            // The later kickoff superseded the earlier match on this TV
-            if (start > existingStart) {
-              activeTvMap[tvName] = card;
+            // If two overlap, award to the later start time
+            if (start > activeTvMap[tvName].start) {
+              activeTvMap[tvName] = { card, start };
             }
           }
         }
       });
 
-      const activeCards = Object.values(activeTvMap);
+      const activeCards = Object.values(activeTvMap).map(item => item.card);
 
-      // Sort cards numerically by TV name (TV 1, TV 2, TV 3...)
       activeCards.sort((a, b) => {
         const aName = a.querySelector(".badge").textContent;
         const bName = b.querySelector(".badge").textContent;
