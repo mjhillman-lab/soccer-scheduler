@@ -3,8 +3,33 @@
 ====================================================================================================================
 
 ####################################################################################################################
-###  TOMORROW'S MATCHES (Friday, September 25)
+###  TODAY'S MATCHES (Friday, September 25)
 ####################################################################################################################
 
 --- 2026-09-25 02:30 PM EDT ---
   [TV 1                    ] [LALIGA 2]     Girona vs Albacete                  (1713 vs 1613) Score: 1563.0 [ESPN+]
+
+####################################################################################################################
+###  TOMORROW'S MATCHES (Saturday, September 26)
+####################################################################################################################
+
+--- 2026-09-26 08:00 AM EDT ---
+  [TV 1                    ] [LALIGA 2]     Ceuta vs Real Sociedad II          (1560 vs 1768) Score: 1456.0 [ESPN+]
+
+--- 2026-09-26 10:15 AM EDT ---
+  [TV 1                    ] [LALIGA 2]     Granada vs FC Andorra                (1622 vs 1593) Score: 1578.5 [ESPN+]
+
+--- 2026-09-26 12:00 PM EDT ---
+  [Other Screen            ] [Copa del Rey] Anaitasuna vs CD Tedeón                 (1450 vs 1450) Score: 1450.0 [Check listings]
+  [Other Screen            ] [Copa del Rey] UB Lebrijana vs Ceuta 6 de Junio          (1450 vs 1450) Score: 1450.0 [Check listings]
+  [Other Screen            ] [Copa del Rey] Atlético Calatayud vs CD Baztán                 (1894 vs 1450) Score: 1228.0 [Check listings]
+
+--- 2026-09-26 12:30 PM EDT ---
+  [TV 1                    ] [LALIGA 2]     Tenerife vs Cádiz                     (1632 vs 1554) Score: 1515.0 [ESPN+]
+  [TV 2                    ] [LALIGA 2]     RC Celta Fortuna vs CD Sabadell               (1749 vs 1578) Score: 1492.5 [ESPN+]
+
+--- 2026-09-26 01:00 PM EDT ---
+  [Other Screen            ] [Copa del Rey] Ribadesella vs SD Noja                   (1450 vs 1450) Score: 1450.0 [Check listings]
+
+--- 2026-09-26 02:00 PM EDT ---
+  [Other Screen            ] [Copa del Rey] Atlético Pinatarense vs Atlético Melilla          (1894 vs 1894) Score: 1894.0 [Check listings]
