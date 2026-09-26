@@ -1,11 +1,20 @@
 day_group,match_time_str,tv_assignment,lookin_window,home_team,away_team,home_elo,away_elo,channels,sort_value,league
-TODAY,2026-09-25 02:30 PM EDT,TV 1,,Girona,Albacete,1713,1613,ESPN+,1563.0,Spanish LALIGA 2
-TOMORROW,2026-09-26 08:00 AM EDT,TV 1,,Ceuta,Real Sociedad II,1560,1768,ESPN+,1456.0,Spanish LALIGA 2
-TOMORROW,2026-09-26 10:15 AM EDT,TV 1,,Granada,FC Andorra,1622,1593,ESPN+,1578.5,Spanish LALIGA 2
-TOMORROW,2026-09-26 12:00 PM EDT,Other Screen,,Anaitasuna,CD Tedeón,1450,1450,Check listings,1450.0,Spanish Copa del Rey
-TOMORROW,2026-09-26 12:00 PM EDT,Other Screen,,UB Lebrijana,Ceuta 6 de Junio,1450,1450,Check listings,1450.0,Spanish Copa del Rey
-TOMORROW,2026-09-26 12:00 PM EDT,Other Screen,,Atlético Calatayud,CD Baztán,1894,1450,Check listings,1228.0,Spanish Copa del Rey
-TOMORROW,2026-09-26 12:30 PM EDT,TV 1,,Tenerife,Cádiz,1632,1554,ESPN+,1515.0,Spanish LALIGA 2
-TOMORROW,2026-09-26 12:30 PM EDT,TV 2,,RC Celta Fortuna,CD Sabadell,1749,1578,ESPN+,1492.5,Spanish LALIGA 2
-TOMORROW,2026-09-26 01:00 PM EDT,Other Screen,,Ribadesella,SD Noja,1450,1450,Check listings,1450.0,Spanish Copa del Rey
-TOMORROW,2026-09-26 02:00 PM EDT,Other Screen,,Atlético Pinatarense,Atlético Melilla,1894,1894,Check listings,1894.0,Spanish Copa del Rey
+TODAY,2026-09-26 08:00 AM EDT,TV 1,,Ceuta,Real Sociedad II,1560,1768,ESPN+,1456.0,Spanish LALIGA 2
+TODAY,2026-09-26 10:15 AM EDT,TV 1,,Granada,FC Andorra,1622,1593,ESPN+,1578.5,Spanish LALIGA 2
+TODAY,2026-09-26 12:00 PM EDT,Other Screen,,Anaitasuna,CD Tedeón,1450,1450,Check listings,1450.0,Spanish Copa del Rey
+TODAY,2026-09-26 12:00 PM EDT,Other Screen,,UB Lebrijana,Ceuta 6 de Junio,1450,1450,Check listings,1450.0,Spanish Copa del Rey
+TODAY,2026-09-26 12:00 PM EDT,Other Screen,,Atlético Calatayud,CD Baztán,1894,1450,Check listings,1228.0,Spanish Copa del Rey
+TODAY,2026-09-26 12:30 PM EDT,TV 1,,Tenerife,Cádiz,1632,1554,ESPN+,1515.0,Spanish LALIGA 2
+TODAY,2026-09-26 12:30 PM EDT,TV 2,,RC Celta Fortuna,CD Sabadell,1749,1578,ESPN+,1492.5,Spanish LALIGA 2
+TODAY,2026-09-26 01:00 PM EDT,Other Screen,,Ribadesella,SD Noja,1450,1450,Check listings,1450.0,Spanish Copa del Rey
+TODAY,2026-09-26 02:00 PM EDT,Other Screen,,Atlético Pinatarense,Atlético Melilla,1894,1894,Check listings,1894.0,Spanish Copa del Rey
+TOMORROW,2026-09-27 06:00 AM EDT,Other Screen,,Sporting Hortaleza,Atlético Unión Güímar,1877,1894,Check listings,1868.5,Spanish Copa del Rey
+TOMORROW,2026-09-27 06:00 AM EDT,Other Screen,,Auriense Cented Academy,CD San José,1450,1562,Check listings,1394.0,Spanish Copa del Rey
+TOMORROW,2026-09-27 08:00 AM EDT,TV 1,,Real Valladolid,Córdoba,1360,1594,ESPN+,1243.0,Spanish LALIGA 2
+TOMORROW,2026-09-27 10:00 AM EDT,Other Screen,,CF San Rafael,AE Prat,1450,1450,Check listings,1450.0,Spanish Copa del Rey
+TOMORROW,2026-09-27 10:15 AM EDT,TV 1,,Mallorca,Almería,1715,1682,ESPN+,1665.5,Spanish LALIGA 2
+TOMORROW,2026-09-27 11:30 AM EDT,Other Screen,,CP Talayuela,Sporting de Alcázar,1450,1877,Check listings,1236.5,Spanish Copa del Rey
+TOMORROW,2026-09-27 12:00 PM EDT,Other Screen,,Maracena,Tavernes de la Valldigna,1450,1450,Check listings,1450.0,Spanish Copa del Rey
+TOMORROW,2026-09-27 12:30 PM EDT,TV 1,,Eibar,Las Palmas,1681,1677,ESPN+,1675.0,Spanish LALIGA 2
+TOMORROW,2026-09-27 12:30 PM EDT,TV 2,,Burgos,Eldense,1655,1591,ESPN+,1559.0,Spanish LALIGA 2
+TOMORROW,2026-09-27 03:00 PM EDT,TV 1,,Real Oviedo,Sporting Gijón,1649,1621,ESPN+,1607.0,Spanish LALIGA 2
