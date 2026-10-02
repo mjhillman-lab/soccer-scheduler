@@ -1,2 +1,9 @@
 day_group,match_time_str,tv_assignment,lookin_window,home_team,away_team,home_elo,away_elo,channels,sort_value,league
-TOMORROW,2026-10-02 02:30 PM EDT,TV 1,,Eldense,Real Oviedo,1591,1649,ESPN+,1562.0,Spanish LALIGA 2
+TODAY,2026-10-02 02:30 PM EDT,TV 1,,Eldense,Real Oviedo,1591,1649,ESPN+,1562.0,Spanish LALIGA 2
+TOMORROW,2026-10-03 08:00 AM EDT,TV 1,,Albacete,Eibar,1613,1681,ESPN+,1579.0,Spanish LALIGA 2
+TOMORROW,2026-10-03 10:15 AM EDT,TV 1,,Almería,Burgos,1682,1655,ESPN+,1641.5,Spanish LALIGA 2
+TOMORROW,2026-10-03 11:30 AM EDT,Other Screen,,CD Baztán,Atlético Calatayud,1450,1894,Check listings,1228.0,Spanish Copa del Rey
+TOMORROW,2026-10-03 12:00 PM EDT,Other Screen,,CD Tedeón,Anaitasuna,1450,1450,Check listings,1450.0,Spanish Copa del Rey
+TOMORROW,2026-10-03 12:00 PM EDT,Other Screen,,Ceuta 6 de Junio,UB Lebrijana,1450,1450,Check listings,1450.0,Spanish Copa del Rey
+TOMORROW,2026-10-03 12:30 PM EDT,TV 1,,CD Sabadell,FC Andorra,1578,1593,ESPN+,1570.5,Spanish LALIGA 2
+TOMORROW,2026-10-03 12:30 PM EDT,TV 2,,Cádiz,Leganés,1554,1615,ESPN+,1523.5,Spanish LALIGA 2

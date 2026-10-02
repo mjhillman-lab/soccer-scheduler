@@ -3,8 +3,29 @@
 ====================================================================================================================
 
 ####################################################################################################################
-###  TOMORROW'S MATCHES (Friday, October 02)
+###  TODAY'S MATCHES (Friday, October 02)
 ####################################################################################################################
 
 --- 2026-10-02 02:30 PM EDT ---
   [TV 1                    ] [LALIGA 2]     Eldense vs Real Oviedo               (1591 vs 1649) Score: 1562.0 [ESPN+]
+
+####################################################################################################################
+###  TOMORROW'S MATCHES (Saturday, October 03)
+####################################################################################################################
+
+--- 2026-10-03 08:00 AM EDT ---
+  [TV 1                    ] [LALIGA 2]     Albacete vs Eibar                     (1613 vs 1681) Score: 1579.0 [ESPN+]
+
+--- 2026-10-03 10:15 AM EDT ---
+  [TV 1                    ] [LALIGA 2]     Almería vs Burgos                    (1682 vs 1655) Score: 1641.5 [ESPN+]
+
+--- 2026-10-03 11:30 AM EDT ---
+  [Other Screen            ] [Copa del Rey] CD Baztán vs Atlético Calatayud        (1450 vs 1894) Score: 1228.0 [Check listings]
+
+--- 2026-10-03 12:00 PM EDT ---
+  [Other Screen            ] [Copa del Rey] CD Tedeón vs Anaitasuna                (1450 vs 1450) Score: 1450.0 [Check listings]
+  [Other Screen            ] [Copa del Rey] Ceuta 6 de Junio vs UB Lebrijana              (1450 vs 1450) Score: 1450.0 [Check listings]
+
+--- 2026-10-03 12:30 PM EDT ---
+  [TV 1                    ] [LALIGA 2]     CD Sabadell vs FC Andorra                (1578 vs 1593) Score: 1570.5 [ESPN+]
+  [TV 2                    ] [LALIGA 2]     Cádiz vs Leganés                   (1554 vs 1615) Score: 1523.5 [ESPN+]
