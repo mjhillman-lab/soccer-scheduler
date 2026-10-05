@@ -3,40 +3,7 @@
 ====================================================================================================================
 
 ####################################################################################################################
-###  TODAY'S MATCHES (Sunday, October 04)
-####################################################################################################################
-
---- 2026-10-04 07:00 AM EDT ---
-  [Other Screen            ] [Copa del Rey] Atlético Unión Güímar vs Sporting Hortaleza        (1894 vs 1877) Score: 1868.5 [Check listings]
-
---- 2026-10-04 08:00 AM EDT ---
-  [TV 1                    ] [LALIGA 2]     Real Sociedad II vs Granada                   (1768 vs 1622) Score: 1549.0 [ESPN+]
-
---- 2026-10-04 10:00 AM EDT ---
-  [Other Screen            ] [Copa del Rey] AE Prat vs CF San Rafael             (1450 vs 1450) Score: 1450.0 [Check listings]
-  [Other Screen            ] [Copa del Rey] SD Noja vs Ribadesella               (1450 vs 1450) Score: 1450.0 [Check listings]
-  [Other Screen            ] [Copa del Rey] CD San José vs Auriense Cented Academy   (1562 vs 1450) Score: 1394.0 [Check listings]
-
---- 2026-10-04 10:15 AM EDT ---
-  [TV 1                    ] [LALIGA 2]     Sporting Gijón vs RC Celta Fortuna          (1621 vs 1749) Score: 1557.0 [ESPN+]
-
---- 2026-10-04 11:30 AM EDT ---
-  [Other Screen            ] [Copa del Rey] Sporting de Alcázar vs CP Talayuela              (1877 vs 1450) Score: 1236.5 [Check listings]
-
---- 2026-10-04 12:00 PM EDT ---
-  [Other Screen            ] [Copa del Rey] Atlético Melilla vs Atlético Pinatarense      (1894 vs 1894) Score: 1894.0 [Check listings]
-  [Other Screen            ] [Copa del Rey] Tavernes de la Valldigna vs Maracena                  (1450 vs 1450) Score: 1450.0 [Check listings]
-
---- 2026-10-04 12:30 PM EDT ---
-  [TV 1                    ] [LALIGA 2]     Castellón vs Ceuta                     (1680 vs 1560) Score: 1500.0 [ESPN+]
-  [TV 2                    ] [LALIGA 2]     Las Palmas vs Real Valladolid           (1677 vs 1360) Score: 1201.5 [ESPN+]
-
---- 2026-10-04 03:00 PM EDT ---
-  [TV 1                    ] [LALIGA 2]     Girona vs Mallorca                  (1713 vs 1715) Score: 1712.0 [ESPN+]
-  [TV 2                    ] [LALIGA 2]     CD Sabadell vs FC Andorra                (1578 vs 1593) Score: 1570.5 [ESPN+]
-
-####################################################################################################################
-###  TOMORROW'S MATCHES (Monday, October 05)
+###  TODAY'S MATCHES (Monday, October 05)
 ####################################################################################################################
 
 --- 2026-10-05 02:30 PM EDT ---
