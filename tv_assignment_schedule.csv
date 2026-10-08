@@ -1,2 +1,12 @@
 day_group,match_time_str,tv_assignment,lookin_window,home_team,away_team,home_elo,away_elo,channels,sort_value,league
-TODAY,2026-10-05 02:30 PM EDT,TV 1,,Córdoba,Tenerife,1594,1632,ESPN+,1575.0,Spanish LALIGA 2
+TOMORROW,2026-10-09 12:30 PM EDT,Other Screen,,1. FC Heidenheim 1846,Kaiserslautern,1642,1605,Check listings,1586.5,German 2. Bundesliga
+TOMORROW,2026-10-09 12:30 PM EDT,Other Screen,,TSV Eintracht Braunschweig,Holstein Kiel,1516,1588,Check listings,1480.0,German 2. Bundesliga
+TOMORROW,2026-10-09 01:00 PM EDT,Other Screen,,Galatasaray,Kasimpasa,1807,1567,beIN SPORTS,1447.0,Turkish Super Lig
+TOMORROW,2026-10-09 01:45 PM EDT,Other Screen,,Moreirense,Gil Vicente,1544,1564,DAZN,1534.0,Portuguese Primeira Liga
+TOMORROW,2026-10-09 02:00 PM EDT,TV 3,,PSV Eindhoven,Heerenveen,1791,1542,ESPN+,1417.5,Dutch Eredivisie
+TOMORROW,2026-10-09 02:30 PM EDT,Other Screen,,Borussia Dortmund,Werder Bremen,1897,1690,Check listings,1586.5,German Bundesliga
+TOMORROW,2026-10-09 02:45 PM EDT,TV 1,,Lens,Lyon,1817,1787,beIN SPORTS,1772.0,French Ligue 1
+TOMORROW,2026-10-09 02:45 PM EDT,Other Screen,,Waasland-Beveren,Lommel SK,1645,1502,DAZN,1430.5,Belgian Pro League
+TOMORROW,2026-10-09 03:00 PM EDT,TV 2,,Málaga,Espanyol,1677,1712,"ESPN Deportes, ESPN+",1659.5,Spanish LALIGA
+TOMORROW,2026-10-09 03:00 PM EDT,Other Screen,,West Ham United,Queens Park Rangers,1783,1613,Check listings,1528.0,English League Championship
+TOMORROW,2026-10-09 03:15 PM EDT,Other Screen,,Braga,Sporting CP,1731,1877,DAZN,1658.0,Portuguese Primeira Liga

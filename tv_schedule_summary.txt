@@ -3,8 +3,32 @@
 ====================================================================================================================
 
 ####################################################################################################################
-###  TODAY'S MATCHES (Monday, October 05)
+###  TOMORROW'S MATCHES (Friday, October 09)
 ####################################################################################################################
 
---- 2026-10-05 02:30 PM EDT ---
-  [TV 1                    ] [LALIGA 2]     Córdoba vs Tenerife                  (1594 vs 1632) Score: 1575.0 [ESPN+]
+--- 2026-10-09 12:30 PM EDT ---
+  [Other Screen            ] [2. Bundesliga] 1. FC Heidenheim 1846 vs Kaiserslautern            (1642 vs 1605) Score: 1586.5 [Check listings]
+  [Other Screen            ] [2. Bundesliga] TSV Eintracht Braunschweig vs Holstein Kiel             (1516 vs 1588) Score: 1480.0 [Check listings]
+
+--- 2026-10-09 01:00 PM EDT ---
+  [Other Screen            ] [Süper Lig]    Galatasaray vs Kasimpasa                 (1807 vs 1567) Score: 1447.0 [beIN SPORTS]
+
+--- 2026-10-09 01:45 PM EDT ---
+  [Other Screen            ] [Liga Portugal] Moreirense vs Gil Vicente               (1544 vs 1564) Score: 1534.0 [DAZN]
+
+--- 2026-10-09 02:00 PM EDT ---
+  [TV 3                    ] [Eredivisie]   PSV Eindhoven vs Heerenveen                (1791 vs 1542) Score: 1417.5 [ESPN+]
+
+--- 2026-10-09 02:30 PM EDT ---
+  [Other Screen            ] [Bundesliga]   Borussia Dortmund vs Werder Bremen             (1897 vs 1690) Score: 1586.5 [Check listings]
+
+--- 2026-10-09 02:45 PM EDT ---
+  [TV 1                    ] [Ligue 1]      Lens vs Lyon                      (1817 vs 1787) Score: 1772.0 [beIN SPORTS]
+  [Other Screen            ] [Belgian Pro]  Waasland-Beveren vs Lommel SK                 (1645 vs 1502) Score: 1430.5 [DAZN]
+
+--- 2026-10-09 03:00 PM EDT ---
+  [TV 2                    ] [LaLiga]       Málaga vs Espanyol                  (1677 vs 1712) Score: 1659.5 [ESPN Deportes, ESPN+]
+  [Other Screen            ] [Championship] West Ham United vs Queens Park Rangers       (1783 vs 1613) Score: 1528.0 [Check listings]
+
+--- 2026-10-09 03:15 PM EDT ---
+  [Other Screen            ] [Liga Portugal] Braga vs Sporting CP               (1731 vs 1877) Score: 1658.0 [DAZN]
