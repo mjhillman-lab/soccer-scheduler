@@ -3,35 +3,7 @@
 ====================================================================================================================
 
 ####################################################################################################################
-###  TODAY'S MATCHES (Monday, October 12)
-####################################################################################################################
-
---- 2026-10-12 08:00 AM EDT ---
-  [Other Screen            ] [LALIGA 2]     Real Valladolid vs Albacete                  (1360 vs 1613) Score: 1233.5 [Check listings]
-
---- 2026-10-12 10:15 AM EDT ---
-  [TV 1                    ] [LALIGA 2]     Burgos vs Granada                   (1655 vs 1622) Score: 1605.5 [ESPN+]
-
---- 2026-10-12 12:30 PM EDT ---
-  [Other Screen            ] [LALIGA 2]     Real Oviedo vs Eibar                     (1649 vs 1681) Score: 1633.0 [Check listings]
-  [TV 1                    ] [Serie A]      Atalanta vs Venezia                   (1812 vs 1651) Score: 1570.5 [Paramount+]
-
---- 2026-10-12 01:00 PM EDT ---
-  [Other Screen            ] [Süper Lig]    Eyupspor vs Goztepe                   (1531 vs 1600) Score: 1496.5 [beIN SPORTS]
-
---- 2026-10-12 02:45 PM EDT ---
-  [TV 2                    ] [Serie A]      Torino vs Udinese                   (1680 vs 1704) Score: 1668.0 [Paramount+]
-
---- 2026-10-12 03:00 PM EDT ---
-  [TV 1                    ] [LaLiga]       Levante vs Sevilla                   (1711 vs 1722) Score: 1705.5 [ESPN Deportes, ESPN+]
-  [TV 3                    ] [LALIGA 2]     Tenerife vs Girona                    (1632 vs 1713) Score: 1591.5 [ESPN+]
-  [Other Screen            ] [EPL]          Coventry City vs Newcastle United          (1686 vs 1876) Score: 1591.0 [USA Net]
-
---- 2026-10-12 03:15 PM EDT ---
-  [Other Screen            ] [Liga Portugal] FC Famalicao vs Alverca                   (1602 vs 1531) Score: 1495.5 [DAZN]
-
-####################################################################################################################
-###  TOMORROW'S MATCHES (Tuesday, October 13)
+###  TODAY'S MATCHES (Tuesday, October 13)
 ####################################################################################################################
 
 --- 2026-10-13 12:45 PM EDT ---
@@ -56,3 +28,26 @@
   [Other Screen            ] [UCL]          Viking FK vs Bayern Munich             (1691 vs 2046) Score: 1513.5 [Paramount+]
   [Other Screen            ] [Championship] Stoke City vs Middlesbrough             (1555 vs 1651) Score: 1507.0 [Paramount+]
   [Other Screen            ] [Championship] Birmingham City vs Preston North End         (1622 vs 1524) Score: 1475.0 [Paramount+]
+
+####################################################################################################################
+###  TOMORROW'S MATCHES (Wednesday, October 14)
+####################################################################################################################
+
+--- 2026-10-14 12:45 PM EDT ---
+  [TV 1                    ] [UCL]          Feyenoord Rotterdam vs Como                      (1713 vs 1817) Score: 1661.0 [Paramount+]
+  [TV 2                    ] [UCL]          LASK Linz vs Liverpool                 (1450 vs 1928) Score: 1211.0 [Paramount+]
+
+--- 2026-10-14 02:45 PM EDT ---
+  [Other Screen            ] [Championship] Norwich City vs Southampton               (1621 vs 1705) Score: 1579.0 [Paramount+]
+  [Other Screen            ] [Championship] Queens Park Rangers vs Derby County              (1613 vs 1567) Score: 1544.0 [Paramount+]
+  [Other Screen            ] [Championship] Portsmouth vs Sheffield United          (1555 vs 1623) Score: 1521.0 [Paramount+]
+
+--- 2026-10-14 03:00 PM EDT ---
+  [TV 1                    ] [UCL]          Manchester City vs Paris Saint-Germain       (2031 vs 1954) Score: 1915.5 [Paramount+]
+  [TV 2                    ] [UCL]          Real Betis vs FC Porto                  (1816 vs 1830) Score: 1809.0 [Paramount+]
+  [TV 3                    ] [UCL]          AS Roma vs Real Madrid               (1856 vs 1975) Score: 1796.5 [Paramount+]
+  [Other Screen            ] [UCL]          Aston Villa vs Fenerbahce                (1884 vs 1775) Score: 1720.5 [Paramount+]
+  [Other Screen            ] [Championship] Lincoln City vs West Ham United           (1610 vs 1783) Score: 1523.5 [Paramount+]
+  [Other Screen            ] [UCL]          Slovan Bratislava vs VfB Stuttgart             (1552 vs 1825) Score: 1415.5 [Paramount+]
+  [Other Screen            ] [UCL]          Shakhtar Donetsk vs AEK Athens                (1686 vs 1450) Score: 1332.0 [Paramount+]
+  [Other Screen            ] [UCL]          Bodo/Glimt vs Borussia Dortmund         (1450 vs 1897) Score: 1226.5 [Paramount+]
