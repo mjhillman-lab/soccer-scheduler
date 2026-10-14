@@ -9,6 +9,7 @@ import csv
 import io
 import json
 import os
+import re
 import sys
 import urllib.parse
 import unicodedata
@@ -227,6 +228,43 @@ NAME_ALIASES = {
     "nk celje": "celje",
     "omonia nicosia": "omonia",
     "hapoel be'er": "beer sheva",
+    "slavia prague": "slavia praha",
+    "slavia praha": "slavia praha",
+    "sk slavia prague": "slavia praha",
+    "lask linz": "lask",
+    "aek athens": "aek",
+    "aek athens fc": "aek",
+    "bodo/glimt": "bodoglimt",
+    "fk bodo/glimt": "bodoglimt",
+    "bodø/glimt": "bodoglimt",
+    "fk bodø/glimt": "bodoglimt",
+    "f.c. kobenhavn": "fc kobenhavn",
+    "fc kobenhavn": "fc kobenhavn",
+    "f.c. copenhagen": "fc kobenhavn",
+    "fc copenhagen": "fc kobenhavn",
+    "copenhagen": "fc kobenhavn",
+    "fc nordsjaelland": "nordsjaelland",
+    "fc nordsjælland": "nordsjaelland",
+    "nordsjælland": "nordsjaelland",
+    "agf": "aarhus",
+    "agf aarhus": "aarhus",
+    "aarhus gf": "aarhus",
+    "pafos": "paphos",
+    "pafos fc": "paphos",
+    "fc pafos": "paphos",
+    "riga": "fk riga",
+    "riga fc": "fk riga",
+    "fc riga": "fk riga",
+    "egnatia": "egnatia rrogozhine",
+    "kf egnatia": "egnatia rrogozhine",
+    "egnatia rrogozhire": "egnatia rrogozhine",
+    "kairat": "fk kairat",
+    "kairat almaty": "fk kairat",
+    "fc kairat": "fk kairat",
+    "fc kairat almaty": "fk kairat",
+    "iberia 1999": "saburtalo",
+    "fc iberia 1999": "saburtalo",
+    "iberia 1999 tbilisi": "saburtalo",
 
     # Turkey (Süper Lig)
     "istanbul basaksehir": "basaksehir",
@@ -239,11 +277,29 @@ NAME_ALIASES = {
 # STRING & BADGE UTILITIES
 # ==========================================
 def strip_accents(s: str) -> str:
-    """Removes diacritics and normalizes to lower case."""
+    """Removes diacritics, expands ligatures, and normalizes to lower case."""
+    s = s.lower().strip()
+    
+    # Handle European characters that NFD ignores
+    replacements = {
+        "æ": "ae",
+        "ø": "o",
+        "œ": "oe",
+        "ß": "ss",
+        "đ": "d",  # Balkan (e.g., Bodø/Glimt, or Ludogorets/Dinamo match-ups)
+        "ð": "d",  # Icelandic/Faroese
+        "þ": "th", # Icelandic
+        "ł": "l",  # Polish (e.g., Jagiellonia Białystok)
+        "å": "a"   # Swedish/Danish/Norwegian
+    }
+    
+    for char, replacement in replacements.items():
+        s = s.replace(char, replacement)
+        
     return "".join(
         c for c in unicodedata.normalize("NFD", s)
         if unicodedata.category(c) != "Mn"
-    ).lower().strip()
+    )
 
 def format_league_badge(league_name: str) -> str:
     short = LEAGUE_DISPLAY_NAMES.get(league_name)
@@ -263,21 +319,27 @@ class EloEngine:
         self._load_or_fetch()
 
     def _load_or_fetch(self):
-        # 1. Try fetching fresh ClubElo CSV
-        self.ratings = self._fetch_clubelo_csv()
-        
-        # 2. If fetch succeeded, update disk cache
-        if self.ratings and len(self.ratings) > 100:
+        # 1. Load existing cache first as a safe baseline
+        cached_ratings = self._load_cache()
+
+        # 2. Try official daily CSV API endpoints
+        fresh_ratings = self._fetch_clubelo_csv()
+
+        # 3. If CSV failed (e.g. 502 Bad Gateway), extract from https://clubelo.com/Ranking
+        if not fresh_ratings or len(fresh_ratings) < 100:
+            fresh_ratings = self._fetch_clubelo_ranking_page()
+
+        # 4. If any remote method succeeded, update cache on disk
+        if fresh_ratings and len(fresh_ratings) > 100:
+            cached_ratings.update(fresh_ratings)
+            self.ratings = cached_ratings
             self._save_cache(self.ratings)
         else:
-            # 3. If fetch failed (502, 403, offline), LOAD DISK CACHE REGARDLESS OF AGE
-            print("Notice: Online fetch yielded no data. Loading disk cache fallback...")
-            self.ratings = self._load_cache()
+            print("Notice: Online fetches yielded no data. Loading disk cache fallback...")
+            self.ratings = cached_ratings
 
-        # Build accent-free lookup index
+        # Build lookup indices
         self.stripped_ratings = {strip_accents(k): v for k, v in self.ratings.items()}
-
-        # Build de-punctuated lookup index
         self.condensed_ratings = {
             strip_accents(k).replace("-", "").replace(" ", "").replace("'", ""): v
             for k, v in self.ratings.items()
@@ -298,81 +360,117 @@ class EloEngine:
     def _save_cache(self, data):
         try:
             with open(self.cache_file, "w", encoding="utf-8") as f:
-                json.dump(data, f)
-        except Exception:
-            pass
+                json.dump(data, f, indent=2)
+            print(f"Successfully updated local cache ({len(data)} clubs).")
+        except Exception as e:
+            print(f"Notice: Failed to write cache to disk: {e}")
 
     def _fetch_clubelo_csv(self):
-        """Fetches ClubElo official daily CSV table with session retries and updates disk cache."""
+        """Fetches ClubElo official daily CSV table over HTTP."""
         now_dt = datetime.now(timezone.utc)
-        today_str = now_dt.strftime("%Y-%m-%d")
-        yesterday_str = (now_dt - timedelta(days=1)).strftime("%Y-%m-%d")
-
         session = requests.Session()
-        retries = requests.adapters.Retry(
-            total=3,
-            backoff_factor=1.5,
+        retries = Retry(
+            total=2,
+            backoff_factor=1.0,
             status_forcelist=[500, 502, 503, 504],
             raise_on_status=False,
         )
-        session.mount("http://", requests.adapters.HTTPAdapter(max_retries=retries))
-        session.mount("https://", requests.adapters.HTTPAdapter(max_retries=retries))
+        session.mount("http://", HTTPAdapter(max_retries=retries))
 
-        clubelo_headers = {
-            "User-Agent": "Mozilla/5.0 (X11; CrOS x86_64 14542.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36",
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36",
             "Accept": "text/csv,text/plain;q=0.9,*/*;q=0.8",
             "Accept-Language": "en-US,en;q=0.9",
         }
-        ratings = {}
 
         endpoints = [
-            f"http://api.clubelo.com/{today_str}",
-            "http://api.clubelo.com/today",
-            f"http://api.clubelo.com/{yesterday_str}",
+            f"http://api.clubelo.com/{(now_dt - timedelta(days=d)).strftime('%Y-%m-%d')}"
+            for d in range(2)
         ]
 
         for url in endpoints:
             try:
                 print(f"Fetching ClubElo daily CSV ({url})...")
-                r = session.get(url, headers=clubelo_headers, timeout=12)
+                r = session.get(url, headers=headers, timeout=(4, 10))
                 if r.status_code == 200 and len(r.text.strip()) > 500:
                     reader = csv.DictReader(io.StringIO(r.text.strip()))
+                    ratings = {}
                     for row in reader:
                         club = row.get("Club", "").strip()
                         country = row.get("Country", "").strip()
                         elo_str = row.get("Elo", "").strip()
-
                         if not club or not elo_str:
                             continue
-
                         try:
                             elo_val = round(float(elo_str))
                         except ValueError:
                             continue
-
                         norm_name = club.lower()
-
                         if norm_name not in ratings or country in ("ENG", "ESP", "GER", "ITA", "FRA", "POR", "NED", "BEL"):
                             ratings[norm_name] = elo_val
                         elif elo_val > ratings[norm_name]:
                             ratings[norm_name] = elo_val
 
                     if len(ratings) > 100:
-                        print(f"Successfully ingested {len(ratings)} club Elo ratings from {url}. Updating disk cache.")
-                        try:
-                            import json
-                            with open("elo_cache.json", "w", encoding="utf-8") as f:
-                                json.dump(ratings, f, indent=2)
-                        except Exception as ce:
-                            print(f"Notice: Failed to write updated cache to disk: {ce}")
                         return ratings
-                else:
-                    print(f"Notice: {url} returned HTTP {r.status_code} (length: {len(r.text.strip())}). Trying next...")
-            except Exception as e:
-                print(f"Notice: Endpoint {url} failed ({repr(e)}). Trying next...")
+            except Exception:
+                pass
+        return {}
 
-        print("Notice: All ClubElo remote endpoints failed. Falling back to disk cache.")
-        return ratings
+    def _fetch_clubelo_ranking_page(self):
+        """Fallback: Extracts club ratings from both the Vega JSON block and HTML table on clubelo.com/Ranking."""
+        url = "https://clubelo.com/Ranking"
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36",
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+            "Accept-Language": "en-US,en;q=0.9",
+        }
+        print(f"Attempting fallback parse from {url}...")
+        try:
+            r = requests.get(url, headers=headers, timeout=(6, 15))
+            if r.status_code != 200 or len(r.text) < 2000:
+                print(f"Notice: Ranking page returned status {r.status_code} (length: {len(r.text)}).")
+                return {}
+
+            ratings = {}
+
+            # 1. Parse from Vega JSON (Top 100 clubs)
+            pattern_json = re.compile(
+                r'\{[^{}]*?"(?:Elo"\s*:\s*([0-9.]+)[^{}]*?"Name"\s*:\s*"([^"]+)"|Name"\s*:\s*"([^"]+)"[^{}]*?"Elo"\s*:\s*([0-9.]+))[^{}]*?\}'
+            )
+            for match in pattern_json.finditer(r.text):
+                elo1, name1, name2, elo2 = match.groups()
+                name = name1 if name1 is not None else name2
+                elo_str = elo1 if elo1 is not None else elo2
+                if name and elo_str:
+                    try:
+                        clean_name = name.encode("utf-8").decode("unicode_escape").lower().strip()
+                        ratings[clean_name] = round(float(elo_str))
+                    except Exception:
+                        continue
+
+            # 2. Parse from HTML Table rows (covers 101 to ~1,700)
+            # Row pattern looks like: <td><a href="...">Club Name</a></td> ... <td>1712</td>
+            pattern_table = re.compile(
+                r'<tr[^>]*>.*?<a[^>]*>([^<]+)</a>.*?<td[^>]*>([12][0-9]{3})</td>.*?</tr>',
+                re.DOTALL
+            )
+            for match in pattern_table.finditer(r.text):
+                name, elo_str = match.groups()
+                name = name.lower().strip()
+                if name and elo_str.isdigit():
+                    ratings[name] = int(elo_str)
+
+            if len(ratings) >= 50:
+                print(f"Successfully extracted {len(ratings)} club ratings directly from Ranking page!")
+                return ratings
+            else:
+                print(f"Notice: Extracted only {len(ratings)} ratings from Ranking page.")
+
+        except Exception as e:
+            print(f"Notice: Failed to parse Ranking page: {e}")
+
+        return {}
 
     def get(self, team_name: str) -> int:
         norm = team_name.lower().strip()
@@ -397,23 +495,47 @@ class EloEngine:
 
         # 4. Standardized noise word stripping
         noise_words = {
-            "fc", "cf", "sc", "afc", "cd", "sk", "nk", "vfl", "sv", "spvgg",
-            "city", "town", "united", "wanderers", "rovers", "albion", "athletic"
+            "fc", "cf", "sc", "afc", "cd", "sk", "nk", "vfl", "sv", "spvgg", "fk",
+            "city", "town", "united", "wanderers", "rovers", "albion", "athletic",
+            "linz", "athens"
         }
-        tokens = [t for t in clean_alias.replace("-", " ").split() if t not in noise_words]
-        normalized = " ".join(tokens)
-        if normalized in self.stripped_ratings:
-            return self.stripped_ratings[normalized]
+        
+        # Strip periods alongside dashes/slashes so "f.c." becomes "fc" and is cleanly removed
+        clean_alias_no_punct = clean_alias.replace("-", " ").replace("/", " ").replace(".", "")
+        tokens_alias = [t for t in clean_alias_no_punct.split() if t not in noise_words]
+        normalized_alias = " ".join(tokens_alias)
+        if normalized_alias in self.stripped_ratings:
+            return self.stripped_ratings[normalized_alias]
+
+        clean_norm_no_punct = clean_norm.replace("-", " ").replace("/", " ").replace(".", "")
+        tokens_norm = [t for t in clean_norm_no_punct.split() if t not in noise_words]
+        normalized_norm = " ".join(tokens_norm)
+        if normalized_norm in self.stripped_ratings:
+            return self.stripped_ratings[normalized_norm]
 
         # 5. Condensation check
-        condensed = clean_alias.replace("-", "").replace(" ", "").replace("'", "")
+        condensed = clean_alias.replace("-", "").replace(" ", "").replace("'", "").replace("/", "").replace(".", "")
         if condensed in self.condensed_ratings:
             return self.condensed_ratings[condensed]
 
-        # 6. Automatic substring match against cache keys
+        # 6. Bi-directional Substring Match
+        # Gathers all our cleaned ESPN names and ignores anything dangerously short (like "FC")
+        search_terms = {clean_norm, clean_alias, normalized_alias, normalized_norm}
+        search_terms = {t for t in search_terms if len(t) >= 5}
+
         for key, val in self.ratings.items():
-            if len(key) >= 5 and (key in norm or key in clean_norm):
-                return val
+            clean_key = strip_accents(key)
+            
+            # Direction A: Is the ClubElo name hidden inside the ESPN name? (e.g., "kobenhavn" in "f.c. kobenhavn")
+            if len(clean_key) >= 5:
+                for term in search_terms:
+                    if clean_key in term:
+                        return val
+                        
+            # Direction B: Is the ESPN name hidden inside the ClubElo name? (e.g., "egnatia" in "egnatia rrogozhine")
+            for term in search_terms:
+                if term in clean_key:
+                    return val
 
         return DEFAULT_ELO
 
@@ -1009,98 +1131,71 @@ def export_mobile_html(matches, window, filename=OUTPUT_HTML):
     <div id="live-tray"></div>
   </div>
 """
-    for group, label in [("TODAY", f"TODAY'S MATCHES ({today_lbl})"),
-                         ("TOMORROW", f"TOMORROW'S MATCHES ({tmrw_lbl})")]:
-        group_matches = [m for m in matches if m["day_group"] == group]
-        if not group_matches:
-            continue
+    if not matches:
+        html += """
+  <div class="day-header">NO SCHEDULED MATCHES</div>
+  <div class="card" style="text-align: center; color: #888; padding: 24px 16px;">
+    No televised fixtures scheduled for today or tomorrow.
+  </div>
+"""
+    else:
+        for group, label in [("TODAY", f"TODAY'S MATCHES ({today_lbl})"),
+                            ("TOMORROW", f"TOMORROW'S MATCHES ({tmrw_lbl})")]:
+            group_matches = [m for m in matches if m["day_group"] == group]
+            if not group_matches:
+                continue
 
-        html += f'<div class="day-header">{label}</div>\n'
-        current_slot = None
-        for m in group_matches:
-            if m["match_time_str"] != current_slot:
-                current_slot = m["match_time_str"]
-                iso_time = m["match_time_dt"].isoformat()
-                html += f'<div class="slot-header" data-time="{iso_time}">{current_slot}</div>\n'
+            html += f'<div class="day-header">{label}</div>\n'
+            current_slot = None
+            for m in group_matches:
+                if m["match_time_str"] != current_slot:
+                    current_slot = m["match_time_str"]
+                    iso_time = m["match_time_dt"].isoformat()
+                    html += f'<div class="slot-header" data-time="{iso_time}">{current_slot}</div>\n'
 
-            # 1. Determine clean badge label (e.g., 'TV 1', 'TV 4', or 'Other Screen')
-            raw_assignment = m.get("tv_assignment", "Other Screen")
-            if "TV " in raw_assignment:
-                parts = raw_assignment.split()
-                tv_num = parts[1].replace("(Look-in)", "").strip()
-                base_tv = f"TV {tv_num}"
-                tv_class = f"tv-tv{tv_num}"
-            else:
-                base_tv = "Other Screen"
-                tv_class = "tv-other"
+                # 1. Determine clean badge label (e.g., 'TV 1', 'TV 4', or 'Other Screen')
+                raw_assignment = m.get("tv_assignment", "Other Screen")
+                if "TV " in raw_assignment:
+                    parts = raw_assignment.split()
+                    tv_num = parts[1].replace("(Look-in)", "").strip()
+                    base_tv = f"TV {tv_num}"
+                    tv_class = f"tv-tv{tv_num}"
+                else:
+                    base_tv = "Other Screen"
+                    tv_class = "tv-other"
 
-            lookin_pill = ""
-            if m.get("is_lookin") and m.get("lookin_window"):
-                lookin_pill = f'<span class="badge-lookin">Look-in: {m["lookin_window"]}</span>'
+                lookin_pill = ""
+                if m.get("is_lookin") and m.get("lookin_window"):
+                    lookin_pill = f'<span class="badge-lookin">Look-in: {m["lookin_window"]}</span>'
 
-            # 1. Match status indicator
-            status_str = m.get("live_status", "UPCOMING")
-            if "LIVE" in status_str:
-                status_class = "status-live"
-            elif "FINAL" in status_str:
-                status_class = "status-final"
-            else:
-                status_class = "status-upcoming"
+                # 2. Clickable tap-to-stream link
+                stream_url = resolve_stream_url(m["channels"], m["league"], m["home_team"], m["away_team"])
+                if stream_url:
+                    channel_html = f'<a href="{stream_url}" target="_blank" rel="noopener noreferrer" class="channel">{m["channels"]} &#8599;</a>'
+                else:
+                    channel_html = f'<span class="channel">{m["channels"]}</span>'
 
-            # 2. Clickable tap-to-stream link
-            stream_url = resolve_stream_url(m["channels"], m["league"], m["home_team"], m["away_team"])
-            if stream_url:
-                channel_html = f'<a href="{stream_url}" target="_blank" rel="noopener noreferrer" class="channel">{m["channels"]} &#8599;</a>'
-            else:
-                channel_html = f'<span class="channel">{m["channels"]}</span>'
+                # Calculate start and end ISO strings for the dynamic Live Tray
+                start_iso = m["match_time_dt"].isoformat()
+                end_iso = (m["match_time_dt"] + timedelta(minutes=MATCH_DURATION_MINUTES)).isoformat()
 
-            # Calculate start and end ISO strings for the dynamic Live Tray
-            start_iso = m["match_time_dt"].isoformat()
-            end_iso = (m["match_time_dt"] + timedelta(minutes=MATCH_DURATION_MINUTES)).isoformat()
-
-            html += f"""
-        <div class="card" data-start="{start_iso}" data-end="{end_iso}">
-          <div class="card-top">
-            <div class="badge-container">
-              <span class="badge {tv_class}">{base_tv}</span>
-              {lookin_pill}
+                html += f"""
+            <div class="card" data-start="{start_iso}" data-end="{end_iso}">
+            <div class="card-top">
+                <div class="badge-container">
+                <span class="badge {tv_class}">{base_tv}</span>
+                {lookin_pill}
+                </div>
+                <span class="comp">{format_league_badge(m['league'])}</span>
             </div>
-            <span class="comp">{format_league_badge(m['league'])}</span>
-          </div>
-          <div class="matchup">{m['home_team']} vs {m['away_team']}</div>
-          <div class="meta">
-            <span>Elos: {m['home_elo']} vs {m['away_elo']} (Score: {m['sort_value']})</span>
-            {channel_html}
-          </div>
-        </div>
-        """
+            <div class="matchup">{m['home_team']} vs {m['away_team']}</div>
+            <div class="meta">
+                <span>Elos: {m['home_elo']} vs {m['away_elo']} (Score: {m['sort_value']})</span>
+                {channel_html}
+            </div>
+            </div>
+            """
     html += """
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const now = new Date().getTime();
-      const lookbackMs = 120 * 60 * 1000; // 2-hour window catches ongoing matches
-      const targetTime = now - lookbackMs;
-
-      const headers = Array.from(document.querySelectorAll('.slot-header[data-time]'));
-      let anchorTarget = null;
-
-      for (const el of headers) {
-        const slotTime = new Date(el.dataset.time).getTime();
-        if (slotTime >= targetTime) {
-          anchorTarget = el;
-          break;
-        }
-      }
-
-      if (!anchorTarget && headers.length > 0) {
-        anchorTarget = headers[headers.length - 1];
-      }
-
-      if (anchorTarget) {
-        anchorTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    });
-  </script>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const now = new Date().getTime();
@@ -1213,12 +1308,11 @@ def main():
     print(f"Total 48-hour matches captured: {len(matches)}")
 
     if not matches:
-        print("No matches found in this 48-hour window.")
-        sys.exit(0)
-
-    allocate_screens(matches)
-
-    chronological_matches = sorted(matches, key=lambda m: (m["match_time_dt"], -m["sort_value"]))
+        print("No matches found in this 48-hour window. Generating empty slate artifacts...")
+        chronological_matches = []
+    else:
+        allocate_screens(matches)
+        chronological_matches = sorted(matches, key=lambda m: (m["match_time_dt"], -m["sort_value"]))
 
     export_csv(chronological_matches)
     export_text_summary(chronological_matches, window)
