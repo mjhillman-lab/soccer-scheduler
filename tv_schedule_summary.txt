@@ -3,39 +3,16 @@
 ====================================================================================================================
 
 ####################################################################################################################
-###  TODAY'S MATCHES (Wednesday, October 14)
-####################################################################################################################
-
---- 2026-10-14 12:45 PM EDT ---
-  [TV 1                    ] [UCL]          Feyenoord Rotterdam vs Como                      (1724 vs 1805) Score: 1683.5 [CBSSN, Paramount+]
-  [TV 2                    ] [UCL]          LASK Linz vs Liverpool                 (1639 vs 1928) Score: 1494.5 [Paramount+]
-
---- 2026-10-14 02:45 PM EDT ---
-  [Other Screen            ] [Championship] Norwich City vs Southampton               (1621 vs 1705) Score: 1579.0 [Paramount+]
-  [Other Screen            ] [Championship] Queens Park Rangers vs Derby County              (1613 vs 1567) Score: 1544.0 [Check listings]
-  [Other Screen            ] [Championship] Portsmouth vs Sheffield United          (1555 vs 1623) Score: 1521.0 [Paramount+]
-
---- 2026-10-14 03:00 PM EDT ---
-  [TV 1                    ] [UCL]          Manchester City vs Paris Saint-Germain       (2034 vs 1957) Score: 1918.5 [Paramount+]
-  [TV 2                    ] [UCL]          Real Betis vs FC Porto                  (1824 vs 1842) Score: 1815.0 [Paramount+]
-  [TV 3                    ] [UCL]          AS Roma vs Real Madrid               (1856 vs 1975) Score: 1796.5 [Paramount+]
-  [Other Screen            ] [UCL]          Aston Villa vs Fenerbahce                (1893 vs 1784) Score: 1729.5 [Paramount+]
-  [Other Screen            ] [UCL]          Bodo/Glimt vs Borussia Dortmund         (1781 vs 1895) Score: 1724.0 [CBSSN, Paramount+]
-  [Other Screen            ] [UCL]          Shakhtar Donetsk vs AEK Athens                (1686 vs 1700) Score: 1679.0 [Paramount+]
-  [Other Screen            ] [Championship] Lincoln City vs West Ham United           (1610 vs 1771) Score: 1529.5 [Paramount+]
-  [Other Screen            ] [UCL]          Slovan Bratislava vs VfB Stuttgart             (1552 vs 1824) Score: 1416.0 [Paramount+]
-
-####################################################################################################################
-###  TOMORROW'S MATCHES (Thursday, October 15)
+###  TODAY'S MATCHES (Thursday, October 15)
 ####################################################################################################################
 
 --- 2026-10-15 12:45 PM EDT ---
-  [TV 1                    ] [UEL]          Lyon vs Crystal Palace            (1795 vs 1829) Score: 1778.0 [Paramount+]
+  [TV 1                    ] [UEL]          Lyon vs Crystal Palace            (1795 vs 1830) Score: 1777.5 [CBSSN, Paramount+]
   [TV 2                    ] [UEL]          Union St.-Gilloise vs Real Sociedad             (1808 vs 1774) Score: 1757.0 [Paramount+]
   [TV 3                    ] [UEL]          AZ Alkmaar vs Hapoel Be'er              (1693 vs 1624) Score: 1589.5 [Paramount+]
   [Other Screen            ] [UECL]         KAA Gent vs AGF                       (1628 vs 1602) Score: 1589.0 [Paramount+]
-  [Other Screen            ] [UEL]          Lech Poznan vs Bayer Leverkusen          (1675 vs 1875) Score: 1575.0 [Paramount+]
-  [Other Screen            ] [UEL]          RB Salzburg vs AC Milan                  (1646 vs 1820) Score: 1559.0 [Paramount+]
+  [Other Screen            ] [UEL]          Lech Poznan vs Bayer Leverkusen          (1675 vs 1876) Score: 1574.5 [Paramount+]
+  [Other Screen            ] [UEL]          RB Salzburg vs AC Milan                  (1646 vs 1819) Score: 1559.5 [Paramount+]
   [Other Screen            ] [UECL]         FC Lugano vs Red Star Belgrade         (1635 vs 1572) Score: 1540.5 [Paramount+]
   [Other Screen            ] [UECL]         Hajduk Split vs Ajax Amsterdam            (1589 vs 1689) Score: 1539.0 [Paramount+]
   [Other Screen            ] [UECL]         CSU Craiova vs Getafe                    (1576 vs 1699) Score: 1514.5 [Paramount+]
@@ -44,27 +21,53 @@
   [Other Screen            ] [UECL]         Riga FC vs Kairat Almaty             (1498 vs 1455) Score: 1433.5 [Paramount+]
   [Other Screen            ] [UECL]         KuPS Kuopio vs Trabzonspor               (1490 vs 1647) Score: 1411.5 [Paramount+]
   [Other Screen            ] [UECL]         Panathinaikos vs Borac Banja Luka          (1647 vs 1485) Score: 1404.0 [Paramount+]
-  [Other Screen            ] [UECL]         CSKA Sofia vs AS Monaco                 (1503 vs 1798) Score: 1355.5 [Paramount+]
+  [Other Screen            ] [UECL]         CSKA Sofia vs AS Monaco                 (1503 vs 1799) Score: 1355.0 [Paramount+]
   [Other Screen            ] [UEL]          Torreense vs Sunderland                (1449 vs 1732) Score: 1307.5 [Paramount+]
   [Other Screen            ] [UECL]         Egnatia vs FC Midtjylland            (1415 vs 1720) Score: 1262.5 [Paramount+]
   [Other Screen            ] [UECL]         Mjällby AIF vs Inter D'Escaldes          (1534 vs 1337) Score: 1238.5 [Paramount+]
 
 --- 2026-10-15 03:00 PM EDT ---
-  [TV 1                    ] [UEL]          Celta Vigo vs Juventus                  (1751 vs 1838) Score: 1707.5 [Paramount+]
-  [TV 2                    ] [UEL]          Marseille vs Olympiacos                (1766 vs 1724) Score: 1703.0 [Paramount+]
+  [TV 1                    ] [UEL]          Celta Vigo vs Juventus                  (1752 vs 1838) Score: 1709.0 [Paramount+]
+  [TV 2                    ] [UEL]          Marseille vs Olympiacos                (1767 vs 1724) Score: 1702.5 [Paramount+]
   [TV 3                    ] [UEL]          TSG Hoffenheim vs Besiktas                  (1721 vs 1693) Score: 1679.0 [Paramount+]
   [Other Screen            ] [UECL]         F.C. København vs Braga                     (1689 vs 1726) Score: 1670.5 [Paramount+]
   [Other Screen            ] [UEL]          Dinamo Zagreb vs Anderlecht                (1671 vs 1662) Score: 1657.5 [Paramount+]
   [Other Screen            ] [UEL]          Ferencvaros vs Viktoria Plzen            (1657 vs 1638) Score: 1628.5 [Paramount+]
-  [Other Screen            ] [UEL]          Benfica vs Celtic                    (1857 vs 1692) Score: 1609.5 [Paramount+]
+  [Other Screen            ] [UEL]          Benfica vs Celtic                    (1856 vs 1692) Score: 1610.0 [CBSSN, Paramount+]
   [Other Screen            ] [UEL]          NEC Nijmegen vs Levski Sofia              (1591 vs 1583) Score: 1579.0 [Paramount+]
   [Other Screen            ] [UEL]          AFC Bournemouth vs SK Sturm Graz             (1850 vs 1637) Score: 1530.5 [Paramount+]
   [Other Screen            ] [UECL]         FC Twente vs FC Thun                   (1660 vs 1569) Score: 1523.5 [Paramount+]
+  [Other Screen            ] [UECL]         Atalanta vs Pafos                     (1808 vs 1602) Score: 1499.0 [Paramount+]
   [Other Screen            ] [UECL]         Heart of Midlothian vs FC Nordsjælland           (1550 vs 1652) Score: 1499.0 [Paramount+]
-  [Other Screen            ] [UECL]         Atalanta vs Pafos                     (1809 vs 1602) Score: 1498.5 [Paramount+]
-  [Other Screen            ] [UECL]         SC Freiburg vs Jablonec                  (1792 vs 1540) Score: 1414.0 [Paramount+]
+  [Other Screen            ] [UECL]         SC Freiburg vs Jablonec                  (1793 vs 1540) Score: 1413.5 [Paramount+]
   [Other Screen            ] [UEL]          Jagiellonia Bialystok vs Ararat-Armenia            (1616 vs 1459) Score: 1380.5 [Paramount+]
-  [Other Screen            ] [UEL]          Stade Rennais vs OFI Crete                 (1759 vs 1472) Score: 1328.5 [Paramount+]
+  [Other Screen            ] [UEL]          Stade Rennais vs OFI Crete                 (1760 vs 1472) Score: 1328.0 [Paramount+]
   [Other Screen            ] [UECL]         Sint-Truidense vs Iberia 1999               (1622 vs 1377) Score: 1254.5 [Paramount+]
   [Other Screen            ] [UECL]         SK Brann vs Lincoln Red Imps          (1581 vs 1349) Score: 1233.0 [Paramount+]
-  [Other Screen            ] [UECL]         Brighton & Hove Albion vs Kauno Zalgiris            (1895 vs 1398) Score: 1149.5 [Paramount+]
+  [Other Screen            ] [UECL]         Brighton & Hove Albion vs Kauno Zalgiris            (1896 vs 1398) Score: 1149.0 [Paramount+]
+
+####################################################################################################################
+###  TOMORROW'S MATCHES (Friday, October 16)
+####################################################################################################################
+
+--- 2026-10-16 12:30 PM EDT ---
+  [Other Screen            ] [2. Bundesliga] Holstein Kiel vs Hertha Berlin             (1588 vs 1651) Score: 1556.5 [Check listings]
+  [Other Screen            ] [2. Bundesliga] Energie Cottbus vs 1. FC Nürnberg            (1549 vs 1612) Score: 1517.5 [Check listings]
+
+--- 2026-10-16 01:00 PM EDT ---
+  [Other Screen            ] [Süper Lig]    Çorum FK vs Caykur Rizespor           (1582 vs 1566) Score: 1558.0 [beIN SPORTS]
+
+--- 2026-10-16 02:00 PM EDT ---
+  [TV 1 (Look-in) [02:00 PM-03:00 PM (~60m)]] [Eredivisie]   Heerenveen vs Excelsior                 (1542 vs 1503) Score: 1483.5 [ESPN+]
+
+--- 2026-10-16 02:30 PM EDT ---
+  [TV 3                    ] [Bundesliga]   Eintracht Frankfurt vs FC Cologne                (1732 vs 1662) Score: 1627.0 [Peacock, Fandango, Universo]
+  [Other Screen            ] [LALIGA 2]     Leganés vs Córdoba                   (1615 vs 1594) Score: 1583.5 [Check listings]
+
+--- 2026-10-16 02:45 PM EDT ---
+  [TV 2                    ] [Serie A]      Frosinone vs Sassuolo                  (1678 vs 1703) Score: 1665.5 [CBSSN, Paramount+]
+  [Other Screen            ] [Ligue 1]      Le Mans vs Toulouse                  (1589 vs 1684) Score: 1541.5 [beIn Sports, FuboTV]
+
+--- 2026-10-16 03:00 PM EDT ---
+  [TV 1                    ] [LaLiga]       Deportivo vs Levante                   (1697 vs 1711) Score: 1690.0 [ESPN Deportes, ESPN+]
+  [TV 3 (Look-in) [04:25 PM-04:55 PM (~30m)]] [Championship] Burnley vs Wolverhampton Wanderers   (1647 vs 1726) Score: 1607.5 [Paramount+]
