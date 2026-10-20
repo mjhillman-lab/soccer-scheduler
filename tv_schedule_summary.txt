@@ -3,34 +3,11 @@
 ====================================================================================================================
 
 ####################################################################################################################
-###  TODAY'S MATCHES (Monday, October 19)
-####################################################################################################################
-
---- 2026-10-19 12:30 PM EDT ---
-  [TV 1                    ] [Serie A]      Monza vs Cagliari                  (1636 vs 1671) Score: 1618.5 [Paramount+]
-
---- 2026-10-19 01:00 PM EDT ---
-  [Other Screen            ] [Süper Lig]    Trabzonspor vs Besiktas                  (1647 vs 1693) Score: 1624.0 [beIN SPORTS]
-
---- 2026-10-19 02:30 PM EDT ---
-  [Other Screen            ] [LALIGA 2]     RC Celta Fortuna vs Tenerife                  (1751 vs 1632) Score: 1572.5 [Check listings]
-
---- 2026-10-19 02:45 PM EDT ---
-  [TV 3                    ] [Serie A]      Parma vs Torino                    (1642 vs 1680) Score: 1623.0 [Paramount+]
-
---- 2026-10-19 03:00 PM EDT ---
-  [TV 1                    ] [LaLiga]       Getafe vs Rayo Vallecano            (1699 vs 1746) Score: 1675.5 [ESPN Deportes, ESPN+]
-  [TV 2                    ] [EPL]          Tottenham Hotspur vs Coventry City             (1799 vs 1686) Score: 1629.5 [USA Net, Universo]
-
---- 2026-10-19 03:15 PM EDT ---
-  [Other Screen            ] [Liga Portugal] Braga vs Gil Vicente               (1717 vs 1564) Score: 1487.5 [DAZN]
-
-####################################################################################################################
-###  TOMORROW'S MATCHES (Tuesday, October 20)
+###  TODAY'S MATCHES (Tuesday, October 20)
 ####################################################################################################################
 
 --- 2026-10-20 12:45 PM EDT ---
-  [TV 1                    ] [UCL]          Fenerbahce vs Slavia Prague             (1781 vs 1744) Score: 1725.5 [Paramount+]
+  [TV 1                    ] [UCL]          Fenerbahce vs Slavia Prague             (1782 vs 1744) Score: 1725.0 [Paramount+]
   [TV 2                    ] [UCL]          Sabah FK vs Borussia Dortmund         (1562 vs 1886) Score: 1400.0 [Paramount+]
 
 --- 2026-10-20 02:45 PM EDT ---
@@ -44,3 +21,23 @@
   [Other Screen            ] [UCL]          Liverpool vs Villarreal                (1937 vs 1801) Score: 1733.0 [Paramount+]
   [Other Screen            ] [UCL]          Manchester City vs AEK Athens                (2025 vs 1700) Score: 1537.5 [Paramount+]
   [Other Screen            ] [UCL]          AS Roma vs Slovan Bratislava         (1855 vs 1552) Score: 1400.5 [Paramount+]
+
+####################################################################################################################
+###  TOMORROW'S MATCHES (Wednesday, October 21)
+####################################################################################################################
+
+--- 2026-10-21 12:45 PM EDT ---
+  [TV 1                    ] [UCL]          Como vs Manchester United         (1806 vs 1871) Score: 1773.5 [Paramount+]
+  [TV 2                    ] [UCL]          Lille vs Galatasaray               (1778 vs 1797) Score: 1768.5 [Paramount+]
+
+--- 2026-10-21 02:00 PM EDT ---
+  [TV 3 (Look-in) [02:00 PM-03:00 PM (~60m)]] [LaLiga]       Levante vs Athletic Club             (1711 vs 1607) Score: 1555.0 [ESPN Deportes, ESPN+]
+
+--- 2026-10-21 03:00 PM EDT ---
+  [TV 1                    ] [UCL]          Bayern Munich vs Arsenal                   (2042 vs 2048) Score: 2039.0 [Paramount+]
+  [TV 2                    ] [UCL]          Club Brugge vs Lens                      (1824 vs 1813) Score: 1807.5 [Paramount+]
+  [TV 3                    ] [UCL]          Real Madrid vs RB Leipzig                (1983 vs 1825) Score: 1746.0 [Paramount+]
+  [Other Screen            ] [UCL]          Real Betis vs Feyenoord Rotterdam       (1824 vs 1733) Score: 1687.5 [Paramount+]
+  [Other Screen            ] [UCL]          Aston Villa vs Viking FK                 (1904 vs 1691) Score: 1584.5 [Paramount+]
+  [Other Screen            ] [UCL]          Internazionale vs Shakhtar Donetsk          (1942 vs 1686) Score: 1558.0 [CBSSN, Paramount+]
+  [Other Screen            ] [UCL]          Sporting CP vs LASK Linz                 (1884 vs 1639) Score: 1516.5 [Paramount+]
