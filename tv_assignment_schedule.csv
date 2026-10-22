@@ -1,47 +1,50 @@
 day_group,match_time_str,tv_assignment,lookin_window,home_team,away_team,home_elo,away_elo,channels,sort_value,league
-TODAY,2026-10-21 12:45 PM EDT,TV 1,,Como,Manchester United,1807,1871,Paramount+,1775.0,UEFA Champions League
-TODAY,2026-10-21 12:45 PM EDT,TV 2,,Lille,Galatasaray,1778,1797,Paramount+,1768.5,UEFA Champions League
-TODAY,2026-10-21 02:00 PM EDT,TV 3 (Look-in),02:00 PM-03:00 PM (~60m),Levante,Athletic Club,1711,1607,"ESPN Deportes, ESPN+",1555.0,Spanish LALIGA
-TODAY,2026-10-21 03:00 PM EDT,TV 1,,Bayern Munich,Arsenal,2042,2048,Paramount+,2039.0,UEFA Champions League
-TODAY,2026-10-21 03:00 PM EDT,TV 2,,Club Brugge,Lens,1824,1814,Paramount+,1809.0,UEFA Champions League
-TODAY,2026-10-21 03:00 PM EDT,TV 3,,Real Madrid,RB Leipzig,1983,1825,Paramount+,1746.0,UEFA Champions League
-TODAY,2026-10-21 03:00 PM EDT,Other Screen,,Real Betis,Feyenoord Rotterdam,1823,1734,Paramount+,1689.5,UEFA Champions League
-TODAY,2026-10-21 03:00 PM EDT,Other Screen,,Aston Villa,Viking FK,1905,1691,Paramount+,1584.0,UEFA Champions League
-TODAY,2026-10-21 03:00 PM EDT,Other Screen,,Internazionale,Shakhtar Donetsk,1943,1686,"CBSSN, Paramount+",1557.5,UEFA Champions League
-TODAY,2026-10-21 03:00 PM EDT,Other Screen,,Sporting CP,LASK Linz,1884,1639,Paramount+,1516.5,UEFA Champions League
-TOMORROW,2026-10-22 10:30 AM EDT,TV 1,,Kairat Almaty,Panathinaikos,1455,1647,Paramount+,1359.0,UEFA Conference League
-TOMORROW,2026-10-22 12:45 PM EDT,TV 1,,Juventus,Stade Rennais,1831,1756,"CBSSN, Paramount+",1718.5,UEFA Europa League
-TOMORROW,2026-10-22 12:45 PM EDT,TV 2,,Lech Poznan,Sunderland,1675,1731,Paramount+,1647.0,UEFA Europa League
-TOMORROW,2026-10-22 12:45 PM EDT,TV 3,,Getafe,FC Lugano,1699,1635,Paramount+,1603.0,UEFA Conference League
-TOMORROW,2026-10-22 12:45 PM EDT,Other Screen,,SK Sturm Graz,Marseille,1637,1766,Paramount+,1572.5,UEFA Europa League
-TOMORROW,2026-10-22 12:45 PM EDT,Other Screen,,Dinamo Zagreb,NEC Nijmegen,1671,1591,Paramount+,1551.0,UEFA Europa League
-TOMORROW,2026-10-22 12:45 PM EDT,Other Screen,,Union St.-Gilloise,Hapoel Be'er,1807,1624,Paramount+,1532.5,UEFA Europa League
-TOMORROW,2026-10-22 12:45 PM EDT,Other Screen,,Red Star Belgrade,F.C. København,1572,1689,Paramount+,1513.5,UEFA Conference League
-TOMORROW,2026-10-22 12:45 PM EDT,Other Screen,,Trabzonspor,Heart of Midlothian,1647,1550,Paramount+,1501.5,UEFA Conference League
-TOMORROW,2026-10-22 12:45 PM EDT,Other Screen,,Pafos,Riga FC,1602,1498,Paramount+,1446.0,UEFA Conference League
-TOMORROW,2026-10-22 12:45 PM EDT,Other Screen,,FC Nordsjælland,CSKA Sofia,1652,1503,Paramount+,1428.5,UEFA Conference League
-TOMORROW,2026-10-22 12:45 PM EDT,Other Screen,,Jablonec,Brighton & Hove Albion,1540,1905,Paramount+,1357.5,UEFA Conference League
-TOMORROW,2026-10-22 12:45 PM EDT,Other Screen,,Ferencvaros,Torreense,1657,1449,Paramount+,1345.0,UEFA Europa League
-TOMORROW,2026-10-22 12:45 PM EDT,Other Screen,,Ararat-Armenia,AZ Alkmaar,1459,1693,Paramount+,1342.0,UEFA Europa League
-TOMORROW,2026-10-22 12:45 PM EDT,Other Screen,,Kauno Zalgiris,SK Brann,1398,1581,Paramount+,1306.5,UEFA Conference League
-TOMORROW,2026-10-22 12:45 PM EDT,Other Screen,,Iberia 1999,Mjällby AIF,1377,1534,Paramount+,1298.5,UEFA Conference League
-TOMORROW,2026-10-22 12:45 PM EDT,Other Screen,,OFI Crete,Bayer Leverkusen,1472,1886,Paramount+,1265.0,UEFA Europa League
-TOMORROW,2026-10-22 12:45 PM EDT,Other Screen,,Inter D'Escaldes,CSU Craiova,1337,1576,Paramount+,1217.5,UEFA Conference League
-TOMORROW,2026-10-22 03:00 PM EDT,TV 1,,AFC Bournemouth,AC Milan,1858,1834,"CBSSN, Paramount+",1822.0,UEFA Europa League
-TOMORROW,2026-10-22 03:00 PM EDT,TV 2,,AS Monaco,SC Freiburg,1796,1790,Paramount+,1787.0,UEFA Conference League
-TOMORROW,2026-10-22 03:00 PM EDT,TV 3,,TSG Hoffenheim,Lyon,1718,1803,Paramount+,1675.5,UEFA Europa League
-TOMORROW,2026-10-22 03:00 PM EDT,Other Screen,,Celtic,Celta Vigo,1692,1750,Paramount+,1663.0,UEFA Europa League
-TOMORROW,2026-10-22 03:00 PM EDT,Other Screen,,Besiktas,Crystal Palace,1693,1819,Paramount+,1630.0,UEFA Europa League
-TOMORROW,2026-10-22 03:00 PM EDT,Other Screen,,Ajax Amsterdam,Atalanta,1689,1808,Paramount+,1629.5,UEFA Conference League
-TOMORROW,2026-10-22 03:00 PM EDT,Other Screen,,Jagiellonia Bialystok,Anderlecht,1616,1662,Paramount+,1593.0,UEFA Europa League
-TOMORROW,2026-10-22 03:00 PM EDT,Other Screen,,Braga,KAA Gent,1717,1628,Paramount+,1583.5,UEFA Conference League
-TOMORROW,2026-10-22 03:00 PM EDT,Other Screen,,FC Midtjylland,Sint-Truidense,1719,1622,Paramount+,1573.5,UEFA Conference League
-TOMORROW,2026-10-22 03:00 PM EDT,Other Screen,,FC Thun,Hajduk Split,1569,1589,Paramount+,1559.0,UEFA Conference League
-TOMORROW,2026-10-22 03:00 PM EDT,Other Screen,,Viktoria Plzen,Levski Sofia,1638,1583,Paramount+,1555.5,UEFA Europa League
-TOMORROW,2026-10-22 03:00 PM EDT,Other Screen,,Omonia Nicosia,Benfica,1635,1858,Paramount+,1523.5,UEFA Europa League
-TOMORROW,2026-10-22 03:00 PM EDT,Other Screen,,Borac Banja Luka,KuPS Kuopio,1485,1490,Paramount+,1482.5,UEFA Conference League
-TOMORROW,2026-10-22 03:00 PM EDT,Other Screen,,NK Celje,RB Salzburg,1518,1646,Paramount+,1454.0,UEFA Europa League
-TOMORROW,2026-10-22 03:00 PM EDT,Other Screen,,Lillestrom,Real Sociedad,1530,1784,Paramount+,1403.0,UEFA Europa League
-TOMORROW,2026-10-22 03:00 PM EDT,Other Screen,,Olympiacos,Sparta Prague,1736,1507,Paramount+,1392.5,UEFA Europa League
-TOMORROW,2026-10-22 03:00 PM EDT,Other Screen,,AGF,Egnatia,1602,1415,Paramount+,1321.5,UEFA Conference League
-TOMORROW,2026-10-22 03:00 PM EDT,Other Screen,,Lincoln Red Imps,FC Twente,1349,1660,Paramount+,1193.5,UEFA Conference League
+TODAY,2026-10-22 10:30 AM EDT,TV 1,,Kairat Almaty,Panathinaikos,1455,1647,Paramount+,1359.0,UEFA Conference League
+TODAY,2026-10-22 12:45 PM EDT,TV 1,,Juventus,Stade Rennais,1832,1755,"CBSSN, Paramount+",1716.5,UEFA Europa League
+TODAY,2026-10-22 12:45 PM EDT,TV 2,,Lech Poznan,Sunderland,1675,1730,Paramount+,1647.5,UEFA Europa League
+TODAY,2026-10-22 12:45 PM EDT,TV 3,,Getafe,FC Lugano,1699,1635,Paramount+,1603.0,UEFA Conference League
+TODAY,2026-10-22 12:45 PM EDT,Other Screen,,SK Sturm Graz,Marseille,1637,1764,Paramount+,1573.5,UEFA Europa League
+TODAY,2026-10-22 12:45 PM EDT,Other Screen,,Dinamo Zagreb,NEC Nijmegen,1671,1591,Paramount+,1551.0,UEFA Europa League
+TODAY,2026-10-22 12:45 PM EDT,Other Screen,,Union St.-Gilloise,Hapoel Be'er,1807,1624,Paramount+,1532.5,UEFA Europa League
+TODAY,2026-10-22 12:45 PM EDT,Other Screen,,Red Star Belgrade,F.C. København,1572,1689,Paramount+,1513.5,UEFA Conference League
+TODAY,2026-10-22 12:45 PM EDT,Other Screen,,Trabzonspor,Heart of Midlothian,1647,1550,Paramount+,1501.5,UEFA Conference League
+TODAY,2026-10-22 12:45 PM EDT,Other Screen,,Pafos,Riga FC,1602,1498,Paramount+,1446.0,UEFA Conference League
+TODAY,2026-10-22 12:45 PM EDT,Other Screen,,FC Nordsjælland,CSKA Sofia,1652,1503,Paramount+,1428.5,UEFA Conference League
+TODAY,2026-10-22 12:45 PM EDT,Other Screen,,Jablonec,Brighton & Hove Albion,1540,1904,Paramount+,1358.0,UEFA Conference League
+TODAY,2026-10-22 12:45 PM EDT,Other Screen,,Ferencvaros,Torreense,1657,1449,Paramount+,1345.0,UEFA Europa League
+TODAY,2026-10-22 12:45 PM EDT,Other Screen,,Ararat-Armenia,AZ Alkmaar,1459,1693,Paramount+,1342.0,UEFA Europa League
+TODAY,2026-10-22 12:45 PM EDT,Other Screen,,Kauno Zalgiris,SK Brann,1398,1581,Paramount+,1306.5,UEFA Conference League
+TODAY,2026-10-22 12:45 PM EDT,Other Screen,,Iberia 1999,Mjällby AIF,1377,1534,Paramount+,1298.5,UEFA Conference League
+TODAY,2026-10-22 12:45 PM EDT,Other Screen,,OFI Crete,Bayer Leverkusen,1472,1885,Paramount+,1265.5,UEFA Europa League
+TODAY,2026-10-22 12:45 PM EDT,Other Screen,,Inter D'Escaldes,CSU Craiova,1337,1576,Paramount+,1217.5,UEFA Conference League
+TODAY,2026-10-22 03:00 PM EDT,TV 1,,AFC Bournemouth,AC Milan,1858,1835,"CBSSN, Paramount+",1823.5,UEFA Europa League
+TODAY,2026-10-22 03:00 PM EDT,TV 2,,AS Monaco,SC Freiburg,1795,1790,Paramount+,1787.5,UEFA Conference League
+TODAY,2026-10-22 03:00 PM EDT,TV 3,,TSG Hoffenheim,Lyon,1718,1802,Paramount+,1676.0,UEFA Europa League
+TODAY,2026-10-22 03:00 PM EDT,Other Screen,,Celtic,Celta Vigo,1692,1750,Paramount+,1663.0,UEFA Europa League
+TODAY,2026-10-22 03:00 PM EDT,Other Screen,,Besiktas,Crystal Palace,1693,1818,Paramount+,1630.5,UEFA Europa League
+TODAY,2026-10-22 03:00 PM EDT,Other Screen,,Ajax Amsterdam,Atalanta,1689,1809,Paramount+,1629.0,UEFA Conference League
+TODAY,2026-10-22 03:00 PM EDT,Other Screen,,Jagiellonia Bialystok,Anderlecht,1616,1662,Paramount+,1593.0,UEFA Europa League
+TODAY,2026-10-22 03:00 PM EDT,Other Screen,,Braga,KAA Gent,1716,1628,Paramount+,1584.0,UEFA Conference League
+TODAY,2026-10-22 03:00 PM EDT,Other Screen,,FC Midtjylland,Sint-Truidense,1720,1622,Paramount+,1573.0,UEFA Conference League
+TODAY,2026-10-22 03:00 PM EDT,Other Screen,,FC Thun,Hajduk Split,1569,1589,Paramount+,1559.0,UEFA Conference League
+TODAY,2026-10-22 03:00 PM EDT,Other Screen,,Viktoria Plzen,Levski Sofia,1638,1583,Paramount+,1555.5,UEFA Europa League
+TODAY,2026-10-22 03:00 PM EDT,Other Screen,,Omonia Nicosia,Benfica,1635,1857,Paramount+,1524.0,UEFA Europa League
+TODAY,2026-10-22 03:00 PM EDT,Other Screen,,Borac Banja Luka,KuPS Kuopio,1485,1490,Paramount+,1482.5,UEFA Conference League
+TODAY,2026-10-22 03:00 PM EDT,Other Screen,,NK Celje,RB Salzburg,1518,1646,Paramount+,1454.0,UEFA Europa League
+TODAY,2026-10-22 03:00 PM EDT,Other Screen,,Lillestrom,Real Sociedad,1530,1785,Paramount+,1402.5,UEFA Europa League
+TODAY,2026-10-22 03:00 PM EDT,Other Screen,,Olympiacos,Sparta Prague,1736,1507,Paramount+,1392.5,UEFA Europa League
+TODAY,2026-10-22 03:00 PM EDT,Other Screen,,AGF,Egnatia,1602,1415,Paramount+,1321.5,UEFA Conference League
+TODAY,2026-10-22 03:00 PM EDT,Other Screen,,Lincoln Red Imps,FC Twente,1349,1660,Paramount+,1193.5,UEFA Conference League
+TOMORROW,2026-10-23 12:30 PM EDT,Other Screen,,SV Darmstadt 98,St. Pauli,1590,1613,Check listings,1578.5,German 2. Bundesliga
+TOMORROW,2026-10-23 12:30 PM EDT,Other Screen,,VfL Bochum,VfL Wolfsburg,1607,1672,Check listings,1574.5,German 2. Bundesliga
+TOMORROW,2026-10-23 01:00 PM EDT,Other Screen,,Alanyaspor,Kocaelispor,1569,1576,beIN SPORTS,1565.5,Turkish Super Lig
+TOMORROW,2026-10-23 02:00 PM EDT,TV 1 (Look-in),02:00 PM-02:30 PM (~30m),Go Ahead Eagles,Telstar,1550,1450,ESPN+,1400.0,Dutch Eredivisie
+TOMORROW,2026-10-23 02:30 PM EDT,TV 1 (Look-in),02:30 PM-03:00 PM (~30m),VfB Stuttgart,Borussia Mönchengladbach,1821,1682,Fandango,1612.5,German Bundesliga
+TOMORROW,2026-10-23 02:30 PM EDT,Other Screen,,Granada,Real Valladolid,1622,1360,Check listings,1229.0,Spanish LALIGA 2
+TOMORROW,2026-10-23 02:45 PM EDT,TV 3,,Brest,Nice,1678,1660,beIn Sports,1651.0,French Ligue 1
+TOMORROW,2026-10-23 02:45 PM EDT,Other Screen,,Torino,Monza,1680,1636,Paramount+,1614.0,Italian Serie A
+TOMORROW,2026-10-23 02:45 PM EDT,Other Screen,,KV Kortrijk,KV Mechelen,1434,1545,DAZN,1378.5,Belgian Pro League
+TOMORROW,2026-10-23 03:00 PM EDT,TV 1,,Alavés,Málaga,1717,1677,"ESPN Deportes, ESPN+",1657.0,Spanish LALIGA
+TOMORROW,2026-10-23 03:00 PM EDT,TV 2,,Ipswich Town,Nottingham Forest,1700,1796,USA Net,1652.0,English Premier League
+TOMORROW,2026-10-23 03:00 PM EDT,Other Screen,,Bolton Wanderers,Middlesbrough,1529,1651,"CBSSN, Paramount+",1468.0,English League Championship
+TOMORROW,2026-10-23 03:45 PM EDT,Other Screen,,Vitória de Guimaraes,Maritimo,1569,1488,DAZN,1447.5,Portuguese Primeira Liga
