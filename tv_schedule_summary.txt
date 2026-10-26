@@ -3,99 +3,7 @@
 ====================================================================================================================
 
 ####################################################################################################################
-###  TODAY'S MATCHES (Sunday, October 25)
-####################################################################################################################
-
---- 2026-10-25 07:15 AM EDT ---
-  [TV 2                    ] [Eredivisie]   Fortuna Sittard vs Excelsior                 (1483 vs 1503) Score: 1473.0 [ESPN+]
-
---- 2026-10-25 07:30 AM EDT ---
-  [TV 1                    ] [Serie A]      Internazionale vs Fiorentina                (1944 vs 1715) Score: 1600.5 [CBSSN, Paramount+]
-
---- 2026-10-25 08:30 AM EDT ---
-  [Other Screen            ] [Belgian Pro]  Racing Genk vs Standard Liege            (1587 vs 1588) Score: 1586.5 [DAZN]
-  [Other Screen            ] [2. Bundesliga] Holstein Kiel vs Dynamo Dresden            (1588 vs 1562) Score: 1549.0 [Check listings]
-  [Other Screen            ] [2. Bundesliga] VfL Osnabruck vs SpVgg Greuther Fürth      (1554 vs 1527) Score: 1513.5 [Check listings]
-  [Other Screen            ] [2. Bundesliga] TSV Eintracht Braunschweig vs Hannover 96               (1516 vs 1627) Score: 1460.5 [Check listings]
-
---- 2026-10-25 09:00 AM EDT ---
-  [TV 2 (Look-in) [09:10 AM-10:00 AM (~50m)]] [LaLiga]       Athletic Club vs Getafe                    (1607 vs 1699) Score: 1561.0 [ESPN+]
-  [Other Screen            ] [LALIGA 2]     CD Sabadell vs Tenerife                  (1578 vs 1632) Score: 1551.0 [Check listings]
-  [Other Screen            ] [Süper Lig]    Konyaspor vs Genclerbirligi            (1533 vs 1565) Score: 1517.0 [beIN SPORTS]
-
---- 2026-10-25 09:30 AM EDT ---
-  [TV 1 (Look-in) [09:30 AM-10:00 AM (~30m)]] [Eredivisie]   PSV Eindhoven vs Feyenoord Rotterdam       (1784 vs 1734) Score: 1709.0 [ESPN+]
-  [TV 3 (Look-in) [09:30 AM-10:00 AM (~30m)]] [Eredivisie]   NEC Nijmegen vs FC Groningen              (1591 vs 1520) Score: 1484.5 [ESPN+]
-
---- 2026-10-25 10:00 AM EDT ---
-  [TV 1                    ] [EPL]          Liverpool vs Brighton & Hove Albion    (1940 vs 1899) Score: 1878.5 [Peacock]
-  [TV 2                    ] [EPL]          Manchester United vs AFC Bournemouth           (1862 vs 1865) Score: 1860.5 [Peacock]
-  [TV 3                    ] [EPL]          Crystal Palace vs Newcastle United          (1818 vs 1861) Score: 1796.5 [USA Net, Tele]
-  [Other Screen            ] [Ligue 1]      AS Monaco vs Lille                     (1801 vs 1767) Score: 1750.0 [beIn Sports]
-  [Other Screen            ] [Serie A]      Genoa vs Venezia                   (1666 vs 1651) Score: 1643.5 [Paramount+]
-  [Other Screen            ] [Serie A]      Atalanta vs Frosinone                 (1799 vs 1678) Score: 1617.5 [Paramount+]
-  [Other Screen            ] [EPL]          Hull City vs Brentford                 (1636 vs 1859) Score: 1524.5 [Peacock]
-
---- 2026-10-25 10:30 AM EDT ---
-  [TV 3 (Look-in) [11:55 AM-12:25 PM (~30m)]] [Bundesliga]   TSG Hoffenheim vs Bayer Leverkusen          (1728 vs 1888) Score: 1648.0 [Fandango]
-
---- 2026-10-25 11:00 AM EDT ---
-  [Other Screen            ] [Belgian Pro]  Club Brugge vs Sint-Truidense            (1832 vs 1622) Score: 1517.0 [DAZN]
-
---- 2026-10-25 11:15 AM EDT ---
-  [TV 2 (Look-in) [11:55 AM-12:30 PM (~35m)]] [LaLiga]       Celta Vigo vs Real Betis                (1755 vs 1826) Score: 1719.5 [ESPN Deportes, ESPN+]
-  [Other Screen            ] [LALIGA 2]     Albacete vs Eldense                   (1613 vs 1591) Score: 1580.0 [ESPN+]
-  [Other Screen            ] [LALIGA 2]     Cádiz vs Ceuta                     (1554 vs 1560) Score: 1551.0 [Check listings]
-
---- 2026-10-25 11:30 AM EDT ---
-  [Other Screen            ] [Liga Portugal] Estoril vs Moreirense                (1521 vs 1544) Score: 1509.5 [DAZN]
-
---- 2026-10-25 11:45 AM EDT ---
-  [Other Screen            ] [Eredivisie]   Sparta Rotterdam vs Ajax Amsterdam            (1507 vs 1689) Score: 1416.0 [ESPN+]
-
---- 2026-10-25 12:00 PM EDT ---
-  [Other Screen            ] [Süper Lig]    Goztepe vs Çorum FK                  (1600 vs 1582) Score: 1573.0 [beIN SPORTS]
-
---- 2026-10-25 12:15 PM EDT ---
-  [TV 1                    ] [Ligue 1]      Stade Rennais vs Strasbourg                (1758 vs 1731) Score: 1717.5 [beIN SPORTS]
-  [Other Screen            ] [Ligue 1]      Toulouse vs Troyes                    (1684 vs 1612) Score: 1576.0 [beIn Sports]
-  [Other Screen            ] [Ligue 1]      Angers vs Lorient                   (1613 vs 1696) Score: 1571.5 [beIN SPORTS]
-  [Other Screen            ] [Ligue 1]      AJ Auxerre vs Le Mans                   (1645 vs 1589) Score: 1561.0 [beIN SPORTS]
-  [Other Screen            ] [Ligue 1]      Marseille vs Le Havre AC               (1758 vs 1610) Score: 1536.0 [beIn Sports]
-
---- 2026-10-25 12:30 PM EDT ---
-  [TV 2                    ] [EPL]          Sunderland vs Leeds United              (1731 vs 1814) Score: 1689.5 [USA Net]
-  [TV 3 (Look-in) [12:30 PM-01:30 PM (~60m)]] [Bundesliga]   SC Freiburg vs Bayern Munich             (1785 vs 2040) Score: 1657.5 [Fandango]
-
---- 2026-10-25 01:00 PM EDT ---
-  [TV 2 (Look-in) [02:25 PM-02:55 PM (~30m)]] [Serie A]      Lecce vs Juventus                  (1619 vs 1828) Score: 1514.5 [Paramount+]
-
---- 2026-10-25 01:30 PM EDT ---
-  [TV 3                    ] [LaLiga]       Real Sociedad vs Levante                   (1791 vs 1711) Score: 1671.0 [ESPN Deportes, ESPN+]
-  [Other Screen            ] [Belgian Pro]  KAA Gent vs Anderlecht                (1628 vs 1662) Score: 1611.0 [DAZN]
-  [TV 1 (Look-in) [02:10 PM-03:25 PM (~75m)]] [LALIGA 2]     Castellón vs Sporting Gijón            (1680 vs 1621) Score: 1591.5 [ESPN+]
-
---- 2026-10-25 02:00 PM EDT ---
-  [Other Screen            ] [Liga Portugal] C.D. Nacional vs Braga                     (1642 vs 1720) Score: 1603.0 [DAZN]
-  [Other Screen            ] [Liga Portugal] Rio Ave vs FC Famalicao              (1500 vs 1602) Score: 1449.0 [DAZN]
-
---- 2026-10-25 02:15 PM EDT ---
-  [Other Screen            ] [Belgian Pro]  Union St.-Gilloise vs Cercle Brugge KSV         (1813 vs 1832) Score: 1803.5 [DAZN]
-
---- 2026-10-25 03:00 PM EDT ---
-  [TV 2                    ] [Eredivisie]   AZ Alkmaar vs FC Twente                 (1693 vs 1660) Score: 1643.5 [ESPN+]
-
---- 2026-10-25 03:45 PM EDT ---
-  [TV 3                    ] [Serie A]      Udinese vs AC Milan                  (1704 vs 1827) Score: 1642.5 [Paramount+]
-
---- 2026-10-25 04:00 PM EDT ---
-  [TV 1                    ] [LaLiga]       Barcelona vs Real Madrid               (2031 vs 1986) Score: 1963.5 [ABC, ESPN Deportes, ESPN+]
-
---- 2026-10-25 04:30 PM EDT ---
-  [Other Screen            ] [Liga Portugal] Sporting CP vs Académico de Viseu        (1870 vs 1494) Score: 1306.0 [DAZN]
-
-####################################################################################################################
-###  TOMORROW'S MATCHES (Monday, October 26)
+###  TODAY'S MATCHES (Monday, October 26)
 ####################################################################################################################
 
 --- 2026-10-26 12:00 PM EDT ---
@@ -114,3 +22,54 @@
 
 --- 2026-10-26 04:00 PM EDT ---
   [TV 1                    ] [LaLiga]       Sevilla vs Osasuna                   (1725 vs 1719) Score: 1716.0 [ESPN Deportes, ESPN+]
+
+####################################################################################################################
+###  TOMORROW'S MATCHES (Tuesday, October 27)
+####################################################################################################################
+
+--- 2026-10-27 01:00 PM EDT ---
+  [Other Screen            ] [Cup]          Hamburg SV vs Eintracht Frankfurt       (1666 vs 1736) Score: 1631.0 [Check listings]
+  [Other Screen            ] [Cup]          VfL Bochum vs Mainz                     (1607 vs 1744) Score: 1538.5 [Check listings]
+  [Other Screen            ] [Cup]          Rot-Weiss Essen vs RB Leipzig                (1531 vs 1822) Score: 1385.5 [Check listings]
+  [Other Screen            ] [Cup]          SG Sonnenhof Großaspach vs FC Augsburg               (1450 vs 1725) Score: 1312.5 [Check listings]
+
+--- 2026-10-27 01:30 PM EDT ---
+  [TV 1                    ] [Serie A]      Sassuolo vs Lazio                     (1703 vs 1794) Score: 1657.5 [Paramount+]
+  [Other Screen            ] [Copa del Rey] CD Cuarte vs Girona                    (1450 vs 1724) Score: 1313.0 [Check listings]
+
+--- 2026-10-27 02:00 PM EDT ---
+  [TV 2                    ] [Copa del Rey] Atlético Pinatarense vs Elche                     (1916 vs 1694) Score: 1583.0 [ESPN+]
+  [Other Screen            ] [Copa del Rey] CF Calamocha vs CE Europa                 (1450 vs 1545) Score: 1402.5 [Check listings]
+  [TV 3 (Look-in) [02:00 PM-03:45 PM (~105m)]] [Copa del Rey] Sestao vs Espanyol                  (1492 vs 1712) Score: 1382.0 [ESPN+]
+
+--- 2026-10-27 02:45 PM EDT ---
+  [Other Screen            ] [Copa del Rey] UD Castellonense vs Almería                   (1680 vs 1682) Score: 1679.0 [Check listings]
+
+--- 2026-10-27 03:00 PM EDT ---
+  [Other Screen            ] [Copa del Rey] Gimnastica Segoviana vs Cultural Leonesa          (1462 vs 1530) Score: 1428.0 [Check listings]
+  [Other Screen            ] [Copa del Rey] Atlético Tordesillas vs Mirandés                  (1916 vs 1575) Score: 1404.5 [Check listings]
+  [Other Screen            ] [Copa del Rey] Llanera vs Ponferradina              (1450 vs 1569) Score: 1390.5 [Check listings]
+  [Other Screen            ] [Copa del Rey] Ciudad De Lucena vs Rayo Majadahonda          (1450 vs 1391) Score: 1361.5 [Check listings]
+  [Other Screen            ] [Copa del Rey] Alcalá vs Las Palmas                (1450 vs 1677) Score: 1336.5 [Check listings]
+
+--- 2026-10-27 03:30 PM EDT ---
+  [Other Screen            ] [Copa del Rey] Manresa vs Sant Andreu               (1450 vs 1530) Score: 1410.0 [Check listings]
+  [Other Screen            ] [Copa del Rey] Don Benito vs CD Extremadura            (1450 vs 1604) Score: 1373.0 [Check listings]
+
+--- 2026-10-27 03:45 PM EDT ---
+  [Other Screen            ] [Cup]          FC Cologne vs 1. FC Union Berlin        (1662 vs 1680) Score: 1653.0 [Check listings]
+  [TV 1                    ] [Serie A]      Torino vs Como                      (1680 vs 1815) Score: 1612.5 [Paramount+]
+  [Other Screen            ] [Cup]          Borussia Dortmund vs Werder Bremen             (1888 vs 1690) Score: 1591.0 [Check listings]
+  [TV 3                    ] [Serie A]      AS Roma vs Cagliari                  (1857 vs 1671) Score: 1578.0 [Paramount+]
+  [Other Screen            ] [Cup]          SV Elversberg vs SV Darmstadt 98           (1675 vs 1590) Score: 1547.5 [Check listings]
+  [Other Screen            ] [Cup]          Borussia Mönchengladbach vs Karlsruher SC             (1682 vs 1572) Score: 1517.0 [Check listings]
+  [Other Screen            ] [EFL Cup]      Bradford City vs Peterborough United       (1509 vs 1454) Score: 1426.5 [Paramount+]
+
+--- 2026-10-27 04:00 PM EDT ---
+  [TV 2                    ] [Copa del Rey] Sporting de Alcázar vs Málaga                    (1870 vs 1677) Score: 1580.5 [ESPN+]
+  [Other Screen            ] [Copa del Rey] Atlético Paso vs Córdoba                   (1916 vs 1594) Score: 1433.0 [Check listings]
+  [Other Screen            ] [Copa del Rey] Arosa vs Pontevedra                (1450 vs 1559) Score: 1395.5 [Check listings]
+  [Other Screen            ] [Copa del Rey] Recreativo Huelva vs Rayo Vallecano            (1461 vs 1745) Score: 1319.0 [ESPN+]
+  [Other Screen            ] [Copa del Rey] Manacor vs Villarreal                (1450 vs 1799) Score: 1275.5 [ESPN+]
+  [Other Screen            ] [Copa del Rey] CD Tudelano vs Real Zaragoza             (1359 vs 1540) Score: 1268.5 [Check listings]
+  [Other Screen            ] [EFL Cup]      Fleetwood Town vs Arsenal                   (1410 vs 2049) Score: 1090.5 [Paramount+]
