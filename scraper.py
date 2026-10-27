@@ -17,7 +17,11 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timedelta, timezone
 from requests.adapters import HTTPAdapter, Retry
 import zoneinfo
+
+# Third-party imports
 import requests
+from requests.adapters import HTTPAdapter, Retry
+from curl_cffi import requests as cffi_requests
 
 # ==========================================
 # CONFIGURATION
@@ -29,8 +33,7 @@ LOCAL_TIMEZONE = zoneinfo.ZoneInfo("America/New_York")
 MAX_WORKERS = 16
 
 CACHE_FILE = "elo_cache.json"
-CACHE_EXPIRY_HOURS = 12
-DEFAULT_ELO = 1450
+DEFAULT_ELO = 0  # Changed from 1450 to act as a missing-data sentinel
 
 OUTPUT_CSV = "tv_assignment_schedule.csv"
 OUTPUT_TXT = "tv_schedule_summary.txt"
@@ -96,17 +99,10 @@ NAME_ALIASES = {
     "manchester city": "man city",
     "manchester united": "man united",
     "nottingham forest": "forest",
-    "tottenham hotspur": "tottenham",
-    "afc bournemouth": "bournemouth",
     "brighton & hove albion": "brighton",
     "wolverhampton wanderers": "wolves",
-    "newcastle united": "newcastle",
-    "west ham united": "west ham",
 
     # English Football League (Championship / League One)
-    "coventry city": "coventry",
-    "ipswich town": "ipswich",
-    "peterborough united": "peterboro",
     "peterborough": "peterboro",
 
     # Spain (La Liga & Segunda)
@@ -125,28 +121,16 @@ NAME_ALIASES = {
     "ad ceuta fc": "ca ceuta",
 
     # Germany (Bundesliga & 2. Bundesliga)
-    "fc cologne": "köln",
     "cologne": "köln",
     "bayern munich": "bayern münchen",
-    "fc bayern munich": "bayern münchen",
     "bayern munchen": "bayern münchen",
-    "fc bayern munchen": "bayern münchen",
     "bayern": "bayern münchen",
     "bayer leverkusen": "leverkusen",
     "tsg hoffenheim": "hoffenheim",
     "1899 hoffenheim": "hoffenheim",
-    "spvgg greuther fürth": "fürth",
-    "spvgg greuther furth": "fürth",
     "greuther fürth": "fürth",
     "greuther furth": "fürth",
-    "1. fc magdeburg": "magdeburg",
-    "magdeburg": "magdeburg",
-    "vfl wolfsburg": "wolfsburg",
-    "sv darmstadt 98": "darmstadt",
     "darmstadt 98": "darmstadt",
-    "darmstadt": "darmstadt",
-    "1. fc union berlin": "union berlin",
-    "union berlin": "union berlin",
     "st. pauli": "st pauli",
 
     # Italy (Serie A)
@@ -165,18 +149,15 @@ NAME_ALIASES = {
     "as nancy-lorraine": "nancy",
     "nancy": "nancy",
     "clermont foot": "clermont",
-    "clermont foot 63": "clermont",
     "stade laval": "laval",
     "stade lavallois": "laval",
     "dijon fco": "dijon",
     "stade de reims": "reims",
-    "stade reims": "reims",
     "as monaco": "monaco",
 
     # Netherlands & Belgium
     "ajax amsterdam": "ajax",
     "az alkmaar": "az",
-    "nec nijmegen": "nijmegen",
     "n.e.c.": "nijmegen",
     "nec": "nijmegen",
     "psv eindhoven": "psv",
@@ -186,10 +167,8 @@ NAME_ALIASES = {
     "rusg": "st gillis",
     "sint-truidense": "st truiden",
     "sint-truiden": "st truiden",
-    "fc groningen": "groningen",
     "kaa gent": "gent",
     "standard liege": "standard",
-    "standard de liege": "standard",
 
     # Portugal
     "sporting cp": "sporting",
@@ -203,73 +182,40 @@ NAME_ALIASES = {
     "academico de viseu": "ac viseu",
 
     # Belgium (Pro League)
-    "raal la louvière": "la louviere",
     "raal la louviere": "la louviere",
     
     # Europe
     "heart of midlothian": "hearts",
     "lillestrom": "lillestrøm",
-    "lillestrøm": "lillestrøm",
     "lillestrom sk": "lillestrøm",
-    "lillestrøm sk": "lillestrøm",
     "lech poznan": "lech",
-    "lech": "lech",
     "kks lech poznan": "lech",
     "jagiellonia bialystok": "jagiellonia",
     "sparta prague": "sparta",
-    "sk sturm graz": "sturm graz",
-    "sturm graz": "sturm graz",
     "olympiacos": "olympiakos",
     "olympiacos fc": "olympiakos",
     "ofi crete": "ofi",
-    "ofi": "ofi",
     "levski sofia": "levski",
-    "pfc levski sofia": "levski",
-    "nk celje": "celje",
-    "omonia nicosia": "omonia",
     "hapoel be'er": "beer sheva",
     "slavia prague": "slavia praha",
-    "slavia praha": "slavia praha",
-    "sk slavia prague": "slavia praha",
-    "lask linz": "lask",
-    "aek athens": "aek",
-    "aek athens fc": "aek",
     "bodo/glimt": "bodoglimt",
-    "fk bodo/glimt": "bodoglimt",
     "bodø/glimt": "bodoglimt",
-    "fk bodø/glimt": "bodoglimt",
     "f.c. kobenhavn": "fc kobenhavn",
-    "fc kobenhavn": "fc kobenhavn",
     "f.c. copenhagen": "fc kobenhavn",
-    "fc copenhagen": "fc kobenhavn",
     "copenhagen": "fc kobenhavn",
-    "fc nordsjaelland": "nordsjaelland",
-    "fc nordsjælland": "nordsjaelland",
-    "nordsjælland": "nordsjaelland",
     "agf": "aarhus",
-    "agf aarhus": "aarhus",
     "aarhus gf": "aarhus",
     "pafos": "paphos",
     "pafos fc": "paphos",
-    "fc pafos": "paphos",
     "riga": "fk riga",
     "riga fc": "fk riga",
-    "fc riga": "fk riga",
     "egnatia": "egnatia rrogozhine",
-    "kf egnatia": "egnatia rrogozhine",
     "egnatia rrogozhire": "egnatia rrogozhine",
     "kairat": "fk kairat",
     "kairat almaty": "fk kairat",
     "fc kairat": "fk kairat",
-    "fc kairat almaty": "fk kairat",
     "iberia 1999": "saburtalo",
-    "fc iberia 1999": "saburtalo",
     "iberia 1999 tbilisi": "saburtalo",
-
-    # Turkey (Süper Lig)
-    "istanbul basaksehir": "basaksehir",
-    "rams basaksehir": "basaksehir",
-    "istanbul başakşehir": "basaksehir",
     "amed sfk": "amed sk",
 }
 
@@ -311,32 +257,44 @@ def format_league_badge(league_name: str) -> str:
 # 1. CLUB ELO ENGINE (OFFICIAL CSV API)
 # ==========================================
 class EloEngine:
-    def __init__(self, cache_file=CACHE_FILE, expiry_hours=CACHE_EXPIRY_HOURS):
+    def __init__(self, cache_file=CACHE_FILE):
         self.cache_file = cache_file
-        self.expiry_hours = expiry_hours
         self.ratings = {}
         self.stripped_ratings = {}
         self._load_or_fetch()
 
     def _load_or_fetch(self):
-        # 1. Load existing cache first as a safe baseline
+        # 1. Check cache age before hitting the network (7-day cooldown)
+        cooldown_days = 7
+        cache_valid = False
+        
+        if os.path.exists(self.cache_file):
+            file_age_seconds = datetime.now().timestamp() - os.path.getmtime(self.cache_file)
+            if file_age_seconds < (cooldown_days * 86400):
+                cache_valid = True
+
         cached_ratings = self._load_cache()
 
-        # 2. Try official daily CSV API endpoints
-        fresh_ratings = self._fetch_clubelo_csv()
-
-        # 3. If CSV failed (e.g. 502 Bad Gateway), extract from https://clubelo.com/Ranking
-        if not fresh_ratings or len(fresh_ratings) < 100:
-            fresh_ratings = self._fetch_clubelo_ranking_page()
-
-        # 4. If any remote method succeeded, update cache on disk
-        if fresh_ratings and len(fresh_ratings) > 100:
-            cached_ratings.update(fresh_ratings)
+        # If cache is fresh, ride the cache and skip network requests
+        if cache_valid and len(cached_ratings) > 100:
+            print(f"Notice: Cache is less than {cooldown_days} days old. Riding the cache to avoid hammering ClubElo.")
             self.ratings = cached_ratings
-            self._save_cache(self.ratings)
         else:
-            print("Notice: Online fetches yielded no data. Loading disk cache fallback...")
-            self.ratings = cached_ratings
+            # 2. Try official daily CSV API endpoints
+            fresh_ratings = self._fetch_clubelo_csv()
+
+            # 3. If CSV failed, extract from https://clubelo.com/Ranking
+            if not fresh_ratings or len(fresh_ratings) < 100:
+                fresh_ratings = self._fetch_clubelo_ranking_page()
+
+            # 4. If any remote method succeeded, update cache on disk
+            if fresh_ratings and len(fresh_ratings) > 100:
+                cached_ratings.update(fresh_ratings)
+                self.ratings = cached_ratings
+                self._save_cache(self.ratings)
+            else:
+                print("Notice: Online fetches yielded no data. Loading disk cache fallback...")
+                self.ratings = cached_ratings
 
         # Build lookup indices
         self.stripped_ratings = {strip_accents(k): v for k, v in self.ratings.items()}
@@ -420,14 +378,13 @@ class EloEngine:
     def _fetch_clubelo_ranking_page(self):
         """Fallback: Extracts club ratings from both the Vega JSON block and HTML table on clubelo.com/Ranking."""
         url = "https://clubelo.com/Ranking"
-        headers = {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36",
-            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-            "Accept-Language": "en-US,en;q=0.9",
-        }
-        print(f"Attempting fallback parse from {url}...")
+        
+        print(f"Attempting fallback parse from {url} via curl_cffi...")
+        
         try:
-            r = requests.get(url, headers=headers, timeout=(6, 15))
+            # 'chrome120' perfectly mimics a real Chrome browser's TLS signature
+            r = cffi_requests.get(url, impersonate="chrome120", timeout=15)
+            
             if r.status_code != 200 or len(r.text) < 2000:
                 print(f"Notice: Ranking page returned status {r.status_code} (length: {len(r.text)}).")
                 return {}
@@ -435,6 +392,7 @@ class EloEngine:
             ratings = {}
 
             # 1. Parse from Vega JSON (Top 100 clubs)
+            # ... [Keep all of your existing regex parsing logic below this line exactly as is]
             pattern_json = re.compile(
                 r'\{[^{}]*?"(?:Elo"\s*:\s*([0-9.]+)[^{}]*?"Name"\s*:\s*"([^"]+)"|Name"\s*:\s*"([^"]+)"[^{}]*?"Elo"\s*:\s*([0-9.]+))[^{}]*?\}'
             )
@@ -523,16 +481,24 @@ class EloEngine:
         search_terms = {clean_norm, clean_alias, normalized_alias, normalized_norm}
         search_terms = {t for t in search_terms if len(t) >= 5}
 
+        # Prevent generic standalone names (used by giants) from hijacking lower-tier clubs
+        danger_keys = {
+            "atletico", "athletic", "real", "sporting", "racing", 
+            "dynamo", "dinamo", "spartak", "lokomotiv", "victoria", "viktoria"
+        }
+
         for key, val in self.ratings.items():
             clean_key = strip_accents(key)
             
-            # Direction A: Is the ClubElo name hidden inside the ESPN name? (e.g., "kobenhavn" in "f.c. kobenhavn")
-            if len(clean_key) >= 5:
+            # Direction A: Is the ClubElo name hidden inside the ESPN name?
+            # We block danger_keys so 'atletico' doesn't hijack 'atletico pinatarense'
+            if len(clean_key) >= 5 and clean_key not in danger_keys:
                 for term in search_terms:
                     if clean_key in term:
                         return val
                         
-            # Direction B: Is the ESPN name hidden inside the ClubElo name? (e.g., "egnatia" in "egnatia rrogozhine")
+            # Direction B: Is the ESPN name hidden inside the ClubElo name?
+            # (e.g., ESPN's 'egnatia' hidden in ClubElo's 'egnatia rrogozhine')
             for term in search_terms:
                 if term in clean_key:
                     return val
@@ -596,11 +562,8 @@ def fetch_espn_fixtures(task):
 def harvest_matches(window, elo_engine):
    # Compute relevant date keys using local calendar days (matches ESPN's scoreboard indexing)
     date_keys = set()
-    curr = window["start_local"].date()
-    end_date = window["end_local"].date()
-    while curr <= end_date:
-        date_keys.add(curr.strftime("%Y%m%d"))
-        curr += timedelta(days=1)
+    start_d = window["start_local"].date()
+    date_keys = {(start_d + timedelta(days=i)).strftime("%Y%m%d") for i in range(3)}
 
     tasks = [(league, d_str) for league in LEAGUES for d_str in date_keys]
     print(f"Querying {len(LEAGUES)} leagues across ESPN ({len(tasks)} parallel requests)...")
@@ -645,31 +608,6 @@ def harvest_matches(window, elo_engine):
 
         day_group = "TODAY" if utc_dt < window["split_utc"] else "TOMORROW"
 
-        # Status determination
-        status_obj = event.get("status", {})
-        status_type_obj = status_obj.get("type", {})
-        state = status_type_obj.get("state", "").lower()          # 'pre', 'in', 'post'
-        type_name = status_type_obj.get("name", "").upper()        # 'STATUS_IN_PROGRESS', 'STATUS_HALFTIME', 'STATUS_FINAL'
-        display_clock = status_obj.get("displayClock", "")
-
-        if state == "post" or "FINAL" in type_name or now_utc >= end_dt_utc:
-            live_status = "FINAL"
-        elif state == "in" or "IN_PROGRESS" in type_name or "HALFTIME" in type_name or (utc_dt <= now_utc < end_dt_utc):
-            if "HALFTIME" in type_name or display_clock == "HT":
-                live_status = "LIVE HT"
-            elif display_clock:
-                live_status = f"LIVE {display_clock}"
-            else:
-                mins_in = int((now_utc - utc_dt).total_seconds() / 60)
-                if mins_in <= 45:
-                    live_status = f"LIVE ~{mins_in}'"
-                elif mins_in <= 60:
-                    live_status = "LIVE HT"
-                else:
-                    live_status = f"LIVE ~{mins_in - 15}'"
-        else:
-            live_status = "UPCOMING"
-
         broadcasts = [b.get("names", []) for b in comp.get("broadcasts", [])]
         channels = ", ".join([item for sublist in broadcasts for item in sublist]) or "Check listings"
         
@@ -706,11 +644,22 @@ def harvest_matches(window, elo_engine):
                     channels = default_net
                     break
                 
-        home_elo = elo_engine.get(home_team)
-        away_elo = elo_engine.get(away_team)
-        avg_elo = (home_elo + away_elo) / 2.0
-        diff_elo = abs(home_elo - away_elo)
+        home_elo_raw = elo_engine.get(home_team) # Returns 0 if unranked
+        away_elo_raw = elo_engine.get(away_team)
+        
+        # Apply 1200 fallback for unranked cup teams, 1450 for unranked league teams
+        is_cup = any(k in league_name.lower() for k in ["cup", "copa", "pokal", "coppa", "uefa.europa.conf"])
+        
+        calc_home = (1200 if is_cup else 1450) if home_elo_raw == DEFAULT_ELO else home_elo_raw
+        calc_away = (1200 if is_cup else 1450) if away_elo_raw == DEFAULT_ELO else away_elo_raw
+
+        avg_elo = (calc_home + calc_away) / 2.0
+        diff_elo = abs(calc_home - calc_away)
         sort_value = round(avg_elo - diff_elo, 1)
+        
+        # Format explicitly for the frontend exporters
+        disp_home = "Unranked" if home_elo_raw == DEFAULT_ELO else str(home_elo_raw)
+        disp_away = "Unranked" if away_elo_raw == DEFAULT_ELO else str(away_elo_raw)
 
         seen_ids.add(event_id)
         matches.append({
@@ -718,8 +667,10 @@ def harvest_matches(window, elo_engine):
             "league": league_name,
             "home_team": home_team,
             "away_team": away_team,
-            "home_elo": home_elo,
-            "away_elo": away_elo,
+            "home_elo": home_elo_raw,  # Kept as raw int in case you add numeric gates later
+            "away_elo": away_elo_raw,
+            "home_elo_disp": disp_home,
+            "away_elo_disp": disp_away,
             "channels": channels,
             "match_time_dt": local_dt,
             "match_time_str": local_dt.strftime("%Y-%m-%d %I:%M %p %Z"),
@@ -881,14 +832,17 @@ def export_text_summary(matches, window, filename=OUTPUT_TXT):
                 current_slot = m["match_time_str"]
                 lines.append(f"\n--- {current_slot} ---")
 
-            # --- DEFINE TV_LABEL HERE ---
             tv_label = m.get("tv_assignment") or "Other Screen"
             if m.get("is_lookin") and m.get("lookin_window"):
                 tv_label = f"{m['tv_assignment']} [{m['lookin_window']}]"
 
+            # Uses safe fallback to standard elo if the _disp keys are missing
+            home_disp = m.get('home_elo_disp', m.get('home_elo'))
+            away_disp = m.get('away_elo_disp', m.get('away_elo'))
+
             lines.append(
                 f"  [{tv_label:<24}] {format_league_badge(m['league']):<14} "
-                f"{m['home_team']} vs {m['away_team']:<25} ({m['home_elo']} vs {m['away_elo']}) "
+                f"{m['home_team']} vs {m['away_team']:<25} ({home_disp} vs {away_disp}) "
                 f"Score: {m['sort_value']:<6} [{m['channels']}]"
             )
 
@@ -1049,22 +1003,6 @@ def export_mobile_html(matches, window, filename=OUTPUT_HTML):
       margin: 12px 0 6px 4px;
       font-weight: 600;
     }}
-    .status-badge {{
-      font-size: 0.68rem;
-      font-weight: 700;
-      padding: 2px 6px;
-      border-radius: 4px;
-      text-transform: uppercase;
-      margin-left: 6px;
-    }}
-    .status-live {{ background: #c92a2a; color: #fff; animation: pulse 2s infinite; }}
-    .status-final {{ background: #495057; color: #ced4da; }}
-    .status-upcoming {{ background: #212529; color: #868e96; border: 1px solid #343a40; }}
-    @keyframes pulse {{
-      0% {{ opacity: 1; }}
-      50% {{ opacity: 0.6; }}
-      100% {{ opacity: 1; }}
-    }}
     .card {{
       background: #1a1a1a;
       border: 1px solid #2a2a2a;
@@ -1190,7 +1128,7 @@ def export_mobile_html(matches, window, filename=OUTPUT_HTML):
             </div>
             <div class="matchup">{m['home_team']} vs {m['away_team']}</div>
             <div class="meta">
-                <span>Elos: {m['home_elo']} vs {m['away_elo']} (Score: {m['sort_value']})</span>
+                <span>Elos: {m['home_elo_disp']} vs {m['away_elo_disp']} (Score: {m['sort_value']})</span>
                 {channel_html}
             </div>
             </div>
