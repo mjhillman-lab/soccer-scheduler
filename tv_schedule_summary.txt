@@ -3,65 +3,14 @@
 ====================================================================================================================
 
 ####################################################################################################################
-###  TODAY'S MATCHES (Tuesday, October 27)
-####################################################################################################################
-
---- 2026-10-27 01:00 PM EDT ---
-  [Other Screen            ] [Cup]          Hamburg SV vs Eintracht Frankfurt       (1666 vs 1736) Score: 1631.0 [Check listings]
-  [Other Screen            ] [Cup]          VfL Bochum vs Mainz                     (1607 vs 1744) Score: 1538.5 [Check listings]
-  [Other Screen            ] [Cup]          Rot-Weiss Essen vs RB Leipzig                (1531 vs 1822) Score: 1385.5 [Check listings]
-  [Other Screen            ] [Cup]          SG Sonnenhof Großaspach vs FC Augsburg               (1450 vs 1725) Score: 1312.5 [Check listings]
-
---- 2026-10-27 01:30 PM EDT ---
-  [TV 1                    ] [Serie A]      Sassuolo vs Lazio                     (1703 vs 1794) Score: 1657.5 [Paramount+]
-  [Other Screen            ] [Copa del Rey] CD Cuarte vs Girona                    (1450 vs 1724) Score: 1313.0 [Check listings]
-
---- 2026-10-27 02:00 PM EDT ---
-  [TV 2                    ] [Copa del Rey] Atlético Pinatarense vs Elche                     (1916 vs 1694) Score: 1583.0 [ESPN+]
-  [Other Screen            ] [Copa del Rey] CF Calamocha vs CE Europa                 (1450 vs 1545) Score: 1402.5 [Check listings]
-  [TV 3 (Look-in) [02:00 PM-03:45 PM (~105m)]] [Copa del Rey] Sestao vs Espanyol                  (1492 vs 1712) Score: 1382.0 [ESPN+]
-
---- 2026-10-27 02:45 PM EDT ---
-  [Other Screen            ] [Copa del Rey] UD Castellonense vs Almería                   (1680 vs 1682) Score: 1679.0 [Check listings]
-
---- 2026-10-27 03:00 PM EDT ---
-  [Other Screen            ] [Copa del Rey] Gimnastica Segoviana vs Cultural Leonesa          (1462 vs 1530) Score: 1428.0 [Check listings]
-  [Other Screen            ] [Copa del Rey] Atlético Tordesillas vs Mirandés                  (1916 vs 1575) Score: 1404.5 [Check listings]
-  [Other Screen            ] [Copa del Rey] Llanera vs Ponferradina              (1450 vs 1569) Score: 1390.5 [Check listings]
-  [Other Screen            ] [Copa del Rey] Ciudad De Lucena vs Rayo Majadahonda          (1450 vs 1391) Score: 1361.5 [Check listings]
-  [Other Screen            ] [Copa del Rey] Alcalá vs Las Palmas                (1450 vs 1677) Score: 1336.5 [Check listings]
-
---- 2026-10-27 03:30 PM EDT ---
-  [Other Screen            ] [Copa del Rey] Manresa vs Sant Andreu               (1450 vs 1530) Score: 1410.0 [Check listings]
-  [Other Screen            ] [Copa del Rey] Don Benito vs CD Extremadura            (1450 vs 1604) Score: 1373.0 [Check listings]
-
---- 2026-10-27 03:45 PM EDT ---
-  [Other Screen            ] [Cup]          FC Cologne vs 1. FC Union Berlin        (1662 vs 1680) Score: 1653.0 [Check listings]
-  [TV 1                    ] [Serie A]      Torino vs Como                      (1680 vs 1815) Score: 1612.5 [Paramount+]
-  [Other Screen            ] [Cup]          Borussia Dortmund vs Werder Bremen             (1888 vs 1690) Score: 1591.0 [Check listings]
-  [TV 3                    ] [Serie A]      AS Roma vs Cagliari                  (1857 vs 1671) Score: 1578.0 [Paramount+]
-  [Other Screen            ] [Cup]          SV Elversberg vs SV Darmstadt 98           (1675 vs 1590) Score: 1547.5 [Check listings]
-  [Other Screen            ] [Cup]          Borussia Mönchengladbach vs Karlsruher SC             (1682 vs 1572) Score: 1517.0 [Check listings]
-  [Other Screen            ] [EFL Cup]      Bradford City vs Peterborough United       (1509 vs 1454) Score: 1426.5 [Paramount+]
-
---- 2026-10-27 04:00 PM EDT ---
-  [TV 2                    ] [Copa del Rey] Sporting de Alcázar vs Málaga                    (1870 vs 1677) Score: 1580.5 [ESPN+]
-  [Other Screen            ] [Copa del Rey] Atlético Paso vs Córdoba                   (1916 vs 1594) Score: 1433.0 [Check listings]
-  [Other Screen            ] [Copa del Rey] Arosa vs Pontevedra                (1450 vs 1559) Score: 1395.5 [Check listings]
-  [Other Screen            ] [Copa del Rey] Recreativo Huelva vs Rayo Vallecano            (1461 vs 1745) Score: 1319.0 [ESPN+]
-  [Other Screen            ] [Copa del Rey] Manacor vs Villarreal                (1450 vs 1799) Score: 1275.5 [ESPN+]
-  [Other Screen            ] [Copa del Rey] CD Tudelano vs Real Zaragoza             (1359 vs 1540) Score: 1268.5 [Check listings]
-  [Other Screen            ] [EFL Cup]      Fleetwood Town vs Arsenal                   (1410 vs 2049) Score: 1090.5 [Paramount+]
-
-####################################################################################################################
-###  TOMORROW'S MATCHES (Wednesday, October 28)
+###  TODAY'S MATCHES (Wednesday, October 28)
 ####################################################################################################################
 
 --- 2026-10-28 01:00 PM EDT ---
   [Other Screen            ] [Cup]          SC Freiburg vs VfL Wolfsburg             (1785 vs 1672) Score: 1615.5 [Check listings]
   [Other Screen            ] [Cup]          SC Paderborn 07 vs VfB Stuttgart             (1655 vs 1812) Score: 1576.5 [Check listings]
   [Other Screen            ] [Cup]          Dynamo Dresden vs Schalke 04                (1562 vs 1650) Score: 1518.0 [Check listings]
-  [Other Screen            ] [Cup]          SSV Jeddeloh II vs Hertha Berlin             (1450 vs 1651) Score: 1349.5 [Check listings]
+  [Other Screen            ] [Cup]          SSV Jeddeloh II vs Hertha Berlin             (Unranked vs 1651) Score: 974.5  [Check listings]
 
 --- 2026-10-28 01:30 PM EDT ---
   [TV 1                    ] [Serie A]      AC Milan vs Bologna                   (1827 vs 1752) Score: 1714.5 [Paramount+]
@@ -70,33 +19,33 @@
 
 --- 2026-10-28 02:00 PM EDT ---
   [Other Screen            ] [Copa del Rey] Peña Sport vs Huesca                    (1613 vs 1557) Score: 1529.0 [Check listings]
-  [Other Screen            ] [Copa del Rey] Poblense vs Ceuta                     (1450 vs 1560) Score: 1395.0 [Check listings]
   [Other Screen            ] [Copa del Rey] Utebo vs CD Sabadell               (1419 vs 1578) Score: 1339.5 [Check listings]
-  [Other Screen            ] [Copa del Rey] CD Pamplona vs Eibar                     (1450 vs 1681) Score: 1334.5 [Check listings]
-  [TV 1 (Look-in) [03:25 PM-03:55 PM (~30m)]] [Copa del Rey] CD Tarancon vs Levante                   (1450 vs 1711) Score: 1319.5 [ESPN+]
-  [Other Screen            ] [Copa del Rey] Anaitasuna vs Alavés                    (1450 vs 1714) Score: 1318.0 [ESPN+]
   [Other Screen            ] [Copa del Rey] Portugalete vs Real Unión Irun           (1870 vs 1496) Score: 1309.0 [Check listings]
   [Other Screen            ] [Copa del Rey] Coruxo vs Zamora CF                 (1292 vs 1549) Score: 1163.5 [Check listings]
+  [Other Screen            ] [Copa del Rey] Poblense vs Ceuta                     (Unranked vs 1560) Score: 1020.0 [Check listings]
+  [Other Screen            ] [Copa del Rey] CD Pamplona vs Eibar                     (Unranked vs 1681) Score: 959.5  [Check listings]
+  [TV 1 (Look-in) [03:25 PM-03:55 PM (~30m)]] [Copa del Rey] CD Tarancon vs Levante                   (Unranked vs 1711) Score: 944.5  [ESPN+]
+  [Other Screen            ] [Copa del Rey] Anaitasuna vs Alavés                    (Unranked vs 1714) Score: 943.0  [ESPN+]
 
 --- 2026-10-28 03:00 PM EDT ---
   [Other Screen            ] [Copa del Rey] Amorebieta vs UD Logroñés               (1507 vs 1502) Score: 1499.5 [Check listings]
   [Other Screen            ] [Copa del Rey] Numancia vs Real Oviedo               (1527 vs 1649) Score: 1466.0 [Check listings]
-  [Other Screen            ] [Copa del Rey] Mijas Las Lagunas vs Real Jaen CF              (1450 vs 1573) Score: 1388.5 [Check listings]
-  [Other Screen            ] [Copa del Rey] Calvo Sotelo vs Albacete                  (1450 vs 1613) Score: 1368.5 [Check listings]
-  [Other Screen            ] [Copa del Rey] Trival Valderas vs Leganés                   (1450 vs 1615) Score: 1367.5 [Check listings]
-  [Other Screen            ] [Copa del Rey] Badajoz vs Tenerife                  (1450 vs 1632) Score: 1359.0 [Check listings]
   [Other Screen            ] [Copa del Rey] Alcoyano vs Mallorca                  (1475 vs 1720) Score: 1352.5 [Check listings]
-  [Other Screen            ] [Copa del Rey] Covadonga vs Real Valladolid           (1450 vs 1360) Score: 1315.0 [Check listings]
+  [Other Screen            ] [Copa del Rey] Covadonga vs Real Valladolid           (Unranked vs 1360) Score: 1120.0 [Check listings]
+  [Other Screen            ] [Copa del Rey] Mijas Las Lagunas vs Real Jaen CF              (Unranked vs 1573) Score: 1013.5 [Check listings]
+  [Other Screen            ] [Copa del Rey] Calvo Sotelo vs Albacete                  (Unranked vs 1613) Score: 993.5  [Check listings]
+  [Other Screen            ] [Copa del Rey] Trival Valderas vs Leganés                   (Unranked vs 1615) Score: 992.5  [Check listings]
+  [Other Screen            ] [Copa del Rey] Badajoz vs Tenerife                  (Unranked vs 1632) Score: 984.0  [Check listings]
 
 --- 2026-10-28 03:30 PM EDT ---
   [TV 3                    ] [EFL Cup]      Manchester City vs Brighton & Hove Albion    (2027 vs 1899) Score: 1835.0 [Paramount+]
-  [Other Screen            ] [Copa del Rey] CD Minera vs FC Cartagena              (1450 vs 1514) Score: 1418.0 [Check listings]
-  [Other Screen            ] [Copa del Rey] Gimnástica Torrelavega vs UD Ourense                (1450 vs 1524) Score: 1413.0 [Check listings]
-  [Other Screen            ] [Copa del Rey] Reus FC Reddis vs Barakaldo                 (1450 vs 1531) Score: 1409.5 [Check listings]
-  [Other Screen            ] [Copa del Rey] Cieza vs Granada                   (1450 vs 1622) Score: 1364.0 [Check listings]
+  [Other Screen            ] [Copa del Rey] CD Minera vs FC Cartagena              (Unranked vs 1514) Score: 1043.0 [Check listings]
+  [Other Screen            ] [Copa del Rey] Gimnástica Torrelavega vs UD Ourense                (Unranked vs 1524) Score: 1038.0 [Check listings]
+  [Other Screen            ] [Copa del Rey] Reus FC Reddis vs Barakaldo                 (Unranked vs 1531) Score: 1034.5 [Check listings]
+  [Other Screen            ] [Copa del Rey] Cieza vs Granada                   (Unranked vs 1622) Score: 989.0  [Check listings]
 
 --- 2026-10-28 03:45 PM EDT ---
-  [TV 2                    ] [EFL Cup]      AFC Bournemouth vs Aston Villa               (1865 vs 1906) Score: 1844.5 [Padres.TV]
+  [TV 2                    ] [EFL Cup]      AFC Bournemouth vs Aston Villa               (1865 vs 1906) Score: 1844.5 [Paramount+]
   [Other Screen            ] [EFL Cup]      Fulham vs Crystal Palace            (1801 vs 1818) Score: 1792.5 [Paramount+]
   [Other Screen            ] [EFL Cup]      Sunderland vs Brentford                 (1731 vs 1859) Score: 1667.0 [Paramount+]
   [Other Screen            ] [Cup]          Hannover 96 vs Kaiserslautern            (1627 vs 1605) Score: 1594.0 [Check listings]
@@ -109,6 +58,37 @@
 --- 2026-10-28 04:00 PM EDT ---
   [TV 1                    ] [EFL Cup]      Liverpool vs Chelsea                   (1940 vs 1896) Score: 1874.0 [Paramount+]
   [Other Screen            ] [Copa del Rey] Xerez vs Cádiz                     (1467 vs 1554) Score: 1423.5 [Check listings]
-  [TV 3 (Look-in) [05:25 PM-05:55 PM (~30m)]] [Copa del Rey] Tavernes de la Valldigna vs Valencia                  (1450 vs 1742) Score: 1304.0 [ESPN+]
-  [Other Screen            ] [Copa del Rey] Salamanca UDS vs Celta Vigo                (1450 vs 1755) Score: 1297.5 [ESPN+]
-  [Other Screen            ] [Copa del Rey] CD Artistico Navalcarnero vs Real Betis                (1450 vs 1826) Score: 1262.0 [ESPN+]
+  [TV 3 (Look-in) [05:25 PM-05:55 PM (~30m)]] [Copa del Rey] Tavernes de la Valldigna vs Valencia                  (Unranked vs 1742) Score: 929.0  [ESPN+]
+  [Other Screen            ] [Copa del Rey] Salamanca UDS vs Celta Vigo                (Unranked vs 1755) Score: 922.5  [ESPN+]
+  [Other Screen            ] [Copa del Rey] CD Artistico Navalcarnero vs Real Betis                (Unranked vs 1826) Score: 887.0  [ESPN+]
+
+####################################################################################################################
+###  TOMORROW'S MATCHES (Thursday, October 29)
+####################################################################################################################
+
+--- 2026-10-29 01:30 PM EDT ---
+  [TV 1                    ] [Serie A]      Frosinone vs Lecce                     (1678 vs 1619) Score: 1589.5 [Paramount+]
+
+--- 2026-10-29 02:00 PM EDT ---
+  [Other Screen            ] [Copa del Rey] Atlético Baleares vs Eldense                   (1570 vs 1591) Score: 1559.5 [Check listings]
+  [Other Screen            ] [Copa del Rey] San Sebastián de los Reyes vs Coria                     (1482 vs 1468) Score: 1461.0 [Check listings]
+  [TV 2                    ] [Copa del Rey] UB Lebrijana vs Getafe                    (Unranked vs 1699) Score: 950.5  [ESPN+]
+  [TV 3 (Look-in) [02:00 PM-03:45 PM (~105m)]] [Copa del Rey] Atlético Calatayud vs Osasuna                   (Unranked vs 1719) Score: 940.5  [ESPN+]
+
+--- 2026-10-29 03:00 PM EDT ---
+  [Other Screen            ] [Copa del Rey] Antequera CF vs Aguilas                   (1520 vs 1493) Score: 1479.5 [Check listings]
+  [Other Screen            ] [Copa del Rey] Real Ávila vs Unionistas de Salamanca   (1406 vs 1509) Score: 1354.5 [Check listings]
+  [Other Screen            ] [Copa del Rey] CD Varea vs FC Andorra                (Unranked vs 1593) Score: 1003.5 [Check listings]
+  [Other Screen            ] [Copa del Rey] Guijuelo vs Sporting Gijón            (Unranked vs 1621) Score: 989.5  [Check listings]
+  [Other Screen            ] [Copa del Rey] CD Laredo vs Burgos                    (Unranked vs 1655) Score: 972.5  [Check listings]
+  [Other Screen            ] [Copa del Rey] Conquense vs Castellón                 (Unranked vs 1680) Score: 960.0  [Check listings]
+
+--- 2026-10-29 03:45 PM EDT ---
+  [TV 1                    ] [Serie A]      Fiorentina vs Atalanta                  (1715 vs 1799) Score: 1673.0 [Paramount+]
+  [TV 3                    ] [EFL Cup]      Everton vs Newcastle United          (1816 vs 1458) Score: 1279.0 [Paramount+]
+
+--- 2026-10-29 04:00 PM EDT ---
+  [TV 2                    ] [Copa del Rey] Sporting Hortaleza vs Sevilla                   (1613 vs 1725) Score: 1557.0 [ESPN+]
+  [Other Screen            ] [Copa del Rey] AE Prat vs Athletic Club             (Unranked vs 1607) Score: 996.5  [ESPN+]
+  [Other Screen            ] [Copa del Rey] Ribadesella vs Racing Santander          (Unranked vs 1695) Score: 952.5  [ESPN+]
+  [Other Screen            ] [Copa del Rey] Auriense Cented Academy vs Deportivo                 (Unranked vs 1697) Score: 951.5  [ESPN+]
