@@ -1716,8 +1716,13 @@
   "mexico": 1722,
   "greece": 1740,
   "denmark": 1708,
+<<<<<<< Updated upstream
   "uruguay": 1691,
   "japan": 1702,
+=======
+  "uruguay": 1693,
+  "japan": 1710,
+>>>>>>> Stashed changes
   "ukraine": 1700,
   "chile": 1682,
   "united states": 1694,
@@ -1735,7 +1740,11 @@
   "israel": 1622,
   "sweden": 1623,
   "peru": 1626,
+<<<<<<< Updated upstream
   "south korea": 1606,
+=======
+  "south korea": 1608,
+>>>>>>> Stashed changes
   "azerbaijan": 1601,
   "egypt": 1604,
   "romania": 1591,
@@ -1750,7 +1759,11 @@
   "qatar": 1531,
   "venezuela": 1553,
   "tunisia": 1551,
+<<<<<<< Updated upstream
   "australia": 1525,
+=======
+  "australia": 1544,
+>>>>>>> Stashed changes
   "thailand": 1519,
   "finland": 1525,
   "iceland": 1522,
@@ -1787,6 +1800,7 @@
   "2026-10-14": 2045,
   "germany": 2040,
   "albania": 1435,
+<<<<<<< Updated upstream
   "2026-10-15": 2045,
   "belarus": 1479,
   "2026-10-17": 2045,
@@ -1796,4 +1810,12 @@
   "2026-10-21": 2049,
   "2026-10-22": 2049,
   "2026-10-24": 2049
+=======
+  "2026-10-17": 2045,
+  "bosnia and herzegovina": 1492,
+  "belarus": 1479,
+  "2026-10-19": 2048,
+  "2026-10-22": 2049,
+  "2026-10-23": 2049
+>>>>>>> Stashed changes
 }
