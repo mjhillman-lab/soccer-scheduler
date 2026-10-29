@@ -99,6 +99,7 @@ NAME_ALIASES = {
     "manchester city": "man city",
     "manchester united": "man united",
     "nottingham forest": "forest",
+    "newcastle united": "newcastle",
     "brighton & hove albion": "brighton",
     "wolverhampton wanderers": "wolves",
 
@@ -583,6 +584,12 @@ def harvest_matches(window, elo_engine):
         if not event_id or event_id in seen_ids:
             continue
 
+        watch_url = None
+        for link in event.get("links", []):
+            if "watch" in link.get("rel", []):
+                watch_url = link.get("href")
+                break
+
         date_str = event.get("date")
         utc_dt = datetime.fromisoformat(date_str.replace("Z", "+00:00"))
         end_dt_utc = utc_dt + timedelta(minutes=MATCH_DURATION_MINUTES)
@@ -644,10 +651,10 @@ def harvest_matches(window, elo_engine):
                     channels = default_net
                     break
                 
-        home_elo_raw = elo_engine.get(home_team) # Returns 0 if unranked
+        home_elo_raw = elo_engine.get(home_team) # Returns 0 if unrated
         away_elo_raw = elo_engine.get(away_team)
         
-        # Apply 1200 fallback for unranked cup teams, 1450 for unranked league teams
+        # Apply 1200 fallback for unrated cup teams, 1450 for unrated league teams
         is_cup = any(k in league_name.lower() for k in ["cup", "copa", "pokal", "coppa", "uefa.europa.conf"])
         
         calc_home = (1200 if is_cup else 1450) if home_elo_raw == DEFAULT_ELO else home_elo_raw
@@ -658,8 +665,8 @@ def harvest_matches(window, elo_engine):
         sort_value = round(avg_elo - diff_elo, 1)
         
         # Format explicitly for the frontend exporters
-        disp_home = "Unranked" if home_elo_raw == DEFAULT_ELO else str(home_elo_raw)
-        disp_away = "Unranked" if away_elo_raw == DEFAULT_ELO else str(away_elo_raw)
+        disp_home = "Unrated" if home_elo_raw == DEFAULT_ELO else str(home_elo_raw)
+        disp_away = "Unrated" if away_elo_raw == DEFAULT_ELO else str(away_elo_raw)
 
         seen_ids.add(event_id)
         matches.append({
@@ -676,6 +683,7 @@ def harvest_matches(window, elo_engine):
             "match_time_str": local_dt.strftime("%Y-%m-%d %I:%M %p %Z"),
             "sort_value": sort_value,
             "tv_assignment": None,
+            "watch_url": watch_url,
         })
 
     return matches
@@ -851,7 +859,7 @@ def export_text_summary(matches, window, filename=OUTPUT_TXT):
     with open(filename, "w", encoding="utf-8") as f:
         f.write(output)
 
-def resolve_stream_url(channels: str, league: str, home: str = "", away: str = "") -> str:
+def resolve_stream_url(channels: str, league: str, home: str = "", away: str = "", watch_url: str = None) -> str:
     """Returns a direct streaming hub or YouTube TV search URL based on channel, league, and matchup."""
     c = channels.lower()
     l = league.lower()
@@ -910,6 +918,11 @@ def resolve_stream_url(channels: str, league: str, home: str = "", away: str = "
 
     # 8. ESPN+ Competitions
     if "espn+" in c:
+        # Return the direct link exactly as ESPN provided it
+        if watch_url:
+            return watch_url
+            
+        # Fallback to catalog links if the game is too far out for a stream link
         if any(k in l for k in ["esp.2", "segunda", "hypermotion", "laliga 2"]):
             return "https://www.espn.com/watch/catalog/20a6bdc8-ff1f-350a-9e78-a771d12ce59a/spanish-laliga-2"
         if "laliga" in l or "esp.1" in l or "spanish" in l:
@@ -1107,7 +1120,7 @@ def export_mobile_html(matches, window, filename=OUTPUT_HTML):
                     lookin_pill = f'<span class="badge-lookin">Look-in: {m["lookin_window"]}</span>'
 
                 # 2. Clickable tap-to-stream link
-                stream_url = resolve_stream_url(m["channels"], m["league"], m["home_team"], m["away_team"])
+                stream_url = resolve_stream_url(m["channels"], m["league"], m["home_team"], m["away_team"], m.get("watch_url"))
                 if stream_url:
                     channel_html = f'<a href="{stream_url}" target="_blank" rel="noopener noreferrer" class="channel">{m["channels"]} &#8599;</a>'
                 else:
