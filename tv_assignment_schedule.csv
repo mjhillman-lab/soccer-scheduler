@@ -1,67 +1,95 @@
 day_group,match_time_str,tv_assignment,lookin_window,home_team,away_team,home_elo,away_elo,channels,sort_value,league
-TODAY,2026-10-30 01:00 PM EDT,Other Screen,,Konyaspor,Galatasaray,1533,1807,beIN SPORTS,1396.0,Turkish Super Lig
-TODAY,2026-10-30 01:30 PM EDT,Other Screen,,Energie Cottbus,VfL Bochum,1549,1607,Check listings,1520.0,German 2. Bundesliga
-TODAY,2026-10-30 01:30 PM EDT,Other Screen,,Arminia Bielefeld,TSV Eintracht Braunschweig,1571,1516,Check listings,1488.5,German 2. Bundesliga
-TODAY,2026-10-30 02:00 PM EDT,TV 1,,Nice,Stade Rennais,1660,1758,beIn Sports,1611.0,French Ligue 1
-TODAY,2026-10-30 02:00 PM EDT,TV 2,,Le Havre AC,Paris Saint-Germain,1610,1978,beIn Sports,1426.0,French Ligue 1
-TODAY,2026-10-30 03:30 PM EDT,TV 3,,SV Elversberg,Mainz,1675,1744,Fandango,1640.5,German Bundesliga
-TODAY,2026-10-30 03:45 PM EDT,Other Screen,,Zulte-Waregem,Club Brugge,1575,1832,DAZN,1446.5,Belgian Pro League
-TODAY,2026-10-30 04:00 PM EDT,TV 2,,Villarreal,Espanyol,1799,1712,"ESPN Deportes, ESPN+",1668.5,Spanish LALIGA
-TODAY,2026-10-30 04:00 PM EDT,TV 3 (Look-in),05:25 PM-05:55 PM (~30m),Sheffield United,Wrexham,1623,1611,Paramount+,1605.0,English League Championship
-TODAY,2026-10-30 04:05 PM EDT,TV 1,,Lille,Lens,1767,1805,beIn Sports,1748.0,French Ligue 1
-TODAY,2026-10-30 04:15 PM EDT,Other Screen,,Casa Pia,Sporting CP,1483,1870,DAZN,1289.5,Portuguese Primeira Liga
-TOMORROW,2026-10-31 06:30 AM EDT,Other Screen,,Erzurum BB,Çorum FK,1572,1582,beIN SPORTS,1567.0,Turkish Super Lig
-TOMORROW,2026-10-31 08:00 AM EDT,Other Screen,,Kaiserslautern,Hertha Berlin,1605,1651,Check listings,1582.0,German 2. Bundesliga
-TOMORROW,2026-10-31 08:00 AM EDT,Other Screen,,SV Darmstadt 98,1. FC Magdeburg,1590,1581,Check listings,1576.5,German 2. Bundesliga
-TOMORROW,2026-10-31 08:00 AM EDT,Other Screen,,VfL Wolfsburg,VfL Osnabruck,1672,1554,Check listings,1495.0,German 2. Bundesliga
-TOMORROW,2026-10-31 08:30 AM EDT,TV 1,,Chelsea,Manchester United,1896,1862,"USA Net, Tele",1845.0,English Premier League
-TOMORROW,2026-10-31 08:30 AM EDT,TV 3,,Lincoln City,Birmingham City,1610,1622,Paramount+,1604.0,English League Championship
-TOMORROW,2026-10-31 08:30 AM EDT,TV 2 (Look-in),08:30 AM-09:00 AM (~30m),Stoke City,Preston North End,1555,1524,Paramount+,1508.5,English League Championship
-TOMORROW,2026-10-31 08:30 AM EDT,Other Screen,,Norwich City,Watford,1621,1531,Check listings,1486.0,English League Championship
-TOMORROW,2026-10-31 09:00 AM EDT,TV 2,,Real Sociedad II,Girona,1791,1724,ESPN+,1690.5,Spanish LALIGA 2
-TOMORROW,2026-10-31 09:00 AM EDT,Other Screen,,Levante,Atlético Madrid,1711,1916,"ESPN Deportes, ESPN+",1608.5,Spanish LALIGA
-TOMORROW,2026-10-31 09:00 AM EDT,Other Screen,,Kocaelispor,Caykur Rizespor,1576,1566,beIN SPORTS,1561.0,Turkish Super Lig
-TOMORROW,2026-10-31 10:00 AM EDT,Other Screen,,Bologna,Monza,1752,1636,"CBSSN, Paramount+",1578.0,Italian Serie A
-TOMORROW,2026-10-31 10:30 AM EDT,TV 3,,Bayer Leverkusen,VfB Stuttgart,1888,1812,Fandango,1774.0,German Bundesliga
-TOMORROW,2026-10-31 10:30 AM EDT,TV 1 (Look-in),10:30 AM-11:00 AM (~30m),FC Augsburg,SC Freiburg,1725,1785,Fandango,1695.0,German Bundesliga
-TOMORROW,2026-10-31 10:30 AM EDT,Other Screen,,Werder Bremen,TSG Hoffenheim,1690,1728,Fandango,1671.0,German Bundesliga
-TOMORROW,2026-10-31 10:30 AM EDT,Other Screen,,Borussia Mönchengladbach,SC Paderborn 07,1682,1655,Fandango,1641.5,German Bundesliga
-TOMORROW,2026-10-31 10:30 AM EDT,Other Screen,,Schalke 04,RB Leipzig,1650,1822,Fandango,1564.0,German Bundesliga
-TOMORROW,2026-10-31 11:00 AM EDT,TV 1,,Manchester City,Brighton & Hove Albion,2027,1899,Peacock,1835.0,English Premier League
-TOMORROW,2026-10-31 11:00 AM EDT,TV 2,,AFC Bournemouth,Leeds United,1865,1814,Peacock,1788.5,English Premier League
-TOMORROW,2026-10-31 11:00 AM EDT,TV 3 (Look-in),12:25 PM-12:55 PM (~30m),Brentford,Nottingham Forest,1859,1795,"USA Net, Universo",1763.0,English Premier League
-TOMORROW,2026-10-31 11:00 AM EDT,Other Screen,,Coventry City,Sunderland,1686,1731,Peacock,1663.5,English Premier League
-TOMORROW,2026-10-31 11:00 AM EDT,Other Screen,,Hull City,Ipswich Town,1636,1700,Peacock,1604.0,English Premier League
-TOMORROW,2026-10-31 11:00 AM EDT,Other Screen,,Southampton,Queens Park Rangers,1705,1613,Paramount+,1567.0,English League Championship
-TOMORROW,2026-10-31 11:00 AM EDT,Other Screen,,Swansea City,Blackburn Rovers,1608,1576,Check listings,1560.0,English League Championship
-TOMORROW,2026-10-31 11:00 AM EDT,Other Screen,,Millwall,Derby County,1637,1567,Paramount+,1532.0,English League Championship
-TOMORROW,2026-10-31 11:00 AM EDT,Other Screen,,Burnley,Portsmouth,1647,1555,Check listings,1509.0,English League Championship
-TOMORROW,2026-10-31 11:00 AM EDT,Other Screen,,Middlesbrough,Charlton Athletic,1651,1552,Paramount+,1502.5,English League Championship
-TOMORROW,2026-10-31 11:00 AM EDT,Other Screen,,Bolton Wanderers,Bristol City,1529,1584,Check listings,1501.5,English League Championship
-TOMORROW,2026-10-31 11:00 AM EDT,Other Screen,,West Ham United,West Bromwich Albion,1782,1594,Paramount+,1500.0,English League Championship
-TOMORROW,2026-10-31 11:00 AM EDT,Other Screen,,Wolverhampton Wanderers,Cardiff City,1726,1563,Paramount+,1481.5,English League Championship
-TOMORROW,2026-10-31 11:00 AM EDT,Other Screen,,KV Mechelen,Racing Genk,1545,0,DAZN,1402.5,Belgian Pro League
-TOMORROW,2026-10-31 11:15 AM EDT,Other Screen,,Rayo Vallecano,Celta Vigo,1745,1755,"ESPN Deportes, ESPN+",1740.0,Spanish LALIGA
-TOMORROW,2026-10-31 11:15 AM EDT,Other Screen,,Eibar,Almería,1681,1682,ESPN+,1680.5,Spanish LALIGA 2
-TOMORROW,2026-10-31 11:30 AM EDT,Other Screen,,Moreirense,Estrela,1544,1503,DAZN,1482.5,Portuguese Primeira Liga
-TOMORROW,2026-10-31 11:30 AM EDT,TV 1 (Look-in),12:55 PM-01:25 PM (~30m),Feyenoord Rotterdam,Fortuna Sittard,1734,1483,ESPN+,1357.5,Dutch Eredivisie
-TOMORROW,2026-10-31 12:00 PM EDT,Other Screen,,Fenerbahce,Goztepe,1781,1600,beIN SPORTS,1509.5,Turkish Super Lig
-TOMORROW,2026-10-31 01:00 PM EDT,TV 3,,Udinese,AS Roma,1704,1857,Paramount+,1627.5,Italian Serie A
-TOMORROW,2026-10-31 01:15 PM EDT,Other Screen,,Standard Liege,KV Kortrijk,1588,1434,DAZN,1357.0,Belgian Pro League
-TOMORROW,2026-10-31 01:30 PM EDT,TV 1,,Bayern Munich,Borussia Dortmund,2040,1888,"CNBC, Fandango",1812.0,German Bundesliga
-TOMORROW,2026-10-31 01:30 PM EDT,TV 2,,Tottenham Hotspur,Crystal Palace,1803,1818,"NBC, Universo",1795.5,English Premier League
-TOMORROW,2026-10-31 01:30 PM EDT,TV 3 (Look-in),02:55 PM-03:25 PM (~30m),Real Betis,Málaga,1826,1677,"ESPN Deportes, ESPN+",1602.5,Spanish LALIGA
-TOMORROW,2026-10-31 01:30 PM EDT,Other Screen,,RC Celta Fortuna,Córdoba,1755,1594,Check listings,1513.5,Spanish LALIGA 2
-TOMORROW,2026-10-31 01:45 PM EDT,Other Screen,,Heerenveen,NEC Nijmegen,1542,1591,ESPN+,1517.5,Dutch Eredivisie
-TOMORROW,2026-10-31 01:45 PM EDT,Other Screen,,PSV Eindhoven,Willem II,1784,1414,ESPN+,1229.0,Dutch Eredivisie
-TOMORROW,2026-10-31 03:30 PM EDT,Other Screen,,Karlsruher SC,1. FC Heidenheim 1846,1572,1642,Check listings,1537.0,German 2. Bundesliga
-TOMORROW,2026-10-31 03:45 PM EDT,TV 1,,AC Milan,Internazionale,1827,1944,Paramount+,1768.5,Italian Serie A
-TOMORROW,2026-10-31 03:45 PM EDT,Other Screen,,Troyes,Le Mans,1612,1589,beIn Sports,1577.5,French Ligue 1
-TOMORROW,2026-10-31 03:45 PM EDT,Other Screen,,Waasland-Beveren,Union St.-Gilloise,1645,1813,DAZN,1561.0,Belgian Pro League
-TOMORROW,2026-10-31 03:45 PM EDT,Other Screen,,Anderlecht,KVC Westerlo,1662,1565,DAZN,1516.5,Belgian Pro League
-TOMORROW,2026-10-31 04:00 PM EDT,TV 2,,Aston Villa,Fulham,1906,1801,Peacock,1748.5,English Premier League
-TOMORROW,2026-10-31 04:00 PM EDT,TV 3,,Ajax Amsterdam,AZ Alkmaar,1689,1693,ESPN+,1687.0,Dutch Eredivisie
-TOMORROW,2026-10-31 04:00 PM EDT,Other Screen,,Albacete,CD Sabadell,1613,1578,Check listings,1560.5,Spanish LALIGA 2
-TOMORROW,2026-10-31 04:00 PM EDT,Other Screen,,Barcelona,Alavés,2031,1714,"ESPN Deportes, ESPN+",1555.5,Spanish LALIGA
-TOMORROW,2026-10-31 04:00 PM EDT,Other Screen,,SC Cambuur,Go Ahead Eagles,1406,1550,ESPN+,1334.0,Dutch Eredivisie
-TOMORROW,2026-10-31 04:30 PM EDT,Other Screen,,FC Porto,Estoril,1827,1521,DAZN,1368.0,Portuguese Primeira Liga
+TODAY,2026-10-31 06:30 AM EDT,Other Screen,,Erzurum BB,Çorum FK,1572,1582,beIN SPORTS,1567.0,Turkish Super Lig
+TODAY,2026-10-31 08:00 AM EDT,Other Screen,,Kaiserslautern,Hertha Berlin,1605,1651,Check listings,1582.0,German 2. Bundesliga
+TODAY,2026-10-31 08:00 AM EDT,Other Screen,,SV Darmstadt 98,1. FC Magdeburg,1590,1581,Check listings,1576.5,German 2. Bundesliga
+TODAY,2026-10-31 08:00 AM EDT,Other Screen,,VfL Wolfsburg,VfL Osnabruck,1672,1554,Check listings,1495.0,German 2. Bundesliga
+TODAY,2026-10-31 08:30 AM EDT,TV 1,,Chelsea,Manchester United,1896,1862,"USA Net, Tele",1845.0,English Premier League
+TODAY,2026-10-31 08:30 AM EDT,TV 3,,Lincoln City,Birmingham City,1610,1622,Paramount+,1604.0,English League Championship
+TODAY,2026-10-31 08:30 AM EDT,TV 2 (Look-in),08:30 AM-09:00 AM (~30m),Stoke City,Preston North End,1555,1524,Paramount+,1508.5,English League Championship
+TODAY,2026-10-31 08:30 AM EDT,Other Screen,,Norwich City,Watford,1621,1531,Check listings,1486.0,English League Championship
+TODAY,2026-10-31 09:00 AM EDT,TV 2,,Real Sociedad II,Girona,1791,1724,ESPN+,1690.5,Spanish LALIGA 2
+TODAY,2026-10-31 09:00 AM EDT,Other Screen,,Levante,Atlético Madrid,1711,1916,"ESPN Deportes, ESPN+",1608.5,Spanish LALIGA
+TODAY,2026-10-31 09:00 AM EDT,Other Screen,,Kocaelispor,Caykur Rizespor,1576,1566,beIN SPORTS,1561.0,Turkish Super Lig
+TODAY,2026-10-31 10:00 AM EDT,Other Screen,,Bologna,Monza,1752,1636,"CBSSN, Paramount+",1578.0,Italian Serie A
+TODAY,2026-10-31 10:30 AM EDT,TV 3,,Bayer Leverkusen,VfB Stuttgart,1888,1812,Fandango,1774.0,German Bundesliga
+TODAY,2026-10-31 10:30 AM EDT,TV 1 (Look-in),10:30 AM-11:00 AM (~30m),FC Augsburg,SC Freiburg,1725,1785,Fandango,1695.0,German Bundesliga
+TODAY,2026-10-31 10:30 AM EDT,Other Screen,,Werder Bremen,TSG Hoffenheim,1690,1728,Fandango,1671.0,German Bundesliga
+TODAY,2026-10-31 10:30 AM EDT,Other Screen,,Borussia Mönchengladbach,SC Paderborn 07,1682,1655,Fandango,1641.5,German Bundesliga
+TODAY,2026-10-31 10:30 AM EDT,Other Screen,,Schalke 04,RB Leipzig,1650,1822,Fandango,1564.0,German Bundesliga
+TODAY,2026-10-31 11:00 AM EDT,TV 1,,Manchester City,Brighton & Hove Albion,2027,1899,Peacock,1835.0,English Premier League
+TODAY,2026-10-31 11:00 AM EDT,TV 2,,AFC Bournemouth,Leeds United,1865,1814,Peacock,1788.5,English Premier League
+TODAY,2026-10-31 11:00 AM EDT,TV 3 (Look-in),12:25 PM-12:55 PM (~30m),Brentford,Nottingham Forest,1859,1795,"USA Net, Universo",1763.0,English Premier League
+TODAY,2026-10-31 11:00 AM EDT,Other Screen,,Coventry City,Sunderland,1686,1731,Peacock,1663.5,English Premier League
+TODAY,2026-10-31 11:00 AM EDT,Other Screen,,Hull City,Ipswich Town,1636,1700,Peacock,1604.0,English Premier League
+TODAY,2026-10-31 11:00 AM EDT,Other Screen,,Southampton,Queens Park Rangers,1705,1613,Paramount+,1567.0,English League Championship
+TODAY,2026-10-31 11:00 AM EDT,Other Screen,,Swansea City,Blackburn Rovers,1608,1576,Check listings,1560.0,English League Championship
+TODAY,2026-10-31 11:00 AM EDT,Other Screen,,Millwall,Derby County,1637,1567,Paramount+,1532.0,English League Championship
+TODAY,2026-10-31 11:00 AM EDT,Other Screen,,Burnley,Portsmouth,1647,1555,Check listings,1509.0,English League Championship
+TODAY,2026-10-31 11:00 AM EDT,Other Screen,,Middlesbrough,Charlton Athletic,1651,1552,Paramount+,1502.5,English League Championship
+TODAY,2026-10-31 11:00 AM EDT,Other Screen,,Bolton Wanderers,Bristol City,1529,1584,Check listings,1501.5,English League Championship
+TODAY,2026-10-31 11:00 AM EDT,Other Screen,,West Ham United,West Bromwich Albion,1782,1594,Paramount+,1500.0,English League Championship
+TODAY,2026-10-31 11:00 AM EDT,Other Screen,,Wolverhampton Wanderers,Cardiff City,1726,1563,Paramount+,1481.5,English League Championship
+TODAY,2026-10-31 11:00 AM EDT,Other Screen,,KV Mechelen,Racing Genk,1545,0,DAZN,1402.5,Belgian Pro League
+TODAY,2026-10-31 11:15 AM EDT,Other Screen,,Rayo Vallecano,Celta Vigo,1745,1755,"ESPN Deportes, ESPN+",1740.0,Spanish LALIGA
+TODAY,2026-10-31 11:15 AM EDT,Other Screen,,Eibar,Almería,1681,1682,ESPN+,1680.5,Spanish LALIGA 2
+TODAY,2026-10-31 11:30 AM EDT,Other Screen,,Moreirense,Estrela,1544,1503,DAZN,1482.5,Portuguese Primeira Liga
+TODAY,2026-10-31 11:30 AM EDT,TV 1 (Look-in),12:55 PM-01:25 PM (~30m),Feyenoord Rotterdam,Fortuna Sittard,1734,1483,ESPN+,1357.5,Dutch Eredivisie
+TODAY,2026-10-31 12:00 PM EDT,Other Screen,,Fenerbahce,Goztepe,1781,1600,beIN SPORTS,1509.5,Turkish Super Lig
+TODAY,2026-10-31 01:00 PM EDT,TV 3,,Udinese,AS Roma,1704,1857,Paramount+,1627.5,Italian Serie A
+TODAY,2026-10-31 01:15 PM EDT,Other Screen,,Standard Liege,KV Kortrijk,1588,1434,DAZN,1357.0,Belgian Pro League
+TODAY,2026-10-31 01:30 PM EDT,TV 1,,Bayern Munich,Borussia Dortmund,2040,1888,"CNBC, Fandango",1812.0,German Bundesliga
+TODAY,2026-10-31 01:30 PM EDT,TV 2,,Tottenham Hotspur,Crystal Palace,1803,1818,"NBC, Universo",1795.5,English Premier League
+TODAY,2026-10-31 01:30 PM EDT,TV 3 (Look-in),02:55 PM-03:25 PM (~30m),Real Betis,Málaga,1826,1677,"ESPN Deportes, ESPN+",1602.5,Spanish LALIGA
+TODAY,2026-10-31 01:30 PM EDT,Other Screen,,RC Celta Fortuna,Córdoba,1755,1594,Check listings,1513.5,Spanish LALIGA 2
+TODAY,2026-10-31 01:45 PM EDT,Other Screen,,Heerenveen,NEC Nijmegen,1542,1591,ESPN+,1517.5,Dutch Eredivisie
+TODAY,2026-10-31 01:45 PM EDT,Other Screen,,PSV Eindhoven,Willem II,1784,1414,ESPN+,1229.0,Dutch Eredivisie
+TODAY,2026-10-31 03:30 PM EDT,Other Screen,,Karlsruher SC,1. FC Heidenheim 1846,1572,1642,Check listings,1537.0,German 2. Bundesliga
+TODAY,2026-10-31 03:45 PM EDT,TV 1,,AC Milan,Internazionale,1827,1944,Paramount+,1768.5,Italian Serie A
+TODAY,2026-10-31 03:45 PM EDT,Other Screen,,Troyes,Le Mans,1612,1589,beIn Sports,1577.5,French Ligue 1
+TODAY,2026-10-31 03:45 PM EDT,Other Screen,,Waasland-Beveren,Union St.-Gilloise,1645,1813,DAZN,1561.0,Belgian Pro League
+TODAY,2026-10-31 03:45 PM EDT,Other Screen,,Anderlecht,KVC Westerlo,1662,1565,DAZN,1516.5,Belgian Pro League
+TODAY,2026-10-31 04:00 PM EDT,TV 2,,Aston Villa,Fulham,1906,1801,Peacock,1748.5,English Premier League
+TODAY,2026-10-31 04:00 PM EDT,TV 3,,Ajax Amsterdam,AZ Alkmaar,1689,1693,ESPN+,1687.0,Dutch Eredivisie
+TODAY,2026-10-31 04:00 PM EDT,Other Screen,,Albacete,CD Sabadell,1613,1578,Check listings,1560.5,Spanish LALIGA 2
+TODAY,2026-10-31 04:00 PM EDT,Other Screen,,Barcelona,Alavés,2031,1714,"ESPN Deportes, ESPN+",1555.5,Spanish LALIGA
+TODAY,2026-10-31 04:00 PM EDT,Other Screen,,SC Cambuur,Go Ahead Eagles,1406,1550,ESPN+,1334.0,Dutch Eredivisie
+TODAY,2026-10-31 04:30 PM EDT,Other Screen,,FC Porto,Estoril,1827,1521,DAZN,1368.0,Portuguese Primeira Liga
+TOMORROW,2026-11-01 05:30 AM EST,Other Screen,,Amed SFK,Eyupspor,1692,1531,beIN SPORTS,1450.5,Turkish Super Lig
+TOMORROW,2026-11-01 06:15 AM EST,TV 3,,PEC Zwolle,ADO Den Haag,1472,1437,ESPN+,1419.5,Dutch Eredivisie
+TOMORROW,2026-11-01 06:30 AM EST,TV 2,,Como,Venezia,1815,1651,Paramount+,1569.0,Italian Serie A
+TOMORROW,2026-11-01 07:30 AM EST,Other Screen,,St. Pauli,1. FC Nürnberg,1613,1612,Check listings,1611.5,German 2. Bundesliga
+TOMORROW,2026-11-01 07:30 AM EST,Other Screen,,Hannover 96,Dynamo Dresden,1627,1562,Check listings,1529.5,German 2. Bundesliga
+TOMORROW,2026-11-01 07:30 AM EST,Other Screen,,SpVgg Greuther Fürth,Holstein Kiel,1527,1588,Check listings,1496.5,German 2. Bundesliga
+TOMORROW,2026-11-01 07:30 AM EST,Other Screen,,Cercle Brugge KSV,Antwerp,1832,1586,DAZN,1463.0,Belgian Pro League
+TOMORROW,2026-11-01 08:00 AM EST,TV 1,,Getafe,Sevilla,1699,1725,"ESPN Deportes, ESPN+",1686.0,Spanish LALIGA
+TOMORROW,2026-11-01 08:00 AM EST,Other Screen,,Istanbul Basaksehir,Samsunspor,1619,1599,beIN SPORTS,1589.0,Turkish Super Lig
+TOMORROW,2026-11-01 08:00 AM EST,TV 2 (Look-in),08:25 AM-09:00 AM (~35m),Eldense,Granada,1591,1622,ESPN+,1575.5,Spanish LALIGA 2
+TOMORROW,2026-11-01 08:00 AM EST,Other Screen,,Trabzonspor,Gaziantep FK,1647,1545,beIN SPORTS,1494.0,Turkish Super Lig
+TOMORROW,2026-11-01 08:30 AM EST,TV 3 (Look-in),08:30 AM-09:00 AM (~30m),Excelsior,FC Twente,1503,1660,ESPN+,1424.5,Dutch Eredivisie
+TOMORROW,2026-11-01 08:30 AM EST,Other Screen,,Telstar,FC Utrecht,1450,1581,ESPN+,1384.5,Dutch Eredivisie
+TOMORROW,2026-11-01 09:00 AM EST,TV 2,,Frosinone,Torino,1678,1680,Paramount+,1677.0,Italian Serie A
+TOMORROW,2026-11-01 09:00 AM EST,TV 3,,Lazio,Cagliari,1794,1671,Paramount+,1609.5,Italian Serie A
+TOMORROW,2026-11-01 09:00 AM EST,TV 1 (Look-in),09:55 AM-10:55 AM (~60m),Strasbourg,AJ Auxerre,1731,1645,beIn Sports,1602.0,French Ligue 1
+TOMORROW,2026-11-01 09:30 AM EST,Other Screen,,1. FC Union Berlin,FC Cologne,1680,0,Fandango,1335.0,German Bundesliga
+TOMORROW,2026-11-01 10:00 AM EST,Other Screen,,Sint-Truidense,OH Leuven,1622,1504,DAZN,1445.0,Belgian Pro League
+TOMORROW,2026-11-01 10:15 AM EST,TV 1 (Look-in),10:55 AM-11:30 AM (~35m),Racing Santander,Real Madrid,1695,1986,"ESPN Deportes, ESPN+",1549.5,Spanish LALIGA
+TOMORROW,2026-11-01 10:15 AM EST,Other Screen,,Ceuta,Sporting Gijón,1560,1621,Check listings,1529.5,Spanish LALIGA 2
+TOMORROW,2026-11-01 10:30 AM EST,Other Screen,,Arouca,C.D. Nacional,1563,1642,DAZN,1523.5,Portuguese Primeira Liga
+TOMORROW,2026-11-01 10:45 AM EST,TV 2 (Look-in),10:55 AM-11:30 AM (~35m),FC Groningen,Sparta Rotterdam,1520,1507,ESPN+,1500.5,Dutch Eredivisie
+TOMORROW,2026-11-01 11:00 AM EST,Other Screen,,Kasimpasa,Besiktas,1567,1693,beIN SPORTS,1504.0,Turkish Super Lig
+TOMORROW,2026-11-01 11:15 AM EST,TV 3,,Paris FC,AS Monaco,1699,1801,beIn Sports,1648.0,French Ligue 1
+TOMORROW,2026-11-01 11:15 AM EST,Other Screen,,Lyon,Angers,1794,1613,beIn Sports,1522.5,French Ligue 1
+TOMORROW,2026-11-01 11:30 AM EST,TV 1,,Liverpool,Arsenal,1940,2049,"Peacock, Tele",1885.5,English Premier League
+TOMORROW,2026-11-01 11:30 AM EST,TV 2 (Look-in),11:30 AM-12:30 PM (~60m),Eintracht Frankfurt,Hamburg SV,1736,1666,USA Net,1631.0,German Bundesliga
+TOMORROW,2026-11-01 12:00 PM EST,TV 3 (Look-in),01:10 PM-01:55 PM (~45m),Lecce,Genoa,1619,1666,Paramount+,1595.5,Italian Serie A
+TOMORROW,2026-11-01 12:30 PM EST,TV 2,,Elche,Valencia,1694,1742,"ESPN Deportes, ESPN+",1670.0,Spanish LALIGA
+TOMORROW,2026-11-01 12:30 PM EST,TV 1 (Look-in),01:25 PM-02:25 PM (~60m),Burgos,Castellón,1655,1680,ESPN+,1642.5,Spanish LALIGA 2
+TOMORROW,2026-11-01 12:30 PM EST,Other Screen,,Lommel SK,KAA Gent,1502,1628,DAZN,1439.0,Belgian Pro League
+TOMORROW,2026-11-01 01:00 PM EST,Other Screen,,Académico de Viseu,Rio Ave,1494,1500,DAZN,1491.0,Portuguese Primeira Liga
+TOMORROW,2026-11-01 01:00 PM EST,Other Screen,,Maritimo,Santa Clara,1488,1568,DAZN,1448.0,Portuguese Primeira Liga
+TOMORROW,2026-11-01 01:15 PM EST,Other Screen,,Royal Charleroi SC,RAAL La Louvière,1623,1489,DAZN,1422.0,Belgian Pro League
+TOMORROW,2026-11-01 02:45 PM EST,TV 1,,Juventus,Napoli,1828,1826,Paramount+,1825.0,Italian Serie A
+TOMORROW,2026-11-01 02:45 PM EST,TV 2,,Marseille,Toulouse,1758,1684,beIn Sports,1647.0,French Ligue 1
+TOMORROW,2026-11-01 03:00 PM EST,Other Screen,,Tenerife,FC Andorra,1632,1593,Check listings,1573.5,Spanish LALIGA 2
+TOMORROW,2026-11-01 03:00 PM EST,TV 3,,Athletic Club,Real Sociedad,1607,1791,"ESPN Deportes, ESPN+",1515.0,Spanish LALIGA
+TOMORROW,2026-11-01 03:30 PM EST,Other Screen,,Braga,FC Famalicao,1720,1602,DAZN,1543.0,Portuguese Primeira Liga
