@@ -18,8 +18,8 @@
 --- 2026-11-01 07:30 AM EST ---
   [Other Screen            ] [2. Bundesliga] St. Pauli vs 1. FC Nürnberg            (1613 vs 1612) Score: 1611.5 [Check listings]
   [Other Screen            ] [2. Bundesliga] Hannover 96 vs Dynamo Dresden            (1627 vs 1562) Score: 1529.5 [Check listings]
+  [Other Screen            ] [Belgian Pro]  Cercle Brugge KSV vs Antwerp                   (1547 vs 1586) Score: 1527.5 [DAZN]
   [Other Screen            ] [2. Bundesliga] SpVgg Greuther Fürth vs Holstein Kiel             (1527 vs 1588) Score: 1496.5 [Check listings]
-  [Other Screen            ] [Belgian Pro]  Cercle Brugge KSV vs Antwerp                   (1832 vs 1586) Score: 1463.0 [DAZN]
 
 --- 2026-11-01 08:00 AM EST ---
   [TV 1                    ] [LaLiga]       Getafe vs Sevilla                   (1699 vs 1725) Score: 1686.0 [ESPN Deportes, ESPN+]
@@ -33,11 +33,11 @@
 
 --- 2026-11-01 09:00 AM EST ---
   [TV 2                    ] [Serie A]      Frosinone vs Torino                    (1678 vs 1680) Score: 1677.0 [Paramount+]
-  [TV 3                    ] [Serie A]      Lazio vs Cagliari                  (1794 vs 1671) Score: 1609.5 [Paramount+]
-  [TV 1 (Look-in) [09:55 AM-10:55 AM (~60m)]] [Ligue 1]      Strasbourg vs AJ Auxerre                (1731 vs 1645) Score: 1602.0 [beIn Sports]
+  [TV 1 (Look-in) [09:55 AM-10:55 AM (~60m)]] [Serie A]      Lazio vs Cagliari                  (1794 vs 1671) Score: 1609.5 [Paramount+]
+  [TV 3 (Look-in) [09:00 AM-09:30 AM (~30m)]] [Ligue 1]      Strasbourg vs AJ Auxerre                (1731 vs 1645) Score: 1602.0 [beIn Sports]
 
 --- 2026-11-01 09:30 AM EST ---
-  [Other Screen            ] [Bundesliga]   1. FC Union Berlin vs FC Cologne                (1680 vs Unrated) Score: 1335.0 [Fandango]
+  [TV 3                    ] [Bundesliga]   1. FC Union Berlin vs FC Cologne                (1680 vs 1662) Score: 1653.0 [Fandango]
 
 --- 2026-11-01 10:00 AM EST ---
   [Other Screen            ] [Belgian Pro]  Sint-Truidense vs OH Leuven                 (1622 vs 1504) Score: 1445.0 [DAZN]
@@ -50,25 +50,25 @@
   [Other Screen            ] [Liga Portugal] Arouca vs C.D. Nacional             (1563 vs 1642) Score: 1523.5 [DAZN]
 
 --- 2026-11-01 10:45 AM EST ---
-  [TV 2 (Look-in) [10:55 AM-11:30 AM (~35m)]] [Eredivisie]   FC Groningen vs Sparta Rotterdam          (1520 vs 1507) Score: 1500.5 [ESPN+]
+  [Other Screen            ] [Eredivisie]   FC Groningen vs Sparta Rotterdam          (1520 vs 1507) Score: 1500.5 [ESPN+]
 
 --- 2026-11-01 11:00 AM EST ---
   [Other Screen            ] [Süper Lig]    Kasimpasa vs Besiktas                  (1567 vs 1693) Score: 1504.0 [beIN SPORTS]
 
 --- 2026-11-01 11:15 AM EST ---
-  [TV 3                    ] [Ligue 1]      Paris FC vs AS Monaco                 (1699 vs 1801) Score: 1648.0 [beIn Sports]
+  [TV 2 (Look-in) [11:15 AM-12:30 PM (~75m)]] [Ligue 1]      Paris FC vs AS Monaco                 (1699 vs 1801) Score: 1648.0 [beIn Sports]
   [Other Screen            ] [Ligue 1]      Lyon vs Angers                    (1794 vs 1613) Score: 1522.5 [beIn Sports]
 
 --- 2026-11-01 11:30 AM EST ---
   [TV 1                    ] [EPL]          Liverpool vs Arsenal                   (1940 vs 2049) Score: 1885.5 [NBCSN, Tele, Peacock]
-  [TV 2 (Look-in) [11:30 AM-12:30 PM (~60m)]] [Bundesliga]   Eintracht Frankfurt vs Hamburg SV                (1736 vs 1666) Score: 1631.0 [USA Net]
+  [TV 3 (Look-in) [11:30 AM-12:30 PM (~60m)]] [Bundesliga]   Eintracht Frankfurt vs Hamburg SV                (1736 vs 1666) Score: 1631.0 [USA Net]
 
 --- 2026-11-01 12:00 PM EST ---
-  [TV 3 (Look-in) [01:10 PM-01:55 PM (~45m)]] [Serie A]      Lecce vs Genoa                     (1619 vs 1666) Score: 1595.5 [Paramount+]
+  [TV 1 (Look-in) [01:25 PM-01:55 PM (~30m)]] [Serie A]      Lecce vs Genoa                     (1619 vs 1666) Score: 1595.5 [Paramount+]
 
 --- 2026-11-01 12:30 PM EST ---
   [TV 2                    ] [LaLiga]       Elche vs Valencia                  (1694 vs 1742) Score: 1670.0 [ESPN Deportes, ESPN+]
-  [TV 1 (Look-in) [01:25 PM-02:25 PM (~60m)]] [LALIGA 2]     Burgos vs Castellón                 (1655 vs 1680) Score: 1642.5 [ESPN+]
+  [TV 3                    ] [LALIGA 2]     Burgos vs Castellón                 (1655 vs 1680) Score: 1642.5 [ESPN+]
   [Other Screen            ] [Belgian Pro]  Lommel SK vs KAA Gent                  (1502 vs 1628) Score: 1439.0 [DAZN]
 
 --- 2026-11-01 01:00 PM EST ---
@@ -80,11 +80,10 @@
 
 --- 2026-11-01 02:45 PM EST ---
   [TV 1                    ] [Serie A]      Juventus vs Napoli                    (1828 vs 1826) Score: 1825.0 [Paramount+]
-  [TV 2                    ] [Ligue 1]      Marseille vs Toulouse                  (1758 vs 1684) Score: 1647.0 [beIn Sports]
+  [TV 3                    ] [Ligue 1]      Marseille vs Toulouse                  (1758 vs 1684) Score: 1647.0 [beIn Sports]
 
 --- 2026-11-01 03:00 PM EST ---
-  [Other Screen            ] [LALIGA 2]     Tenerife vs FC Andorra                (1632 vs 1593) Score: 1573.5 [Check listings]
-  [TV 3                    ] [LaLiga]       Athletic Club vs Real Sociedad             (1607 vs 1791) Score: 1515.0 [ESPN Deportes, ESPN+]
+  [TV 2                    ] [LaLiga]       Athletic Club vs Real Sociedad             (1767 vs 1791) Score: 1755.0 [ESPN Deportes, ESPN+]
 
 --- 2026-11-01 03:30 PM EST ---
   [Other Screen            ] [Liga Portugal] Braga vs FC Famalicao              (1720 vs 1602) Score: 1543.0 [DAZN]
@@ -92,6 +91,9 @@
 ####################################################################################################################
 ###  TOMORROW'S MATCHES (Monday, November 02)
 ####################################################################################################################
+
+--- 2026-11-02 08:00 AM EST ---
+  [Other Screen            ] [LALIGA 2]     Tenerife vs FC Andorra                (1632 vs 1593) Score: 1573.5 [Check listings]
 
 --- 2026-11-02 10:15 AM EST ---
   [Other Screen            ] [LALIGA 2]     Real Oviedo vs Las Palmas                (1649 vs 1677) Score: 1635.0 [Check listings]
@@ -101,7 +103,7 @@
 
 --- 2026-11-02 12:30 PM EST ---
   [TV 1                    ] [Serie A]      Sassuolo vs Fiorentina                (1703 vs 1715) Score: 1697.0 [Paramount+]
-  [Other Screen            ] [LALIGA 2]     Real Valladolid vs Leganés                   (1360 vs 1615) Score: 1232.5 [Check listings]
+  [Other Screen            ] [LALIGA 2]     Real Valladolid vs Leganés                   (1544 vs 1615) Score: 1508.5 [Check listings]
 
 --- 2026-11-02 02:45 PM EST ---
   [TV 3                    ] [Ligue 1]      Lorient vs Brest                     (1696 vs 1678) Score: 1669.0 [beIn Sports]

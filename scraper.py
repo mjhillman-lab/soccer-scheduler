@@ -107,8 +107,8 @@ NAME_ALIASES = {
     "peterborough": "peterboro",
 
     # Spain (La Liga & Segunda)
-    "athletic bilbao": "athletic",
-    "athletic club": "athletic",
+    "athletic": "athletic club",
+    "athletic bilbao": "athletic club",
     "atlético madrid": "atletico",
     "atletico madrid": "atletico",
     "celta vigo": "celta",
@@ -122,9 +122,14 @@ NAME_ALIASES = {
     "ad ceuta fc": "ca ceuta",
     "real sociedad ii" : "real sociedad b",
     "rc celta fortuna" : "rc celta b",
+    "real valladolid": "valladolid",
+    "real valladolid cf": "valladolid",
 
     # Germany (Bundesliga & 2. Bundesliga)
-    "cologne" : "koeln",
+    "fc cologne": "köln",
+    "1. fc cologne": "köln",
+    "cologne": "köln",
+    "1. fc köln": "köln",
     "bayern munich": "bayern münchen",
     "bayern munchen": "bayern münchen",
     "bayern": "bayern münchen",
@@ -174,6 +179,10 @@ NAME_ALIASES = {
     "standard liege": "standard",
     "racing genk" : "genk",
     "krc genk" : "genk",
+    "cercle brugge ksv": "cercle brugge",
+    "cercle brugge": "cercle brugge",
+    "club brugge kv": "brugge",
+    "club brugge": "brugge",
 
     # Portugal
     "sporting cp": "sporting",
