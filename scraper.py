@@ -120,9 +120,11 @@ NAME_ALIASES = {
     "ceuta": "ca ceuta",
     "ad ceuta": "ca ceuta",
     "ad ceuta fc": "ca ceuta",
+    "real sociedad ii" : "real sociedad b",
+    "rc celta fortuna" : "rc celta b",
 
     # Germany (Bundesliga & 2. Bundesliga)
-    "cologne": "köln",
+    "cologne" : "koeln",
     "bayern munich": "bayern münchen",
     "bayern munchen": "bayern münchen",
     "bayern": "bayern münchen",
@@ -170,6 +172,8 @@ NAME_ALIASES = {
     "sint-truiden": "st truiden",
     "kaa gent": "gent",
     "standard liege": "standard",
+    "racing genk" : "genk",
+    "krc genk" : "genk",
 
     # Portugal
     "sporting cp": "sporting",
