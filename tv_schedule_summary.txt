@@ -83,7 +83,6 @@
   [TV 2                    ] [Ligue 1]      Marseille vs Toulouse                  (1758 vs 1684) Score: 1647.0 [beIn Sports]
 
 --- 2026-11-01 03:00 PM EST ---
-  [Other Screen            ] [LALIGA 2]     Tenerife vs FC Andorra                (1632 vs 1593) Score: 1573.5 [Check listings]
   [TV 3                    ] [LaLiga]       Athletic Club vs Real Sociedad             (1607 vs 1791) Score: 1515.0 [ESPN Deportes, ESPN+]
 
 --- 2026-11-01 03:30 PM EST ---
@@ -92,6 +91,9 @@
 ####################################################################################################################
 ###  TOMORROW'S MATCHES (Monday, November 02)
 ####################################################################################################################
+
+--- 2026-11-02 08:00 AM EST ---
+  [Other Screen            ] [LALIGA 2]     Tenerife vs FC Andorra                (1632 vs 1593) Score: 1573.5 [Check listings]
 
 --- 2026-11-02 10:15 AM EST ---
   [Other Screen            ] [LALIGA 2]     Real Oviedo vs Las Palmas                (1649 vs 1677) Score: 1635.0 [Check listings]
