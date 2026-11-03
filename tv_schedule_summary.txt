@@ -3,37 +3,7 @@
 ====================================================================================================================
 
 ####################################################################################################################
-###  TODAY'S MATCHES (Monday, November 02)
-####################################################################################################################
-
---- 2026-11-02 08:00 AM EST ---
-  [Other Screen            ] [LALIGA 2]     Tenerife vs FC Andorra                (1632 vs 1593) Score: 1573.5 [Check listings]
-
---- 2026-11-02 10:15 AM EST ---
-  [Other Screen            ] [LALIGA 2]     Real Oviedo vs Las Palmas                (1649 vs 1677) Score: 1635.0 [Check listings]
-
---- 2026-11-02 12:00 PM EST ---
-  [Other Screen            ] [Süper Lig]    Genclerbirligi vs Alanyaspor                (1565 vs 1569) Score: 1563.0 [beIN SPORTS]
-
---- 2026-11-02 12:30 PM EST ---
-  [TV 1                    ] [Serie A]      Sassuolo vs Fiorentina                (1703 vs 1715) Score: 1697.0 [Paramount+]
-  [Other Screen            ] [LALIGA 2]     Real Valladolid vs Leganés                   (1544 vs 1615) Score: 1508.5 [Check listings]
-
---- 2026-11-02 02:45 PM EST ---
-  [TV 3                    ] [Ligue 1]      Lorient vs Brest                     (1696 vs 1678) Score: 1669.0 [beIn Sports]
-  [Other Screen            ] [Serie A]      Atalanta vs Parma                     (1799 vs 1642) Score: 1563.5 [Paramount+]
-
---- 2026-11-02 03:00 PM EST ---
-  [TV 1                    ] [EPL]          Newcastle United vs Everton                   (1861 vs 1816) Score: 1793.5 [USA Net, Universo]
-  [TV 2                    ] [LaLiga]       Deportivo vs Osasuna                   (1697 vs 1719) Score: 1686.0 [ESPN Deportes, ESPN+]
-  [Other Screen            ] [LALIGA 2]     Mallorca vs Cádiz                     (1720 vs 1554) Score: 1471.0 [ESPN+]
-
---- 2026-11-02 03:15 PM EST ---
-  [Other Screen            ] [Liga Portugal] Gil Vicente vs Vitória de Guimaraes      (1564 vs 1569) Score: 1561.5 [DAZN]
-  [Other Screen            ] [Liga Portugal] Benfica vs Alverca                   (1863 vs 1531) Score: 1365.0 [DAZN]
-
-####################################################################################################################
-###  TOMORROW'S MATCHES (Tuesday, November 03)
+###  TODAY'S MATCHES (Tuesday, November 03)
 ####################################################################################################################
 
 --- 2026-11-03 12:45 PM EST ---
@@ -63,3 +33,41 @@
   [Other Screen            ] [Championship] Birmingham City vs Millwall                  (1622 vs 1637) Score: 1614.5 [Paramount+]
   [Other Screen            ] [Championship] West Bromwich Albion vs Southampton               (1594 vs 1705) Score: 1538.5 [Paramount+]
   [Other Screen            ] [UCL]          LASK Linz vs Slovan Bratislava         (1639 vs 1552) Score: 1508.5 [Paramount+]
+
+####################################################################################################################
+###  TOMORROW'S MATCHES (Wednesday, November 04)
+####################################################################################################################
+
+--- 2026-11-04 10:30 AM EST ---
+  [TV 1                    ] [UEL]          Stade Rennais vs Olympiacos                (1758 vs 1740) Score: 1731.0 [Paramount+]
+
+--- 2026-11-04 12:45 PM EST ---
+  [TV 1                    ] [UCL]          Fenerbahce vs Liverpool                 (1781 vs 1940) Score: 1701.5 [Paramount+]
+  [TV 2                    ] [UCL]          AEK Athens vs Real Madrid               (1700 vs 1986) Score: 1557.0 [Paramount+]
+
+--- 2026-11-04 01:00 PM EST ---
+  [Other Screen            ] [Copa del Rey] Portugalete vs Real Unión Irun           (1870 vs 1496) Score: 1309.0 [Check listings]
+
+--- 2026-11-04 02:00 PM EST ---
+  [Other Screen            ] [Copa del Rey] Amorebieta vs UD Logroñés               (1507 vs 1502) Score: 1499.5 [Check listings]
+
+--- 2026-11-04 02:30 PM EST ---
+  [Other Screen            ] [Belgian Pro]  KV Kortrijk vs KV Mechelen               (1434 vs 1545) Score: 1378.5 [DAZN]
+  [Other Screen            ] [Copa del Rey] Utebo vs CD Sabadell               (1419 vs 1578) Score: 1339.5 [Check listings]
+  [Other Screen            ] [Copa del Rey] CD Minera vs FC Cartagena              (Unrated vs 1514) Score: 1043.0 [Check listings]
+  [Other Screen            ] [Copa del Rey] Reus FC Reddis vs Barakaldo                 (Unrated vs 1531) Score: 1034.5 [Check listings]
+
+--- 2026-11-04 02:45 PM EST ---
+  [Other Screen            ] [Championship] Wrexham vs Middlesbrough             (1611 vs 1651) Score: 1591.0 [Paramount+]
+  [Other Screen            ] [Championship] Cardiff City vs West Ham United           (1563 vs 1782) Score: 1453.5 [Paramount+]
+  [Other Screen            ] [Copa del Rey] Calvo Sotelo vs Albacete                  (Unrated vs 1613) Score: 993.5  [Check listings]
+
+--- 2026-11-04 03:00 PM EST ---
+  [TV 1                    ] [UCL]          FC Porto vs Napoli                    (1827 vs 1826) Score: 1825.5 [Paramount+]
+  [TV 2                    ] [UCL]          Lens vs Como                      (1805 vs 1815) Score: 1800.0 [Paramount+]
+  [TV 3                    ] [UCL]          Borussia Dortmund vs Real Betis                (1888 vs 1826) Score: 1795.0 [Paramount+]
+  [Other Screen            ] [UCL]          PSV Eindhoven vs Club Brugge               (1784 vs 1832) Score: 1760.0 [Paramount+]
+  [Other Screen            ] [UCL]          RB Leipzig vs Manchester City           (1822 vs 2027) Score: 1719.5 [Paramount+]
+  [Other Screen            ] [UCL]          Slavia Prague vs Arsenal                   (1746 vs 2049) Score: 1594.5 [Paramount+]
+  [Other Screen            ] [Championship] Bristol City vs Wolverhampton Wanderers   (1584 vs 1726) Score: 1513.0 [Paramount+]
+  [Other Screen            ] [UCL]          Viking FK vs Sabah FK                  (1691 vs 1562) Score: 1497.5 [Paramount+]
