@@ -95,18 +95,16 @@ LEAGUE_DISPLAY_NAMES = {
 
 # Manual translation & discrepancy mappings
 NAME_ALIASES = {
-    # Premier League
+    # England
     "manchester city": "man city",
     "manchester united": "man united",
     "nottingham forest": "forest",
     "newcastle united": "newcastle",
     "brighton & hove albion": "brighton",
     "wolverhampton wanderers": "wolves",
-
-    # English Football League (Championship / League One)
     "peterborough": "peterboro",
 
-    # Spain (La Liga & Segunda)
+    # Spain
     "athletic": "athletic club",
     "athletic bilbao": "athletic club",
     "atlético madrid": "atletico",
@@ -119,13 +117,11 @@ NAME_ALIASES = {
     "racing santander": "santander",
     "ceuta": "ca ceuta",
     "ad ceuta": "ca ceuta",
-    "ad ceuta fc": "ca ceuta",
     "real sociedad ii" : "real sociedad b",
     "rc celta fortuna" : "rc celta b",
     "real valladolid": "valladolid",
-    "real valladolid cf": "valladolid",
 
-    # Germany (Bundesliga & 2. Bundesliga)
+    # Germany
     "fc cologne": "köln",
     "1. fc cologne": "köln",
     "cologne": "köln",
@@ -141,16 +137,15 @@ NAME_ALIASES = {
     "darmstadt 98": "darmstadt",
     "st. pauli": "st pauli",
 
-    # Italy (Serie A)
+    # Italy
     "inter milan": "inter",
     "internazionale": "inter",
     "ac milan": "milan",
     "as roma" : "roma",
 
-    # France (Ligue 1 & Ligue 2)
+    # France
     "paris saint-germain": "paris sg",
     "stade rennais": "rennes",
-    "stade rennais fc": "rennes",
     "rodez aveyron": "rodez",
     "rodez af": "rodez",
     "as nancy lorraine": "nancy",
@@ -195,7 +190,7 @@ NAME_ALIASES = {
     "académico de viseu": "ac viseu",
     "academico de viseu": "ac viseu",
 
-    # Belgium (Pro League)
+    # Belgium
     "raal la louviere": "la louviere",
     
     # Europe
@@ -207,7 +202,6 @@ NAME_ALIASES = {
     "jagiellonia bialystok": "jagiellonia",
     "sparta prague": "sparta",
     "olympiacos": "olympiakos",
-    "olympiacos fc": "olympiakos",
     "ofi crete": "ofi",
     "levski sofia": "levski",
     "hapoel be'er": "beer sheva",
@@ -220,14 +214,11 @@ NAME_ALIASES = {
     "agf": "aarhus",
     "aarhus gf": "aarhus",
     "pafos": "paphos",
-    "pafos fc": "paphos",
     "riga": "fk riga",
-    "riga fc": "fk riga",
     "egnatia": "egnatia rrogozhine",
     "egnatia rrogozhire": "egnatia rrogozhine",
     "kairat": "fk kairat",
     "kairat almaty": "fk kairat",
-    "fc kairat": "fk kairat",
     "iberia 1999": "saburtalo",
     "iberia 1999 tbilisi": "saburtalo",
     "amed sfk": "amed sk",
@@ -469,7 +460,7 @@ class EloEngine:
         noise_words = {
             "fc", "cf", "sc", "afc", "cd", "sk", "nk", "vfl", "sv", "spvgg", "fk",
             "city", "town", "united", "wanderers", "rovers", "albion", "athletic",
-            "linz", "athens"
+            "linz", "athens", "club"
         }
         
         # Strip periods alongside dashes/slashes so "f.c." becomes "fc" and is cleanly removed
@@ -497,24 +488,20 @@ class EloEngine:
 
         # Prevent generic standalone names (used by giants) from hijacking lower-tier clubs
         danger_keys = {
-            "atletico", "athletic", "real", "sporting", "racing", 
-            "dynamo", "dinamo", "spartak", "lokomotiv", "victoria", "viktoria"
+            "atletico", "athletic", "real", "sport", "sporting", "sporting club", "sporting c", "racing", 
+            "dynamo", "dinamo", "spartak", "lokomotiv", "victoria", "viktoria", "portugal"
         }
 
-        for key, val in self.ratings.items():
-            clean_key = strip_accents(key)
-            
+        for clean_key, val in self.stripped_ratings.items():
             # Direction A: Is the ClubElo name hidden inside the ESPN name?
-            # We block danger_keys so 'atletico' doesn't hijack 'atletico pinatarense'
             if len(clean_key) >= 5 and clean_key not in danger_keys:
                 for term in search_terms:
                     if clean_key in term:
                         return val
                         
             # Direction B: Is the ESPN name hidden inside the ClubElo name?
-            # (e.g., ESPN's 'egnatia' hidden in ClubElo's 'egnatia rrogozhine')
             for term in search_terms:
-                if term in clean_key:
+                if term not in danger_keys and term in clean_key:
                     return val
 
         return DEFAULT_ELO
@@ -539,25 +526,12 @@ def get_48h_window():
         "split_utc": t_split_local.astimezone(timezone.utc),
     }
 
-def fetch_espn_fixtures(task):
+def fetch_espn_fixtures(task, session):
     league_code, d_str = task
     url = f"https://site.web.api.espn.com/apis/site/v2/sports/soccer/{league_code}/scoreboard?dates={d_str}"
     events = []
 
-    # Configure a thread-local session with 2 retries and exponential backoff
-    session = requests.Session()
-    retries = Retry(
-        total=2,
-        backoff_factor=0.5,
-        status_forcelist=[429, 500, 502, 503, 504],
-        raise_on_status=False
-    )
-    adapter = HTTPAdapter(max_retries=retries)
-    session.mount("https://", adapter)
-    session.mount("http://", adapter)
-
     try:
-        # Bumped timeout from 10 to 15 seconds
         r = session.get(url, headers=HEADERS, timeout=15)
         if r.status_code != 200:
             print(f"[WARN] {league_code} {d_str} returned HTTP {r.status_code}")
@@ -568,8 +542,6 @@ def fetch_espn_fixtures(task):
             events.append((league_name, event))
     except Exception as e:
         print(f"[ERR] {league_code} {d_str}: {e}")
-    finally:
-        session.close()
 
     return events
 
@@ -583,10 +555,23 @@ def harvest_matches(window, elo_engine):
     print(f"Querying {len(LEAGUES)} leagues across ESPN ({len(tasks)} parallel requests)...")
 
     raw_events = []
-    with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
-        futures = [executor.submit(fetch_espn_fixtures, t) for t in tasks]
-        for f in as_completed(futures):
-            raw_events.extend(f.result())
+    
+    # Configure a single shared session with connection pooling
+    with requests.Session() as session:
+        retries = Retry(
+            total=2,
+            backoff_factor=0.5,
+            status_forcelist=[429, 500, 502, 503, 504],
+            raise_on_status=False
+        )
+        adapter = HTTPAdapter(pool_connections=MAX_WORKERS, pool_maxsize=MAX_WORKERS, max_retries=retries)
+        session.mount("https://", adapter)
+        session.mount("http://", adapter)
+
+        with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
+            futures = [executor.submit(fetch_espn_fixtures, t, session) for t in tasks]
+            for f in as_completed(futures):
+                raw_events.extend(f.result())
 
     now_utc = datetime.now(timezone.utc)
     seen_ids = set()
@@ -668,7 +653,7 @@ def harvest_matches(window, elo_engine):
         away_elo_raw = elo_engine.get(away_team)
         
         # Apply 1200 fallback for unrated cup teams, 1450 for unrated league teams
-        is_cup = any(k in league_name.lower() for k in ["cup", "copa", "pokal", "coppa", "uefa.europa.conf"])
+        is_cup = any(k in league_name.lower() for k in ["cup", "copa", "pokal", "coppa", "coupe", "uefa.europa.conf"])
         
         calc_home = (1200 if is_cup else 1450) if home_elo_raw == DEFAULT_ELO else home_elo_raw
         calc_away = (1200 if is_cup else 1450) if away_elo_raw == DEFAULT_ELO else away_elo_raw
