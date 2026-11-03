@@ -41,12 +41,15 @@
 --- 2026-11-04 10:30 AM EST ---
   [TV 1                    ] [UEL]          Stade Rennais vs Olympiacos                (1758 vs 1740) Score: 1731.0 [Paramount+]
 
+--- 2026-11-04 12:00 PM EST ---
+  [Other Screen            ] [Coupe de France] SPORTING CLUB BAIE-MAHAULT vs SIROCO LES ABYMES         (Unrated vs Unrated) Score: 1200.0 [Check listings]
+
 --- 2026-11-04 12:45 PM EST ---
   [TV 1                    ] [UCL]          Fenerbahce vs Liverpool                 (1781 vs 1940) Score: 1701.5 [Paramount+]
   [TV 2                    ] [UCL]          AEK Athens vs Real Madrid               (1700 vs 1986) Score: 1557.0 [Paramount+]
 
 --- 2026-11-04 01:00 PM EST ---
-  [Other Screen            ] [Copa del Rey] Portugalete vs Real Unión Irun           (1870 vs 1496) Score: 1309.0 [Check listings]
+  [Other Screen            ] [Copa del Rey] Portugalete vs Real Unión Irun           (Unrated vs 1496) Score: 1052.0 [Check listings]
 
 --- 2026-11-04 02:00 PM EST ---
   [Other Screen            ] [Copa del Rey] Amorebieta vs UD Logroñés               (1507 vs 1502) Score: 1499.5 [Check listings]
