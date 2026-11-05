@@ -469,12 +469,20 @@ class EloEngine:
         normalized_alias = " ".join(tokens_alias)
         if normalized_alias in self.stripped_ratings:
             return self.stripped_ratings[normalized_alias]
+            
+        # Re-check alias dict in case stripping the noise word revealed a base alias
+        if NAME_ALIASES.get(normalized_alias) in self.stripped_ratings:
+            return self.stripped_ratings[NAME_ALIASES.get(normalized_alias)]
 
         clean_norm_no_punct = clean_norm.replace("-", " ").replace("/", " ").replace(".", "")
         tokens_norm = [t for t in clean_norm_no_punct.split() if t not in noise_words]
         normalized_norm = " ".join(tokens_norm)
         if normalized_norm in self.stripped_ratings:
             return self.stripped_ratings[normalized_norm]
+            
+        # Re-check alias dict for the norm string as well
+        if NAME_ALIASES.get(normalized_norm) in self.stripped_ratings:
+            return self.stripped_ratings[NAME_ALIASES.get(normalized_norm)]
 
         # 5. Condensation check
         condensed = clean_alias.replace("-", "").replace(" ", "").replace("'", "").replace("/", "").replace(".", "")
