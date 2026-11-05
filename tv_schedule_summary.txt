@@ -3,52 +3,11 @@
 ====================================================================================================================
 
 ####################################################################################################################
-###  TODAY'S MATCHES (Wednesday, November 04)
-####################################################################################################################
-
---- 2026-11-04 10:30 AM EST ---
-  [TV 1                    ] [UEL]          Stade Rennais vs Olympiacos                (1758 vs 1740) Score: 1731.0 [Paramount+]
-
---- 2026-11-04 12:00 PM EST ---
-  [Other Screen            ] [Coupe de France] Sporting Club Baie-Mahault vs Siroco Les Abymes         (Unrated vs Unrated) Score: 1200.0 [Check listings]
-
---- 2026-11-04 12:45 PM EST ---
-  [TV 1                    ] [UCL]          Fenerbahce vs Liverpool                 (1781 vs 1940) Score: 1701.5 [Paramount+]
-  [TV 2                    ] [UCL]          AEK Athens vs Real Madrid               (1700 vs 1986) Score: 1557.0 [Paramount+]
-
---- 2026-11-04 01:00 PM EST ---
-  [Other Screen            ] [Copa del Rey] Portugalete vs Real Unión Irun           (Unrated vs 1496) Score: 1052.0 [Check listings]
-
---- 2026-11-04 02:00 PM EST ---
-  [Other Screen            ] [Copa del Rey] Amorebieta vs UD Logroñés               (1507 vs 1502) Score: 1499.5 [Check listings]
-
---- 2026-11-04 02:30 PM EST ---
-  [Other Screen            ] [Belgian Pro]  KV Kortrijk vs KV Mechelen               (1434 vs 1545) Score: 1378.5 [DAZN]
-  [Other Screen            ] [Copa del Rey] Utebo vs CD Sabadell               (1419 vs 1578) Score: 1339.5 [Check listings]
-  [Other Screen            ] [Copa del Rey] CD Minera vs FC Cartagena              (Unrated vs 1514) Score: 1043.0 [Check listings]
-  [Other Screen            ] [Copa del Rey] Reus FC Reddis vs Barakaldo                 (Unrated vs 1531) Score: 1034.5 [Check listings]
-
---- 2026-11-04 02:45 PM EST ---
-  [Other Screen            ] [Championship] Wrexham vs Middlesbrough             (1611 vs 1651) Score: 1591.0 [Paramount+]
-  [Other Screen            ] [Championship] Cardiff City vs West Ham United           (1563 vs 1782) Score: 1453.5 [Paramount+]
-  [Other Screen            ] [Copa del Rey] Calvo Sotelo vs Albacete                  (Unrated vs 1613) Score: 993.5  [Check listings]
-
---- 2026-11-04 03:00 PM EST ---
-  [TV 1                    ] [UCL]          FC Porto vs Napoli                    (1827 vs 1826) Score: 1825.5 [CBSSN, Paramount+]
-  [TV 2                    ] [UCL]          Lens vs Como                      (1805 vs 1815) Score: 1800.0 [Paramount+]
-  [TV 3                    ] [UCL]          Borussia Dortmund vs Real Betis                (1888 vs 1826) Score: 1795.0 [Paramount+]
-  [Other Screen            ] [UCL]          PSV Eindhoven vs Club Brugge               (1784 vs 1832) Score: 1760.0 [Paramount+]
-  [Other Screen            ] [UCL]          RB Leipzig vs Manchester City           (1822 vs 2027) Score: 1719.5 [Paramount+]
-  [Other Screen            ] [UCL]          Slavia Prague vs Arsenal                   (1746 vs 2049) Score: 1594.5 [Paramount+]
-  [Other Screen            ] [Championship] Bristol City vs Wolverhampton Wanderers   (1584 vs 1726) Score: 1513.0 [Paramount+]
-  [Other Screen            ] [UCL]          Viking FK vs Sabah FK                  (1691 vs 1562) Score: 1497.5 [Paramount+]
-
-####################################################################################################################
-###  TOMORROW'S MATCHES (Thursday, November 05)
+###  TODAY'S MATCHES (Thursday, November 05)
 ####################################################################################################################
 
 --- 2026-11-05 12:45 PM EST ---
-  [TV 1                    ] [UEL]          Real Sociedad vs Lyon                      (1791 vs 1794) Score: 1789.5 [Paramount+]
+  [TV 1                    ] [UEL]          Real Sociedad vs Lyon                      (1791 vs 1794) Score: 1789.5 [CBSSN, Paramount+]
   [TV 2                    ] [UEL]          Crystal Palace vs TSG Hoffenheim            (1818 vs 1728) Score: 1683.0 [Paramount+]
   [TV 3                    ] [UECL]         FC Midtjylland vs Ajax Amsterdam            (1720 vs 1689) Score: 1673.5 [Paramount+]
   [Other Screen            ] [UEL]          Anderlecht vs RB Salzburg               (1662 vs 1646) Score: 1638.0 [Paramount+]
@@ -71,7 +30,7 @@
 
 --- 2026-11-05 03:00 PM EST ---
   [TV 1                    ] [UEL]          Celta Vigo vs Union St.-Gilloise        (1755 vs 1813) Score: 1726.0 [Paramount+]
-  [TV 2                    ] [UEL]          Bayer Leverkusen vs Marseille                 (1888 vs 1758) Score: 1693.0 [Paramount+]
+  [TV 2                    ] [UEL]          Bayer Leverkusen vs Marseille                 (1888 vs 1758) Score: 1693.0 [CBSSN, Paramount+]
   [TV 3                    ] [UEL]          Celtic vs Besiktas                  (1692 vs 1693) Score: 1691.5 [Paramount+]
   [Other Screen            ] [UEL]          Sunderland vs Dinamo Zagreb             (1731 vs 1671) Score: 1641.0 [Paramount+]
   [Other Screen            ] [UEL]          AZ Alkmaar vs Juventus                  (1693 vs 1828) Score: 1625.5 [Paramount+]
@@ -89,3 +48,37 @@
   [Other Screen            ] [UECL]         CSU Craiova vs Egnatia                   (1576 vs 1415) Score: 1334.5 [Paramount+]
   [Other Screen            ] [UECL]         FC Lugano vs Kauno Zalgiris            (1635 vs 1398) Score: 1279.5 [Paramount+]
   [Other Screen            ] [UECL]         F.C. København vs Iberia 1999               (1689 vs 1377) Score: 1221.0 [Paramount+]
+
+####################################################################################################################
+###  TOMORROW'S MATCHES (Friday, November 06)
+####################################################################################################################
+
+--- 2026-11-06 12:00 PM EST ---
+  [Other Screen            ] [Süper Lig]    Gaziantep FK vs Kasimpasa                 (1545 vs 1567) Score: 1534.0 [beIN SPORTS]
+
+--- 2026-11-06 12:30 PM EST ---
+  [Other Screen            ] [2. Bundesliga] Dynamo Dresden vs SpVgg Greuther Fürth      (1562 vs 1527) Score: 1509.5 [Check listings]
+  [Other Screen            ] [2. Bundesliga] TSV Eintracht Braunschweig vs Energie Cottbus           (1516 vs 1549) Score: 1499.5 [Check listings]
+
+--- 2026-11-06 02:00 PM EST ---
+  [TV 1 (Look-in) [02:00 PM-02:30 PM (~30m)]] [Eredivisie]   Willem II vs PEC Zwolle                (1414 vs 1472) Score: 1385.0 [ESPN+]
+  [Other Screen            ] [Coupe de France] Olympique De Cayenne vs AS Etoile Matoury         (Unrated vs Unrated) Score: 1200.0 [Check listings]
+
+--- 2026-11-06 02:30 PM EST ---
+  [TV 2                    ] [LALIGA 2]     Castellón vs Eibar                     (1680 vs 1681) Score: 1679.5 [ESPN+]
+  [TV 1 (Look-in) [02:30 PM-03:00 PM (~30m)]] [Bundesliga]   Hamburg SV vs Borussia Mönchengladbach  (1666 vs 1682) Score: 1658.0 [Fandango]
+  [Other Screen            ] [FA Cup]       Bristol Rovers vs Cambridge United          (1391 vs 1476) Score: 1348.5 [Check listings]
+
+--- 2026-11-06 02:45 PM EST ---
+  [TV 3                    ] [Ligue 1]      Toulouse vs Strasbourg                (1684 vs 1731) Score: 1660.5 [beIn Sports]
+  [Other Screen            ] [Serie A]      Venezia vs Udinese                   (1651 vs 1704) Score: 1624.5 [Paramount+]
+  [Other Screen            ] [Belgian Pro]  Standard Liege vs Waasland-Beveren          (1588 vs 1645) Score: 1559.5 [DAZN]
+  [Other Screen            ] [FA Cup]       Oxford City vs Leicester City            (1536 vs 1582) Score: 1513.0 [ESPN+]
+
+--- 2026-11-06 03:00 PM EST ---
+  [TV 1                    ] [LaLiga]       Sevilla vs Alavés                    (1725 vs 1714) Score: 1708.5 [ESPN Deportes, ESPN+]
+  [TV 2 (Look-in) [04:25 PM-04:55 PM (~30m)]] [EPL]          Everton vs Coventry City             (1816 vs 1686) Score: 1621.0 [USA Net, Universo]
+  [Other Screen            ] [Championship] Derby County vs Bolton Wanderers          (1567 vs 1529) Score: 1510.0 [Paramount+]
+
+--- 2026-11-06 03:45 PM EST ---
+  [Other Screen            ] [Liga Portugal] FC Famalicao vs Arouca                    (1602 vs 1563) Score: 1543.5 [DAZN]
