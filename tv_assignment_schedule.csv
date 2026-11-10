@@ -1,10 +1,7 @@
 day_group,match_time_str,tv_assignment,lookin_window,home_team,away_team,home_elo,away_elo,channels,sort_value,league
-TODAY,2026-11-09 02:30 PM EST,Other Screen,,CD Sabadell,Real Sociedad II,1578,1587,Check listings,1573.5,Spanish LALIGA 2
-TODAY,2026-11-09 02:30 PM EST,TV 1,,Las Palmas,Eldense,1677,1591,ESPN+,1548.0,Spanish LALIGA 2
-TODAY,2026-11-09 02:30 PM EST,TV 2,,Plymouth Parkway,Berkhamsted,1546,0,ESPN+,1027.0,English FA Cup
-TOMORROW,2026-11-10 01:00 PM EST,Other Screen,,CD Pamplona,Eibar,0,1681,Check listings,959.5,Spanish Copa del Rey
-TOMORROW,2026-11-10 01:00 PM EST,TV 1,,Anaitasuna,Alavés,0,1714,ESPN+,943.0,Spanish Copa del Rey
-TOMORROW,2026-11-10 02:00 PM EST,Other Screen,,Amorebieta,UD Logroñés,1507,1502,Check listings,1499.5,Spanish Copa del Rey
-TOMORROW,2026-11-10 02:00 PM EST,Other Screen,,Mijas Las Lagunas,Real Jaen CF,0,1573,Check listings,1013.5,Spanish Copa del Rey
-TOMORROW,2026-11-10 02:00 PM EST,Other Screen,,Trival Valderas,Leganés,0,1615,Check listings,992.5,Spanish Copa del Rey
-TOMORROW,2026-11-10 03:00 PM EST,TV 1,,Tavernes de la Valldigna,Valencia,0,1742,ESPN+,929.0,Spanish Copa del Rey
+TODAY,2026-11-10 01:00 PM EST,Other Screen,,CD Pamplona,Eibar,0,1681,Check listings,959.5,Spanish Copa del Rey
+TODAY,2026-11-10 01:00 PM EST,TV 1,,Anaitasuna,Alavés,0,1714,ESPN+,943.0,Spanish Copa del Rey
+TODAY,2026-11-10 02:00 PM EST,Other Screen,,Amorebieta,UD Logroñés,1507,1502,Check listings,1499.5,Spanish Copa del Rey
+TODAY,2026-11-10 02:00 PM EST,Other Screen,,Mijas Las Lagunas,Real Jaen CF,0,1573,Check listings,1013.5,Spanish Copa del Rey
+TODAY,2026-11-10 02:00 PM EST,Other Screen,,Trival Valderas,Leganés,0,1615,Check listings,992.5,Spanish Copa del Rey
+TODAY,2026-11-10 03:00 PM EST,TV 1,,Tavernes de la Valldigna,Valencia,0,1742,ESPN+,929.0,Spanish Copa del Rey
