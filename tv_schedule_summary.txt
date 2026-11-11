@@ -3,17 +3,13 @@
 ====================================================================================================================
 
 ####################################################################################################################
-###  TODAY'S MATCHES (Tuesday, November 10)
+###  TOMORROW'S MATCHES (Thursday, November 12)
 ####################################################################################################################
 
---- 2026-11-10 01:00 PM EST ---
-  [Other Screen            ] [Copa del Rey] CD Pamplona vs Eibar                     (Unrated vs 1681) Score: 959.5  [Check listings]
-  [TV 1                    ] [Copa del Rey] Anaitasuna vs Alavés                    (Unrated vs 1714) Score: 943.0  [ESPN+]
+--- 2026-11-12 12:30 PM EST ---
+  [Other Screen            ] [Copa del Rey] Calvo Sotelo vs Albacete                  (Unrated vs 1613) Score: 993.5  [Check listings]
 
---- 2026-11-10 02:00 PM EST ---
-  [Other Screen            ] [Copa del Rey] Amorebieta vs UD Logroñés               (1507 vs 1502) Score: 1499.5 [Check listings]
-  [Other Screen            ] [Copa del Rey] Mijas Las Lagunas vs Real Jaen CF              (Unrated vs 1573) Score: 1013.5 [Check listings]
-  [Other Screen            ] [Copa del Rey] Trival Valderas vs Leganés                   (Unrated vs 1615) Score: 992.5  [Check listings]
-
---- 2026-11-10 03:00 PM EST ---
-  [TV 1                    ] [Copa del Rey] Tavernes de la Valldigna vs Valencia                  (Unrated vs 1742) Score: 929.0  [ESPN+]
+--- 2026-11-12 01:00 PM EST ---
+  [Other Screen            ] [Coupe de France] Chambéry Savoie vs Grenoble                  (Unrated vs 1512) Score: 1044.0 [Check listings]
+  [Other Screen            ] [Copa del Rey] CD Tarancon vs Levante                   (Unrated vs 1711) Score: 944.5  [Check listings]
+  [TV 1                    ] [Copa del Rey] CD Artistico Navalcarnero vs Real Betis                (Unrated vs 1826) Score: 887.0  [ESPN+]
