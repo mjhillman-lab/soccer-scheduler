@@ -3,13 +3,28 @@
 ====================================================================================================================
 
 ####################################################################################################################
-###  TOMORROW'S MATCHES (Thursday, November 12)
+###  TODAY'S MATCHES (Thursday, November 12)
 ####################################################################################################################
 
 --- 2026-11-12 12:30 PM EST ---
-  [Other Screen            ] [Copa del Rey] Calvo Sotelo vs Albacete                  (Unrated vs 1613) Score: 993.5  [Check listings]
+  [Other Screen            ] [Copa del Rey] CS Puertollano vs Albacete                  (Unrated vs 1613) Score: 993.5  [Check listings]
 
 --- 2026-11-12 01:00 PM EST ---
   [Other Screen            ] [Coupe de France] Chambéry Savoie vs Grenoble                  (Unrated vs 1512) Score: 1044.0 [Check listings]
-  [Other Screen            ] [Copa del Rey] CD Tarancon vs Levante                   (Unrated vs 1711) Score: 944.5  [Check listings]
-  [TV 1                    ] [Copa del Rey] CD Artistico Navalcarnero vs Real Betis                (Unrated vs 1826) Score: 887.0  [ESPN+]
+  [TV 1                    ] [Copa del Rey] CD Tarancon vs Levante                   (Unrated vs 1711) Score: 944.5  [ESPN+]
+  [TV 2                    ] [Copa del Rey] CD Artistico Navalcarnero vs Real Betis                (Unrated vs 1826) Score: 887.0  [ESPN+]
+
+####################################################################################################################
+###  TOMORROW'S MATCHES (Friday, November 13)
+####################################################################################################################
+
+--- 2026-11-13 02:00 PM EST ---
+  [Other Screen            ] [Coupe de France] Dijon FCO vs Orléans                   (1538 vs 1470) Score: 1436.0 [Check listings]
+  [Other Screen            ] [Coupe de France] US Saint-Philbert-de-Grand-Lieu vs La Roche-sur-Yon          (Unrated vs Unrated) Score: 1200.0 [Check listings]
+  [Other Screen            ] [Coupe de France] Neuvillette-Jamin vs Valenciennes              (Unrated vs 1413) Score: 1093.5 [Check listings]
+
+--- 2026-11-13 02:30 PM EST ---
+  [TV 1                    ] [LALIGA 2]     Leganés vs Burgos                    (1615 vs 1655) Score: 1595.0 [ESPN+]
+
+--- 2026-11-13 03:00 PM EST ---
+  [TV 2                    ] [Copa del Rey] Salamanca UDS vs Celta Vigo                (Unrated vs 1755) Score: 922.5  [ESPN+]

@@ -1,5 +1,10 @@
 day_group,match_time_str,tv_assignment,lookin_window,home_team,away_team,home_elo,away_elo,channels,sort_value,league
-TOMORROW,2026-11-12 12:30 PM EST,Other Screen,,Calvo Sotelo,Albacete,0,1613,Check listings,993.5,Spanish Copa del Rey
-TOMORROW,2026-11-12 01:00 PM EST,Other Screen,,Chambéry Savoie,Grenoble,0,1512,Check listings,1044.0,Coupe de France
-TOMORROW,2026-11-12 01:00 PM EST,Other Screen,,CD Tarancon,Levante,0,1711,Check listings,944.5,Spanish Copa del Rey
-TOMORROW,2026-11-12 01:00 PM EST,TV 1,,CD Artistico Navalcarnero,Real Betis,0,1826,ESPN+,887.0,Spanish Copa del Rey
+TODAY,2026-11-12 12:30 PM EST,Other Screen,,CS Puertollano,Albacete,0,1613,Check listings,993.5,Spanish Copa del Rey
+TODAY,2026-11-12 01:00 PM EST,Other Screen,,Chambéry Savoie,Grenoble,0,1512,Check listings,1044.0,Coupe de France
+TODAY,2026-11-12 01:00 PM EST,TV 1,,CD Tarancon,Levante,0,1711,ESPN+,944.5,Spanish Copa del Rey
+TODAY,2026-11-12 01:00 PM EST,TV 2,,CD Artistico Navalcarnero,Real Betis,0,1826,ESPN+,887.0,Spanish Copa del Rey
+TOMORROW,2026-11-13 02:00 PM EST,Other Screen,,Dijon FCO,Orléans,1538,1470,Check listings,1436.0,Coupe de France
+TOMORROW,2026-11-13 02:00 PM EST,Other Screen,,US Saint-Philbert-de-Grand-Lieu,La Roche-sur-Yon,0,0,Check listings,1200.0,Coupe de France
+TOMORROW,2026-11-13 02:00 PM EST,Other Screen,,Neuvillette-Jamin,Valenciennes,0,1413,Check listings,1093.5,Coupe de France
+TOMORROW,2026-11-13 02:30 PM EST,TV 1,,Leganés,Burgos,1615,1655,ESPN+,1595.0,Spanish LALIGA 2
+TOMORROW,2026-11-13 03:00 PM EST,TV 2,,Salamanca UDS,Celta Vigo,0,1755,ESPN+,922.5,Spanish Copa del Rey
