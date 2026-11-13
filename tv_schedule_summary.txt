@@ -3,19 +3,7 @@
 ====================================================================================================================
 
 ####################################################################################################################
-###  TODAY'S MATCHES (Thursday, November 12)
-####################################################################################################################
-
---- 2026-11-12 12:30 PM EST ---
-  [Other Screen            ] [Copa del Rey] CS Puertollano vs Albacete                  (Unrated vs 1613) Score: 993.5  [Check listings]
-
---- 2026-11-12 01:00 PM EST ---
-  [Other Screen            ] [Coupe de France] Chambéry Savoie vs Grenoble                  (Unrated vs 1512) Score: 1044.0 [Check listings]
-  [TV 1                    ] [Copa del Rey] CD Tarancon vs Levante                   (Unrated vs 1711) Score: 944.5  [ESPN+]
-  [TV 2                    ] [Copa del Rey] CD Artistico Navalcarnero vs Real Betis                (Unrated vs 1826) Score: 887.0  [ESPN+]
-
-####################################################################################################################
-###  TOMORROW'S MATCHES (Friday, November 13)
+###  TODAY'S MATCHES (Friday, November 13)
 ####################################################################################################################
 
 --- 2026-11-13 02:00 PM EST ---
@@ -28,3 +16,91 @@
 
 --- 2026-11-13 03:00 PM EST ---
   [TV 2                    ] [Copa del Rey] Salamanca UDS vs Celta Vigo                (Unrated vs 1755) Score: 922.5  [ESPN+]
+
+####################################################################################################################
+###  TOMORROW'S MATCHES (Saturday, November 14)
+####################################################################################################################
+
+--- 2026-11-14 08:00 AM EST ---
+  [TV 1                    ] [LALIGA 2]     Real Valladolid vs Castellón                 (1544 vs 1680) Score: 1476.0 [ESPN+]
+  [Other Screen            ] [Coupe de France] Versailles 78 vs Rodez Aveyron             (1482 vs 1573) Score: 1436.5 [Check listings]
+  [Other Screen            ] [Coupe de France] Saint-Pauloise FC vs La Tamponnaise            (Unrated vs Unrated) Score: 1200.0 [Check listings]
+  [Other Screen            ] [Coupe de France] Le Puy vs Diables Noirs             (1491 vs Unrated) Score: 1054.5 [Check listings]
+  [Other Screen            ] [Coupe de France] Balagne vs Montpellier               (Unrated vs 1578) Score: 1011.0 [Check listings]
+  [Other Screen            ] [Coupe de France] Tourcoing vs Stade de Reims            (Unrated vs 1636) Score: 982.0  [Check listings]
+
+--- 2026-11-14 08:30 AM EST ---
+  [Other Screen            ] [Coupe de France] CA Boulay vs Sochaux                   (Unrated vs 1517) Score: 1041.5 [Check listings]
+
+--- 2026-11-14 09:00 AM EST ---
+  [Other Screen            ] [Coupe de France] Rhone Crussol Foot vs Frejus                    (Unrated vs Unrated) Score: 1200.0 [Check listings]
+
+--- 2026-11-14 10:00 AM EST ---
+  [Other Screen            ] [Coupe de France] Chalon-sur-Saone vs Hauts Lyonnais            (Unrated vs Unrated) Score: 1200.0 [Check listings]
+  [Other Screen            ] [Coupe de France] Choisy Au Bac vs Caen                      (Unrated vs 1470) Score: 1065.0 [Check listings]
+  [Other Screen            ] [Coupe de France] Fontenay Foot vs Clermont Foot             (Unrated vs 1498) Score: 1051.0 [Check listings]
+
+--- 2026-11-14 10:15 AM EST ---
+  [TV 1                    ] [LALIGA 2]     Real Sociedad II vs Sporting Gijón            (1587 vs 1621) Score: 1570.0 [ESPN+]
+
+--- 2026-11-14 11:00 AM EST ---
+  [Other Screen            ] [Coupe de France] IC Croix vs ES Thaon                  (Unrated vs Unrated) Score: 1200.0 [Check listings]
+  [Other Screen            ] [Coupe de France] Le Poire SV vs Vertou                    (Unrated vs Unrated) Score: 1200.0 [Check listings]
+  [Other Screen            ] [Coupe de France] Saint Sebastien vs La Baule-Le Pouliguen     (Unrated vs Unrated) Score: 1200.0 [Check listings]
+  [Other Screen            ] [Coupe de France] Pont-de-Cheruy vs Bourg-Peronnas            (Unrated vs 1360) Score: 1120.0 [Check listings]
+  [Other Screen            ] [Coupe de France] Tinteniac St Domineuc vs Concarneau                (Unrated vs 1447) Score: 1076.5 [Check listings]
+  [Other Screen            ] [Coupe de France] Firminy vs Annecy                    (Unrated vs 1563) Score: 1018.5 [Check listings]
+
+--- 2026-11-14 11:30 AM EST ---
+  [Other Screen            ] [Coupe de France] Koetzingue vs Biesheim                  (Unrated vs Unrated) Score: 1200.0 [Check listings]
+
+--- 2026-11-14 12:00 PM EST ---
+  [Other Screen            ] [Coupe de France] Dunkerque vs US Quevilly               (1539 vs 1431) Score: 1377.0 [Check listings]
+  [Other Screen            ] [Coupe de France] Amneville vs Sundhoffen                (Unrated vs Unrated) Score: 1200.0 [Check listings]
+  [Other Screen            ] [Coupe de France] Chateaubriant vs Horizon Patho             (Unrated vs Unrated) Score: 1200.0 [Check listings]
+  [Other Screen            ] [Coupe de France] Contres vs ESA Linas-Montlhery       (Unrated vs Unrated) Score: 1200.0 [Check listings]
+  [Other Screen            ] [Coupe de France] Cournon vs Chassieu Declines FC      (Unrated vs Unrated) Score: 1200.0 [Check listings]
+  [Other Screen            ] [Coupe de France] Grau-Du-Roi vs Riviera                   (Unrated vs Unrated) Score: 1200.0 [Check listings]
+  [Other Screen            ] [Coupe de France] Le Touquet vs Avranches                 (Unrated vs Unrated) Score: 1200.0 [Check listings]
+  [Other Screen            ] [Coupe de France] Lyon-la-Duchere vs US Feurs                  (Unrated vs Unrated) Score: 1200.0 [Check listings]
+  [Other Screen            ] [Coupe de France] Pays de Saint-Omer vs AF Virois                 (Unrated vs Unrated) Score: 1200.0 [Check listings]
+  [Other Screen            ] [Coupe de France] Racing Besancon vs Am. du Personnel Municipal Metz (Unrated vs Unrated) Score: 1200.0 [Check listings]
+  [Other Screen            ] [Coupe de France] Sag Cestas vs Bayonne                   (Unrated vs Unrated) Score: 1200.0 [Check listings]
+  [Other Screen            ] [Coupe de France] Vitre vs Saint-Pierre Milizac      (Unrated vs Unrated) Score: 1200.0 [Check listings]
+  [Other Screen            ] [Coupe de France] US Cheminots Paray-Foot vs Villefranche              (Unrated vs 1394) Score: 1103.0 [Check listings]
+  [Other Screen            ] [Coupe de France] Caen vs FC Chambly                (1470 vs Unrated) Score: 1065.0 [Check listings]
+  [Other Screen            ] [Coupe de France] St-Ouen L'Aumone vs Boulogne                  (Unrated vs 1484) Score: 1058.0 [Check listings]
+  [Other Screen            ] [Coupe de France] Stade Béthunois vs AS Nancy Lorraine         (Unrated vs 1491) Score: 1054.5 [Check listings]
+  [Other Screen            ] [Coupe de France] Vesoul vs FC Fleury 91              (Unrated vs 1520) Score: 1040.0 [Check listings]
+  [Other Screen            ] [Coupe de France] Saint-Brieuc vs Rouen                     (Unrated vs 1527) Score: 1036.5 [Check listings]
+  [Other Screen            ] [Coupe de France] Asptt Dijon vs Selongey                  (1538 vs Unrated) Score: 1031.0 [Check listings]
+  [Other Screen            ] [Coupe de France] Strasbourg Koenigshoffen vs Oberlauterbach            (1731 vs Unrated) Score: 934.5  [Check listings]
+  [Other Screen            ] [Coupe de France] GSI Pontivy vs Rennes TA                 (Unrated vs 1758) Score: 921.0  [Check listings]
+
+--- 2026-11-14 12:30 PM EST ---
+  [TV 1                    ] [LALIGA 2]     Almería vs FC Andorra                (1682 vs 1593) Score: 1548.5 [ESPN+]
+  [TV 2                    ] [LALIGA 2]     Mallorca vs Córdoba                   (1720 vs 1594) Score: 1531.0 [ESPN+]
+  [Other Screen            ] [Coupe de France] Balma vs Castanet                  (Unrated vs Unrated) Score: 1200.0 [Check listings]
+
+--- 2026-11-14 01:00 PM EST ---
+  [Other Screen            ] [Coupe de France] Avenir Foot Lozere vs Entente Crest-Aouste      (Unrated vs Unrated) Score: 1200.0 [Check listings]
+  [Other Screen            ] [Coupe de France] Boulazac vs Anglet Genets             (Unrated vs Unrated) Score: 1200.0 [Check listings]
+  [Other Screen            ] [Coupe de France] Bressuire vs FC Challans               (Unrated vs Unrated) Score: 1200.0 [Check listings]
+  [Other Screen            ] [Coupe de France] Brive vs Angouleme                 (Unrated vs Unrated) Score: 1200.0 [Check listings]
+  [Other Screen            ] [Coupe de France] Cercle Paul Bert Brequigny Football vs Montlucon Football        (Unrated vs Unrated) Score: 1200.0 [Check listings]
+  [Other Screen            ] [Coupe de France] Chauny vs Le Pays Du Valois         (Unrated vs Unrated) Score: 1200.0 [Check listings]
+  [Other Screen            ] [Coupe de France] Claira / St Laurent vs Puissalicon Magalas       (Unrated vs Unrated) Score: 1200.0 [Check listings]
+  [Other Screen            ] [Coupe de France] ES Buxerolles vs Sablé FC                  (Unrated vs Unrated) Score: 1200.0 [Check listings]
+  [Other Screen            ] [Coupe de France] St Andre St Macaire vs Nueillaubiers             (Unrated vs Unrated) Score: 1200.0 [Check listings]
+  [Other Screen            ] [Coupe de France] Stade Bordelais vs Mazeres Uzos Rontignon    (Unrated vs Unrated) Score: 1200.0 [Check listings]
+  [Other Screen            ] [Coupe de France] FC Lourdes vs Pau                       (Unrated vs 1488) Score: 1056.0 [Check listings]
+  [Other Screen            ] [Coupe de France] Lannion vs Guingamp                  (Unrated vs 1530) Score: 1035.0 [Check listings]
+
+--- 2026-11-14 02:00 PM EST ---
+  [Other Screen            ] [Coupe de France] Olympique des Membres de Cambrai Amerique vs SC Amiens                 (Unrated vs 1456) Score: 1072.0 [Check listings]
+
+--- 2026-11-14 03:00 PM EST ---
+  [TV 1                    ] [LALIGA 2]     Real Oviedo vs Girona                    (1649 vs 1724) Score: 1611.5 [ESPN+]
+
+--- 2026-11-14 11:00 PM EST ---
+  [Other Screen            ] [Coupe de France] AS Tefana vs Thionville                (Unrated vs 1545) Score: 1027.5 [Check listings]
