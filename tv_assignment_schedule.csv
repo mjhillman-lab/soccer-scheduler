@@ -1,64 +1,95 @@
 day_group,match_time_str,tv_assignment,lookin_window,home_team,away_team,home_elo,away_elo,channels,sort_value,league
-TODAY,2026-11-13 02:00 PM EST,Other Screen,,Dijon FCO,Orléans,1538,1470,Check listings,1436.0,Coupe de France
-TODAY,2026-11-13 02:00 PM EST,Other Screen,,US Saint-Philbert-de-Grand-Lieu,La Roche-sur-Yon,0,0,Check listings,1200.0,Coupe de France
-TODAY,2026-11-13 02:00 PM EST,Other Screen,,Neuvillette-Jamin,Valenciennes,0,1413,Check listings,1093.5,Coupe de France
-TODAY,2026-11-13 02:30 PM EST,TV 1,,Leganés,Burgos,1615,1655,ESPN+,1595.0,Spanish LALIGA 2
-TODAY,2026-11-13 03:00 PM EST,TV 2,,Salamanca UDS,Celta Vigo,0,1755,ESPN+,922.5,Spanish Copa del Rey
-TOMORROW,2026-11-14 08:00 AM EST,TV 1,,Real Valladolid,Castellón,1544,1680,ESPN+,1476.0,Spanish LALIGA 2
-TOMORROW,2026-11-14 08:00 AM EST,Other Screen,,Versailles 78,Rodez Aveyron,1482,1573,Check listings,1436.5,Coupe de France
-TOMORROW,2026-11-14 08:00 AM EST,Other Screen,,Saint-Pauloise FC,La Tamponnaise,0,0,Check listings,1200.0,Coupe de France
-TOMORROW,2026-11-14 08:00 AM EST,Other Screen,,Le Puy,Diables Noirs,1491,0,Check listings,1054.5,Coupe de France
-TOMORROW,2026-11-14 08:00 AM EST,Other Screen,,Balagne,Montpellier,0,1578,Check listings,1011.0,Coupe de France
-TOMORROW,2026-11-14 08:00 AM EST,Other Screen,,Tourcoing,Stade de Reims,0,1636,Check listings,982.0,Coupe de France
-TOMORROW,2026-11-14 08:30 AM EST,Other Screen,,CA Boulay,Sochaux,0,1517,Check listings,1041.5,Coupe de France
-TOMORROW,2026-11-14 09:00 AM EST,Other Screen,,Rhone Crussol Foot,Frejus,0,0,Check listings,1200.0,Coupe de France
-TOMORROW,2026-11-14 10:00 AM EST,Other Screen,,Chalon-sur-Saone,Hauts Lyonnais,0,0,Check listings,1200.0,Coupe de France
-TOMORROW,2026-11-14 10:00 AM EST,Other Screen,,Choisy Au Bac,Caen,0,1470,Check listings,1065.0,Coupe de France
-TOMORROW,2026-11-14 10:00 AM EST,Other Screen,,Fontenay Foot,Clermont Foot,0,1498,Check listings,1051.0,Coupe de France
-TOMORROW,2026-11-14 10:15 AM EST,TV 1,,Real Sociedad II,Sporting Gijón,1587,1621,ESPN+,1570.0,Spanish LALIGA 2
-TOMORROW,2026-11-14 11:00 AM EST,Other Screen,,IC Croix,ES Thaon,0,0,Check listings,1200.0,Coupe de France
-TOMORROW,2026-11-14 11:00 AM EST,Other Screen,,Le Poire SV,Vertou,0,0,Check listings,1200.0,Coupe de France
-TOMORROW,2026-11-14 11:00 AM EST,Other Screen,,Saint Sebastien,La Baule-Le Pouliguen,0,0,Check listings,1200.0,Coupe de France
-TOMORROW,2026-11-14 11:00 AM EST,Other Screen,,Pont-de-Cheruy,Bourg-Peronnas,0,1360,Check listings,1120.0,Coupe de France
-TOMORROW,2026-11-14 11:00 AM EST,Other Screen,,Tinteniac St Domineuc,Concarneau,0,1447,Check listings,1076.5,Coupe de France
-TOMORROW,2026-11-14 11:00 AM EST,Other Screen,,Firminy,Annecy,0,1563,Check listings,1018.5,Coupe de France
-TOMORROW,2026-11-14 11:30 AM EST,Other Screen,,Koetzingue,Biesheim,0,0,Check listings,1200.0,Coupe de France
-TOMORROW,2026-11-14 12:00 PM EST,Other Screen,,Dunkerque,US Quevilly,1539,1431,Check listings,1377.0,Coupe de France
-TOMORROW,2026-11-14 12:00 PM EST,Other Screen,,Amneville,Sundhoffen,0,0,Check listings,1200.0,Coupe de France
-TOMORROW,2026-11-14 12:00 PM EST,Other Screen,,Chateaubriant,Horizon Patho,0,0,Check listings,1200.0,Coupe de France
-TOMORROW,2026-11-14 12:00 PM EST,Other Screen,,Contres,ESA Linas-Montlhery,0,0,Check listings,1200.0,Coupe de France
-TOMORROW,2026-11-14 12:00 PM EST,Other Screen,,Cournon,Chassieu Declines FC,0,0,Check listings,1200.0,Coupe de France
-TOMORROW,2026-11-14 12:00 PM EST,Other Screen,,Grau-Du-Roi,Riviera,0,0,Check listings,1200.0,Coupe de France
-TOMORROW,2026-11-14 12:00 PM EST,Other Screen,,Le Touquet,Avranches,0,0,Check listings,1200.0,Coupe de France
-TOMORROW,2026-11-14 12:00 PM EST,Other Screen,,Lyon-la-Duchere,US Feurs,0,0,Check listings,1200.0,Coupe de France
-TOMORROW,2026-11-14 12:00 PM EST,Other Screen,,Pays de Saint-Omer,AF Virois,0,0,Check listings,1200.0,Coupe de France
-TOMORROW,2026-11-14 12:00 PM EST,Other Screen,,Racing Besancon,Am. du Personnel Municipal Metz,0,0,Check listings,1200.0,Coupe de France
-TOMORROW,2026-11-14 12:00 PM EST,Other Screen,,Sag Cestas,Bayonne,0,0,Check listings,1200.0,Coupe de France
-TOMORROW,2026-11-14 12:00 PM EST,Other Screen,,Vitre,Saint-Pierre Milizac,0,0,Check listings,1200.0,Coupe de France
-TOMORROW,2026-11-14 12:00 PM EST,Other Screen,,US Cheminots Paray-Foot,Villefranche,0,1394,Check listings,1103.0,Coupe de France
-TOMORROW,2026-11-14 12:00 PM EST,Other Screen,,Caen,FC Chambly,1470,0,Check listings,1065.0,Coupe de France
-TOMORROW,2026-11-14 12:00 PM EST,Other Screen,,St-Ouen L'Aumone,Boulogne,0,1484,Check listings,1058.0,Coupe de France
-TOMORROW,2026-11-14 12:00 PM EST,Other Screen,,Stade Béthunois,AS Nancy Lorraine,0,1491,Check listings,1054.5,Coupe de France
-TOMORROW,2026-11-14 12:00 PM EST,Other Screen,,Vesoul,FC Fleury 91,0,1520,Check listings,1040.0,Coupe de France
-TOMORROW,2026-11-14 12:00 PM EST,Other Screen,,Saint-Brieuc,Rouen,0,1527,Check listings,1036.5,Coupe de France
-TOMORROW,2026-11-14 12:00 PM EST,Other Screen,,Asptt Dijon,Selongey,1538,0,Check listings,1031.0,Coupe de France
-TOMORROW,2026-11-14 12:00 PM EST,Other Screen,,Strasbourg Koenigshoffen,Oberlauterbach,1731,0,Check listings,934.5,Coupe de France
-TOMORROW,2026-11-14 12:00 PM EST,Other Screen,,GSI Pontivy,Rennes TA,0,1758,Check listings,921.0,Coupe de France
-TOMORROW,2026-11-14 12:30 PM EST,TV 1,,Almería,FC Andorra,1682,1593,ESPN+,1548.5,Spanish LALIGA 2
-TOMORROW,2026-11-14 12:30 PM EST,TV 2,,Mallorca,Córdoba,1720,1594,ESPN+,1531.0,Spanish LALIGA 2
-TOMORROW,2026-11-14 12:30 PM EST,Other Screen,,Balma,Castanet,0,0,Check listings,1200.0,Coupe de France
-TOMORROW,2026-11-14 01:00 PM EST,Other Screen,,Avenir Foot Lozere,Entente Crest-Aouste,0,0,Check listings,1200.0,Coupe de France
-TOMORROW,2026-11-14 01:00 PM EST,Other Screen,,Boulazac,Anglet Genets,0,0,Check listings,1200.0,Coupe de France
-TOMORROW,2026-11-14 01:00 PM EST,Other Screen,,Bressuire,FC Challans,0,0,Check listings,1200.0,Coupe de France
-TOMORROW,2026-11-14 01:00 PM EST,Other Screen,,Brive,Angouleme,0,0,Check listings,1200.0,Coupe de France
-TOMORROW,2026-11-14 01:00 PM EST,Other Screen,,Cercle Paul Bert Brequigny Football,Montlucon Football,0,0,Check listings,1200.0,Coupe de France
-TOMORROW,2026-11-14 01:00 PM EST,Other Screen,,Chauny,Le Pays Du Valois,0,0,Check listings,1200.0,Coupe de France
-TOMORROW,2026-11-14 01:00 PM EST,Other Screen,,Claira / St Laurent,Puissalicon Magalas,0,0,Check listings,1200.0,Coupe de France
-TOMORROW,2026-11-14 01:00 PM EST,Other Screen,,ES Buxerolles,Sablé FC,0,0,Check listings,1200.0,Coupe de France
-TOMORROW,2026-11-14 01:00 PM EST,Other Screen,,St Andre St Macaire,Nueillaubiers,0,0,Check listings,1200.0,Coupe de France
-TOMORROW,2026-11-14 01:00 PM EST,Other Screen,,Stade Bordelais,Mazeres Uzos Rontignon,0,0,Check listings,1200.0,Coupe de France
-TOMORROW,2026-11-14 01:00 PM EST,Other Screen,,FC Lourdes,Pau,0,1488,Check listings,1056.0,Coupe de France
-TOMORROW,2026-11-14 01:00 PM EST,Other Screen,,Lannion,Guingamp,0,1530,Check listings,1035.0,Coupe de France
-TOMORROW,2026-11-14 02:00 PM EST,Other Screen,,Olympique des Membres de Cambrai Amerique,SC Amiens,0,1456,Check listings,1072.0,Coupe de France
-TOMORROW,2026-11-14 03:00 PM EST,TV 1,,Real Oviedo,Girona,1649,1724,ESPN+,1611.5,Spanish LALIGA 2
-TOMORROW,2026-11-14 11:00 PM EST,Other Screen,,AS Tefana,Thionville,0,1545,Check listings,1027.5,Coupe de France
+TODAY,2026-11-14 08:00 AM EST,TV 1,,Real Valladolid,Castellón,1544,1680,ESPN+,1476.0,Spanish LALIGA 2
+TODAY,2026-11-14 08:00 AM EST,Other Screen,,Versailles 78,Rodez Aveyron,1482,1573,Check listings,1436.5,Coupe de France
+TODAY,2026-11-14 08:00 AM EST,Other Screen,,Saint-Pauloise FC,La Tamponnaise,0,0,Check listings,1200.0,Coupe de France
+TODAY,2026-11-14 08:00 AM EST,Other Screen,,Le Puy,Diables Noirs,1491,0,Check listings,1054.5,Coupe de France
+TODAY,2026-11-14 08:00 AM EST,Other Screen,,Balagne,Montpellier,0,1578,Check listings,1011.0,Coupe de France
+TODAY,2026-11-14 08:00 AM EST,Other Screen,,Tourcoing,Stade de Reims,0,1636,Check listings,982.0,Coupe de France
+TODAY,2026-11-14 08:30 AM EST,Other Screen,,CA Boulay,Sochaux,0,1517,Check listings,1041.5,Coupe de France
+TODAY,2026-11-14 09:00 AM EST,Other Screen,,Rhone Crussol Foot,Frejus,0,0,Check listings,1200.0,Coupe de France
+TODAY,2026-11-14 10:00 AM EST,Other Screen,,Chalon-sur-Saone,Hauts Lyonnais,0,0,Check listings,1200.0,Coupe de France
+TODAY,2026-11-14 10:00 AM EST,Other Screen,,Choisy Au Bac,Caen,0,1470,Check listings,1065.0,Coupe de France
+TODAY,2026-11-14 10:00 AM EST,Other Screen,,Fontenay Foot,Clermont Foot,0,1498,Check listings,1051.0,Coupe de France
+TODAY,2026-11-14 10:15 AM EST,TV 1,,Real Sociedad II,Sporting Gijón,1587,1621,ESPN+,1570.0,Spanish LALIGA 2
+TODAY,2026-11-14 11:00 AM EST,Other Screen,,IC Croix,ES Thaon,0,0,Check listings,1200.0,Coupe de France
+TODAY,2026-11-14 11:00 AM EST,Other Screen,,Le Poire SV,Vertou,0,0,Check listings,1200.0,Coupe de France
+TODAY,2026-11-14 11:00 AM EST,Other Screen,,Saint Sebastien,La Baule-Le Pouliguen,0,0,Check listings,1200.0,Coupe de France
+TODAY,2026-11-14 11:00 AM EST,Other Screen,,Pont-de-Cheruy,Bourg-Peronnas,0,1360,Check listings,1120.0,Coupe de France
+TODAY,2026-11-14 11:00 AM EST,Other Screen,,Tinteniac St Domineuc,Concarneau,0,1447,Check listings,1076.5,Coupe de France
+TODAY,2026-11-14 11:00 AM EST,Other Screen,,Firminy,Annecy,0,1563,Check listings,1018.5,Coupe de France
+TODAY,2026-11-14 11:30 AM EST,Other Screen,,Koetzingue,Biesheim,0,0,Check listings,1200.0,Coupe de France
+TODAY,2026-11-14 12:00 PM EST,Other Screen,,Dunkerque,US Quevilly,1539,1431,Check listings,1377.0,Coupe de France
+TODAY,2026-11-14 12:00 PM EST,Other Screen,,Amneville,Sundhoffen,0,0,Check listings,1200.0,Coupe de France
+TODAY,2026-11-14 12:00 PM EST,Other Screen,,Chateaubriant,Horizon Patho,0,0,Check listings,1200.0,Coupe de France
+TODAY,2026-11-14 12:00 PM EST,Other Screen,,Contres,ESA Linas-Montlhery,0,0,Check listings,1200.0,Coupe de France
+TODAY,2026-11-14 12:00 PM EST,Other Screen,,Cournon,Chassieu Declines FC,0,0,Check listings,1200.0,Coupe de France
+TODAY,2026-11-14 12:00 PM EST,Other Screen,,Grau-Du-Roi,Riviera,0,0,Check listings,1200.0,Coupe de France
+TODAY,2026-11-14 12:00 PM EST,Other Screen,,Le Touquet,Avranches,0,0,Check listings,1200.0,Coupe de France
+TODAY,2026-11-14 12:00 PM EST,Other Screen,,Lyon-la-Duchere,US Feurs,0,0,Check listings,1200.0,Coupe de France
+TODAY,2026-11-14 12:00 PM EST,Other Screen,,Pays de Saint-Omer,AF Virois,0,0,Check listings,1200.0,Coupe de France
+TODAY,2026-11-14 12:00 PM EST,Other Screen,,Racing Besancon,Am. du Personnel Municipal Metz,0,0,Check listings,1200.0,Coupe de France
+TODAY,2026-11-14 12:00 PM EST,Other Screen,,Sag Cestas,Bayonne,0,0,Check listings,1200.0,Coupe de France
+TODAY,2026-11-14 12:00 PM EST,Other Screen,,Vitre,Saint-Pierre Milizac,0,0,Check listings,1200.0,Coupe de France
+TODAY,2026-11-14 12:00 PM EST,Other Screen,,US Cheminots Paray-Foot,Villefranche,0,1394,Check listings,1103.0,Coupe de France
+TODAY,2026-11-14 12:00 PM EST,Other Screen,,Caen,FC Chambly,1470,0,Check listings,1065.0,Coupe de France
+TODAY,2026-11-14 12:00 PM EST,Other Screen,,St-Ouen L'Aumone,Boulogne,0,1484,Check listings,1058.0,Coupe de France
+TODAY,2026-11-14 12:00 PM EST,Other Screen,,Stade Béthunois,AS Nancy Lorraine,0,1491,Check listings,1054.5,Coupe de France
+TODAY,2026-11-14 12:00 PM EST,Other Screen,,Vesoul,FC Fleury 91,0,1520,Check listings,1040.0,Coupe de France
+TODAY,2026-11-14 12:00 PM EST,Other Screen,,Saint-Brieuc,Rouen,0,1527,Check listings,1036.5,Coupe de France
+TODAY,2026-11-14 12:00 PM EST,Other Screen,,Asptt Dijon,Selongey,1538,0,Check listings,1031.0,Coupe de France
+TODAY,2026-11-14 12:00 PM EST,Other Screen,,Strasbourg Koenigshoffen,Oberlauterbach,1731,0,Check listings,934.5,Coupe de France
+TODAY,2026-11-14 12:00 PM EST,Other Screen,,GSI Pontivy,Rennes TA,0,1758,Check listings,921.0,Coupe de France
+TODAY,2026-11-14 12:30 PM EST,TV 1,,Almería,FC Andorra,1682,1593,ESPN+,1548.5,Spanish LALIGA 2
+TODAY,2026-11-14 12:30 PM EST,TV 2,,Mallorca,Córdoba,1720,1594,ESPN+,1531.0,Spanish LALIGA 2
+TODAY,2026-11-14 12:30 PM EST,Other Screen,,Balma,Castanet,0,0,Check listings,1200.0,Coupe de France
+TODAY,2026-11-14 01:00 PM EST,Other Screen,,Avenir Foot Lozere,Entente Crest-Aouste,0,0,Check listings,1200.0,Coupe de France
+TODAY,2026-11-14 01:00 PM EST,Other Screen,,Boulazac,Anglet Genets,0,0,Check listings,1200.0,Coupe de France
+TODAY,2026-11-14 01:00 PM EST,Other Screen,,Bressuire,FC Challans,0,0,Check listings,1200.0,Coupe de France
+TODAY,2026-11-14 01:00 PM EST,Other Screen,,Brive,Angouleme,0,0,Check listings,1200.0,Coupe de France
+TODAY,2026-11-14 01:00 PM EST,Other Screen,,Cercle Paul Bert Brequigny Football,Montlucon Football,0,0,Check listings,1200.0,Coupe de France
+TODAY,2026-11-14 01:00 PM EST,Other Screen,,Chauny,Le Pays Du Valois,0,0,Check listings,1200.0,Coupe de France
+TODAY,2026-11-14 01:00 PM EST,Other Screen,,Claira / St Laurent,Puissalicon Magalas,0,0,Check listings,1200.0,Coupe de France
+TODAY,2026-11-14 01:00 PM EST,Other Screen,,ES Buxerolles,Sablé FC,0,0,Check listings,1200.0,Coupe de France
+TODAY,2026-11-14 01:00 PM EST,Other Screen,,St Andre St Macaire,Nueillaubiers,0,0,Check listings,1200.0,Coupe de France
+TODAY,2026-11-14 01:00 PM EST,Other Screen,,Stade Bordelais,Mazeres Uzos Rontignon,0,0,Check listings,1200.0,Coupe de France
+TODAY,2026-11-14 01:00 PM EST,Other Screen,,FC Lourdes,Pau,0,1488,Check listings,1056.0,Coupe de France
+TODAY,2026-11-14 01:00 PM EST,Other Screen,,Lannion,Guingamp,0,1530,Check listings,1035.0,Coupe de France
+TODAY,2026-11-14 02:00 PM EST,Other Screen,,Olympique des Membres de Cambrai Amerique,SC Amiens,0,1456,Check listings,1072.0,Coupe de France
+TODAY,2026-11-14 03:00 PM EST,TV 1,,Real Oviedo,Girona,1649,1724,ESPN+,1611.5,Spanish LALIGA 2
+TODAY,2026-11-14 11:00 PM EST,Other Screen,,AS Tefana,Thionville,0,1545,Check listings,1027.5,Coupe de France
+TOMORROW,2026-11-15 08:00 AM EST,TV 1,,Tenerife,Ceuta,1632,1560,ESPN+,1524.0,Spanish LALIGA 2
+TOMORROW,2026-11-15 08:00 AM EST,Other Screen,,Paris 13 Atletico,Red Star FC 93,1381,1572,Check listings,1285.5,Coupe de France
+TOMORROW,2026-11-15 08:00 AM EST,Other Screen,,Chatou,Les Ulis,0,0,Check listings,1200.0,Coupe de France
+TOMORROW,2026-11-15 08:00 AM EST,Other Screen,,ESAP Metz,Reipertswiller,0,0,Check listings,1200.0,Coupe de France
+TOMORROW,2026-11-15 08:00 AM EST,Other Screen,,Massay,Montlouis,0,0,Check listings,1200.0,Coupe de France
+TOMORROW,2026-11-15 08:00 AM EST,Other Screen,,Montigny-Les-Metz,Pontarlier,0,0,Check listings,1200.0,Coupe de France
+TOMORROW,2026-11-15 08:00 AM EST,Other Screen,,Montreuil FC,Loon Plage FC,0,0,Check listings,1200.0,Coupe de France
+TOMORROW,2026-11-15 08:00 AM EST,Other Screen,,Neslois,Furiani-Agliani,0,0,Check listings,1200.0,Coupe de France
+TOMORROW,2026-11-15 08:00 AM EST,Other Screen,,Olympique Charleville Prix AM,Olympique Marcquois,0,0,Check listings,1200.0,Coupe de France
+TOMORROW,2026-11-15 08:00 AM EST,Other Screen,,Racing Chambery,Chamois Niortais FC,0,0,Check listings,1200.0,Coupe de France
+TOMORROW,2026-11-15 08:00 AM EST,Other Screen,,RIOM,FC Limonest,0,0,Check listings,1200.0,Coupe de France
+TOMORROW,2026-11-15 08:00 AM EST,Other Screen,,Rives 82,Trelissac FC,0,0,Check listings,1200.0,Coupe de France
+TOMORROW,2026-11-15 08:00 AM EST,Other Screen,,Sedan,Bourges Foot,0,0,Check listings,1200.0,Coupe de France
+TOMORROW,2026-11-15 08:00 AM EST,Other Screen,,Senlis,Saint-Pryvé Saint Hilaire,0,0,Check listings,1200.0,Coupe de France
+TOMORROW,2026-11-15 08:00 AM EST,Other Screen,,Stade Pontivy,Plabennec,0,0,Check listings,1200.0,Coupe de France
+TOMORROW,2026-11-15 08:00 AM EST,Other Screen,,Talange,Baume-Les-Dames,0,0,Check listings,1200.0,Coupe de France
+TOMORROW,2026-11-15 08:00 AM EST,Other Screen,,Tremblay,Maisons-Alfort,0,0,Check listings,1200.0,Coupe de France
+TOMORROW,2026-11-15 08:00 AM EST,Other Screen,,Val Yerres Crosne,Union Cosnoise,0,0,Check listings,1200.0,Coupe de France
+TOMORROW,2026-11-15 08:00 AM EST,Other Screen,,Vandruvre,Epinal,0,0,Check listings,1200.0,Coupe de France
+TOMORROW,2026-11-15 08:00 AM EST,Other Screen,,Veauche,St Paul en Jarez,0,0,Check listings,1200.0,Coupe de France
+TOMORROW,2026-11-15 08:00 AM EST,Other Screen,,Verson,Calais,0,0,Check listings,1200.0,Coupe de France
+TOMORROW,2026-11-15 08:00 AM EST,Other Screen,,Violaines,Vermelles,0,0,Check listings,1200.0,Coupe de France
+TOMORROW,2026-11-15 08:00 AM EST,Other Screen,,Seyssinet,Nimes,0,1392,Check listings,1104.0,Coupe de France
+TOMORROW,2026-11-15 08:00 AM EST,Other Screen,,Saint-Renan,Stade Laval,0,1484,Check listings,1058.0,Coupe de France
+TOMORROW,2026-11-15 08:00 AM EST,Other Screen,,Saint-Die Kellermann,Metz,0,1568,Check listings,1016.0,Coupe de France
+TOMORROW,2026-11-15 08:00 AM EST,Other Screen,,Stade Castelbourgeois,Nantes,0,1571,Check listings,1014.5,Coupe de France
+TOMORROW,2026-11-15 08:00 AM EST,Other Screen,,St Martin Tatinghem,Racing Club de France,0,1706,Check listings,947.0,Coupe de France
+TOMORROW,2026-11-15 08:00 AM EST,Other Screen,,US Marseille Endoume,SC Toulon,1758,0,Check listings,921.0,Coupe de France
+TOMORROW,2026-11-15 08:00 AM EST,Other Screen,,Rochefort FC,Juventus Papus,0,1828,Check listings,886.0,Coupe de France
+TOMORROW,2026-11-15 08:30 AM EST,Other Screen,,Perros-Louannec,Vannes OC,0,0,Check listings,1200.0,Coupe de France
+TOMORROW,2026-11-15 08:30 AM EST,Other Screen,,Stade Sotteville,USF Fecamp,0,0,Check listings,1200.0,Coupe de France
+TOMORROW,2026-11-15 09:00 AM EST,Other Screen,,Atlas Paillade,AS Cannes,1562,1587,Check listings,1549.5,Coupe de France
+TOMORROW,2026-11-15 09:00 AM EST,Other Screen,,Rumilly Vallières,Saint-Étienne,0,1613,Check listings,993.5,Coupe de France
+TOMORROW,2026-11-15 10:15 AM EST,TV 1,,Granada,Las Palmas,1622,1677,ESPN+,1594.5,Spanish LALIGA 2
+TOMORROW,2026-11-15 12:30 PM EST,TV 1,,Eldense,CD Sabadell,1591,1578,ESPN+,1571.5,Spanish LALIGA 2
+TOMORROW,2026-11-15 12:30 PM EST,TV 2,,Eibar,Cádiz,1681,1554,ESPN+,1490.5,Spanish LALIGA 2
