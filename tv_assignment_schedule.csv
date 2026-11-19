@@ -1,7 +1,8 @@
 day_group,match_time_str,tv_assignment,lookin_window,home_team,away_team,home_elo,away_elo,channels,sort_value,league
-TODAY,2026-11-18 01:00 PM EST,Other Screen,,Utebo,CD Sabadell,1419,1578,Check listings,1339.5,Spanish Copa del Rey
-TODAY,2026-11-18 01:00 PM EST,Other Screen,,Portugalete,Real Unión Irun,0,1496,Check listings,1052.0,Spanish Copa del Rey
-TODAY,2026-11-18 02:00 PM EST,Other Screen,,Alcoyano,Mallorca,1475,1720,Check listings,1352.5,Spanish Copa del Rey
-TODAY,2026-11-18 02:00 PM EST,Other Screen,,Badajoz,Tenerife,0,1632,Check listings,984.0,Spanish Copa del Rey
-TODAY,2026-11-18 02:30 PM EST,Other Screen,,CD Minera,FC Cartagena,0,1514,Check listings,1043.0,Spanish Copa del Rey
-TODAY,2026-11-18 02:30 PM EST,Other Screen,,Reus FC Reddis,Barakaldo,0,1531,Check listings,1034.5,Spanish Copa del Rey
+TOMORROW,2026-11-20 12:30 PM EST,Other Screen,,Arminia Bielefeld,1. FC Magdeburg,1571,1581,Check listings,1566.0,German 2. Bundesliga
+TOMORROW,2026-11-20 12:30 PM EST,Other Screen,,SV Darmstadt 98,1. FC Heidenheim 1846,1590,1642,Check listings,1564.0,German 2. Bundesliga
+TOMORROW,2026-11-20 02:30 PM EST,Other Screen,,FC Andorra,Leganés,1593,1615,Check listings,1582.0,Spanish LALIGA 2
+TOMORROW,2026-11-20 02:30 PM EST,TV 3,,Bayern Munich,FC Cologne,2040,1662,"USA Net, Fandango",1473.0,German Bundesliga
+TOMORROW,2026-11-20 02:45 PM EST,TV 2,,Troyes,Le Havre AC,1612,1610,beIN SPORTS,1609.0,French Ligue 1
+TOMORROW,2026-11-20 02:45 PM EST,Other Screen,,Cercle Brugge KSV,KVC Westerlo,1547,1565,DAZN,1538.0,Belgian Pro League
+TOMORROW,2026-11-20 03:00 PM EST,TV 1,,Athletic Club,Espanyol,1767,1712,"ESPN Deportes, ESPN+",1684.5,Spanish LALIGA

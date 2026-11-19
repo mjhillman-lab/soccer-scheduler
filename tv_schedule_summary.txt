@@ -3,17 +3,20 @@
 ====================================================================================================================
 
 ####################################################################################################################
-###  TODAY'S MATCHES (Wednesday, November 18)
+###  TOMORROW'S MATCHES (Friday, November 20)
 ####################################################################################################################
 
---- 2026-11-18 01:00 PM EST ---
-  [Other Screen            ] [Copa del Rey] Utebo vs CD Sabadell               (1419 vs 1578) Score: 1339.5 [Check listings]
-  [Other Screen            ] [Copa del Rey] Portugalete vs Real Unión Irun           (Unrated vs 1496) Score: 1052.0 [Check listings]
+--- 2026-11-20 12:30 PM EST ---
+  [Other Screen            ] [2. Bundesliga] Arminia Bielefeld vs 1. FC Magdeburg           (1571 vs 1581) Score: 1566.0 [Check listings]
+  [Other Screen            ] [2. Bundesliga] SV Darmstadt 98 vs 1. FC Heidenheim 1846     (1590 vs 1642) Score: 1564.0 [Check listings]
 
---- 2026-11-18 02:00 PM EST ---
-  [Other Screen            ] [Copa del Rey] Alcoyano vs Mallorca                  (1475 vs 1720) Score: 1352.5 [Check listings]
-  [Other Screen            ] [Copa del Rey] Badajoz vs Tenerife                  (Unrated vs 1632) Score: 984.0  [Check listings]
+--- 2026-11-20 02:30 PM EST ---
+  [Other Screen            ] [LALIGA 2]     FC Andorra vs Leganés                   (1593 vs 1615) Score: 1582.0 [Check listings]
+  [TV 3                    ] [Bundesliga]   Bayern Munich vs FC Cologne                (2040 vs 1662) Score: 1473.0 [USA Net, Fandango]
 
---- 2026-11-18 02:30 PM EST ---
-  [Other Screen            ] [Copa del Rey] CD Minera vs FC Cartagena              (Unrated vs 1514) Score: 1043.0 [Check listings]
-  [Other Screen            ] [Copa del Rey] Reus FC Reddis vs Barakaldo                 (Unrated vs 1531) Score: 1034.5 [Check listings]
+--- 2026-11-20 02:45 PM EST ---
+  [TV 2                    ] [Ligue 1]      Troyes vs Le Havre AC               (1612 vs 1610) Score: 1609.0 [beIN SPORTS]
+  [Other Screen            ] [Belgian Pro]  Cercle Brugge KSV vs KVC Westerlo              (1547 vs 1565) Score: 1538.0 [DAZN]
+
+--- 2026-11-20 03:00 PM EST ---
+  [TV 1                    ] [LaLiga]       Athletic Club vs Espanyol                  (1767 vs 1712) Score: 1684.5 [ESPN Deportes, ESPN+]
