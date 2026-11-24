@@ -3,24 +3,7 @@
 ====================================================================================================================
 
 ####################################################################################################################
-###  TODAY'S MATCHES (Monday, November 23)
-####################################################################################################################
-
---- 2026-11-23 12:00 PM EST ---
-  [Other Screen            ] [Süper Lig]    Istanbul Basaksehir vs Çorum FK                  (1619 vs 1582) Score: 1563.5 [beIN SPORTS]
-
---- 2026-11-23 02:30 PM EST ---
-  [TV 1 (Look-in) [02:30 PM-03:00 PM (~30m)]] [LALIGA 2]     Ceuta vs Almería                   (1560 vs 1682) Score: 1499.0 [ESPN+]
-
---- 2026-11-23 02:45 PM EST ---
-  [TV 3                    ] [Serie A]      Monza vs Fiorentina                (1636 vs 1715) Score: 1596.5 [Paramount+]
-
---- 2026-11-23 03:00 PM EST ---
-  [TV 1                    ] [EPL]          Brentford vs Everton                   (1859 vs 1816) Score: 1794.5 [USA Net]
-  [TV 2                    ] [LaLiga]       Levante vs Elche                     (1711 vs 1694) Score: 1685.5 [ESPN Deportes, ESPN+]
-
-####################################################################################################################
-###  TOMORROW'S MATCHES (Tuesday, November 24)
+###  TODAY'S MATCHES (Tuesday, November 24)
 ####################################################################################################################
 
 --- 2026-11-24 12:45 PM EST ---
@@ -45,3 +28,26 @@
   [Other Screen            ] [UCL]          Como vs AEK Athens                (1815 vs 1700) Score: 1642.5 [Paramount+]
   [Other Screen            ] [Championship] Wolverhampton Wanderers vs Derby County              (1726 vs 1567) Score: 1487.5 [Paramount+]
   [Other Screen            ] [UCL]          Slovan Bratislava vs Real Betis                (1552 vs 1826) Score: 1415.0 [Paramount+]
+
+####################################################################################################################
+###  TOMORROW'S MATCHES (Wednesday, November 25)
+####################################################################################################################
+
+--- 2026-11-25 12:45 PM EST ---
+  [TV 1                    ] [UCL]          Slavia Prague vs Villarreal                (1746 vs 1799) Score: 1719.5 [Paramount+]
+  [TV 2                    ] [UCL]          Sabah FK vs Barcelona                 (1562 vs 2031) Score: 1327.5 [Paramount+]
+
+--- 2026-11-25 02:45 PM EST ---
+  [Other Screen            ] [Championship] Burnley vs Birmingham City           (1647 vs 1622) Score: 1609.5 [Paramount+]
+  [Other Screen            ] [Championship] Watford vs Blackburn Rovers          (1531 vs 1576) Score: 1508.5 [Check listings]
+  [Other Screen            ] [Championship] Bolton Wanderers vs West Bromwich Albion      (1529 vs 1594) Score: 1496.5 [Check listings]
+
+--- 2026-11-25 03:00 PM EST ---
+  [TV 1                    ] [UCL]          Sporting CP vs Manchester United         (1870 vs 1862) Score: 1858.0 [Paramount+]
+  [TV 2                    ] [UCL]          Paris Saint-Germain vs AS Roma                   (1978 vs 1857) Score: 1796.5 [Paramount+]
+  [TV 3                    ] [UCL]          Club Brugge vs Liverpool                 (1832 vs 1940) Score: 1778.0 [Paramount+]
+  [Other Screen            ] [UCL]          Internazionale vs VfB Stuttgart             (1944 vs 1812) Score: 1746.0 [Paramount+]
+  [Other Screen            ] [UCL]          Shakhtar Donetsk vs Fenerbahce                (1686 vs 1781) Score: 1638.5 [Paramount+]
+  [Other Screen            ] [UCL]          Lille vs Bayern Munich             (1767 vs 2040) Score: 1630.5 [Paramount+]
+  [Other Screen            ] [UCL]          Atlético Madrid vs Viking FK                 (1916 vs 1691) Score: 1578.5 [Paramount+]
+  [Other Screen            ] [Championship] Stoke City vs Millwall                  (1555 vs 1637) Score: 1514.0 [Paramount+]
